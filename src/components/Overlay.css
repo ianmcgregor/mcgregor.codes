@@ -1,0 +1,46 @@
+:root {}
+.Overlay {
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: opacity 0.3s ease-out;
+    visibility: hidden;
+}
+.Overlay::before {
+    background-color: var(--overlay-nav-background-color);
+    content: "";
+    height: 50px;
+    position: absolute;
+    transform: translate(12px, -2px) skewY(2deg);
+    width: 84px;
+}
+.Overlay-nav {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    padding-left: 2px;
+    padding: var(--spacing);
+    position: relative;
+}
+.Overlay-link, .Overlay-close {
+    color: var(--overlay-nav-icon-color);
+    margin-left: 15px;
+}
+.Overlay-close {
+    display: none;
+}
+@media (--narrow) {
+    .Overlay-nav {
+        padding-left: var(--spacing);
+    }
+    .Overlay-close {
+        display: block;
+    }
+}
+.Project.is-selected .Overlay {
+    opacity: 1;
+    visibility: visible;
+}

@@ -1,0 +1,521 @@
+{
+    "projects": [{
+        "title": "Inside Abbey Road",
+        "year": 2015,
+        "visible": true,
+        "layout": "center",
+        "thumb": "abbey_road/abbey_road_02",
+        "images": [
+            "abbey_road/abbey_road_02",
+            "abbey_road/abbey_road_01",
+            "abbey_road/abbey_road_10",
+            "abbey_road/abbey_road_14"
+        ],
+        "text": [
+            "Classic effects recreated using the Web Audio API",
+            "Component based architecture",
+            "Web Audio, Marionette, Three, Lodash, SUIT, PostCSS",
+            "FWA Site of the Month"
+        ],
+        "link": "https://insideabbeyroad.withgoogle.com/",
+        "tags": [
+            "audio",
+            "3d",
+            "data"
+        ]
+    }, {
+        "title": "Made",
+        "year": 2014,
+        "visible": true,
+        "layout": "left",
+        "thumb": "made/made_01",
+        "images": [
+            "made/made_01",
+            "made/made_02",
+            "made/made_03",
+            "made/made_09",
+            "made/made_19",
+            "made/made_25",
+            "made/made_30",
+            "made/made_36",
+            "made/made_39"
+        ],
+        "text": [
+            "Platform runner game for mobile and desktop",
+            "Save your Facebook friends",
+            "Four full levels with bosses and powerups",
+            "Phaser, PIXI, Tiled Map Editor"
+        ],
+        "link": "http://game.ray-ban.com/",
+        "tags": [
+            "game",
+            "mobile"
+        ]
+    }, {
+        "title": "Monty's Christmas",
+        "year": 2014,
+        "visible": true,
+        "layout": "right",
+        "thumb": "montys_christmas/montys_christmas_01",
+        "images": [
+            "montys_christmas/montys_christmas_01",
+            "montys_christmas/montys_christmas_03",
+            "montys_christmas/montys_christmas_06",
+            "montys_christmas/montys_christmas_07",
+            "montys_christmas/montys_christmas_18"
+        ],
+        "text": [
+            "Interactive storybook in 3d",
+            "Designed to work on Google Cardboard VR headsets",
+            "Additional non-vr versions for iPad and web",
+            "Three.js, Web Audio API, Cordova"
+        ],
+        "link": "http://www.johnlewis.com/christmas-advert-2014-montys-christmas/montys-360-world",
+        "tags": [
+            "game",
+            "vr",
+            "mobile",
+            "3d",
+            "audio"
+        ]
+    }, {
+        "title": "Chance Chanel",
+        "year": 2014,
+        "visible": true,
+        "layout": "left",
+        "thumb": "chance/chance_02",
+        "images": [
+            "chance/chance_02",
+            "chance/chance_05",
+            "chance/chance_07"
+        ],
+        "text": [
+            "Interactive branching film",
+            "Supports numerous mobile and desktop platforms",
+            "Fully responsive and progressively enhanced",
+            "PIXI, Handlebars, Sass"
+        ],
+        "link": "http://chance.archive.stinkdigital.com/en_GB",
+        "tags": [
+            "mobile",
+            "video"
+        ]
+    }, {
+        "title": "Revolutions in Sound",
+        "year": 2014,
+        "visible": true,
+        "layout": "center",
+        "thumb": "revs_in_sound/revs_in_sound_01",
+        "images": [
+            "revs_in_sound/revs_in_sound_01",
+            "revs_in_sound/revs_in_sound_02",
+            "revs_in_sound/revs_in_sound_06",
+            "revs_in_sound/revs_in_sound_12",
+            "revs_in_sound/revs_in_sound_13",
+            "revs_in_sound/revs_in_sound_14",
+            "revs_in_sound/revs_in_sound_15",
+            "revs_in_sound/revs_in_sound_16",
+            "revs_in_sound/revs_in_sound_19",
+            "revs_in_sound/revs_in_sound_23"
+        ],
+        "text": [
+            "Living archive of UK club culture",
+            "User generated content and user profiles",
+            "Google+, YouTube and SoundCloud integration",
+            "Angular, PIXI, Box2d, Sass"
+        ],
+        "link": "http://archive.revolutionsinsound.com/",
+        "tags": [
+            "data"
+        ]
+    }, {
+        "title": "Imagepack",
+        "year": 2015,
+        "visible": true,
+        "layout": "smallLeft",
+        "thumb": "imagepack/imagepack_04",
+        "images": [
+            "imagepack/imagepack_04"
+        ],
+        "text": [
+            "Utility to pack images into a binary file",
+            "Reduces load times for image sequences",
+            "Node.js, Gulp"
+        ],
+        "link": "https://www.npmjs.com/package/imagepack",
+        "tags": [
+            "library",
+            "open source",
+            "side project"
+        ]
+    }, {
+        "title": "Point Cloud",
+        "year": 2015,
+        "visible": true,
+        "layout": "smallRight",
+        "thumb": "pointcloud/pointcloud_05",
+        "images": [
+            "pointcloud/pointcloud_05"
+        ],
+        "text": [
+            "Experiment with Point Clouds in Three.js",
+            "A Torus Knot serves as the geometry for the points",
+            "Three.js, Canvas"
+        ],
+        "link": "http://codepen.io/ianmcgregor/pen/OPGemQ",
+        "tags": [
+            "3d",
+            "experiment",
+            "side project"
+        ]
+    }, {
+        "title": "sono",
+        "year": 2015,
+        "visible": true,
+        "layout": "right",
+        "thumb": "sono/sono_02",
+        "images": [
+            "sono/sono_02"
+        ],
+        "text": [
+            "Open source library for creative audio",
+            "Aims to help bring a new level of flourish to audio",
+            "Used on several big projects"
+        ],
+        "link": "http://prototypes.stinkdigital.com/webaudio/sono/examples/",
+        "tags": [
+            "audio",
+            "library",
+            "open source"
+        ]
+    }, {
+        "title": "Deep Sea Freediver",
+        "year": 2014,
+        "visible": true,
+        "layout": "left",
+        "thumb": "deep_sea_freediver/deep_sea_freediver_01",
+        "images": [
+            "deep_sea_freediver/deep_sea_freediver_01",
+            "deep_sea_freediver/deep_sea_freediver_03",
+            "deep_sea_freediver/deep_sea_freediver_04",
+            "deep_sea_freediver/deep_sea_freediver_06"
+        ],
+        "text": [
+            "Made in 48 hours for the Ludum Dare game jam",
+            "Works on mobile devices using the accelerometer",
+            "As per competition rules I made all the code graphics and audio"
+        ],
+        "link": "http://ianmcgregor.me/games/deep-sea-freediver/",
+        "tags": [
+            "game",
+            "mobile",
+            "side project"
+        ]
+    }, {
+        "title": "Gif Inbox",
+        "year": 2014,
+        "visible": true,
+        "layout": "smallRight",
+        "thumb": "gifinbox/gifinbox_02",
+        "images": [
+            "gifinbox/gifinbox_02"
+        ],
+        "text": [
+            "Gifs that arrive in my email inbox",
+            "The app pulls them onto the web",
+            "Python, Google AppEngine"
+        ],
+        "link": "http://gifinbox.appspot.com/",
+        "tags": [
+            "side project",
+            "experiment"
+        ]
+    }, {
+        "title": "Circloids",
+        "year": 2014,
+        "visible": true,
+        "layout": "smallLeft",
+        "thumb": "circloids/circloids_05",
+        "images": [
+            "circloids/circloids_05"
+        ],
+        "text": [
+            "Experiment using boids (flocking behaviours) and simple circle shapes to create interesting visuals"
+        ],
+        "link": "http://ianmcgregor.me/experiments/circloids/",
+        "tags": [
+            "side project",
+            "experiment"
+        ]
+    }, {
+        "title": "My Time Is Now",
+        "year": 2014,
+        "visible": true,
+        "layout": "center",
+        "thumb": "my_time_is_now/my_time_is_now_12",
+        "images": [
+            "my_time_is_now/my_time_is_now_12",
+            "my_time_is_now/my_time_is_now_24",
+            "my_time_is_now/my_time_is_now_26",
+            "my_time_is_now/my_time_is_now_43",
+            "my_time_is_now/my_time_is_now_53",
+            "my_time_is_now/my_time_is_now_57",
+            "my_time_is_now/my_time_is_now_66"
+        ],
+        "text": [
+            "Interactive film filled with rabbit holes that take you into mini-games",
+            "Hugely popular with millions of visitors who battled to be first to discover all the content"
+        ],
+        "link": "http://nikemytimeisnow.archive.stinkdigital.com/",
+        "tags": [
+            "game",
+            "video"
+        ]
+    }, {
+        "title": "Christmas Carole",
+        "year": 2014,
+        "visible": false,
+        "layout": "right",
+        "thumb": "project_01_thumb",
+        "images": [
+            "project_01",
+            "project_02",
+            "project_03"
+        ],
+        "text": [
+            "The app takes the users address and composites images from Google Streetview into green screen footage to make it appear like Carole is coming to your house"
+        ],
+        "link": "http://stella-carole.archive.stinkdigital.com/",
+        "tags": [
+            "data"
+        ]
+    }, {
+        "title": "Captain Ice",
+        "year": 2014,
+        "visible": true,
+        "layout": "right",
+        "thumb": "captain_ice/captain_ice_04",
+        "images": [
+            "captain_ice/captain_ice_04",
+            "captain_ice/captain_ice_01",
+            "captain_ice/captain_ice_09",
+            "captain_ice/captain_ice_10"
+        ],
+        "text": [
+            "A game using a blend of video clips and pixel art"
+        ],
+        "link": "http://www.vigorsolcaptainice.com/",
+        "tags": [
+            "game"
+        ]
+    }, {
+        "title": "Unite All Originals",
+        "year": 2013,
+        "visible": false,
+        "layout": "right",
+        "thumb": "project_01_thumb",
+        "images": [
+            "project_01",
+            "project_02",
+            "project_03"
+        ],
+        "text": [
+            "Web Speech API experience with Hip-Hop legends Run DMC",
+            "Certain keywords change the film as the user watches",
+            "Web Speech API"
+        ],
+        "link": "http://adidas-fw13.archive.stinkdigital.com/",
+        "tags": [
+            "video",
+            "audio"
+        ]
+    }, {
+        "title": "Miru",
+        "year": 2013,
+        "visible": true,
+        "layout": "left",
+        "thumb": "miru/miru_16",
+        "images": [
+            "miru/miru_16",
+            "miru/miru_09",
+            "miru/miru_01"
+        ],
+        "text": [
+            "An interactive 360 film shot using an octocopter",
+            "Custom shader to optimise the playback as existing 3d libraries were too slow"
+        ],
+        "link": "http://miru.menicon.com/tosee/",
+        "tags": [
+            "3d"
+        ]
+    }, {
+        "title": "Urban Tour",
+        "year": 2013,
+        "visible": true,
+        "layout": "right",
+        "thumb": "urban_tour/urban_tour_09",
+        "images": [
+            "urban_tour/urban_tour_09",
+            "urban_tour/urban_tour_20",
+            "urban_tour/urban_tour_25",
+            "urban_tour/urban_tour_27"
+        ],
+        "text": [
+            "Interactive fashion catalogue slash music video"
+        ],
+        "link": "https://vimeo.com/36039145",
+        "tags": [
+            "video"
+        ]
+    }, {
+        "title": "Kino",
+        "year": 2013,
+        "visible": true,
+        "layout": "left",
+        "thumb": "kino/kino_06",
+        "images": [
+            "kino/kino_06",
+            "kino/kino_30",
+            "kino/kino_07",
+            "kino/kino_10"
+        ],
+        "text": [
+            "Camera API allows the user to 'See things differently' by tilting their head",
+            "The film and audio changes seamlessly when they tilt their head from side to side"
+        ],
+        "link": "http://hugo-justdifferent.archive.stinkdigital.com/",
+        "tags": [
+            "video"
+        ]
+    }, {
+        "title": "Happy Inside",
+        "year": 2011,
+        "visible": true,
+        "layout": "right",
+        "thumb": "happy_inside/happy_inside_02",
+        "images": [
+            "happy_inside/happy_inside_02",
+            "happy_inside/happy_inside_03",
+            "happy_inside/happy_inside_09",
+            "happy_inside/happy_inside_10"
+        ],
+        "text": [
+            "A competition encouraging Facebook shares",
+            "We filmed cats wandering through Ikea",
+            "Users win a product by choosing the right cat"
+        ],
+        "link": "http://cats.archive.stinkdigital.com/",
+        "tags": [
+            "data"
+        ]
+    }, {
+        "title": "One Life",
+        "year": 2011,
+        "visible": true,
+        "layout": "left",
+        "thumb": "one_life/one_life_06",
+        "images": [
+            "one_life/one_life_06",
+            "one_life/one_life_19",
+            "one_life/one_life_27",
+            "one_life/one_life_32"
+        ],
+        "text": [
+            "Interactive film trailer for a BBC nature film",
+            "Swipe for contextual content at any time",
+            "Interface reflects average colour of the frame, highlighting the rich visuals"
+        ],
+        "link": "http://bbc-onelife.archive.stinkdigital.com/",
+        "tags": [
+            "video",
+            "data"
+        ]
+    }, {
+        "title": "Diesel Island",
+        "year": 2011,
+        "visible": false,
+        "layout": "right",
+        "thumb": "project_01_thumb",
+        "images": [
+            "project_01",
+            "project_02",
+            "project_03"
+        ],
+        "text": [
+            "An island community powered by Facebook"
+        ],
+        "link": "http://diesel-island-ss11.archive.stinkdigital.com/",
+        "tags": [
+            "data"
+        ]
+    }, {
+        "title": "Dark Ride",
+        "year": 2010,
+        "visible": true,
+        "layout": "right",
+        "thumb": "dark_ride/dark_ride_06",
+        "images": [
+            "dark_ride/dark_ride_06",
+            "dark_ride/dark_ride_14",
+            "dark_ride/dark_ride_17",
+            "dark_ride/dark_ride_19",
+            "dark_ride/dark_ride_26",
+            "dark_ride/dark_ride_43",
+            "dark_ride/dark_ride_51",
+            "dark_ride/dark_ride_56"
+        ],
+        "text": [
+            "Branching narrative with elements of user content",
+            "Quick fire decisions change the film",
+            "Interview gathers user info and audio recordings",
+            "FWA People's Choice Site of the Year"
+        ],
+        "link": "http://darkride.archive.stinkdigital.com/",
+        "tags": [
+            "video"
+        ]
+    }, {
+        "title": "A Hundred Lovers",
+        "year": 2010,
+        "visible": true,
+        "layout": "left",
+        "thumb": "a_hundred_lovers/a_hundred_lovers_29",
+        "images": [
+            "a_hundred_lovers/a_hundred_lovers_29",
+            "a_hundred_lovers/a_hundred_lovers_32",
+            "a_hundred_lovers/a_hundred_lovers_33",
+            "a_hundred_lovers/a_hundred_lovers_35",
+            "a_hundred_lovers/a_hundred_lovers_02"
+        ],
+        "text": [
+            "Music video slash fashion catalogue",
+            "Roll over the film to see featured clothes"
+        ],
+        "link": "http://diesel-hundredlovers.archive.stinkdigital.com/",
+        "tags": [
+            "video",
+            "audio"
+        ]
+    }, {
+        "title": "Carousel",
+        "year": 2009,
+        "visible": true,
+        "layout": "center",
+        "thumb": "carousel/carousel_15",
+        "images": [
+            "carousel/carousel_15",
+            "carousel/carousel_09",
+            "carousel/carousel_22"
+        ],
+        "text": [
+            "Groundbreaking interactive film",
+            "Ambilight effect samples colour from the video",
+            "Segue seamlessly into behind the scenes films",
+            "Stinkdigital's first FWA and Cannes Grand Prix"
+        ],
+        "link": "http://labs.tribalddb.nl/Cinema219/",
+        "tags": [
+            "video"
+        ]
+    }]
+}

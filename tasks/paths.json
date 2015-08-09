@@ -1,0 +1,37 @@
+{
+    "connect": {
+        "dir": "./",
+        "files": [
+            "dist/js/bundle.js",
+            "dist/js/bundle.min.js",
+            "dist/css/styles.css",
+            "dist/css/styles.min.css",
+            "index.html"
+        ]
+    },
+    "scripts": {
+        "entry": "src/index.js",
+        "dest": "dist/js/",
+        "bundle": "bundle.js",
+        "lint": [
+            "src/**/*.js",
+            "tasks/**/*.js"
+        ]
+    },
+    "styles": {
+        "entry": "src/index.css",
+        "dest": "dist/css/",
+        "bundle": "styles.css",
+        "watch": [
+            "src/index.css",
+            "src/css/**/*.css",
+            "src/components/**/*.css",
+            "src/font/**/*.css"
+        ],
+        "lint": "dist/css/styles.css"
+    },
+    "images": {
+        "entry": "src/img/png",
+        "dest": "dist/img"
+    }
+}

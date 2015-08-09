@@ -1,0 +1,18 @@
+:root {
+    --work-tag-spacing: 6px;
+}
+.Work {
+    background-color: var(--work-background-color);
+    flex: 1;
+}
+.Work-tags {
+    background-color: var(--work-tags-background-color);
+    border-bottom: 1px solid var(--work-tags-border-color);
+    border-top: 1px solid var(--work-tags-border-color);
+    padding: 4px calc(var(--spacing-wide) - var(--work-tag-spacing));
+}
+.Work-projects {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}

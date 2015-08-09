@@ -1,0 +1,143 @@
+/* Root */
+
+/* font face */
+
+@import url(http://fonts.googleapis.com/css?family=Inconsolata:400,700);
+/*@import url(http://fonts.googleapis.com/css?family=Nunito:400,700,300);*/
+/*@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700);*/
+/*@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700);*/
+
+/* vars */
+
+:root {
+    /* font family */
+
+    --font: "Inconsolata", monospace, Courier;
+
+    /* font size */
+
+    --font-size-small: 12px;
+    --font-size-medium: 14px;
+    --font-size-large: 16px;
+    --font-size-x-large: 24px;
+
+    /* spacing */
+
+    --spacing: 8px;
+    --spacing-wide: 16px;
+    --border-width: 4px;
+
+    /* color palette */
+
+    --blue: #3859ff;
+    --mint: #6bffa1;
+    --pink: #fa9ef3;
+    --yellow: #ffe610;
+    --red: #fa4d46;
+
+    /* component colors */
+
+    --header-bg-color: var(--blue);
+    --header-title-color: var(--pink);
+    --header-link-color: var(--mint);
+    --header-link-hover-color: var(--pink);
+
+    --work-background-color: var(--red);
+    --work-tags-border-color: none;
+    --work-tags-background-color: var(--red);
+    --work-tag-color: var(--yellow);
+    --work-tag-hover-color: var(--yellow);
+
+    --project-background-color: var(--blue);
+    --info-background-color: var(--blue);
+    --info-title-color: var(--pink);
+    --info-year-color: var(--pink);
+    --info-text-color: var(--mint);
+    --info-tag-color: var(--mint);
+    --info-tag-underline-color: var(--pink);
+
+    --overlay-nav-background-color: var(--blue);
+    --overlay-nav-icon-color: var(--pink);
+
+    --carousel-nav-icon-color: var(--pink);
+    --carousel-navbutton-background-color: var(--blue);
+
+    --footer-background-color: var(--blue);
+    --footer-border-color: var(--mint);
+    --footer-text-color: var(--pink);
+    --footer-link-color: var(--mint);
+
+    --services-background-color: var(--red);
+    --services-text-color: var(--yellow);
+
+    --contact-background-color: var(--red);
+    --contact-text-color: var(--yellow);
+    --contact-link-color: var(--yellow);
+}
+
+/* media queries */
+
+@custom-media --narrow (min-width: 415px);
+@custom-media --medium (min-width: 768px);
+@custom-media --large (min-width: 1280px);
+@custom-media --portrait (orientation: portrait);
+@custom-media --landscape (orientation: landscape);
+
+/* sections */
+
+html {
+    height: 100%;
+    font-family: var(--font);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: var(--font);
+    background-color: #ffffff;
+    color: #000;
+    height: 100%;
+    line-height: 1.5;
+    margin: 0;
+    overflow-y: scroll;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+/* elements */
+
+button {
+    cursor: pointer;
+    font-family: var(--font);
+    text-transform: uppercase;
+}
+
+button:focus, a:focus {
+    outline: none;
+}
+
+/* utilities */
+
+.u-link {
+    position: relative;
+    text-decoration: none;
+}
+.u-link::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: inherit;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+.u-link.active::before, .u-link.is-active::before {
+    transform: scaleX(1);
+}
+@media (--narrow) {
+    .u-link:hover::before {
+        transform: scaleX(1);
+    }
+}

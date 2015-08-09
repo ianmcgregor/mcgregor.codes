@@ -1,0 +1,48 @@
+.Filter {
+    display: flex;
+}
+.Filter-item {
+    font-size: var(--font-size-small);
+}
+
+/*
+ * Modifier: Work
+ */
+
+.Filter--work {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+@media (--medium) {
+    .Filter--work {
+        justify-content: space-between;
+    }
+}
+.Filter--work .Filter-item {
+    color: var(--work-tag-color);
+    margin: 0 var(--work-tag-spacing);
+}
+.Filter--work .Filter-item::before {
+    background-color: var(--work-tag-hover-color);
+}
+
+/*
+ * Modifier: Info
+ */
+
+.Filter--info {
+    align-items: center;
+    line-height: 1;
+    margin-bottom: 16px;
+    width: 100%;
+}
+.Filter--info .Filter-item {
+    color: var(--info-tag-color);
+    margin: 0 var(--spacing);
+}
+.Filter--info .Filter-item::before {
+    background-color: var(--info-tag-underline-color);
+}
+.Filter--info-left {
+    margin-bottom: 10px;
+}

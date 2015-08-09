@@ -1,0 +1,20 @@
+:root {}
+.Contact {
+    background-color: var(--contact-background-color);
+    color: var(--contact-text-color);
+    flex: 1;
+    padding: var(--spacing-wide);
+    text-transform: none;
+}
+@media (--medium) {
+    .Contact {
+        font-size: var(--font-size-x-large);
+    }
+}
+.Contact li:first-child {
+    margin-bottom: 10px;
+}
+.Contact-link {
+    color: var(--contact-link-color);
+    font-weight: bold;
+}

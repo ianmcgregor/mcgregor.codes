@@ -1,0 +1,65 @@
+{
+    "parser": "babel-eslint",
+    "env": {
+        "browser": true,
+        "node": true
+    },
+    "globals": {
+        "describe": true,
+        "beforeEach": true,
+        "afterEach": true,
+        "it": true,
+        "expect": true
+    },
+    "plugins": [
+        "react"
+    ],
+    "ecmaFeatures": {
+        "blockBindings": true,
+        "forOf": true,
+        "jsx": true
+    },
+    "rules": {
+        "space-before-blocks": 2,
+        "indent": [2, 4, {"SwitchCase": 1}],
+        "brace-style": 2,
+        "space-after-keywords": 2,
+        "strict": 0,
+        "no-unused-expressions": 0,
+        "comma-dangle": [2, never],
+        "eol-last": 2,
+        "dot-notation": 2,
+        "dot-location": [2, property],
+        "consistent-return": 2,
+        "no-unused-vars": [2, args: none],
+        "quotes": [2, single, avoid-escape],
+        "no-shadow": 2,
+        "no-multi-spaces": 2,
+        "max-len": [1, 120],
+        "no-underscore-dangle": 0,
+        "new-cap": 0,
+        "no-use-before-define": 0,
+        "key-spacing": 0,
+        "no-empty": 0,
+        "no-undef-init": 0,
+        "block-scoped-var": 0,
+
+        "react/display-name": 0,
+        "react/jsx-boolean-value": [2, always],
+        "react/jsx-no-undef": 2,
+        "react/jsx-quotes": [2, double],
+        "react/jsx-sort-prop-types": 0,
+        "react/jsx-sort-props": 0,
+        "react/jsx-uses-react": 2,
+        "react/jsx-uses-vars": 2,
+        "react/no-did-mount-set-state": 0,
+        "react/no-did-update-set-state": 0,
+        "react/no-multi-comp": 0,
+        "react/no-unknown-property": 2,
+        "react/prop-types": 0,
+        "react/react-in-jsx-scope": 2,
+        "react/self-closing-comp": 2,
+        "react/sort-comp": 0,
+        "react/wrap-multilines": [2, {declaration: false, assignment: false}]
+    }
+}

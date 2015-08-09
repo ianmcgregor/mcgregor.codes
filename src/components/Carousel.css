@@ -1,0 +1,97 @@
+:root {
+    --carousel-anim-duration: 0.5s;
+    --carousel-anim-ease: ease-in;
+}
+.Carousel {
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+}
+.Carousel-inner {
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+.Carousel-imageList {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    list-style: none;
+    pointer-events: none;
+    transform: translateX(0);
+    transition: transform 0.5s ease-out;
+    /*transition: transform 0.5s ease-in;*/
+    width: 100%;
+}
+.Carousel-imageItem {
+    backface-visibility: hidden;
+    min-width: 100%;
+    perspective: 1200px;
+    transition: transform 0.5s ease-out;
+}
+.Carousel-imageItem img {
+    display: block;
+    max-width: 100%;
+    transition: transform 0.5s ease-in;
+}
+.Carousel-imageItem.is-centered {
+    z-index: 2;
+}
+.Carousel-imageItem.is-left {
+    transform: translateX(60%) scale(0.6);
+}
+.Carousel-imageItem.is-right {
+    transform: translateX(-60%) scale(0.6);
+}
+
+/* stop ugly overlap pop on transition: */
+
+.Carousel-imageItem.is-right.is-first {
+    z-index: 1;
+}
+.Carousel-imageItem.is-centered img {
+    transform: rotateY(0deg);
+}
+.Carousel-imageItem.is-left img {
+    transform: rotateY(30deg);
+}
+.Carousel-imageItem.is-right img {
+    transform: rotateY(-30deg);
+}
+.Carousel-nav {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: calc(50% - 30px);
+    width: 100%;
+}
+.Carousel-navButton {
+    align-items: center;
+    color: var(--carousel-nav-icon-color);
+    padding: var(--spacing);
+    text-align: left;
+    transition: opacity 0.3s;
+}
+.Carousel-navButton::before {
+    background-color: var(--carousel-navbutton-background-color);
+    content: "";
+    height: 32px;
+    position: absolute;
+    transform: translate(-10px, 0) skewY(-2deg);
+    width: 36px;
+}
+.Carousel-navButton--right {
+    text-align: right;
+}
+.Carousel-navButton--right::before {
+    transform: translate(-10px, 0) skewY(2deg);
+}
+.Carousel-navButton .Icon {
+    position: relative;
+    z-index: 1;
+}
+.Carousel-navButton.is-disabled {
+    opacity: 0;
+    pointer-events: none;
+}

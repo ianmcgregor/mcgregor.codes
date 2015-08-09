@@ -1,0 +1,69 @@
+:root {}
+.Services {
+    background-color: var(--services-background-color);
+    box-sizing: border-box;
+    color: var(--services-text-color);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+    padding: var(--spacing-wide);
+    width: 100%;
+}
+@media (--medium) {
+    .Services {
+        flex-direction: row;
+    }
+}
+.Services-info {
+    flex: 1;
+    margin-right: 10%;
+    margin-bottom: var(--spacing-wide);
+}
+.Services-info h2 {
+    font-weight: normal;
+}
+.Services-info p {
+    margin-bottom: 10px;
+    text-transform: none;
+}
+.Services-list {
+    color: var(--mint);
+    font-size: var(--font-size-small);
+    flex: 1;
+    padding: var(--spacing-wide);
+    position: relative;
+}
+.Services-list::before {
+    border-top: solid var(--footer-border-color);
+    border-bottom: solid var(--footer-border-color);
+    border-width: var(--border-width);
+    box-sizing: border-box;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--blue);
+    transform: translate(-15px, -10px) skewY(2deg);
+}
+.Services-group {
+    color: var(--pink);
+    width: 100%;
+}
+.Services-list ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: var(--spacing-wide);
+    position: relative;
+}
+@media (--narrow) {
+    .Services-list ul {
+        flex-direction: row;
+    }
+}
+.Services-list ul > li {
+    /*min-width: 200px;*/
+    min-width: 50%;
+}

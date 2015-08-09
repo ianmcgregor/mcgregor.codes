@@ -1,0 +1,93 @@
+:root {
+    --project-info-height: 120px;
+}
+.Project {
+    flex: 0 1 auto;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    position: relative;
+}
+.Project::before {
+    content: "";
+    display: block;
+    padding-top: calc(56.25% + var(--project-info-height));
+    width: 100%;
+}
+.Project-inner {
+    background-color: var(--project-background-color);
+    border-top: solid var(--footer-border-color);
+    border-width: var(--border-width);
+    height: calc(100% - var(--project-info-height));
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: width, height, top, left;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    width: 100%;
+    z-index: 0
+}
+.Project.is-selected .Project-inner {
+    transition-timing-function: ease-out;
+}
+.Project-inner img {
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+/*.Project.is-selected .Project-inner > Picture img {
+    filter: grayscale();
+}*/
+.Project-link {
+    cursor: zoom-in;
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.Project.is-selected .Project-link {
+    /*cursor: zoom-out;*/
+    display: none;
+}
+.Project-info {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+}
+@media (--narrow) {
+    .Project.layout-center {
+        margin-left: 20%;
+        margin-right: 20%;
+        min-width: 320px;
+        width: 60%;
+    }
+    .Project.layout-right {
+        margin-left: 30%;
+        margin-right: 10%;
+        min-width: 320px;
+        width: 60%;
+    }
+    .Project.layout-left {
+        margin-left: 10%;
+        margin-right: 30%;
+        min-width: 320px;
+        width: 60%;
+    }
+    .Project.layout-smallLeft {
+        margin-left: 30%;
+        margin-right: 40%;
+        min-width: 280px;
+        width: 30%;
+    }
+    .Project.layout-smallRight {
+        margin-left: 40%;
+        margin-right: 30%;
+        min-width: 280px;
+        width: 30%;
+    }
+}

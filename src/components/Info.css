@@ -1,0 +1,54 @@
+:root {}
+.Info {
+    height: 120px;
+    width: 100%;
+}
+.Info-inner {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+}
+.Info-inner::before {
+    background-color: var(--info-background-color);
+    border-bottom: solid var(--footer-border-color);
+    border-width: var(--border-width);
+    content: "";
+    height: 110%;
+    pointer-events: none;
+    position: absolute;
+    transform: translateY(-20px) skewY(1deg);
+    width: 100%;
+    z-index: -1;
+}
+.Info--left .Info-inner::before {
+    transform: translateY(-20px) skewY(-1deg);
+}
+.Info-header {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    padding: 1px var(--spacing);
+    pointer-events: none;
+}
+.Info-title {
+    color: var(--info-title-color);
+    font-size: var(--font-size-medium);
+    font-weight: normal;
+}
+.Info-year {
+    color: var(--info-year-color);
+    font-size: var(--font-size-small);
+}
+.Info-text {
+    color: var(--info-text-color);
+    font-size: var(--font-size-small);
+    line-height: 1.2;
+    list-style: square inside;
+    padding: 0 var(--spacing);
+    pointer-events: none;
+    text-align: left;
+    text-transform: none;
+}
