@@ -99,12 +99,14 @@ class Carousel extends React.Component {
                                 <li key={key}
                                     className={`Carousel-imageItem ${state}`}>
                                     <Picture src={src} alt={caption} />
-                                    <p style={{
+                                    {/*
+                                        <p style={{
                                         position: 'absolute',
                                         top: '10px',
                                         left: '10px',
                                         backgroundColor: 'white'
                                     }}>{src.slice(src.lastIndexOf('/') + 1)}</p>
+                                    */}
                                 </li>
                             );
                         })}
