@@ -8,14 +8,14 @@
 }
 .Footer::before {
     background-color: var(--footer-background-color);
-    border-top: solid var(--footer-border-color);
+    border-top: solid var(--border-color);
     border-width: var(--border-width);
     content: "";
     height: 100%;
     left: 0;
     position: absolute;
     top: 18px;
-    transform: skewY(0.75deg);
+    /*transform: skewY(0.75deg);*/
     width: 100%;
 }
 .Footer-list {

@@ -10,7 +10,7 @@
     padding-bottom: 22px;
 }
 .Header::before {
-    border-bottom: solid var(--footer-border-color);
+    border-bottom: solid var(--border-color);
     border-width: var(--border-width);
     background-color: var(--header-bg-color);
     height: 66px;
@@ -18,24 +18,19 @@
     left: 0;
     position: absolute;
     top: -12px;
-    transform: skewY(-0.75deg);
+    /*transform: skewY(-0.75deg);*/
     width: 100%;
     z-index: -1;
 }
 .Header-title {
     color: var(--header-title-color);
     flex: 1;
-    font-size: var(--font-size-medium);
+    font-size: var(--font-size-large);
     font-weight: normal;
     line-height: 1;
     margin: 0;
 }
 @media (--narrow) {
-    .Header-title {
-        font-size: var(--font-size-large);
-    }
-}
-@media (--medium) {
     .Header-title {
         font-size: var(--font-size-x-large);
     }

@@ -1,11 +1,13 @@
 {
     "connect": {
-        "dir": "./",
+        "dirMin": "./",
+        "dir": "dist",
         "files": [
             "dist/js/bundle.js",
             "dist/js/bundle.min.js",
             "dist/css/styles.css",
             "dist/css/styles.min.css",
+            "dist/index.html",
             "index.html"
         ]
     },
