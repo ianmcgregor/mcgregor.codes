@@ -18,7 +18,7 @@
     left: 0;
     position: absolute;
     top: -12px;
-    transform: skewY(-0.75deg);
+    /*transform: skewY(-0.75deg);*/
     width: 100%;
     z-index: -1;
 }

@@ -15,7 +15,7 @@
     left: 0;
     position: absolute;
     top: 18px;
-    transform: skewY(0.75deg);
+    /*transform: skewY(0.75deg);*/
     width: 100%;
 }
 .Footer-list {

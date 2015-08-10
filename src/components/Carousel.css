@@ -78,14 +78,14 @@
     content: "";
     height: 32px;
     position: absolute;
-    transform: translate(-10px, 0) skewY(-2deg);
+    /*transform: translate(-10px, 0) skewY(-2deg);*/
     width: 36px;
 }
 .Carousel-navButton--right {
     text-align: right;
 }
 .Carousel-navButton--right::before {
-    transform: translate(-10px, 0) skewY(2deg);
+    /*transform: translate(-10px, 0) skewY(2deg);*/
 }
 .Carousel-navButton .Icon {
     position: relative;

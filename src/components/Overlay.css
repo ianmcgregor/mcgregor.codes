@@ -13,7 +13,7 @@
     content: "";
     height: 50px;
     position: absolute;
-    transform: translate(12px, -2px) skewY(2deg);
+    /*transform: translate(12px, -2px) skewY(2deg);*/
     width: 84px;
 }
 .Overlay-nav {
