@@ -35,44 +35,59 @@
     --yellow: #ffe610;
     --red: #fa4d46;
 
+    --bg-primary: var(--red);
+    --text-primary: var(--yellow);
+    --link-primary: var(--yellow);
+    --link-primary-underline: var(--yellow);
+
+    --bg-secondary: var(--blue);
+    --text-secondary: var(--mint);
+    --link-secondary: var(--mint);
+    --link-secondary-underline: var(--pink);
+
+    --border-color: var(--mint);
+    --highlight: var(--pink);
+
     /* component colors */
 
-    --header-bg-color: var(--blue);
-    --header-title-color: var(--pink);
-    --header-link-color: var(--mint);
-    --header-link-hover-color: var(--pink);
+    --header-bg-color: var(--bg-secondary);
+    --header-title-color: var(--highlight);
+    --header-link-color: var(--link-secondary);
+    --header-link-hover-color: var(--link-secondary-underline);
 
-    --work-background-color: var(--red);
+    --work-background-color: var(--bg-primary);
     --work-tags-border-color: none;
-    --work-tags-background-color: var(--red);
-    --work-tag-color: var(--yellow);
-    --work-tag-hover-color: var(--yellow);
+    --work-tags-background-color: var(--bg-primary);
+    --work-tag-color: var(--link-primary);
+    --work-tag-hover-color: var(--link-primary-underline);
 
-    --project-background-color: var(--blue);
-    --info-background-color: var(--blue);
-    --info-title-color: var(--pink);
-    --info-year-color: var(--pink);
-    --info-text-color: var(--mint);
-    --info-tag-color: var(--mint);
-    --info-tag-underline-color: var(--pink);
+    --project-background-color: var(--bg-secondary);
+    --info-background-color: var(--bg-secondary);
+    --info-title-color: var(--highlight);
+    --info-year-color: var(--highlight);
+    --info-text-color: var(--text-secondary);
+    --info-tag-color: var(--link-secondary);
+    --info-tag-underline-color: var(--link-secondary-underline);
 
-    --overlay-nav-background-color: var(--blue);
-    --overlay-nav-icon-color: var(--pink);
+    --overlay-nav-background-color: var(--bg-secondary);
+    --overlay-nav-icon-color: var(--link-secondary-underline);
 
-    --carousel-nav-icon-color: var(--pink);
-    --carousel-navbutton-background-color: var(--blue);
+    --carousel-navbutton-background-color: var(--bg-secondary);
+    --carousel-nav-icon-color: var(--highlight);
 
-    --footer-background-color: var(--blue);
-    --footer-border-color: var(--mint);
-    --footer-text-color: var(--pink);
-    --footer-link-color: var(--mint);
+    --footer-background-color: var(--bg-secondary);
+    --footer-text-color: var(--highlight);
+    --footer-link-color: var(--link-secondary);
 
-    --services-background-color: var(--red);
-    --services-text-color: var(--yellow);
+    --services-background-color: var(--bg-primary);
+    --services-text-color: var(--text-primary);
+    --services-list-bg-color: var(--bg-secondary);
+    --services-list-text-color: var(--text-secondary);
+    --services-list-group-color: var(--highlight);
 
-    --contact-background-color: var(--red);
-    --contact-text-color: var(--yellow);
-    --contact-link-color: var(--yellow);
+    --contact-background-color: var(--bg-primary);
+    --contact-text-color: var(--text-primary);
+    --contact-link-color: var(--link-primary);
 }
 
 /* media queries */

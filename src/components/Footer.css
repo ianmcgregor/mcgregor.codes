@@ -8,7 +8,7 @@
 }
 .Footer::before {
     background-color: var(--footer-background-color);
-    border-top: solid var(--footer-border-color);
+    border-top: solid var(--border-color);
     border-width: var(--border-width);
     content: "";
     height: 100%;

@@ -13,7 +13,7 @@
 }
 .Info-inner::before {
     background-color: var(--info-background-color);
-    border-bottom: solid var(--footer-border-color);
+    border-bottom: solid var(--border-color);
     border-width: var(--border-width);
     content: "";
     /*height: 110%;*/

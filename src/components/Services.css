@@ -28,28 +28,28 @@
     text-transform: none;
 }
 .Services-list {
-    color: var(--mint);
+    color: var(--services-list-text-color);
     font-size: var(--font-size-small);
     flex: 1;
     padding: var(--spacing-wide);
     position: relative;
 }
 .Services-list::before {
-    border-top: solid var(--footer-border-color);
-    border-bottom: solid var(--footer-border-color);
+    border-top: solid var(--border-color);
+    border-bottom: solid var(--border-color);
     border-width: var(--border-width);
     box-sizing: border-box;
     content: "";
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: var(--blue);
+    background-color: var(--services-list-bg-color);
     left: 0;
     top: 10px;
     /*transform: translate(-15px, -10px) skewY(2deg);*/
 }
 .Services-group {
-    color: var(--pink);
+    color: var(--services-list-group-color);
     width: 100%;
 }
 .Services-list ul {

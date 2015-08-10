@@ -10,7 +10,7 @@
     padding-bottom: 22px;
 }
 .Header::before {
-    border-bottom: solid var(--footer-border-color);
+    border-bottom: solid var(--border-color);
     border-width: var(--border-width);
     background-color: var(--header-bg-color);
     height: 66px;
