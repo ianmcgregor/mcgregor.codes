@@ -12,7 +12,7 @@ class Store extends EventEmitter {
 
         // possible sizes: 1280x720, 960x540, 800x450, 640x360
         const isWide = window.matchMedia(constants.MQ_NARROW).matches;
-        const imagePath = 'dist/img/' + (isWide ? '1280x720' : '800x450') + '/';
+        const imagePath = (window.isDebug ? '' : 'dist/') + 'img/' + (isWide ? '1280x720' : '800x450') + '/';
 
         function getCaption(project, index) {
             const {text} = project;
