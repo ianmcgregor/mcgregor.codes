@@ -6,7 +6,7 @@
     padding: var(--spacing-wide);
     text-transform: none;
 }
-@media (--medium) {
+@media (--narrow) {
     .Contact {
         font-size: var(--font-size-x-large);
     }

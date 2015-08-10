@@ -25,17 +25,12 @@
 .Header-title {
     color: var(--header-title-color);
     flex: 1;
-    font-size: var(--font-size-medium);
+    font-size: var(--font-size-large);
     font-weight: normal;
     line-height: 1;
     margin: 0;
 }
 @media (--narrow) {
-    .Header-title {
-        font-size: var(--font-size-large);
-    }
-}
-@media (--medium) {
     .Header-title {
         font-size: var(--font-size-x-large);
     }

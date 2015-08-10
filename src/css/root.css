@@ -2,9 +2,9 @@
 
 /* font face */
 
-@import url(http://fonts.googleapis.com/css?family=Inconsolata:400,700);
+/*@import url(http://fonts.googleapis.com/css?family=Inconsolata:400,700);*/
 /*@import url(http://fonts.googleapis.com/css?family=Nunito:400,700,300);*/
-/*@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700);*/
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700);
 /*@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700);*/
 
 /* vars */
@@ -12,7 +12,7 @@
 :root {
     /* font family */
 
-    --font: "Inconsolata", monospace, Courier;
+    --font: "Source Sans Pro", monospace, Courier;
 
     /* font size */
 
@@ -35,7 +35,20 @@
     --yellow: #ffe610;
     --red: #fa4d46;
 
-    --bg-primary: var(--red);
+    --bg-primary: #fafafa;
+    --text-primary: black;
+    --link-primary: black;
+    --link-primary-underline: black;
+
+    --bg-secondary: #303030;
+    --text-secondary: white;
+    --link-secondary: #fafafa;
+    --link-secondary-underline: var(--mint);
+
+    --border-color: var(--mint);
+    --highlight: var(--mint);
+    --title: #fafafa;
+    /*--bg-primary: var(--red);
     --text-primary: var(--yellow);
     --link-primary: var(--yellow);
     --link-primary-underline: var(--yellow);
@@ -46,12 +59,12 @@
     --link-secondary-underline: var(--pink);
 
     --border-color: var(--mint);
-    --highlight: var(--pink);
+    --highlight: var(--pink);*/
 
     /* component colors */
 
     --header-bg-color: var(--bg-secondary);
-    --header-title-color: var(--highlight);
+    --header-title-color: var(--title);
     --header-link-color: var(--link-secondary);
     --header-link-hover-color: var(--link-secondary-underline);
 
@@ -63,8 +76,8 @@
 
     --project-background-color: var(--bg-secondary);
     --info-background-color: var(--bg-secondary);
-    --info-title-color: var(--highlight);
-    --info-year-color: var(--highlight);
+    --info-title-color: var(--title);
+    --info-year-color: var(--title);
     --info-text-color: var(--text-secondary);
     --info-tag-color: var(--link-secondary);
     --info-tag-underline-color: var(--link-secondary-underline);

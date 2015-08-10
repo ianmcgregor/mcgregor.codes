@@ -3,6 +3,7 @@
 }
 .Project {
     flex: 0 1 auto;
+    box-shadow: 6px 8px 32px 4px rgba(0,0,0,0.3);
     margin-bottom: 20px;
     margin-top: 10px;
     position: relative;
@@ -13,9 +14,12 @@
     padding-top: calc(56.25% + var(--project-info-height));
     width: 100%;
 }
+.Project.is-selected {
+    box-shadow: none;
+}
 .Project-inner {
     background-color: var(--project-background-color);
-    border-top: solid var(--border-color);
+    /*border-top: solid var(--border-color);*/
     border-width: var(--border-width);
     height: calc(100% - var(--project-info-height));
     left: 0;
