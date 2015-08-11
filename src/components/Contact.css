@@ -2,9 +2,9 @@
 .Contact {
     background-color: var(--contact-background-color);
     color: var(--contact-text-color);
-    flex: 1;
     padding: var(--spacing-wide);
     text-transform: none;
+    flex: 1 0 auto;
 }
 @media (--narrow) {
     .Contact {

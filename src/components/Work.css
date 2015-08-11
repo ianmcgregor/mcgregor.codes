@@ -3,7 +3,7 @@
 }
 .Work {
     background-color: var(--work-background-color);
-    flex: 1;
+    flex: 1 0 auto;
 }
 .Work-tags {
     background-color: var(--work-tags-background-color);

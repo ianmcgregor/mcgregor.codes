@@ -1,6 +1,7 @@
 :root {}
 .Footer {
     background-color: var(--work-background-color);
+    flex-shrink: 0;
     overflow: hidden;
     padding: var(--spacing-wide);
     padding-top: 40px;

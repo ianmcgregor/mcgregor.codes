@@ -3,6 +3,7 @@
     align-items: center;
     background-color: var(--work-background-color);
     display: flex;
+    flex-shrink: 0;
     justify-content: space-between;
     padding: var(--spacing-wide);
     position: relative;
@@ -25,7 +26,7 @@
 .Header-title {
     color: var(--header-title-color);
     flex: 1;
-    font-size: var(--font-size-large);
+    font-size: var(--font-size-medium);
     font-weight: normal;
     line-height: 1;
     margin: 0;
@@ -40,15 +41,20 @@
 }
 .Header-menuItem {
     display: block;
-    margin: 0 var(--spacing);
+    margin: 0 var(--spacing-narrow);
 }
-.Header-menuItem:last-child {
-    margin-right: 0;
+@media (--narrow) {
+    .Header-menuItem {
+        margin: 0 var(--spacing);
+    }
 }
 @media (--medium) {
     .Header-menuItem {
         margin: 0 var(--spacing-wide);
     }
+}
+.Header-menuItem:last-child {
+    margin-right: 0;
 }
 .Header-link {
     color: var(--header-link-color);

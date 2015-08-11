@@ -5,7 +5,7 @@
     color: var(--services-text-color);
     display: flex;
     flex-direction: column;
-    flex: 1;
+    flex: 1 0 auto;
     justify-content: space-between;
     padding: var(--spacing-wide);
     width: 100%;
