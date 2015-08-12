@@ -1,5 +1,6 @@
 :root {}
 .Overlay {
+    background-color: var(--overlay-nav-background-color);
     opacity: 0;
     overflow: hidden;
     position: absolute;
@@ -8,33 +9,24 @@
     transition: opacity 0.3s ease-out;
     visibility: hidden;
 }
-.Overlay::before {
-    background-color: var(--overlay-nav-background-color);
-    content: "";
-    height: 50px;
-    position: absolute;
-    /*transform: translate(12px, -2px) skewY(2deg);*/
-    width: 84px;
-}
 .Overlay-nav {
     align-items: center;
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
-    padding-left: 2px;
-    padding: var(--spacing);
+    padding: 4px 8px;
     position: relative;
 }
 .Overlay-link, .Overlay-close {
     color: var(--overlay-nav-icon-color);
-    margin-left: 15px;
 }
 .Overlay-close {
     display: none;
+    margin-left: var(--spacing-wide);
 }
 @media (--narrow) {
     .Overlay-nav {
-        padding-left: var(--spacing);
+        padding: 8px 12px;
     }
     .Overlay-close {
         display: block;

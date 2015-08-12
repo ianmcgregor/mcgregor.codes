@@ -33,7 +33,7 @@
 .Filter--info {
     align-items: center;
     line-height: 1;
-    margin-bottom: 16px;
+    margin-bottom: var(--spacing);
     width: 100%;
 }
 .Filter--info .Filter-item {

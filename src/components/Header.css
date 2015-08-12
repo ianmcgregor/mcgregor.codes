@@ -1,27 +1,15 @@
 :root {}
 .Header {
     align-items: center;
-    background-color: var(--work-background-color);
+    border-bottom: solid var(--border-color);
+    border-width: var(--border-width);
+    background-color: var(--header-bg-color);
     display: flex;
     flex-shrink: 0;
     justify-content: space-between;
     padding: var(--spacing-wide);
     position: relative;
-    z-index: 1;
     padding-bottom: 22px;
-}
-.Header::before {
-    border-bottom: solid var(--border-color);
-    border-width: var(--border-width);
-    background-color: var(--header-bg-color);
-    height: 66px;
-    content: "";
-    left: 0;
-    position: absolute;
-    top: -12px;
-    /*transform: skewY(-0.75deg);*/
-    width: 100%;
-    z-index: -1;
 }
 .Header-title {
     color: var(--header-title-color);

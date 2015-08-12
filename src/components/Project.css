@@ -29,7 +29,7 @@
     transition-duration: 0.3s;
     transition-timing-function: ease-in;
     width: 100%;
-    z-index: 0
+    z-index: 0;
 }
 .Project.is-selected .Project-inner {
     transition-timing-function: ease-out;

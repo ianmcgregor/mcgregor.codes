@@ -30,37 +30,26 @@
 
     /* color palette */
 
-    --blue: #3859ff;
+    --light-grey: #fafafa;
+    --dark-grey: #303030;
     --mint: #6bffa1;
-    --pink: #fa9ef3;
+    /*--pink: #fa9ef3;
     --yellow: #ffe610;
-    --red: #fa4d46;
+    --red: #fa4d46;*/
 
-    --bg-primary: #fafafa;
+    --bg-primary: var(--light-grey);
     --text-primary: black;
     --link-primary: black;
     --link-primary-underline: black;
 
-    --bg-secondary: #303030;
+    --bg-secondary: var(--dark-grey);
     --text-secondary: white;
-    --link-secondary: #fafafa;
+    --link-secondary: var(--light-grey);
     --link-secondary-underline: var(--mint);
 
     --border-color: var(--mint);
     --highlight: var(--mint);
-    --title: #fafafa;
-    /*--bg-primary: var(--red);
-    --text-primary: var(--yellow);
-    --link-primary: var(--yellow);
-    --link-primary-underline: var(--yellow);
-
-    --bg-secondary: var(--blue);
-    --text-secondary: var(--mint);
-    --link-secondary: var(--mint);
-    --link-secondary-underline: var(--pink);
-
-    --border-color: var(--mint);
-    --highlight: var(--pink);*/
+    --title: var(--light-grey);
 
     /* component colors */
 
