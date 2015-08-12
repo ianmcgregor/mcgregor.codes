@@ -4,10 +4,7 @@
     border-top: solid var(--border-color);
     border-width: var(--border-width);
     flex-shrink: 0;
-    overflow: hidden;
     padding: var(--spacing-wide);
-    padding-top: 40px;
-    position: relative;
 }
 .Footer-list {
     align-items: center;
@@ -18,8 +15,6 @@
     justify-content: space-between;
     margin: 0;
     padding: 0;
-    position: relative;
-    z-index: 1;
 }
 @media (--medium) {
     .Footer-list {
