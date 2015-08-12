@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Router from 'react-router';
-import {DefaultRoute, NotFoundRoute, Route} from 'react-router';
+import {DefaultRoute, NotFoundRoute, Route, Redirect} from 'react-router';
 import App from './components/App';
 import Services from './components/Services';
 import Contact from './components/Contact';
@@ -21,6 +21,7 @@ const routes = (
         <Route name="contact" handler={Contact}/>
         <DefaultRoute handler={Work}/>
         <NotFoundRoute handler={Work}/>
+        <Redirect from="/" to="projects"/>
     </Route>
 );
 
