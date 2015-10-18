@@ -1,8 +1,22 @@
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
-import {RouteHandler} from 'react-router';
 import {store} from '../model/store';
+import {History} from 'react-router';
+
+import ReactMixin from 'react-mixin';
+import track from '../utils/track';
+
+function getDocTitle(pathname) {
+    const title = 'CGREGOR CODES';
+    return title + pathname
+        .replace('_', ' ')
+        .replace('/', ' / ')
+        .toUpperCase();
+}
+
+
+@ReactMixin.decorate(History)
 
 class App extends React.Component {
 
@@ -10,23 +24,23 @@ class App extends React.Component {
         super(props);
 
         this._onChange = this._onChange.bind(this);
-    }
 
-    static contextTypes = {
-        router: React.PropTypes.func.isRequired
+        // init Google Analytics
+        track.init('UA-66215708-1');
     }
 
     _onChange () {
-        const {router} = this.context;
         const filter = store.getFilter();
+
         if (filter) {
-            router.transitionTo('filter', {filter});
+            this.history.pushState(null, `/projects/filter/${filter}`);
         } else {
-            router.transitionTo('projects');
+            this.history.pushState(null, '/projects');
         }
     }
 
     render () {
+
         const {params} = this.props;
         if (!(params.project || params.filter)) {
             store.getFilters().length = 0;
@@ -37,14 +51,27 @@ class App extends React.Component {
         return (
             <div className="App">
                 <Header />
-                <RouteHandler project={project} filter={filter}/>
+                    {React.cloneElement(this.props.children, {project, filter})}
                 <Footer />
             </div>
         );
     }
 
+    _pathChanged () {
+        const {pathname} = this.props.location;
+        console.debug('Route changed: ', pathname);
+
+        document.title = getDocTitle(pathname);
+        track.page(pathname);
+    }
+
+    componentDidUpdate () {
+        this._pathChanged();
+    }
+
     componentDidMount () {
         store.addChangeListener(this._onChange);
+        this._pathChanged();
     }
 
     componentWillUnmount () {

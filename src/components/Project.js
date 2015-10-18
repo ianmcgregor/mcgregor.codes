@@ -1,13 +1,17 @@
 import {debounce} from 'lodash';
 import React from 'react';
-// import {Link} from 'react-router';
+import ReactDOM from 'react-dom';
 import Carousel from './Carousel';
 import Info from './Info';
 import Overlay from './Overlay';
 import Picture from './Picture';
 import constants from '../model/constants';
+import {History} from 'react-router';
+import ReactMixin from 'react-mixin';
 
 let depth = 1;
+
+@ReactMixin.decorate(History)
 
 class Project extends React.Component {
 
@@ -17,10 +21,6 @@ class Project extends React.Component {
         this._onScroll = this._onScroll.bind(this);
         this._onResize = debounce(this._onResize.bind(this), 500);
         this._onSelect = this._onSelect.bind(this);
-    }
-
-    static contextTypes = {
-        router: React.PropTypes.func.isRequired
     }
 
     static propTypes = {
@@ -49,11 +49,11 @@ class Project extends React.Component {
 
     _onScroll () {
         if (this._isWide()) {
-            const {router} = this.context;
-            if (!router.goBack()) {
-                router.transitionTo('projects');
+
+            if (!this.history.goBack()) {
+                this.history.pushState(null, '/projects');
             }
-        } else if (!this._inViewport(React.findDOMNode(this))) {
+        } else if (!this._inViewport(ReactDOM.findDOMNode(this))) {
             this.setState({
                 isSelected: false
             });
@@ -69,8 +69,7 @@ class Project extends React.Component {
 
     _onSelect (project) {
         if (this._isWide()) {
-            const {router} = this.context;
-            router.transitionTo('project', {project});
+            this.history.pushState(null, `/projects/${project}`);
         } else {
             this.setState({
                 isSelected: true
@@ -79,11 +78,11 @@ class Project extends React.Component {
     }
 
     _getRect () {
-        const inner = React.findDOMNode(this.refs.inner);
+        const inner = ReactDOM.findDOMNode(this.refs.inner);
         let {left, top, width, height} = inner.getBoundingClientRect();
 
         const viewportWidth = Math.min(window.innerWidth, document.documentElement.clientWidth);
-        const infoHeight = 120;//React.findDOMNode(this.refs.info).offsetHeight;
+        const infoHeight = 120;//ReactDOM.findDOMNode(this.refs.info).offsetHeight;
         const viewportHeight = window.innerHeight - infoHeight;
         const scale = Math.min(viewportWidth / width, viewportHeight / height);
 

@@ -26,7 +26,7 @@ var processors = [
         //     return 'http://example.com/' + url
         // }
     }),
-    require('autoprefixer-core')({
+    require('autoprefixer')({
         browsers: ['last 2 version'],
         cascade: false
     })

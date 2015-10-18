@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import Picture from './Picture';
 import swipe from '../utils/swipe';
 
@@ -127,7 +128,7 @@ class Carousel extends React.Component {
     componentDidMount () {
         const {swiper, autoPlay} = this.state;
 
-        swiper.listen(React.findDOMNode(this))
+        swiper.listen(ReactDOM.findDOMNode(this))
             .on('left', this._next)
             .on('right', this._prev);
 

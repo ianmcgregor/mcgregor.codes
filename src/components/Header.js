@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router';
+import {Link, IndexLink} from 'react-router';
 
 class Header extends React.Component {
 
@@ -10,17 +10,17 @@ class Header extends React.Component {
                 <nav>
                     <ul className="Header-menu">
                         <li className="Header-menuItem">
-                            <Link className="Header-link u-link" to="projects">
+                            <IndexLink className="Header-link u-link" to="/projects" activeClassName="active">
                                 Projects
-                            </Link>
+                            </IndexLink>
                         </li>
                         <li className="Header-menuItem">
-                            <Link className="Header-link u-link" to="services">
+                            <Link className="Header-link u-link" to="/services" activeClassName="active">
                                 Services
                             </Link>
                         </li>
                         <li className="Header-menuItem">
-                            <Link className="Header-link u-link" to="contact">
+                            <Link className="Header-link u-link" to="/contact" activeClassName="active">
                                 Contact
                             </Link>
                         </li>
