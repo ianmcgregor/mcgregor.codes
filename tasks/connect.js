@@ -1,9 +1,7 @@
-'use strict';
-
-var args = require('yargs').argv;
-var browserSync = require('browser-sync').create();
-var historyApiFallback = require('connect-history-api-fallback');
-var paths = require('./paths.json').connect;
+const args = require('yargs').argv;
+const browserSync = require('browser-sync').create();
+const historyApiFallback = require('connect-history-api-fallback');
+const paths = require('./paths.json').connect;
 
 module.exports = function() {
     browserSync.init({

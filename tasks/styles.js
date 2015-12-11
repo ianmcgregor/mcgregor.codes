@@ -1,24 +1,18 @@
-'use strict';
+const chalk = require('chalk');
+const gulp = require('gulp');
+const plumber = require('gulp-plumber');
+const postcss = require('gulp-postcss');
+const rename = require('gulp-rename');
+const sourcemaps = require('gulp-sourcemaps');
+const paths = require('./paths.json').styles;
 
-var args = require('yargs').argv;
-var chalk = require('chalk');
-var csslint = require('gulp-csslint');
-var gulp = require('gulp');
-var gulpif = require('gulp-if');
-var minify = require('gulp-minify-css');
-var plumber = require('gulp-plumber');
-var postcss = require('gulp-postcss');
-var rename = require('gulp-rename');
-var sourcemaps = require('gulp-sourcemaps');
-
-var paths = require('./paths.json').styles;
-var isProduction = args.min; // eg: gulp --min
-
-var processors = [
+const processors = [
+    require('postcss-import')(),
     require('postcss-nested')(),
     require('postcss-custom-media')(),
     require('postcss-custom-properties')(),
     require('postcss-calc')(),
+    require('postcss-easings')(),
     require('postcss-url')({
         url: 'inline',
         maxSize: 4096
@@ -29,7 +23,8 @@ var processors = [
     require('autoprefixer')({
         browsers: ['last 2 version'],
         cascade: false
-    })
+    }),
+    require('cssnano')()
 ];
 
 function logError(msg) {
@@ -38,38 +33,26 @@ function logError(msg) {
 
 function bundle() {
     return gulp.src(paths.entry)
-        .pipe(plumber({
-            errorHandler: logError
-        }))
-        .pipe(sourcemaps.init({
-            loadMaps: true
-        }))
-        .pipe(minify({
-            keepBreaks: true,
-            advanced: false
-        }).on('error', logError))
-        // .pipe(stylus({
-        //     'include css': true,
-        //     sourcemap: {
-        //         inline: true,
-        //         sourceRoot: '.',
-        //         basePath: 'src/css'
-        //     }
-        // }).on('error', logError))
+        .pipe(plumber({errorHandler: logError}))
+        .pipe(sourcemaps.init({loadMaps: true}))
         .pipe(rename(paths.bundle))
         .pipe(postcss(processors))
-        .pipe(sourcemaps.write())
-        // .pipe(gulpif(isProduction, minify()))
-        .pipe(gulpif(isProduction, rename({
-            suffix: '.min'
-        })))
+        .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(paths.dest));
 }
 
 function lint() {
     return gulp.src(paths.lint)
-        .pipe(csslint('/.csslintrc'))
-        .pipe(csslint.reporter());
+        .pipe(plumber({
+            errorHandler: logError
+        }))
+        .pipe(postcss([
+            require('postcss-bem-linter')(),
+            require('stylelint')(),
+            require('postcss-reporter')({
+                clearMessages: true
+            })
+        ]));
 }
 
 function watch() {

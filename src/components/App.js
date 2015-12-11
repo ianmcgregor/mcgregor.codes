@@ -16,8 +16,7 @@ function getDocTitle(pathname) {
 }
 
 
-@ReactMixin.decorate(History)
-
+// @ReactMixin.decorate(History)
 class App extends React.Component {
 
     constructor (props) {
@@ -78,5 +77,7 @@ class App extends React.Component {
         store.removeChangeListener(this._onChange);
     }
 }
+
+ReactMixin.onClass(App, History);
 
 export {App as default};

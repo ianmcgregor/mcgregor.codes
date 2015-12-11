@@ -29,15 +29,15 @@ class Services extends React.Component {
                     lead dev or working on my own.</p>
                 </div>
                 <div className="Services-list">
-                    <ul>
-                        <li className="Services-group">Basics</li>
+                    <ul className="Services-group">
+                        <li className="Services-name">Basics</li>
                         <li>JavaScript (ES5, ES6 + Babel)</li>
                         <li>CSS (Vanilla, Stylus, Sass)</li>
                         <li>Unit Tests (Karma, Mocha, Chai)</li>
                         <li>Node.js, Gulp, AWS, GitFlow</li>
                     </ul>
-                    <ul>
-                        <li className="Services-group">Libraries/Apis</li>
+                    <ul className="Services-group">
+                        <li className="Services-name">Libraries/Apis</li>
                         <li>React, Flux</li>
                         <li>Backbone, Marionette</li>
                         <li>Angular</li>
@@ -53,8 +53,8 @@ class Services extends React.Component {
                         <li>Modernizr, jQuery</li>
                         <li>YouTube, Facebook Apis</li>
                     </ul>
-                    <ul>
-                        <li className="Services-group">Non-coding</li>
+                    <ul className="Services-group">
+                        <li className="Services-name">Non-coding</li>
                         <li>UX</li>
                         <li>Wireframes</li>
                         <li>Tech Specs</li>

@@ -1,19 +1,19 @@
-:root {}
 .Contact {
     background-color: var(--contact-background-color);
     color: var(--contact-text-color);
+    flex: 1 0 auto;
     padding: var(--spacing-wide);
     text-transform: none;
-    flex: 1 0 auto;
-}
-@media (--narrow) {
-    .Contact {
+
+    li:first-child {
+        margin-bottom: 10px;
+    }
+
+    @media (--narrow) {
         font-size: var(--font-size-x-large);
     }
 }
-.Contact li:first-child {
-    margin-bottom: 10px;
-}
+
 .Contact-link {
     color: var(--contact-link-color);
     font-weight: bold;

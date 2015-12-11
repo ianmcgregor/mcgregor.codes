@@ -1,22 +1,19 @@
-'use strict';
+const args = require('yargs').argv;
+const browserify = require('browserify');
+const buffer = require('vinyl-buffer');
+const chalk = require('chalk');
+const debug = require('gulp-debug');
+const gulp = require('gulp');
+const gulpif = require('gulp-if');
+const eslint = require('gulp-eslint');
+const rename = require('gulp-rename');
+const source = require('vinyl-source-stream');
+const strip = require('gulp-strip-debug');
+const uglify = require('gulp-uglify');
+const watchify = require('watchify');
 
-var args = require('yargs').argv;
-var browserify = require('browserify');
-var buffer = require('vinyl-buffer');
-var chalk = require('chalk');
-var debug = require('gulp-debug');
-var gulp = require('gulp');
-var gulpif = require('gulp-if');
-var jscs = require('gulp-jscs');
-var eslint = require('gulp-eslint');
-var rename = require('gulp-rename');
-var source = require('vinyl-source-stream');
-var strip = require('gulp-strip-debug');
-var uglify = require('gulp-uglify');
-var watchify = require('watchify');
-
-var paths = require('./paths.json').scripts;
-var isProduction = args.min; // eg: gulp --min
+const paths = require('./paths.json').scripts;
+const isProduction = args.min; // eg: gulp --min
 
 var bundler = browserify({
     entries: paths.entry,
@@ -31,12 +28,6 @@ function lint() {
     return gulp.src(paths.lint)
         .pipe(eslint())
         .pipe(eslint.format());
-}
-
-function lintJscs() {
-    return gulp.src(paths.lint)
-        .pipe(debug())
-        .pipe(jscs());
 }
 
 function bundle() {
@@ -62,6 +53,5 @@ function watch() {
 module.exports = {
     bundle: bundle,
     lint: lint,
-    jscs: lintJscs,
     watch: watch
 };

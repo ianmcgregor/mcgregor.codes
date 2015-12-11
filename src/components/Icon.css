@@ -4,6 +4,7 @@
     font-weight: normal;
     src: url("../font/octicons/octicons.woff") format("woff");
 }
+
 .Icon {
     color: inherit;
     display: inline-block;
@@ -13,24 +14,31 @@
     text-rendering: auto;
     user-select: none;
 }
+
 .Icon--tag {
     font-size: var(--font-size-large);
 }
+
 .Icon--left::before {
     content: "\f0a4";
 }
+
 .Icon--right::before {
     content: "\f078";
 }
+
 .Icon--close::before {
     content: "\f081";
 }
+
 .Icon--tag::before {
     content: "\f015";
 }
+
 .Icon--link::before {
     content: "\f07f";
 }
+
 .Icon--view::before {
     content: "\f04e";
 }

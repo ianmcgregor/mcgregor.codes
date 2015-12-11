@@ -1,16 +1,14 @@
-'use strict';
+const args = require('yargs').argv;
+const path = require('path');
+const uniq = require('lodash').uniq;
+const gulp = require('gulp');
+const debug = require('gulp-debug');
+const resize = require('gulp-image-resize');
+const webp = require('imagemin-webp');
 
-var args = require('yargs').argv;
-var path = require('path');
-var uniq = require('lodash').uniq;
-var gulp = require('gulp');
-var debug = require('gulp-debug');
-var resize = require('gulp-image-resize');
-var webp = require('imagemin-webp');
+const paths = require('./paths.json').images;
 
-var paths = require('./paths.json').images;
-
-var sizes = [{
+const sizes = [{
     width: 1280,
     height: 720
 }, {
@@ -25,8 +23,8 @@ var sizes = [{
 }];
 
 function listImages(search) {
-    var config = require('../src/model/config.json');
-    var projects = config.projects;
+    const config = require('../src/model/config.json');
+    const projects = config.projects;
     if (search) {
         projects = projects.filter(function(project) {
             return project.title.toLowerCase().indexOf(search) > -1;

@@ -1,8 +1,8 @@
-:root {}
 .Info {
     height: 120px;
     width: 100%;
 }
+
 .Info-inner {
     background-color: var(--info-background-color);
     border-bottom: solid var(--border-color);
@@ -15,23 +15,27 @@
     position: relative;
     width: 100%;
 }
+
 .Info-header {
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
-    padding: 0 var(--spacing);
     margin-top: var(--spacing-narrow);
+    padding: 0 var(--spacing);
     pointer-events: none;
 }
+
 .Info-title {
     color: var(--info-title-color);
     font-size: var(--font-size-medium);
     font-weight: normal;
 }
+
 .Info-year {
     color: var(--info-year-color);
     font-size: var(--font-size-small);
 }
+
 .Info-text {
     color: var(--info-text-color);
     font-size: var(--font-size-small);

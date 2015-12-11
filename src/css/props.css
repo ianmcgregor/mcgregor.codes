@@ -1,0 +1,78 @@
+:root {
+
+    /* font family */
+
+    --font: "Source Sans Pro", monospace, Courier;
+
+    /* font size */
+
+    --font-size-small: 12px;
+    --font-size-medium: 14px;
+    --font-size-large: 16px;
+    --font-size-x-large: 24px;
+
+    /* spacing */
+
+    --spacing-narrow: 4px;
+    --spacing: 8px;
+    --spacing-wide: 16px;
+    --border-width: 4px;
+
+    /* color palette */
+
+    --light-grey: #fafafa;
+    --dark-grey: #303030;
+    --mint: #6bffa1;
+
+    /*
+    --pink: #fa9ef3;
+    --yellow: #ffe610;
+    --red: #fa4d46;
+    */
+
+    --bg-primary: var(--light-grey);
+    --text-primary: black;
+    --link-primary: black;
+    --link-primary-underline: black;
+    --bg-secondary: var(--dark-grey);
+    --text-secondary: white;
+    --link-secondary: var(--light-grey);
+    --link-secondary-underline: var(--mint);
+    --border-color: var(--mint);
+    --highlight: var(--mint);
+    --title: var(--light-grey);
+
+    /* component colors */
+
+    --header-bg-color: var(--bg-secondary);
+    --header-title-color: var(--title);
+    --header-link-color: var(--link-secondary);
+    --header-link-hover-color: var(--link-secondary-underline);
+    --work-background-color: var(--bg-primary);
+    --work-tags-border-color: none;
+    --work-tags-background-color: var(--bg-primary);
+    --work-tag-color: var(--link-primary);
+    --work-tag-hover-color: var(--link-primary-underline);
+    --project-background-color: var(--bg-secondary);
+    --info-background-color: var(--bg-secondary);
+    --info-title-color: var(--title);
+    --info-year-color: var(--title);
+    --info-text-color: var(--text-secondary);
+    --info-tag-color: var(--link-secondary);
+    --info-tag-underline-color: var(--link-secondary-underline);
+    --overlay-nav-background-color: var(--bg-secondary);
+    --overlay-nav-icon-color: var(--link-secondary-underline);
+    --carousel-navbutton-background-color: var(--bg-secondary);
+    --carousel-nav-icon-color: var(--highlight);
+    --footer-background-color: var(--bg-secondary);
+    --footer-text-color: var(--highlight);
+    --footer-link-color: var(--link-secondary);
+    --services-background-color: var(--bg-primary);
+    --services-text-color: var(--text-primary);
+    --services-list-bg-color: var(--bg-secondary);
+    --services-list-text-color: var(--text-secondary);
+    --services-list-group-color: var(--highlight);
+    --contact-background-color: var(--bg-primary);
+    --contact-text-color: var(--text-primary);
+    --contact-link-color: var(--link-primary);
+}

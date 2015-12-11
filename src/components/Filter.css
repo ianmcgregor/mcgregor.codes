@@ -1,6 +1,7 @@
 .Filter {
     display: flex;
 }
+
 .Filter-item {
     font-size: var(--font-size-small);
 }
@@ -13,15 +14,18 @@
     flex-wrap: wrap;
     justify-content: flex-start;
 }
+
 @media (--medium) {
     .Filter--work {
         justify-content: space-between;
     }
 }
+
 .Filter--work .Filter-item {
     color: var(--work-tag-color);
     margin: 0 var(--work-tag-spacing);
 }
+
 .Filter--work .Filter-item::before {
     background-color: var(--work-tag-hover-color);
 }
@@ -36,13 +40,16 @@
     margin-bottom: var(--spacing);
     width: 100%;
 }
+
 .Filter--info .Filter-item {
     color: var(--info-tag-color);
     margin: 0 var(--spacing);
 }
+
 .Filter--info .Filter-item::before {
     background-color: var(--info-tag-underline-color);
 }
+
 .Filter--info-left {
     margin-bottom: 10px;
 }

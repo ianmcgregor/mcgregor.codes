@@ -1,4 +1,3 @@
-:root {}
 .Footer {
     background-color: var(--footer-background-color);
     border-top: solid var(--border-color);
@@ -6,6 +5,7 @@
     flex-shrink: 0;
     padding: var(--spacing-wide);
 }
+
 .Footer-list {
     align-items: center;
     color: var(--footer-text-color);
@@ -16,17 +16,21 @@
     margin: 0;
     padding: 0;
 }
+
 @media (--medium) {
     .Footer-list {
         font-size: var(--font-size-large);
     }
 }
+
 .Footer-link {
     color: var(--footer-link-color);
 }
+
 .Footer-link::before {
     background-color: var(--footer-text-color);
 }
+
 .Footer-copyright {
     min-width: 40%;
     text-align: right;

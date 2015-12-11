@@ -11,7 +11,7 @@ import ReactMixin from 'react-mixin';
 
 let depth = 1;
 
-@ReactMixin.decorate(History)
+// @ReactMixin.decorate(History)
 
 class Project extends React.Component {
 
@@ -40,7 +40,7 @@ class Project extends React.Component {
     }
 
     _inViewport (el) {
-        var rect = el.getBoundingClientRect();
+        const rect = el.getBoundingClientRect();
         return (
             rect.top >= -20 &&
             rect.top <= window.innerHeight
@@ -184,5 +184,7 @@ class Project extends React.Component {
         }
     }
 }
+
+ReactMixin.onClass(Project, History);
 
 export {Project as default};

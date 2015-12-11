@@ -1,6 +1,4 @@
-'use strict';
-
-var gulp = require('gulp');
+const gulp = require('gulp');
 
 // connect
 gulp.task('connect', require('./tasks/connect'));
@@ -9,7 +7,6 @@ gulp.task('connect', require('./tasks/connect'));
 gulp.task('js', require('./tasks/scripts').bundle);
 gulp.task('js:watch', require('./tasks/scripts').watch);
 gulp.task('js:lint', require('./tasks/scripts').lint);
-gulp.task('jscs', require('./tasks/scripts').jscs);
 
 // styles
 gulp.task('css', require('./tasks/styles').bundle);

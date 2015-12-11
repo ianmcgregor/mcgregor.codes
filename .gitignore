@@ -4,11 +4,8 @@
 !/.gitignore
 !/.gitinclude
 !/.editorconfig
-!/.jscsrc
-!/.jshintrc
 !/.eslintrc
-!/.jshintignore
-!/.csslintrc
+!/.stylelintrc
 !/.travis.yml
 
 ehthumbs.db

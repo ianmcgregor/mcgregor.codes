@@ -1,54 +1,23 @@
-// import {includes} from 'lodash';
 import React from 'react';
+import ReactDOM from 'react-dom';
 import Filter from './Filter';
 import Project from './Project';
 import {store} from '../model/store';
+import Boids from './Boids';
 
 class Work extends React.Component {
 
-    // constructor (props) {
-    //     super(props);
-    //
-    //     // this._onChange = this._onChange.bind(this);
-    // }
-
-    // state = {
-    //     projects: store.getProjects(),
-    //     filters: []
-    // }
-
-    // componentDidMount () {
-    //     store.addChangeListener(this._onChange);
-    // }
-    //
-    // componentWillUnmount () {
-    //     store.removeChangeListener(this._onChange);
-    // }
-
-    // _onChange () {
-    //     this.setState({
-    //         filters: store.getFilters()
-    //     });
-    // }
-
-    // _getFilteredProjects (filters) {
-    //     if (filters && filters.length) {
-    //         const {projects} = this.state;
-    //         return projects.filter((project) => (
-    //             project.tags.some((item) => includes(filters, item.slug))
-    //         ));
-    //     }
-    //     return this.state.projects;
-    // }
+    componentDidMount () {
+        ReactDOM.findDOMNode(this);
+    }
 
     render () {
         const {project, filter} = this.props;
-        // const {filters} = this.state;
-        // const projects = this._getFilteredProjects(filters);
         const projects = store.getFilteredProjects(filter);
 
         return (
             <section className="Work">
+                <Boids/>
                 <nav className="Work-tags">
                     <Filter
                         tags={store.getTags()}

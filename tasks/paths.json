@@ -30,7 +30,11 @@
             "src/components/**/*.css",
             "src/font/**/*.css"
         ],
-        "lint": "dist/css/styles.css"
+        "lint": [
+            "src/index.css",
+            "src/css/**/*.css",
+            "src/components/**/*.css"
+        ]
     },
     "images": {
         "entry": "src/img/png",
