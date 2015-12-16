@@ -2,26 +2,27 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Router, Route, IndexRoute, Redirect} from 'react-router';
-import App from './components/App';
-import Services from './components/Services';
-import Contact from './components/Contact';
-import Work from './components/Work';
+import {Router, Route, IndexRoute} from 'react-router';
 import {createHistory} from 'history';
+
+import App from './components/App';
+import Contact from './components/Contact';
+import Home from './components/Home';
+import Services from './components/Services';
+import Work from './components/Work';
 
 const container = document.querySelector('[data-region="container"]');
 
 const routes = (
     <Route path="/" component={App} ignoreScrollBehavior={true}>
-        <Route path="services" component={Services}/>
+        <IndexRoute component={Home}/>
         <Route path="projects" component={Work}>
             <Route path="filter/:filter" component={Work}/>
             <Route path=":project" component={Work}/>
         </Route>
+        <Route path="services" component={Services}/>
         <Route path="contact" component={Contact}/>
-        <IndexRoute component={Work}/>
-        <Route path="*" component={Work}/>
-        <Redirect from="/" to="/projects"/>
+        <Route path="*" component={Home}/>
     </Route>
 );
 

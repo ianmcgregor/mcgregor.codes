@@ -15,7 +15,6 @@
     width: 100%;
 }
 
-.u-link.active::before,
 .u-link.is-active::before {
     transform: scaleX(1);
 }
@@ -24,4 +23,13 @@
     .u-link:hover::before {
         transform: scaleX(1);
     }
+}
+
+.u-background {
+    background: linear-gradient(to bottom,
+        var(--home-background-color)
+        0%,
+        #fff
+        100%
+    );
 }

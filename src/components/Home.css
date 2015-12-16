@@ -1,0 +1,20 @@
+.Home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-transform: none;
+    z-index: -1;
+}
+
+.Home-title {
+    color: var(--header-title-color);
+    font-size: 48px;
+    font-weight: normal;
+}
+
+.Home-subtitle {
+    max-width: 50vw;
+    text-align: center;
+}

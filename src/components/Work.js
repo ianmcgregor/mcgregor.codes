@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import Filter from './Filter';
 import Project from './Project';
 import {store} from '../model/store';
-import Boids from './Boids';
 
 class Work extends React.Component {
 
@@ -16,8 +15,7 @@ class Work extends React.Component {
         const projects = store.getFilteredProjects(filter);
 
         return (
-            <section className="Work">
-                <Boids/>
+            <main className="Work">
                 <nav className="Work-tags">
                     <Filter
                         tags={store.getTags()}
@@ -25,7 +23,7 @@ class Work extends React.Component {
                         modifier="Filter--work"
                         showCount={true}/>
                 </nav>
-                <div className="Work-projects">
+                <section className="Work-projects">
                     {projects.map((p) => (
                         <Project
                             key={p.key}
@@ -33,8 +31,8 @@ class Work extends React.Component {
                             project={p}
                             isSelected={project === p.slug}/>
                     ))}
-                </div>
-            </section>
+                </section>
+            </main>
         );
     }
 }

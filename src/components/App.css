@@ -2,4 +2,10 @@
     display: flex;
     flex-direction: column;
     height: 100vh;
+
+    main {
+        background-color: var(--bg-primary);
+        background: var(--bg-gradient);
+        flex: 1 0 auto;
+    }
 }

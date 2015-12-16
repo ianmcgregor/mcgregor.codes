@@ -1,9 +1,9 @@
 .Footer {
     background-color: var(--footer-background-color);
-    border-top: solid var(--border-color);
+    /*border-top: solid var(--border-color);*/
     border-width: var(--border-width);
     flex-shrink: 0;
-    padding: var(--spacing-wide);
+    padding: var(--spacing) var(--spacing-wide);
 }
 
 .Footer-list {
@@ -15,10 +15,8 @@
     justify-content: space-between;
     margin: 0;
     padding: 0;
-}
 
-@media (--medium) {
-    .Footer-list {
+    @media (--medium) {
         font-size: var(--font-size-large);
     }
 }

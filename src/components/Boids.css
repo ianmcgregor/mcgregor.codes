@@ -1,24 +1,27 @@
 :root {
-    --boid-size: 20px;
+    --boids-size: 30px;
+    --boids-opacity: 1;
+    --boids-color: var(--mint);
 }
 
 .Boids {
     height: 100%;
     left: 0;
+    overflow: hidden;
     pointer-events: none;
     position: absolute;
-    top: 100px;
+    top: 0;
     width: 100%;
-    z-index: 0;
+    z-index: -1;
 
     > b {
-        background-color: var(--mint);
-        border-radius: 2px;
-        box-shadow: 0 0 12px var(--mint);
+        width: 0;
+    	height: 0;
+    	border-top: var(--boids-size) solid transparent;
+    	border-bottom: var(--boids-size) solid transparent;
+    	border-left: var(--boids-size) solid var(--boids-color);
         display: block;
-        height: var(--boid-size);
-        opacity: 0.5;
+        opacity: var(--boids-opacity);
         position: absolute;
-        width: var(--boid-size);
     }
 }

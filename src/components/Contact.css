@@ -1,7 +1,5 @@
 .Contact {
-    background-color: var(--contact-background-color);
     color: var(--contact-text-color);
-    flex: 1 0 auto;
     padding: var(--spacing-wide);
     text-transform: none;
 

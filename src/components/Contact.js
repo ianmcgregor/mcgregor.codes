@@ -8,7 +8,7 @@ class Contact extends React.Component {
 
     render () {
         return (
-            <div className="Contact">
+            <main className="Contact">
                 {/*<h2>Contact</h2>
                 <p>
                     Message me at <a href="mailto:ian@mcgregor.codes">
@@ -69,7 +69,7 @@ class Contact extends React.Component {
                         </a> on StackOverflow
                     </li>
                 </ul>
-            </div>
+            </main>
         );
     }
 }

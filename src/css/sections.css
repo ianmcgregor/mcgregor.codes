@@ -16,3 +16,7 @@ body {
     padding: 0;
     text-transform: uppercase;
 }
+
+main {
+    display: block;
+}

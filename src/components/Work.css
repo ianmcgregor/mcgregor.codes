@@ -2,12 +2,7 @@
     --work-tag-spacing: 6px;
 }
 
-.Work {
-    background-color: var(--work-background-color);
-
-    /*background-color: #303030; */
-    flex: 1 0 auto;
-}
+.Work {}
 
 .Work-tags {
     background-color: var(--work-tags-background-color);

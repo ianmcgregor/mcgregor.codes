@@ -16,6 +16,10 @@
     flex-direction: row;
     padding: 4px 8px;
     position: relative;
+
+    @media (--narrow) {
+        padding: 8px 12px;
+    }
 }
 
 .Overlay-link,
@@ -26,14 +30,8 @@
 .Overlay-close {
     display: none;
     margin-left: var(--spacing-wide);
-}
 
-@media (--narrow) {
-    .Overlay-nav {
-        padding: 8px 12px;
-    }
-
-    .Overlay-close {
+    @media (--narrow) {
         display: block;
     }
 }

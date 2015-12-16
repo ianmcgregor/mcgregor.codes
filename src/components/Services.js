@@ -8,27 +8,22 @@ class Services extends React.Component {
 
     render () {
         return (
-            <div className="Services">
-                <div className="Services-info">
+            <main className="Services">
+                <section className="Services-info">
                     <h2>About</h2>
-
-                    <p>Specialist in creative, experiential
-                    web sites and applications.</p>
 
                     <p>I write robust, performant JavaScript and CSS.
                     The KISS, DRY and YAGNI principles are always on my mind.</p>
+
+                    <p>I love to push the limits of the technologies at hand.</p>
 
                     <p>My work has won over 60 major awards including
                     FWA Site of the Year, two FWA Site of the Months, a
                     pride of Cannes Lions including the Grand Prix and
                     several Golds, plus a few Webbys, Awwwards
                     SOTDs and D&AD pencils.</p>
-
-                    <p>I love to push the limits of the technologies at hand.
-                    I'm equally comfortable leading a dev team, working with a
-                    lead dev or working on my own.</p>
-                </div>
-                <div className="Services-list">
+                </section>
+                <section className="Services-list">
                     <ul className="Services-group">
                         <li className="Services-name">Basics</li>
                         <li>JavaScript (ES5, ES6 + Babel)</li>
@@ -60,8 +55,8 @@ class Services extends React.Component {
                         <li>Tech Specs</li>
                         <li>Timings</li>
                     </ul>
-                </div>
-            </div>
+                </section>
+            </main>
         );
     }
 }

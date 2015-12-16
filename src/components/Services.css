@@ -1,9 +1,7 @@
 .Services {
-    background-color: var(--services-background-color);
     box-sizing: border-box;
     color: var(--services-text-color);
     display: flex;
-    flex: 1 0 auto;
     flex-direction: column;
     justify-content: space-between;
     padding: var(--spacing-wide);

@@ -20,34 +20,181 @@
 
     /* color palette */
 
+    --black: #222;
     --light-grey: #fafafa;
     --dark-grey: #303030;
+    --dark-grey-b: #000020;
     --mint: #6bffa1;
-
-    /*
     --pink: #fa9ef3;
     --yellow: #ffe610;
     --red: #fa4d46;
+
+
+    --bg-gradient: linear-gradient(to bottom,
+        var(--home-background-color)
+        0%,
+        #fff
+        100%
+    );
+
+
+    /*--dark-primary-color-background: #388E3C;
+    --default-primary-color-background: #4CAF50;
+    --xlight-primary-color-background: #C8E6C9;
+    --light-primary-color-background: #388E3C;
+
+    --text-primary-color-color: #FFFFFF;
+    --accent-color-background: #8BC34A;
+    --primary-text-color-color: #212121;
+    --secondary-text-color-color: #727272;
+    --divider-color-border-color: #B6B6B6;*/
+
+
+    /*--dark-primary-color-background: #455A64;
+    --default-primary-color-background: #607D8B;*/
+    /*--dark-primary-color-background: #607D8B;
+    --default-primary-color-background: #455A64;
+
+    --light-primary-color-background: #CFD8DC;
+    --text-primary-color-color: #FFFFFF;
+    --accent-color-background: #607D8B;
+    --primary-text-color-color: #212121;
+    --secondary-text-color-color: #727272;
+    --divider-color-border-color: #B6B6B6;*/
+
+    /*--dark-primary-color-background: #0288D1;
+    --default-primary-color-background: #03A9F4;
+    --light-primary-color-background: #B3E5FC;
+    --text-primary-color-color: #FFFFFF;
+    --accent-color-background: #FF4081;
+    --primary-text-color-color: #212121;
+    --secondary-text-color-color: #727272;
+    --divider-color-border-color: #B6B6B6;*/
+
+    /*--dark-primary-color-background: #00BCD4;
+    --default-primary-color-background: #0097A7;*/
+    /*--dark-primary-color-background: #0097A7;
+    --default-primary-color-background: #00BCD4;
+    --light-primary-color-background: #B2EBF2;
+    --text-primary-color-color: #FFFFFF;
+    --accent-color-background: #00BCD4;
+    --primary-text-color-color: #212121;
+    --secondary-text-color-color: #727272;
+    --divider-color-border-color: #B6B6B6;*/
+
+    /*--dark-primary-color-background: #00796B;
+    --default-primary-color-background: #009688;
+    --light-primary-color-background: #B2DFDB;
+    --text-primary-color-color: #FFFFFF;
+    --accent-color-background: #009688;
+    --primary-text-color-color: #212121;
+    --secondary-text-color-color: #727272;
+    --divider-color-border-color: #B6B6B6;*/
+
+    /*--dark-primary-color-background: #455A64;
+    --default-primary-color-background: #607D8B;
+    --light-primary-color-background: #CFD8DC;
+    --text-primary-color-color: #FFFFFF;
+    --accent-color-background: #607D8B;
+    --primary-text-color-color: #212121;
+    --secondary-text-color-color: #727272;
+    --divider-color-border-color: #B6B6B6;*/
+
+    /*--dark-primary-color-background: #FFA000;
+    --default-primary-color-background: #FFC107;
+    --light-primary-color-background: #FFECB3;
+    --text-primary-color-color: #212121;
+    --accent-color-background: #FFC107;
+    --primary-text-color-color: #212121;
+    --secondary-text-color-color: #727272;
+    --divider-color-border-color: #B6B6B6;*/
+
+    /*--dark-primary-color-background: #303F9F;
+    --default-primary-color-background: #3F51B5;
+    --light-primary-color-background: #C5CAE9;
+    --text-primary-color-color: #FFFFFF;
+    --accent-color-background: #536DFE;
+    --primary-text-color-color: #212121;
+    --secondary-text-color-color: #727272;
+    --divider-color-border-color: #B6B6B6;*/
+
+    /*--dark-primary-color-background: #D32F2F;
+    --default-primary-color-background: #F44336;
+    --light-primary-color-background: #FFCDD2;
+    --text-primary-color-color: #FFFFFF;
+    --accent-color-background: #FF5252;
+    --primary-text-color-color: #212121;
+    --secondary-text-color-color: #727272;
+    --divider-color-border-color: #B6B6B6;*/
+
+    --dark-primary-color-background: #e3e3e3;
+    --default-primary-color-background: #c9c9c9;
+    --light-primary-color-background: #89bdd3;
+    --accent-color-background: #9ad3de;
+
+    --text-primary-color-color: #FFFFFF;
+    --primary-text-color-color: #212121;
+    --secondary-text-color-color: #727272;
+    --divider-color-border-color: #B6B6B6;
+
+/*
+    --bg-header: #89bdd3;
+    --bg-primary: #c9c9c9;
+    --bg-secondary: #e3e3e3;*/
+
+    --bg-header: #fff;
+    --bg-primary: #f2f1f1;
+    --bg-secondary: #212121;
+    /*--accent-color: #ffd300;*/
+    --accent-color: var(--mint);
+    --text-color-dark: #000;
+    --text-color-light: #fff;
+    /**/
+
+    /*--bg-header: var(--dark-primary-color-background);
+    --bg-primary: var(--default-primary-color-background);
+    --bg-secondary: var(--light-primary-color-background);*/
+
+    --text-primary: var(--text-color-dark);
+    --link-primary: var(--text-color-dark);
+    --link-primary-underline: var(--accent-color);
+    --text-secondary: var(--text-color-light);
+    --link-secondary: var(--text-color-light);
+    --link-secondary-underline: var(--accent-color);
+    --border-color: var(--accent-color);
+    --highlight: var(--accent-color);
+    --title: var(--text-color-dark);
+    --info-title: var(--text-color-light);
+
+    /*
+    #FFAC00
+    #53BBF4
+    #222
     */
 
-    --bg-primary: var(--light-grey);
-    --text-primary: black;
-    --link-primary: black;
-    --link-primary-underline: black;
-    --bg-secondary: var(--dark-grey);
-    --text-secondary: white;
-    --link-secondary: var(--light-grey);
-    --link-secondary-underline: var(--mint);
-    --border-color: var(--mint);
-    --highlight: var(--mint);
-    --title: var(--light-grey);
+    /*
+    #70dee2
+    #f6f558
+    #e97547
+    #293f57
+    #bdc9cc
+    #818eaa
+    */
+
+    /*
+    #dbdecb
+    #f15d58
+
+    #2e393e
+    */
 
     /* component colors */
 
-    --header-bg-color: var(--bg-secondary);
+    --header-bg-color: var(--bg-header);
     --header-title-color: var(--title);
-    --header-link-color: var(--link-secondary);
-    --header-link-hover-color: var(--link-secondary-underline);
+    --header-link-color: var(--link-primary);
+    --header-link-hover-color: var(--link-primary-underline);
+    --home-background-color: var(--bg-primary);
     --work-background-color: var(--bg-primary);
     --work-tags-border-color: none;
     --work-tags-background-color: var(--bg-primary);
@@ -55,8 +202,8 @@
     --work-tag-hover-color: var(--link-primary-underline);
     --project-background-color: var(--bg-secondary);
     --info-background-color: var(--bg-secondary);
-    --info-title-color: var(--title);
-    --info-year-color: var(--title);
+    --info-title-color: var(--info-title);
+    --info-year-color: var(--info-title);
     --info-text-color: var(--text-secondary);
     --info-tag-color: var(--link-secondary);
     --info-tag-underline-color: var(--link-secondary-underline);
@@ -76,3 +223,8 @@
     --contact-text-color: var(--text-primary);
     --contact-link-color: var(--link-primary);
 }
+
+
+/*p, a, button, li, h1, h2, h3, h4, .dg {
+    opacity: 0 !important;
+}*/
