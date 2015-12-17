@@ -9,10 +9,10 @@ class Boids extends React.Component {
     numBoids = 50;
 
     options = {
-        mass: 1,
-        maxForce: 0.5,
-        maxSpeed: 8,
         edgeBehavior: 'wrap',
+        mass: 1,
+        maxSpeed: 8,
+        maxForce: 0.5,
         minDistance: 50,
         maxDistance: 300
     };
@@ -43,19 +43,16 @@ class Boids extends React.Component {
         const canvas = ReactDOM.findDOMNode(this);
         // canvas.style.height = this.getHeight();
 
-        const width = canvas.offsetWidth,
-            height = canvas.offsetHeight;
+        const padding = 50,
+            offset = 0 - padding / 2,
+            width = canvas.offsetWidth + padding,
+            height = canvas.offsetHeight + padding;
 
         // const {maxSpeed, minDistance, maxDistance, edgeBehavior, maxForce} = this.options;
 
         while (boids.length < this.numBoids) {
             boid = new Boid(this.options);
-            boid.setBounds(width, height);
-            // boid.edgeBehavior = edgeBehavior;
-            // boid.maxDistance = maxDistance;
-            // boid.minDistance = minDistance;
-            // boid.maxForce = maxForce;
-            // boid.maxSpeed = maxSpeed;
+            boid.setBounds(width, height, offset, offset);
             boid.position.x = width * Math.random();
             boid.position.y = height * Math.random();
             boid.velocity.x = 20 * Math.random() - 10;
@@ -67,6 +64,15 @@ class Boids extends React.Component {
         }
 
         return boids;
+    }
+
+    rotate (from, end) {
+        const PI2 = Math.PI * 2;
+        let diff = (end - from) % PI2;
+        if (diff !== diff % Math.PI) {
+            diff = diff < 0 ? diff + PI2 : diff - PI2;
+        }
+        return from + diff;
     }
 
     loop () {
@@ -83,7 +89,9 @@ class Boids extends React.Component {
             const {x, y} = point;
             const oldAngle = boid.userData.angle || 0;
             const newAngle = boid.velocity.angle;
-            boid.userData.angle = oldAngle + ( newAngle - oldAngle ) * 0.1;
+            // const angle = oldAngle + ( newAngle - oldAngle ) * 0.1;
+            const angle = oldAngle + ( newAngle - oldAngle ) * 0.05;
+            boid.userData.angle = this.rotate(oldAngle, angle);
             const rotation = boid.userData.angle;
 
             // const roundTo = 8;
