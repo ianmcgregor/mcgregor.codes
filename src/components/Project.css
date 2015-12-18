@@ -45,6 +45,7 @@
 }
 
 .Project.is-selected .Project-inner {
+    box-shadow: 0 0 0 999px rgba(0, 0, 0, 0.6);
     transition-timing-function: ease-out;
 }
 

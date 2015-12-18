@@ -3,8 +3,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Carousel from './Carousel';
 import Info from './Info';
-import Overlay from './Overlay';
-import Picture from './Picture';
 import constants from '../model/constants';
 import {History} from 'react-router';
 import ReactMixin from 'react-mixin';
@@ -14,6 +12,8 @@ let depth = 1;
 // @ReactMixin.decorate(History)
 
 class Project extends React.Component {
+
+    inTimeout = null;
 
     constructor (props) {
         super(props);
@@ -61,7 +61,6 @@ class Project extends React.Component {
     }
 
     _onResize () {
-        console.debug('_onResize');
         this.setState({
             isSelected: true
         });
@@ -127,31 +126,28 @@ class Project extends React.Component {
 
     render () {
         const {project, filter} = this.props;
-        const {layout, slug, thumb, images, link} = project;
+        const {layout, slug, images} = project;
         const {isSelected, rect, zIndex} = this.state;
         const cssState = isSelected ? 'is-selected' : '';
         const isWide = this._isWide();
         const {left, top, width, height} = rect;
         const style = isSelected && isWide ? {left, top, width, height, zIndex} : {zIndex};
-        const carouselNode = isSelected ? (<Carousel images={images} autoPlay={!isWide}/>) : '';
 
         return (
-            <div className={`Project layout-${layout} ${cssState}`}>
+            <article className={`Project layout-${layout} ${cssState}`}>
                 <div className="Project-inner" style={style} ref="inner">
-                    <Picture src={thumb.src} alt={thumb.caption}/>
                     <div className="Project-info">
                         <Info
                             project={project}
                             filter={filter}
                             layout={layout}/>
                     </div>
+                    <Carousel images={images} autoPlay={isSelected}/>
                     <button
                         className="Project-link"
                         onClick={() => this._onSelect(slug)}/>
-                    {carouselNode}
-                    <Overlay link={link} onClose={this._onScroll}/>
                 </div>
-            </div>
+            </article>
         );
     }
 

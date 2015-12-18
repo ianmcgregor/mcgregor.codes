@@ -14,7 +14,7 @@
 
 .Info-inner {
     background-color: var(--info-background-color);
-    border-bottom: solid var(--border-color);
+    border-top: solid var(--border-color);
     border-width: var(--border-width);
     box-sizing: border-box;
     display: flex;
@@ -54,4 +54,12 @@
     pointer-events: none;
     text-align: left;
     text-transform: none;
+}
+
+.Info-link {
+    bottom: 0;
+    color: var(--overlay-nav-icon-color);
+    padding: var(--spacing-narrow) var(--spacing);
+    position: absolute;
+    right: 0;
 }

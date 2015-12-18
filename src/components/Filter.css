@@ -38,8 +38,24 @@
         }
     }
 
-    li:last-child .Filter-item {
-        margin-right: 0;
+    li {
+        min-width: 50%;
+
+        @media (--medium) {
+            min-width: 0;
+        }
+
+        .Icon {
+            min-width: 16px;
+
+            @media (--medium) {
+                min-width: 0;
+            }
+        }
+
+        &:last-child .Filter-item {
+            margin-right: 0;
+        }
     }
 }
 

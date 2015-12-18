@@ -1,5 +1,5 @@
 import Boid from 'boid';
-import dat from 'dat-gui';
+// import dat from 'dat-gui';
 import {debounce} from 'lodash';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -30,7 +30,9 @@ class Boids extends React.Component {
 
         this.loop();
 
-        this.createGUI();
+        if (window.isDebug) {
+            this.createGUI();
+        }
 
         window.addEventListener('resize', this.onResize);
 
@@ -173,8 +175,9 @@ class Boids extends React.Component {
     }
 
     componentWillUnmount () {
-
-        this.gui.destroy();
+        if (this.gui) {
+            this.gui.destroy();
+        }
 
         window.removeEventListener('resize', this.onResize);
     }

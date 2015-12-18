@@ -1,17 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Picture from './Picture';
-import swipe from '../utils/swipe';
 
 class Carousel extends React.Component {
+
+    _time = 3000;
+    _timeoutId = null;
 
     constructor (props) {
         super(props);
 
         this.state = this._getState(props);
-        this.state.swiper = swipe(null, 5);
-
-        this._prev = this._prev.bind(this);
         this._next = this._next.bind(this);
     }
 
@@ -21,22 +19,29 @@ class Carousel extends React.Component {
     }
 
     _getState (props) {
-        const {images, autoPlay} = this.props;
+        const {images, autoPlay} = props;
         const index = 0;
         const count = images.length;
-        const center = count / 2 - 0.5;
+
         return {
             images,
             count,
             index,
-            center,
             autoPlay
         };
     }
 
-    _prev () {
-        let index = this.state.index - 1;
-        if (index < 0) {
+    _cueNext () {
+        window.clearTimeout(this._timeoutId);
+        this._timeoutId = window.setTimeout(
+            this._next,
+            this._time
+        );
+    }
+
+    _next () {
+        let index = this.state.index + 1;
+        if (index === this.state.count) {
             index = 0;
         }
         this.setState({
@@ -44,109 +49,49 @@ class Carousel extends React.Component {
         });
     }
 
-    _next () {
-        let index = this.state.index + 1;
-        if (index === this.state.count) {
-            index = this.state.count - 1;
-        }
-        this.setState({
-            index
-        });
-    }
-
-    _getClassState (i) {
-        const {index} = this.state;
-        if (i < index) {
-            return 'is-left';
-        }
-        if (i === index + 1) {
-            return 'is-right is-first';
-        }
-        if (i > index) {
-            return 'is-right';
-        }
-        return 'is-centered';
-    }
-
-    _getBtnClassName (isDisabled, isRight) {
-        const state = isDisabled ? 'is-disabled' : '';
-        const modifier = isRight ? 'Carousel-navButton--right' : '';
-        return `Carousel-navButton ${state} ${modifier}`;
-    }
-
     componentWillReceiveProps (props) {
         this.setState(this._getState(props));
     }
 
     render () {
-        const {index, center, images, count} = this.state;
-        const x = (center - index) * 100;
-        const transform = `translateX(${x}%)`;
-        const style = {
-            WebkitTransform: transform,
-            transform: transform
-        };
-        const classNamePrev = this._getBtnClassName(index === 0);
-        const classNameNext = this._getBtnClassName(index === count - 1, true);
+        const {images, index} = this.state;
 
         return (
-            <div className="Carousel">
-                <div className="Carousel-inner">
-                    <ul className="Carousel-imageList" style={style}>
-                        {images.map((image, i) => {
-                            const {key, src, caption} = image;
-                            const state = this._getClassState(i);
-                            return (
-                                <li key={key}
-                                    className={`Carousel-imageItem ${state}`}>
-                                    <Picture src={src} alt={caption} />
-                                    {/*
-                                        <p style={{
-                                        position: 'absolute',
-                                        top: '10px',
-                                        left: '10px',
-                                        backgroundColor: 'white'
-                                    }}>{src.slice(src.lastIndexOf('/') + 1)}</p>
-                                    */}
-                                </li>
-                            );
-                        })}
-                    </ul>
-                    <nav className="Carousel-nav">
-                        <button className={classNamePrev} onClick={this._prev}>
-                            <span className="Icon Icon--left"></span>
-                        </button>
-                        <button className={classNameNext} onClick={this._next}>
-                            <span className="Icon Icon--right"></span>
-                        </button>
-                    </nav>
-                </div>
-            </div>
+            <section className="Carousel">
+                <ul className="Carousel-list">
+                    {images.map((image, i) => {
+                        const {key, src, caption} = image;
+                        const state = i === index ? 'is-active' : '';
+                        return (
+                            <li key={key}
+                                className={`Carousel-item ${state}`}>
+                                <Picture src={src} alt={caption} />
+                            </li>
+                        );
+                    })}
+                </ul>
+            </section>
         );
     }
 
-    componentDidMount () {
-        const {swiper, autoPlay} = this.state;
-
-        swiper.listen(ReactDOM.findDOMNode(this))
-            .on('left', this._next)
-            .on('right', this._prev);
+    triggerAutoPlay () {
+        const {autoPlay} = this.state;
 
         if (autoPlay) {
-            // window.requestAnimationFrame(
-            //     this._next
-            // );
-            window.setTimeout(
-                this._next, 100
-            );
+            this._cueNext();
         }
     }
 
+    componentDidUpdate (prevProps, prevState) {
+        this.triggerAutoPlay();
+    }
+
+    componentDidMount () {
+        this.triggerAutoPlay();
+    }
+
     componentWillUnmount () {
-        console.debug('componentWillUnmount', this.state.swiper);
-        if (this.state.swiper) {
-            this.state.swiper.destroy();
-        }
+        window.clearTimeout(this._timeoutId);
     }
 }
 

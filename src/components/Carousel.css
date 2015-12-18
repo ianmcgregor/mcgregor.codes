@@ -1,8 +1,6 @@
 :root {
     --carousel-anim-duration: 0.5s;
     --carousel-anim-ease: ease-in;
-    --carousel-navbutton-background-color: var(--bg-color-dark);
-    --carousel-nav-icon-color: var(--accent-color);
 }
 
 .Carousel {
@@ -11,95 +9,28 @@
     width: 100%;
 }
 
-.Carousel-inner {
+.Carousel-list {
     height: 100%;
-    position: relative;
-    width: 100%;
-}
-
-.Carousel-imageList {
-    display: flex;
-    height: 100%;
-    justify-content: center;
     list-style: none;
-    pointer-events: none;
-    transform: translateX(0);
-    transition: transform 0.5s ease-out;
     width: 100%;
 }
 
-.Carousel-imageItem {
-    backface-visibility: hidden;
+.Carousel-item {
+    height: 100%;
+    left: 0;
     min-width: 100%;
-    perspective: 1200px;
-    transition: transform 0.5s ease-out;
-}
-
-.Carousel-imageItem img {
-    display: block;
-    max-width: 100%;
-    transition: transform 0.5s ease-in;
-}
-
-.Carousel-imageItem.is-centered {
-    z-index: 2;
-}
-
-.Carousel-imageItem.is-left {
-    transform: translateX(60%) scale(0.6);
-}
-
-.Carousel-imageItem.is-right {
-    transform: translateX(-60%) scale(0.6);
-}
-
-/* stop ugly overlap pop on transition: */
-
-.Carousel-imageItem.is-right.is-first {
-    z-index: 1;
-}
-
-.Carousel-imageItem.is-centered img {
-    transform: rotateY(0deg);
-}
-
-.Carousel-imageItem.is-left img {
-    transform: rotateY(30deg);
-}
-
-.Carousel-imageItem.is-right img {
-    transform: rotateY(-30deg);
-}
-
-.Carousel-nav {
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    top: calc(50% - 20px);
-    width: 100%;
-}
-
-.Carousel-navButton {
-    align-items: center;
-    background-color: var(--carousel-navbutton-background-color);
-    color: var(--carousel-nav-icon-color);
-    padding: 2px 6px;
-    text-align: left;
-    transition: opacity 0.3s;
-}
-
-@media (--narrow) {
-    .Carousel-navButton {
-        padding: 6px 10px;
-    }
-}
-
-.Carousel-navButton--right {
-    text-align: right;
-}
-
-.Carousel-navButton.is-disabled {
     opacity: 0;
-    pointer-events: none;
+    position: absolute;
+    top: 0;
+    transition: opacity 0.5s ease-out;
+    width: 100%;
+
+    > img {
+        display: block;
+        max-width: 100%;
+    }
+
+    &.is-active {
+        opacity: 1;
+    }
 }
