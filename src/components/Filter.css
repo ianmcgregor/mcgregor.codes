@@ -5,6 +5,7 @@
 
 .Filter-item {
     font-size: var(--font-size-small);
+    line-height: 1.2;
     position: relative;
 
     &::after {
@@ -48,8 +49,7 @@
 
 .Filter--info {
     align-items: center;
-    line-height: 1;
-    margin-bottom: var(--spacing);
+    padding: 0 var(--spacing) var(--spacing);
     width: 100%;
 
     .Icon {
@@ -65,8 +65,4 @@
             background-color: var(--info-tag-underline-color);
         }
     }
-}
-
-.Filter--info-left {
-    margin-bottom: 10px;
 }

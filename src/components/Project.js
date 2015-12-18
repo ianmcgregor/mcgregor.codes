@@ -82,7 +82,7 @@ class Project extends React.Component {
         let {left, top, width, height} = inner.getBoundingClientRect();
 
         const viewportWidth = Math.min(window.innerWidth, document.documentElement.clientWidth);
-        const infoHeight = 120;//ReactDOM.findDOMNode(this.refs.info).offsetHeight;
+        const infoHeight = 140;//ReactDOM.findDOMNode(this.refs.info).offsetHeight;
         const viewportHeight = window.innerHeight - infoHeight;
         const scale = Math.min(viewportWidth / width, viewportHeight / height);
 

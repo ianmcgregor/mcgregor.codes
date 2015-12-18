@@ -18,6 +18,15 @@
 }
 
 .Contact-link {
+    background: linear-gradient(var(--contact-link-color), var(--contact-link-color)) no-repeat;
+    background-position: 0 1.1em;
+    background-size: 100% 2px;
     color: var(--contact-link-color);
-    font-weight: bold;
+    font-weight: 700;
+    text-decoration: none;
+    text-shadow:
+        -1px -1px 0 var(--bg-color-primary),
+        1px -1px 0 var(--bg-color-primary),
+        -1px 1px 0 var(--bg-color-primary),
+        1px 1px 0 var(--bg-color-primary);
 }

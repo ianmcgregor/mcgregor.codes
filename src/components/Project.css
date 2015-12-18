@@ -1,9 +1,9 @@
 :root {
-    --project-info-height: 120px;
+    --project-info-height: 140px;
 }
 
 .Project {
-    box-shadow: 6px 8px 32px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 6px 8px 32px 4px rgba(0, 0, 0, 0.15);
     flex: 0 1 auto;
     margin-bottom: 20px;
     margin-top: 10px;
@@ -73,6 +73,7 @@
 }
 
 .Project-info {
+    height: var(--project-info-height);
     position: absolute;
     top: 100%;
     width: 100%;

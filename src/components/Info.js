@@ -19,7 +19,7 @@ class Info extends React.Component {
         const {title, year, text, tags} = project;
 
         return (
-            <div className={`Info Info--${layout}`}>
+            <section className={`Info Info--${layout}`}>
                 <div className="Info-inner">
                     <div className="Info-header" ref="info">
                         <h3 className="Info-title">
@@ -37,10 +37,10 @@ class Info extends React.Component {
                     <Filter
                         filter={filter}
                         tags={tags}
-                        modifier={`Filter--info Filter--info-${layout}`}
+                        modifier="Filter--info"
                         showCount={false}/>
                 </div>
-            </div>
+            </section>
         );
     }
 }
