@@ -65,10 +65,11 @@
 
     > li {
         min-width: 50%;
-    }
-}
+        width: 50%;
 
-.Services-name {
-    color: var(--services-list-group-color);
-    width: 100%;
+        &.Services-name {
+            color: var(--services-list-group-color);
+            width: 100%;
+        }
+    }
 }
