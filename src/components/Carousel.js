@@ -3,7 +3,7 @@ import Picture from './Picture';
 
 class Carousel extends React.Component {
 
-    _time = 3000;
+    _time = 2000;
     _timeoutId = null;
 
     constructor (props) {

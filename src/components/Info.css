@@ -58,7 +58,7 @@
 
 .Info-link {
     bottom: 0;
-    color: var(--overlay-nav-icon-color);
+    color: var(--accent-color);
     padding: var(--spacing-narrow) var(--spacing);
     position: absolute;
     right: 0;
