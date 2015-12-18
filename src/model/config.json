@@ -20,8 +20,7 @@
         "link": "https://insideabbeyroad.withgoogle.com/",
         "tags": [
             "audio",
-            "3d",
-            "data"
+            "3d"
         ]
     }, {
         "title": "Made",
@@ -49,7 +48,7 @@
         "link": "http://game.ray-ban.com/",
         "tags": [
             "game",
-            "mobile"
+            "mobile first"
         ]
     }, {
         "title": "Monty's Christmas",
@@ -73,8 +72,7 @@
         "link": "http://www.johnlewis.com/christmas-advert-2014-montys-christmas/montys-360-world",
         "tags": [
             "game",
-            "vr",
-            "mobile",
+            "mobile first",
             "3d",
             "audio"
         ]
@@ -97,8 +95,8 @@
         ],
         "link": "http://chance.archive.stinkdigital.com/en_GB",
         "tags": [
-            "mobile",
-            "video"
+            "mobile first",
+            "interactive film"
         ]
     }, {
         "title": "Revolutions in Sound",
@@ -126,7 +124,7 @@
         ],
         "link": "http://archive.revolutionsinsound.com/",
         "tags": [
-            "data"
+            "data driven"
         ]
     }, {
         "title": "Imagepack",
@@ -144,7 +142,6 @@
         ],
         "link": "https://www.npmjs.com/package/imagepack",
         "tags": [
-            "library",
             "open source",
             "side project"
         ]
@@ -165,7 +162,6 @@
         "link": "http://codepen.io/ianmcgregor/pen/OPGemQ",
         "tags": [
             "3d",
-            "experiment",
             "side project"
         ]
     }, {
@@ -185,7 +181,6 @@
         "link": "http://prototypes.stinkdigital.com/webaudio/sono/examples/",
         "tags": [
             "audio",
-            "library",
             "open source"
         ]
     }, {
@@ -208,7 +203,7 @@
         "link": "http://ianmcgregor.me/games/deep-sea-freediver/",
         "tags": [
             "game",
-            "mobile",
+            "mobile first",
             "side project"
         ]
     }, {
@@ -228,7 +223,7 @@
         "link": "http://gifinbox.appspot.com/",
         "tags": [
             "side project",
-            "experiment"
+            "data driven"
         ]
     }, {
         "title": "Circloids",
@@ -244,8 +239,7 @@
         ],
         "link": "http://ianmcgregor.me/experiments/circloids/",
         "tags": [
-            "side project",
-            "experiment"
+            "side project"
         ]
     }, {
         "title": "My Time Is Now",
@@ -269,7 +263,7 @@
         "link": "http://nikemytimeisnow.archive.stinkdigital.com/",
         "tags": [
             "game",
-            "video"
+            "interactive film"
         ]
     }, {
         "title": "Christmas Carole",
@@ -287,7 +281,7 @@
         ],
         "link": "http://stella-carole.archive.stinkdigital.com/",
         "tags": [
-            "data"
+            "data driven"
         ]
     }, {
         "title": "Captain Ice",
@@ -326,7 +320,7 @@
         ],
         "link": "http://adidas-fw13.archive.stinkdigital.com/",
         "tags": [
-            "video",
+            "interactive film",
             "audio"
         ]
     }, {
@@ -365,7 +359,7 @@
         ],
         "link": "https://vimeo.com/36039145",
         "tags": [
-            "video"
+            "interactive film"
         ]
     }, {
         "title": "Kino",
@@ -385,7 +379,7 @@
         ],
         "link": "http://hugo-justdifferent.archive.stinkdigital.com/",
         "tags": [
-            "video"
+            "interactive film"
         ]
     }, {
         "title": "Happy Inside",
@@ -406,7 +400,7 @@
         ],
         "link": "http://cats.archive.stinkdigital.com/",
         "tags": [
-            "data"
+            "data driven"
         ]
     }, {
         "title": "One Life",
@@ -427,8 +421,8 @@
         ],
         "link": "http://bbc-onelife.archive.stinkdigital.com/",
         "tags": [
-            "video",
-            "data"
+            "interactive film",
+            "data driven"
         ]
     }, {
         "title": "Diesel Island",
@@ -446,7 +440,7 @@
         ],
         "link": "http://diesel-island-ss11.archive.stinkdigital.com/",
         "tags": [
-            "data"
+            "data driven"
         ]
     }, {
         "title": "Dark Ride",
@@ -472,7 +466,7 @@
         ],
         "link": "http://darkride.archive.stinkdigital.com/",
         "tags": [
-            "video"
+            "interactive film"
         ]
     }, {
         "title": "A Hundred Lovers",
@@ -493,7 +487,7 @@
         ],
         "link": "http://diesel-hundredlovers.archive.stinkdigital.com/",
         "tags": [
-            "video",
+            "interactive film",
             "audio"
         ]
     }, {
@@ -515,7 +509,7 @@
         ],
         "link": "http://labs.tribalddb.nl/Cinema219/",
         "tags": [
-            "video"
+            "interactive film"
         ]
     }]
 }

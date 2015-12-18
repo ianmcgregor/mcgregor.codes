@@ -1,3 +1,12 @@
+:root {
+    --info-background-color: var(--bg-color-dark);
+    --info-title-color: var(--text-color-light);
+    --info-year-color: var(--text-color-light);
+    --info-text-color: var(--text-color-light);
+    --info-tag-color: var(--text-color-light);
+    --info-tag-underline-color: var(--text-color-light-underline);
+}
+
 .Info {
     height: 120px;
     width: 100%;

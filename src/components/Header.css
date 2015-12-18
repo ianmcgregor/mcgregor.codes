@@ -1,7 +1,8 @@
-@keyframes typing {
-    from {
-        width: 0;
-    }
+:root {
+    --header-bg-color: var(--bg-color-light);
+    --header-title-color: var(--title-color);
+    --header-link-color: var(--text-color-dark);
+    --header-link-hover-color: var(--text-color-dark-underline);
 }
 
 @keyframes caret {
@@ -13,8 +14,7 @@
 .Header {
     align-items: center;
     background-color: var(--header-bg-color);
-    box-shadow: 0 0 3px 0 rgba(0,0,0,.15);
-    border-width: var(--border-width);
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.15);
     display: flex;
     flex-shrink: 0;
     justify-content: space-between;
@@ -43,17 +43,6 @@
         font-size: var(--font-size-x-large);
     }
 }
-
-/*
-.Header-titleCodes {
-    animation: typing 6s steps(5);
-    display: inline-block;
-    overflow: hidden;
-    white-space: nowrap;
-    width: 5ch;
-}
-*/
-
 
 .Header-menu {
     display: flex;

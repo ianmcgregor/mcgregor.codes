@@ -1,13 +1,12 @@
 :root {
     --work-tag-spacing: 6px;
+    --work-tag-color: var(--text-color-dark);
+    --work-tag-hover-color: var(--text-color-dark-underline);
 }
 
-.Work {}
+/*.Work {}*/
 
 .Work-tags {
-    background-color: var(--work-tags-background-color);
-    border-bottom: 1px solid var(--work-tags-border-color);
-    border-top: 1px solid var(--work-tags-border-color);
     padding: 4px calc(var(--spacing-wide) - var(--work-tag-spacing));
 }
 

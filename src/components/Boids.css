@@ -1,7 +1,7 @@
 :root {
-    --boids-size: 30px;
+    --boids-size: 15px;
     --boids-opacity: 1;
-    --boids-color: var(--mint);
+    --boids-color: var(--accent-color);
 }
 
 .Boids {
@@ -15,13 +15,14 @@
     z-index: -1;
 
     > b {
-        width: 0;
-    	height: 0;
-    	border-top: var(--boids-size) solid transparent;
-    	border-bottom: var(--boids-size) solid transparent;
-    	border-left: var(--boids-size) solid var(--boids-color);
+        border-bottom: solid transparent;
+        border-left: solid var(--boids-color);
+        border-top: solid transparent;
+        border-width: var(--boids-size);
         display: block;
+        height: 0;
         opacity: var(--boids-opacity);
         position: absolute;
+        width: 0;
     }
 }

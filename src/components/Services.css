@@ -1,3 +1,10 @@
+:root {
+    --services-text-color: var(--text-color-dark);
+    --services-list-bg-color: var(--bg-color-dark);
+    --services-list-text-color: var(--text-color-light);
+    --services-list-group-color: var(--accent-color);
+}
+
 .Services {
     box-sizing: border-box;
     color: var(--services-text-color);
@@ -18,7 +25,7 @@
     margin-right: 10%;
 
     > h2 {
-        font-size: var(--font-size-large);
+        font-size: var(--font-size-x-large);
         font-weight: normal;
     }
 
@@ -36,6 +43,7 @@
     color: var(--services-list-text-color);
     flex: 1;
     font-size: var(--font-size-small);
+    margin: 0.8em 0;
     padding: var(--spacing-wide);
 }
 

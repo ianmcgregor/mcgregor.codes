@@ -1,6 +1,8 @@
 :root {
     --carousel-anim-duration: 0.5s;
     --carousel-anim-ease: ease-in;
+    --carousel-navbutton-background-color: var(--bg-color-dark);
+    --carousel-nav-icon-color: var(--accent-color);
 }
 
 .Carousel {

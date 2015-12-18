@@ -1,3 +1,8 @@
+:root {
+    --overlay-nav-background-color: var(--bg-color-dark);
+    --overlay-nav-icon-color: var(--text-color-light-underline);
+}
+
 .Overlay {
     background-color: var(--overlay-nav-background-color);
     opacity: 0;

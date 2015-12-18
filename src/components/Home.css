@@ -1,8 +1,8 @@
 .Home {
+    align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     position: relative;
     text-transform: none;
     z-index: -1;

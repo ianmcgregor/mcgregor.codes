@@ -4,8 +4,7 @@
     height: 100vh;
 
     main {
-        background-color: var(--bg-primary);
-        background: var(--bg-gradient);
+        background: var(--bg-color-primary) var(--bg-gradient);
         flex: 1 0 auto;
     }
 }

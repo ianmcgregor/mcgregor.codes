@@ -12,16 +12,13 @@ class Services extends React.Component {
                 <section className="Services-info">
                     <h2>About</h2>
 
-                    <p>I write robust, performant JavaScript and CSS.
-                    The KISS, DRY and YAGNI principles are always on my mind.</p>
+                    <p>I love to push the limits of the technologies at hand.
+                        I write robust, performant JavaScript and CSS.
+                        The KISS, DRY and YAGNI principles are always on my mind.</p>
 
-                    <p>I love to push the limits of the technologies at hand.</p>
-
-                    <p>My work has won over 60 major awards including
-                    FWA Site of the Year, two FWA Site of the Months, a
-                    pride of Cannes Lions including the Grand Prix and
-                    several Golds, plus a few Webbys, Awwwards
-                    SOTDs and D&AD pencils.</p>
+                    <p>My work has won over 60 major awards from The FWA
+                        (SOTY, SOTM x 2), Cannes Lions (Grand Prix, Gold x 3),
+                        Webby Awards, Awwwards and D&AD.</p>
                 </section>
                 <section className="Services-list">
                     <ul className="Services-group">
@@ -29,7 +26,7 @@ class Services extends React.Component {
                         <li>JavaScript (ES5, ES6 + Babel)</li>
                         <li>CSS (Vanilla, Stylus, Sass)</li>
                         <li>Unit Tests (Karma, Mocha, Chai)</li>
-                        <li>Node.js, Gulp, AWS, GitFlow</li>
+                        <li>Node, Gulp, AWS, GitFlow</li>
                     </ul>
                     <ul className="Services-group">
                         <li className="Services-name">Libraries/Apis</li>
@@ -47,6 +44,8 @@ class Services extends React.Component {
                         <li>Browserify, CommonJS</li>
                         <li>Modernizr, jQuery</li>
                         <li>YouTube, Facebook Apis</li>
+                        <li>Express, Mongo</li>
+                        <li>Socket IO, Passport</li>
                     </ul>
                     <ul className="Services-group">
                         <li className="Services-name">Non-coding</li>

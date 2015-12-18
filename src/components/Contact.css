@@ -1,3 +1,8 @@
+:root {
+    --contact-text-color: var(--text-color-dark);
+    --contact-link-color: var(--text-color-dark);
+}
+
 .Contact {
     color: var(--contact-text-color);
     padding: var(--spacing-wide);

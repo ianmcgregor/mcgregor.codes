@@ -8,15 +8,24 @@
 .Icon {
     color: inherit;
     display: inline-block;
-    font: normal normal normal 32px/1 octicons;
+    font-family: octicons;
+    font-size: var(--icon-size-large);
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 1;
     pointer-events: none;
     text-decoration: none;
     text-rendering: auto;
     user-select: none;
 }
 
+.Icon--small {
+    font-size: var(--icon-size-small);
+}
+
 .Icon--tag {
-    font-size: var(--font-size-large);
+    font-size: var(--icon-size-small);
 }
 
 .Icon--left::before {
@@ -41,4 +50,44 @@
 
 .Icon--view::before {
     content: "\f04e";
+}
+
+/* Filters */
+
+.Icon--side_project::before {
+    content: "\f0dd";
+}
+
+.Icon--open_source::before {
+    content: "\f00a";
+
+    /*content: "\f042";*/
+}
+
+.Icon--audio::before {
+    content: "\f0ba";
+}
+
+.Icon--mobile_first::before {
+    content: "\f038";
+}
+
+.Icon--interactive_film::before {
+    content: "\f056";
+}
+
+.Icon--data_driven::before {
+    content: "\f094";
+}
+
+.Icon--vr::before {
+    content: "\f04e";
+}
+
+.Icon--3d::before {
+    content: "\f057";
+}
+
+.Icon--game::before {
+    content: "\f09d";
 }

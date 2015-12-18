@@ -1,9 +1,13 @@
+:root {
+    --footer-background-color: var(--bg-color-dark);
+    --footer-text-color: var(--accent-color);
+    --footer-link-color: var(--text-color-light);
+}
+
 .Footer {
     background-color: var(--footer-background-color);
-    /*border-top: solid var(--border-color);*/
-    border-width: var(--border-width);
     flex-shrink: 0;
-    padding: var(--spacing) var(--spacing-wide);
+    padding: var(--spacing-narrow) var(--spacing-wide);
 }
 
 .Footer-list {

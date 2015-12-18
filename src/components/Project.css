@@ -22,7 +22,7 @@
 }
 
 .Project-inner {
-    background-color: var(--project-background-color);
+    background-color: var(--bg-color-dark);
     border-width: var(--border-width);
     height: calc(100% - var(--project-info-height));
     left: 0;

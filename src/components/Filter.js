@@ -24,6 +24,7 @@ class Filter extends React.Component {
 
                     return (
                         <li key={key}>
+                            <span className={`Icon Icon--small Icon--${slug}`}></span>
                             <button
                                 className={`Filter-item u-link ${active}`}
                                 onClick={toggleFilter.bind(undefined, slug)}>
