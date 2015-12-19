@@ -58,7 +58,9 @@ class Project extends React.Component {
     }
 
     componentDidMount () {
-        this._updateInView();
+        window.requestAnimationFrame(
+            () => this._updateInView()
+        );
     }
 }
 
