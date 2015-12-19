@@ -9,7 +9,7 @@
     color: inherit;
     display: inline-block;
     font-family: octicons;
-    font-size: var(--icon-size-large);
+    font-size: 0;
     font-style: normal;
     font-variant: normal;
     font-weight: normal;
@@ -18,14 +18,22 @@
     text-decoration: none;
     text-rendering: auto;
     user-select: none;
+
+    &::before {
+        font-size: var(--icon-size-large);
+    }
 }
 
 .Icon--small {
-    font-size: var(--icon-size-small);
+    &::before {
+        font-size: var(--icon-size-small);
+    }
 }
 
 .Icon--tag {
-    font-size: var(--icon-size-small);
+    &::before {
+        font-size: var(--icon-size-small);
+    }
 }
 
 .Icon--left::before {

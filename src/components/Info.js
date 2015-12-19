@@ -43,7 +43,7 @@ class Info extends React.Component {
                     modifier="Filter--info"
                     showCount={false}/>
                 <a className="Info-link" href={link} target="_blank">
-                    <span className="Icon Icon--link"></span>
+                    <span className="Icon Icon--link">View Project</span>
                 </a>
             </section>
         );
