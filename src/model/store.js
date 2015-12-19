@@ -3,6 +3,7 @@ import {Dispatcher} from 'flux';
 import {EventEmitter} from 'events';
 import constants from './constants';
 
+
 class Store extends EventEmitter {
 
     constructor(config) {
@@ -136,26 +137,46 @@ class Store extends EventEmitter {
         return this._model.filters[0];
     }
 
+    clearFilters () {
+        this._model.filters.length = 0;
+    }
+
+    _hasTag (project, filter) {
+        return project.tags.some((tag) => tag.slug === filter);
+    }
+
+    _hasSlug (project, slug) {
+        return project.slug === slug;
+    }
+
     getFilteredProjects (filter) {
         const {projects} = this._model;
         if (!filter) {
             return projects;
         }
-        return projects.filter((project) => (
-            project.tags.some((tag) => tag.slug === filter)
-        ));
+        return projects.filter((project) => {
+            return project.slug === filter || this._hasTag(project, filter);
+        });
     }
 
     toggleFilter (value) {
         console.debug('toggleFilter', value);
         if (!this._addFilter(value)) {
-            this._model.filters.length = 0;
+            this.clearFilters();
         }
         // if (!this.hasFilter(value)) {
         //     this._model.filters.push(value);
         // } else {
         //     this._model.filters.splice(this._model.filters.indexOf(value), 1);
         // }
+        this._emitChange();
+    }
+
+    selectProject (value) {
+        console.debug('selectProject', value);
+        if (!this._addFilter(value)) {
+            this.clearFilters();
+        }
         this._emitChange();
     }
 }
@@ -168,6 +189,9 @@ dispatcher.register(function(action) {
     switch (action.type) {
         case constants.ACTION_TOGGLE_FILTER:
             store.toggleFilter(action.slug);
+            break;
+        case constants.ACTION_SELECT_PROJECT:
+            store.selectProject(action.slug);
             break;
         default:
     }

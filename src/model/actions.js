@@ -9,4 +9,12 @@ function toggleFilter(slug) {
     });
 }
 
-export {toggleFilter};
+function selectProject(slug) {
+    const type = constants.ACTION_SELECT_PROJECT;
+    dispatcher.dispatch({
+        type,
+        slug
+    });
+}
+
+export {toggleFilter, selectProject};

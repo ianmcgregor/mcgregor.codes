@@ -3,17 +3,9 @@ import Header from './Header';
 import Footer from './Footer';
 import {store} from '../model/store';
 import {History} from 'react-router';
-
 import ReactMixin from 'react-mixin';
 import track from '../utils/track';
-
-function getDocTitle(pathname) {
-    const title = 'CGREGOR CODES';
-    return title + pathname
-        .replace('_', ' ')
-        .replace('/', ' / ')
-        .toUpperCase();
-}
+import constants from '../model/constants';
 
 
 // @ReactMixin.decorate(History)
@@ -25,14 +17,14 @@ class App extends React.Component {
         this._onChange = this._onChange.bind(this);
 
         // init Google Analytics
-        track.init('UA-66215708-1');
+        track.init(constants.GA_ID);
     }
 
     _onChange () {
         const filter = store.getFilter();
 
         if (filter) {
-            this.history.pushState(null, `/projects/filter/${filter}`);
+            this.history.pushState(null, `/projects/${filter}`);
         } else {
             this.history.pushState(null, '/projects');
         }
@@ -40,27 +32,35 @@ class App extends React.Component {
 
     render () {
 
-        const {params} = this.props;
-        if (!(params.project || params.filter)) {
-            store.getFilters().length = 0;
+        const {filter} = this.props.params;
+
+        if (!filter) {
+            store.clearFilters();
         }
-        const {project} = params;
-        const filter = params.filter || (project && store.getFilter());
 
         return (
             <div className="App">
                 <Header />
-                    {React.cloneElement(this.props.children, {project, filter})}
+                    {React.cloneElement(this.props.children, {filter})}
                 <Footer />
             </div>
         );
     }
 
+    _getDocTitle(pathname) {
+        const title = constants.DOC_TITLE;
+        return title + pathname
+            .replace('_', ' ')
+            .replace('/', ' / ')
+            .toUpperCase();
+    }
+
     _pathChanged () {
         const {pathname} = this.props.location;
-        console.debug('Route changed: ', pathname);
+        // console.debug('Route changed: ', pathname);
 
-        document.title = getDocTitle(pathname);
+        document.title = this._getDocTitle(pathname);
+
         track.page(pathname);
     }
 

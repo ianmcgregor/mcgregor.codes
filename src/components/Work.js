@@ -1,17 +1,37 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Filter from './Filter';
 import Project from './Project';
 import {store} from '../model/store';
+import {debounce} from 'lodash';
+import getScrollTop from '../utils/getScrollTop';
 
 class Work extends React.Component {
 
-    componentDidMount () {
-        ReactDOM.findDOMNode(this);
+    static propTypes = {
+        filter: React.PropTypes.string
+    }
+
+    constructor (props) {
+        super(props);
+
+        this._onScroll = debounce(this._onScroll.bind(this), 300);
+    }
+
+    state = {
+        scrollTop: 0
+    }
+
+    _onScroll () {
+        const scrollTop = getScrollTop();
+
+        this.setState({
+            scrollTop
+        });
     }
 
     render () {
-        const {project, filter} = this.props;
+        const {filter} = this.props;
+        const {scrollTop} = this.state;
         const projects = store.getFilteredProjects(filter);
 
         return (
@@ -29,11 +49,19 @@ class Work extends React.Component {
                             key={p.key}
                             filter={filter}
                             project={p}
-                            isSelected={project === p.slug}/>
+                            scrollTop={scrollTop}/>
                     ))}
                 </section>
             </main>
         );
+    }
+
+    componentDidMount () {
+        window.addEventListener('scroll', this._onScroll);
+    }
+
+    componentWillUnmount () {
+        window.removeEventListener('scroll', this._onScroll);
     }
 }
 

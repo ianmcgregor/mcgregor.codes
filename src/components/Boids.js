@@ -31,7 +31,9 @@ class Boids extends React.Component {
         this.loop();
 
         if (window.isDebug) {
-            this.createGUI();
+            try {
+                this.createGUI();
+            } catch (e) {}
         }
 
         window.addEventListener('resize', this.onResize);

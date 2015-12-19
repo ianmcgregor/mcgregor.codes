@@ -1,11 +1,13 @@
 import React from 'react';
 import Filter from './Filter';
+import {History} from 'react-router';
+import ReactMixin from 'react-mixin';
+import {selectProject} from '../model/actions';
 
 class Info extends React.Component {
 
     static propTypes = {
         filter: React.PropTypes.string,
-        layout: React.PropTypes.string.isRequired,
         project: React.PropTypes.shape({
             title: React.PropTypes.string.isRequired,
             year: React.PropTypes.number.isRequired,
@@ -15,19 +17,21 @@ class Info extends React.Component {
     }
 
     render () {
-        const {project, filter, layout} = this.props;
-        const {title, year, text, tags, link} = project;
+        const {project, filter} = this.props;
+        const {title, year, text, tags, link, slug} = project;
 
         return (
-            <section className={`Info Info--${layout}`}>
+            <section className="Info">
                 <div className="Info-inner">
                     <header className="Info-header" ref="info">
-                        <h3 className="Info-title">
-                            {title}
-                        </h3>
-                        <p className="Info-year">
-                            {year}
-                        </p>
+                            <h3 className="Info-title">
+                                {title}
+                            </h3>
+                            <button
+                                className="Info-year"
+                                onClick={selectProject.bind(undefined, slug)}>
+                                {year}
+                            </button>
                     </header>
                     <ul className="Info-text">
                         {text.map((item) => (
@@ -48,5 +52,7 @@ class Info extends React.Component {
         );
     }
 }
+
+ReactMixin.onClass(Info, History);
 
 export {Info as default};

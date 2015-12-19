@@ -1,5 +1,8 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import Picture from './Picture';
+import blockScrolling from '../utils/blockScrolling';
+import constants from '../model/constants';
 
 class Carousel extends React.Component {
 
@@ -9,8 +12,8 @@ class Carousel extends React.Component {
     constructor (props) {
         super(props);
 
-        this.state = this._getState(props);
         this._next = this._next.bind(this);
+        this._zoom = this._zoom.bind(this);
     }
 
     static propTypes = {
@@ -18,21 +21,22 @@ class Carousel extends React.Component {
         autoPlay: React.PropTypes.bool.isRequired
     }
 
-    _getState (props) {
-        const {images, autoPlay} = props;
-        const index = 0;
-        const count = images.length;
+    state = {
+        autoPlay: this.props.autoPlay,
+        count: this.props.images.length,
+        images: this.props.images,
+        index: 0,
+        isZoomed: false,
+        style: {}
+    }
 
-        return {
-            images,
-            count,
-            index,
-            autoPlay
-        };
+    _cancel () {
+        window.clearTimeout(this._timeoutId);
     }
 
     _cueNext () {
-        window.clearTimeout(this._timeoutId);
+        this._cancel();
+
         this._timeoutId = window.setTimeout(
             this._next,
             this._time
@@ -41,23 +45,74 @@ class Carousel extends React.Component {
 
     _next () {
         let index = this.state.index + 1;
+
         if (index === this.state.count) {
             index = 0;
         }
+
         this.setState({
             index
         });
     }
 
+    _zoom () {
+        const isWide = window.matchMedia(constants.MQ_NARROW).matches;
+
+        if (!isWide) {
+            return;
+        }
+
+        const isZoomed = !this.state.isZoomed;
+        const style = isZoomed ? this._getZoomRect() : {};
+        const autoPlay = isZoomed || this.state.autoPlay;
+
+        blockScrolling(isZoomed);
+
+        this.setState({
+            style,
+            isZoomed,
+            autoPlay
+        });
+    }
+
+    _getZoomRect () {
+        const el = ReactDOM.findDOMNode(this);
+        let {left, top, width, height} = el.getBoundingClientRect();
+
+        const viewportWidth = Math.min(window.innerWidth, document.documentElement.clientWidth);
+        const viewportHeight = window.innerHeight;
+        const scale = Math.min(viewportWidth / width, viewportHeight / height);
+
+        left = (viewportWidth - width) / 2 - left;
+        top = (viewportHeight - height) / 2 - top;
+
+        width = Math.floor(width * scale);
+        height = Math.floor(height * scale);
+
+        return {
+            transform: `translate(${left}px, ${top}px) scale(${scale})`
+        };
+    }
+
     componentWillReceiveProps (props) {
-        this.setState(this._getState(props));
+        const {autoPlay} = props;
+
+        this.setState({
+            autoPlay
+        });
     }
 
     render () {
-        const {images, index} = this.state;
+        const {images, index, isZoomed, autoPlay, style} = this.state;
+
+        const classZoomed = isZoomed ? 'is-zoomed' : '';
+        const classPlaying = autoPlay ? 'is-playing' : '';
 
         return (
-            <section className="Carousel">
+            <section
+                className={`Carousel ${classZoomed} ${classPlaying}`}
+                style={style}
+                onClick={() => this._zoom()}>
                 <ul className="Carousel-list">
                     {images.map((image, i) => {
                         const {key, src, caption} = image;
@@ -74,24 +129,26 @@ class Carousel extends React.Component {
         );
     }
 
-    triggerAutoPlay () {
+    toggleAutoPlay () {
         const {autoPlay} = this.state;
 
         if (autoPlay) {
             this._cueNext();
+        } else {
+            this._cancel();
         }
     }
 
     componentDidUpdate (prevProps, prevState) {
-        this.triggerAutoPlay();
+        this.toggleAutoPlay();
     }
 
     componentDidMount () {
-        this.triggerAutoPlay();
+        this.toggleAutoPlay();
     }
 
     componentWillUnmount () {
-        window.clearTimeout(this._timeoutId);
+        this._cancel();
     }
 }
 

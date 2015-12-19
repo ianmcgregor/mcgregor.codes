@@ -10,11 +10,21 @@
 
 .Home-title {
     color: var(--header-title-color);
-    font-size: 48px;
+    font-size: 36px;
     font-weight: normal;
+
+    @media (--narrow) {
+        font-size: 48px;
+    }
 }
 
 .Home-subtitle {
-    max-width: 50vw;
+    font-size: var(--font-size-large);
+    max-width: 70vw;
     text-align: center;
+
+    @media (--narrow) {
+        font-size: var(--font-size-x-large);
+        max-width: 50vw;
+    }
 }

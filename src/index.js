@@ -17,8 +17,7 @@ const routes = (
     <Route path="/" component={App} ignoreScrollBehavior={true}>
         <IndexRoute component={Home}/>
         <Route path="projects" component={Work}>
-            <Route path="filter/:filter" component={Work}/>
-            <Route path=":project" component={Work}/>
+            <Route path=":filter" component={Work}/>
         </Route>
         <Route path="services" component={Services}/>
         <Route path="contact" component={Contact}/>
