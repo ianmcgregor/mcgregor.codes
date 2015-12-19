@@ -12,10 +12,11 @@
             "abbey_road/abbey_road_14"
         ],
         "text": [
+            "FWA Site of the Month",
             "Classic effects recreated using the Web Audio API",
-            "Component based architecture",
-            "Web Audio, Marionette, Three, Lodash, SUIT, PostCSS",
-            "FWA Site of the Month"
+            "Tech: Web Audio, Marionette, Three, Lodash, SUIT, PostCSS",
+            "Role: Lead Developer",
+            "Client: Google, Abbey Road, Stinkdigital"
         ],
         "link": "https://insideabbeyroad.withgoogle.com/",
         "tags": [
@@ -41,9 +42,11 @@
         ],
         "text": [
             "Platform runner game for mobile and desktop",
-            "Save your Facebook friends",
+            "Personalised with data from Facebook",
             "Four full levels with bosses and powerups",
-            "Phaser, PIXI, Tiled Map Editor"
+            "Tech: Phaser, PIXI, Tiled Map Editor",
+            "Role: Lead Developer, Game design",
+            "Client: Ray-Ban, Stinkdigital"
         ],
         "link": "http://game.ray-ban.com/",
         "tags": [
@@ -67,7 +70,9 @@
             "Interactive storybook in 3d",
             "Designed to work on Google Cardboard VR headsets",
             "Additional non-vr versions for iPad and web",
-            "Three.js, Web Audio API, Cordova"
+            "Tech: Three.js, Web Audio API, Cordova",
+            "Role: Technical Lead",
+            "Client: John Lewis, Adam & Eve, Stinkdigital"
         ],
         "link": "http://www.johnlewis.com/christmas-advert-2014-montys-christmas/montys-360-world",
         "tags": [
@@ -89,9 +94,11 @@
         ],
         "text": [
             "Interactive branching film",
-            "Supports numerous mobile and desktop platforms",
             "Fully responsive and progressively enhanced",
-            "PIXI, Handlebars, Sass"
+            "Supports numerous mobile and desktop platforms",
+            "Tech: PIXI, Handlebars, Sass",
+            "Role: Lead Developer",
+            "Client: Chanel, Stinkdigital"
         ],
         "link": "http://chance.archive.stinkdigital.com/en_GB",
         "tags": [
@@ -120,7 +127,9 @@
             "Living archive of UK club culture",
             "User generated content and user profiles",
             "Google+, YouTube and SoundCloud integration",
-            "Angular, PIXI, Box2d, Sass"
+            "Tech: Angular, PIXI, Box2d, Sass",
+            "Role: Lead Developer",
+            "Client: Red Bull, Google, Stinkdigital"
         ],
         "link": "http://archive.revolutionsinsound.com/",
         "tags": [
@@ -138,7 +147,7 @@
         "text": [
             "Utility to pack images into a binary file",
             "Reduces load times for image sequences",
-            "Node.js, Gulp"
+            "Tech: Node.js, Gulp"
         ],
         "link": "https://www.npmjs.com/package/imagepack",
         "tags": [
@@ -157,7 +166,7 @@
         "text": [
             "Experiment with Point Clouds in Three.js",
             "A Torus Knot serves as the geometry for the points",
-            "Three.js, Canvas"
+            "Tech: Three.js, Canvas"
         ],
         "link": "http://codepen.io/ianmcgregor/pen/OPGemQ",
         "tags": [
@@ -176,7 +185,8 @@
         "text": [
             "Open source library for creative audio",
             "Aims to help bring a new level of flourish to audio",
-            "Used on several big projects"
+            "Used on several big projects",
+            "Tech: Web Audio API"
         ],
         "link": "http://prototypes.stinkdigital.com/webaudio/sono/examples/",
         "tags": [
@@ -198,7 +208,8 @@
         "text": [
             "Made in 48 hours for the Ludum Dare game jam",
             "Works on mobile devices using the accelerometer",
-            "As per competition rules I made all the code graphics and audio"
+            "As per competition rules I made all the code graphics and audio",
+            "Tech: Phaser, PIXI"
         ],
         "link": "http://ianmcgregor.me/games/deep-sea-freediver/",
         "tags": [
@@ -218,7 +229,7 @@
         "text": [
             "Gifs that arrive in my email inbox",
             "The app pulls them onto the web",
-            "Python, Google AppEngine"
+            "Tech: Python, Google AppEngine"
         ],
         "link": "http://gifinbox.appspot.com/",
         "tags": [
@@ -235,7 +246,9 @@
             "circloids/circloids_05"
         ],
         "text": [
-            "Experiment using boids (flocking behaviours) and simple circle shapes to create interesting visuals"
+            "Experiment using boids (flocking behaviours)",
+            "Simple shapes paired with organic movements",
+            "Tech: Canvas"
         ],
         "link": "http://ianmcgregor.me/experiments/circloids/",
         "tags": [
@@ -258,7 +271,9 @@
         ],
         "text": [
             "Interactive film filled with rabbit holes that take you into mini-games",
-            "Hugely popular with millions of visitors who battled to be first to discover all the content"
+            "Hugely popular with millions of visitors who battled to be first to discover all the content",
+            "Role: Lead Developer",
+            "Client: Nike, W+K, Stinkdigital"
         ],
         "link": "http://nikemytimeisnow.archive.stinkdigital.com/",
         "tags": [
@@ -277,7 +292,9 @@
             "project_03"
         ],
         "text": [
-            "The app takes the users address and composites images from Google Streetview into green screen footage to make it appear like Carole is coming to your house"
+            "The app takes the users address and composites images from Google Streetview into green screen footage to make it appear like Carole is coming to your house",
+            "Role: Lead Developer",
+            "Client: Stella Artois, Mother, Stinkdigital"
         ],
         "link": "http://stella-carole.archive.stinkdigital.com/",
         "tags": [
@@ -296,7 +313,9 @@
             "captain_ice/captain_ice_10"
         ],
         "text": [
-            "A game using a blend of video clips and pixel art"
+            "A game that blends video clips and pixel art",
+            "Role: Lead Developer",
+            "Client: Vigorsol, BBH, Stinkdigital"
         ],
         "link": "http://www.vigorsolcaptainice.com/",
         "tags": [
@@ -316,7 +335,9 @@
         "text": [
             "Web Speech API experience with Hip-Hop legends Run DMC",
             "Certain keywords change the film as the user watches",
-            "Web Speech API"
+            "Tech: Web Speech API, Audio, Video",
+            "Role: Lead Developer",
+            "Client: Adidas, Sid Lee, Stinkdigital"
         ],
         "link": "http://adidas-fw13.archive.stinkdigital.com/",
         "tags": [
@@ -336,7 +357,9 @@
         ],
         "text": [
             "An interactive 360 film shot using an octocopter",
-            "Custom shader to optimise the playback as existing 3d libraries were too slow"
+            "Custom shader to optimise the playback as existing 3d libraries were too slow",
+            "Role: Lead Developer",
+            "Client: Menicon, Mori, Stinkdigital"
         ],
         "link": "http://miru.menicon.com/tosee/",
         "tags": [
@@ -355,7 +378,9 @@
             "urban_tour/urban_tour_27"
         ],
         "text": [
-            "Interactive fashion catalogue slash music video"
+            "Interactive fashion catalogue slash music video",
+            "Role: Lead Developer",
+            "Client: Asos, BBH, Stinkdigital"
         ],
         "link": "https://vimeo.com/36039145",
         "tags": [
@@ -375,7 +400,9 @@
         ],
         "text": [
             "Camera API allows the user to 'See things differently' by tilting their head",
-            "The film and audio changes seamlessly when they tilt their head from side to side"
+            "The film and audio changes seamlessly when they tilt their head from side to side",
+            "Role: Senior Developer",
+            "Client: Hugo Boss, Blast Radius, Stinkdigital"
         ],
         "link": "http://hugo-justdifferent.archive.stinkdigital.com/",
         "tags": [
@@ -396,7 +423,9 @@
         "text": [
             "A competition encouraging Facebook shares",
             "We filmed cats wandering through Ikea",
-            "Users win a product by choosing the right cat"
+            "Users win a product by choosing the right cat",
+            "Role: Lead Developer",
+            "Client: Ikea, Mother, Stinkdigital"
         ],
         "link": "http://cats.archive.stinkdigital.com/",
         "tags": [
@@ -417,7 +446,9 @@
         "text": [
             "Interactive film trailer for a BBC nature film",
             "Swipe for contextual content at any time",
-            "Interface reflects average colour of the frame, highlighting the rich visuals"
+            "Interface reflects average colour of the frame, highlighting the rich visuals",
+            "Role: Lead Developer",
+            "Client: BBC, Brooklyn Brothers, Stinkdigital"
         ],
         "link": "http://bbc-onelife.archive.stinkdigital.com/",
         "tags": [
@@ -436,7 +467,9 @@
             "project_03"
         ],
         "text": [
-            "An island community powered by Facebook"
+            "An island community powered by Facebook",
+            "Role: Lead Developer",
+            "Client: Diesel, Stinkdigital"
         ],
         "link": "http://diesel-island-ss11.archive.stinkdigital.com/",
         "tags": [
@@ -462,7 +495,9 @@
             "Branching narrative with elements of user content",
             "Quick fire decisions change the film",
             "Interview gathers user info and audio recordings",
-            "FWA People's Choice Site of the Year"
+            "FWA People's Choice Site of the Year",
+            "Role: Lead Developer",
+            "Client: Lexus, Vitro, Stinkdigital"
         ],
         "link": "http://darkride.archive.stinkdigital.com/",
         "tags": [
@@ -483,7 +518,9 @@
         ],
         "text": [
             "Music video slash fashion catalogue",
-            "Roll over the film to see featured clothes"
+            "Roll over the film to see featured clothes",
+            "Role: Lead Developer",
+            "Client: Diesel, Anomaly, Stinkdigital"
         ],
         "link": "http://diesel-hundredlovers.archive.stinkdigital.com/",
         "tags": [
@@ -505,7 +542,9 @@
             "Groundbreaking interactive film",
             "Ambilight effect samples colour from the video",
             "Segue seamlessly into behind the scenes films",
-            "Stinkdigital's first FWA and Cannes Grand Prix"
+            "Stinkdigital's first FWA and Cannes Grand Prix",
+            "Role: Lead Developer",
+            "Client: Philips, Tribal DDB, Stinkdigital"
         ],
         "link": "http://labs.tribalddb.nl/Cinema219/",
         "tags": [
