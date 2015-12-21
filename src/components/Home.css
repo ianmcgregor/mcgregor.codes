@@ -25,6 +25,6 @@
 
     @media (--narrow) {
         font-size: var(--font-size-x-large);
-        max-width: 50vw;
+        max-width: 400px;
     }
 }
