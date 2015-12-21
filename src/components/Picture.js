@@ -11,13 +11,35 @@ class Picture extends React.Component {
         return false;
     }
 
+    _getUrl (base, src, ext) {
+        return `${base}_${src.width}x${src.height}.${ext}`;
+    }
+
+    _getSrcSet (arr, base, ext) {
+        return arr.map((src) => (
+            `${this._getUrl(base, src, ext)} ${src.vw}w`
+        )).join(',\n');
+    }
+
+    _getDefault (arr, base, ext) {
+        const src = arr[arr.length - 1];
+        return this._getUrl(base, src, ext);
+    }
+
     render () {
-        const {src, alt} = this.props;
+        const {src, alt, srcSet} = this.props;
+
+        const srcSetJpg = this._getSrcSet(srcSet, src, 'jpg');
+        const srcSetWebp = this._getSrcSet(srcSet, src, 'webp');
+        const srcDefault = this._getDefault(srcSet, src, 'jpg');
 
         return (
             <picture>
-                <source srcSet={`/${src}.webp`} type="image/webp"/>
-                <img src={`/${src}.jpg`} alt={alt}/>
+                <source type="image/webp"
+                    srcSet={srcSetWebp}/>
+                <img src={srcDefault}
+                    srcSet={srcSetJpg}
+                    alt={alt}/>
             </picture>
         );
     }

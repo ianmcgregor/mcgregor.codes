@@ -104,6 +104,7 @@ class Carousel extends React.Component {
 
     render () {
         const {images, index, isZoomed, autoPlay, style} = this.state;
+        const {srcSet} = this.props;
 
         const classZoomed = isZoomed ? 'is-zoomed' : '';
         const classPlaying = autoPlay ? 'is-playing' : '';
@@ -120,7 +121,7 @@ class Carousel extends React.Component {
                         return (
                             <li key={key}
                                 className={`Carousel-item ${state}`}>
-                                <Picture src={src} alt={caption} />
+                                <Picture src={src} alt={caption} srcSet={srcSet} />
                             </li>
                         );
                     })}
@@ -130,9 +131,9 @@ class Carousel extends React.Component {
     }
 
     toggleAutoPlay () {
-        const {autoPlay} = this.state;
+        const {autoPlay, count} = this.state;
 
-        if (autoPlay) {
+        if (autoPlay && count > 1) {
             this._cueNext();
         } else {
             this._cancel();

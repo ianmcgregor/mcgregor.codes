@@ -11,20 +11,18 @@ class Store extends EventEmitter {
 
         this.setMaxListeners(1);
 
-        // possible sizes: 1280x720, 960x540, 800x450, 640x360
-        const isWide = window.matchMedia(constants.MQ_NARROW).matches;
-        const imagePath = (window.isDebug ? '' : 'dist/') + 'img/' + (isWide ? '1280x720' : '800x450') + '/';
+        // function getCaption(project, index) {
+        //     const {text} = project;
+        //     if (!Array.isArray(text)) {
+        //         return text;
+        //     }
+        //     if (index > text.length - 1) {
+        //         return text[text.length - 1];
+        //     }
+        //     return text[index];
+        // }
 
-        function getCaption(project, index) {
-            const {text} = project;
-            if (!Array.isArray(text)) {
-                return text;
-            }
-            if (index > text.length - 1) {
-                return text[text.length - 1];
-            }
-            return text[index];
-        }
+        const imagePath = (window.isDebug ? '' : '/dist/') + '/img/';
 
         function getSlug(str) {
             return str
@@ -67,15 +65,10 @@ class Store extends EventEmitter {
                 slug: getSlug(project.title),
                 layout: (project.layout || 'center'),
                 tags: project.tags.map((tag) => cloneTag(tag)),
-                thumb: {
-                    key: uniqueId(),
-                    src: imagePath + project.thumb,
-                    caption: project.title
-                },
                 images: project.images.map((image, i) => ({
                     key: uniqueId(),
-                    src: imagePath + image,
-                    caption: getCaption(project, i)
+                    src: `${imagePath}${image}`,
+                    caption: project.title
                 })),
                 text: project.text.map((text) => ({
                     key: uniqueId(),
@@ -84,12 +77,14 @@ class Store extends EventEmitter {
             })
         ));
 
+        const {srcSet} = config;
         const filters = [];
 
         this._model = Object.freeze({
             tags,
             projects,
-            filters
+            filters,
+            srcSet
         });
     }
 
@@ -131,6 +126,10 @@ class Store extends EventEmitter {
 
     getFilters () {
         return this._model.filters;
+    }
+
+    getSrcSet () {
+        return this._model.srcSet;
     }
 
     getFilter () {

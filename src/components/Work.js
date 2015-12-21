@@ -33,6 +33,7 @@ class Work extends React.Component {
         const {filter} = this.props;
         const {scrollTop} = this.state;
         const projects = store.getFilteredProjects(filter);
+        const srcSet = store.getSrcSet();
 
         return (
             <main className="Work">
@@ -49,6 +50,7 @@ class Work extends React.Component {
                             key={p.key}
                             filter={filter}
                             project={p}
+                            srcSet={srcSet}
                             scrollTop={scrollTop}/>
                     ))}
                 </section>

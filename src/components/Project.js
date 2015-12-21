@@ -14,8 +14,7 @@ class Project extends React.Component {
     static propTypes = {
         project: React.PropTypes.shape({
             images: React.PropTypes.array.isRequired,
-            layout: React.PropTypes.string.isRequired,
-            thumb: React.PropTypes.object.isRequired
+            layout: React.PropTypes.string.isRequired
         })
     }
 
@@ -25,7 +24,7 @@ class Project extends React.Component {
 
     _updateInView () {
         const el = ReactDOM.findDOMNode(this);
-        const inView = inViewport(el, -40);
+        const inView = inViewport(el, -80);
 
         this.setState({
             inView: inView
@@ -43,14 +42,14 @@ class Project extends React.Component {
     }
 
     render () {
-        const {project, filter} = this.props;
+        const {project, filter, srcSet} = this.props;
         const {layout, images} = project;
         const {inView} = this.state;
 
         return (
             <article className={`Project layout-${layout}`}>
                 <div className="Project-carousel">
-                    <Carousel images={images} autoPlay={inView} />
+                    <Carousel images={images} srcSet={srcSet} autoPlay={inView} />
                 </div>
                 <Info project={project} filter={filter}/>
             </article>

@@ -4,7 +4,6 @@
         "year": 2015,
         "visible": true,
         "layout": "center",
-        "thumb": "abbey_road/abbey_road_02",
         "images": [
             "abbey_road/abbey_road_02",
             "abbey_road/abbey_road_01",
@@ -28,7 +27,6 @@
         "year": 2014,
         "visible": true,
         "layout": "left",
-        "thumb": "made/made_01",
         "images": [
             "made/made_01",
             "made/made_02",
@@ -58,7 +56,6 @@
         "year": 2014,
         "visible": true,
         "layout": "right",
-        "thumb": "montys_christmas/montys_christmas_01",
         "images": [
             "montys_christmas/montys_christmas_01",
             "montys_christmas/montys_christmas_03",
@@ -86,7 +83,6 @@
         "year": 2014,
         "visible": true,
         "layout": "left",
-        "thumb": "chance/chance_02",
         "images": [
             "chance/chance_02",
             "chance/chance_05",
@@ -110,7 +106,6 @@
         "year": 2014,
         "visible": true,
         "layout": "center",
-        "thumb": "revs_in_sound/revs_in_sound_01",
         "images": [
             "revs_in_sound/revs_in_sound_01",
             "revs_in_sound/revs_in_sound_02",
@@ -140,7 +135,6 @@
         "year": 2015,
         "visible": true,
         "layout": "smallLeft",
-        "thumb": "imagepack/imagepack_04",
         "images": [
             "imagepack/imagepack_04"
         ],
@@ -159,7 +153,6 @@
         "year": 2015,
         "visible": true,
         "layout": "smallRight",
-        "thumb": "pointcloud/pointcloud_05",
         "images": [
             "pointcloud/pointcloud_05"
         ],
@@ -178,7 +171,6 @@
         "year": 2015,
         "visible": true,
         "layout": "right",
-        "thumb": "sono/sono_02",
         "images": [
             "sono/sono_02"
         ],
@@ -198,7 +190,6 @@
         "year": 2014,
         "visible": true,
         "layout": "left",
-        "thumb": "deep_sea_freediver/deep_sea_freediver_01",
         "images": [
             "deep_sea_freediver/deep_sea_freediver_01",
             "deep_sea_freediver/deep_sea_freediver_03",
@@ -222,7 +213,6 @@
         "year": 2014,
         "visible": true,
         "layout": "smallRight",
-        "thumb": "gifinbox/gifinbox_02",
         "images": [
             "gifinbox/gifinbox_02"
         ],
@@ -241,7 +231,6 @@
         "year": 2014,
         "visible": true,
         "layout": "smallLeft",
-        "thumb": "circloids/circloids_05",
         "images": [
             "circloids/circloids_05"
         ],
@@ -259,7 +248,6 @@
         "year": 2014,
         "visible": true,
         "layout": "center",
-        "thumb": "my_time_is_now/my_time_is_now_12",
         "images": [
             "my_time_is_now/my_time_is_now_12",
             "my_time_is_now/my_time_is_now_24",
@@ -285,7 +273,6 @@
         "year": 2014,
         "visible": false,
         "layout": "right",
-        "thumb": "project_01_thumb",
         "images": [
             "project_01",
             "project_02",
@@ -305,7 +292,6 @@
         "year": 2014,
         "visible": true,
         "layout": "right",
-        "thumb": "captain_ice/captain_ice_04",
         "images": [
             "captain_ice/captain_ice_04",
             "captain_ice/captain_ice_01",
@@ -326,7 +312,6 @@
         "year": 2013,
         "visible": false,
         "layout": "right",
-        "thumb": "project_01_thumb",
         "images": [
             "project_01",
             "project_02",
@@ -349,7 +334,6 @@
         "year": 2013,
         "visible": true,
         "layout": "left",
-        "thumb": "miru/miru_16",
         "images": [
             "miru/miru_16",
             "miru/miru_09",
@@ -370,7 +354,6 @@
         "year": 2013,
         "visible": true,
         "layout": "right",
-        "thumb": "urban_tour/urban_tour_09",
         "images": [
             "urban_tour/urban_tour_09",
             "urban_tour/urban_tour_20",
@@ -391,7 +374,6 @@
         "year": 2013,
         "visible": true,
         "layout": "left",
-        "thumb": "kino/kino_06",
         "images": [
             "kino/kino_06",
             "kino/kino_30",
@@ -413,7 +395,6 @@
         "year": 2011,
         "visible": true,
         "layout": "right",
-        "thumb": "happy_inside/happy_inside_02",
         "images": [
             "happy_inside/happy_inside_02",
             "happy_inside/happy_inside_03",
@@ -436,7 +417,6 @@
         "year": 2011,
         "visible": true,
         "layout": "left",
-        "thumb": "one_life/one_life_06",
         "images": [
             "one_life/one_life_06",
             "one_life/one_life_19",
@@ -460,7 +440,6 @@
         "year": 2011,
         "visible": false,
         "layout": "right",
-        "thumb": "project_01_thumb",
         "images": [
             "project_01",
             "project_02",
@@ -480,7 +459,6 @@
         "year": 2010,
         "visible": true,
         "layout": "right",
-        "thumb": "dark_ride/dark_ride_06",
         "images": [
             "dark_ride/dark_ride_06",
             "dark_ride/dark_ride_14",
@@ -508,7 +486,6 @@
         "year": 2010,
         "visible": true,
         "layout": "left",
-        "thumb": "a_hundred_lovers/a_hundred_lovers_29",
         "images": [
             "a_hundred_lovers/a_hundred_lovers_29",
             "a_hundred_lovers/a_hundred_lovers_32",
@@ -532,7 +509,6 @@
         "year": 2009,
         "visible": true,
         "layout": "center",
-        "thumb": "carousel/carousel_15",
         "images": [
             "carousel/carousel_15",
             "carousel/carousel_09",
@@ -550,5 +526,30 @@
         "tags": [
             "interactive film"
         ]
+    }],
+    "srcSet": [{
+        "width": 1920,
+        "height": 1080,
+        "vw": 3840
+    }, {
+        "width": 1024,
+        "height": 576,
+        "vw": 2048
+    }, {
+        "width": 768,
+        "height": 432,
+        "vw": 1536
+    }, {
+        "width": 640,
+        "height": 360,
+        "vw": 1280
+    }, {
+        "width": 768,
+        "height": 432,
+        "vw": 768
+    }, {
+        "width": 640,
+        "height": 360,
+        "vw": 640
     }]
 }

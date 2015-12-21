@@ -1,29 +1,21 @@
+const _ = require('lodash');
 const args = require('yargs').argv;
 const path = require('path');
-const uniq = require('lodash').uniq;
 const gulp = require('gulp');
 const debug = require('gulp-debug');
+const rename = require('gulp-rename');
 const resize = require('gulp-image-resize');
 const webp = require('imagemin-webp');
 
 const paths = require('./paths.json').images;
 
-const sizes = [{
-    width: 1280,
-    height: 720
-}, {
-    width: 960,
-    height: 540
-}, {
-    width: 800,
-    height: 450
-}, {
-    width: 640,
-    height: 360
-}];
+const config = require('../src/model/config.json');
+
+const sizes = _.uniq(config.srcSet.map(function(src) {
+    return _.omit(src, 'vw');
+}), 'width');
 
 function listImages(search) {
-    const config = require('../src/model/config.json');
     const projects = config.projects;
     if (search) {
         projects = projects.filter(function(project) {
@@ -36,7 +28,7 @@ function listImages(search) {
             return project.visible;
         })
         .map(function(project) {
-            return uniq(project.images.concat([project.thumb]));
+            return project.images;
         })
         .reduce(function(value, images) {
             return value.concat(images);
@@ -46,22 +38,9 @@ function listImages(search) {
 function getSrcImages(search) {
     return listImages(search)
         .map(function(image) {
-            return paths.entry + '/**/' + path.basename(image, '.jpg') + '.*';
+            return paths.entry + '/**/' + path.basename(image, '.jpg') + '.png';
         });
 }
-
-// function resizeJPG(size) {
-//     return resize({
-//         format: 'jpg',
-//         width: size.width,
-//         height: size.height,
-//         crop: false,
-//         upscale: false,
-//         quality: 1,
-//         filter: 'Catrom',
-//         sharpen: false
-//     });
-// }
 
 function convertJPG(quality) {
     return resize({
@@ -83,7 +62,7 @@ function resizePNG(size) {
         crop: false,
         upscale: false,
         filter: 'Catrom',
-        sharpen: false
+        sharpen: true
     });
 }
 
@@ -94,13 +73,19 @@ function convert() {
             .pipe(debug())
             .pipe(resizePNG(size))
             .pipe(convertJPG(0.9))
-            .pipe(gulp.dest(paths.dest + '/' + size.width + 'x' + size.height));
+            .pipe(rename({
+                suffix: '_' + size.width + 'x' + size.height
+            }))
+            .pipe(gulp.dest(paths.dest));
 
         gulp.src(getSrcImages(args.project))
             .pipe(debug())
             .pipe(resizePNG(size))
             .pipe(convertWebP(90))
-            .pipe(gulp.dest(paths.dest + '/' + size.width + 'x' + size.height));
+            .pipe(rename({
+                suffix: '_' + size.width + 'x' + size.height
+            }))
+            .pipe(gulp.dest(paths.dest));
     });
 }
 
