@@ -59,7 +59,7 @@ module.exports = function(config) {
         // config.LOG_WARN
         // config.LOG_INFO
         // config.LOG_DEBUG
-        logLevel: config.LOG_DEBUG,
+        logLevel: config.LOG_ERROR,
 
         // enable / disable watching file and executing tests whenever any file changes
         autoWatch: true,

@@ -14,6 +14,8 @@ class App extends React.Component {
     constructor (props) {
         super(props);
 
+        console.log(Footer());
+
         this._onChange = this._onChange.bind(this);
 
         // init Google Analytics
