@@ -34,12 +34,14 @@ class Carousel extends React.Component {
         window.clearTimeout(this._timeoutId);
     }
 
-    _cueNext () {
+    _cueNext (first) {
         this._cancel();
+
+        const time = first ? this._time / 2 : this._time;
 
         this._timeoutId = window.setTimeout(
             this._next,
-            this._time
+            time
         );
     }
 
@@ -130,22 +132,22 @@ class Carousel extends React.Component {
         );
     }
 
-    toggleAutoPlay () {
+    toggleAutoPlay (first) {
         const {autoPlay, count} = this.state;
 
         if (autoPlay && count > 1) {
-            this._cueNext();
+            this._cueNext(first);
         } else {
             this._cancel();
         }
     }
 
     componentDidUpdate (prevProps, prevState) {
-        this.toggleAutoPlay();
+        this.toggleAutoPlay(!prevState.autoPlay);
     }
 
     componentDidMount () {
-        this.toggleAutoPlay();
+        this.toggleAutoPlay(false);
     }
 
     componentWillUnmount () {
