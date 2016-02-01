@@ -1,5 +1,5 @@
 import React from 'react';
-import Boids from './Boids';
+import Boids from '../components/Boids';
 
 class Home extends React.Component {
 

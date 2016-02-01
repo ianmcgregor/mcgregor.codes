@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from './Header';
-import Footer from './Footer';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 import {store} from '../model/store';
 import {History} from 'react-router';
 import ReactMixin from 'react-mixin';
@@ -13,8 +13,6 @@ class App extends React.Component {
 
     constructor (props) {
         super(props);
-
-        console.log(Footer());
 
         this._onChange = this._onChange.bind(this);
 

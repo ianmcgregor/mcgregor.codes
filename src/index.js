@@ -5,11 +5,11 @@ import ReactDOM from 'react-dom';
 import {Router, Route, IndexRoute} from 'react-router';
 import {createHistory} from 'history';
 
-import App from './components/App';
-import Contact from './components/Contact';
-import Home from './components/Home';
-import Services from './components/Services';
-import Work from './components/Work';
+import App from './view/App';
+import Contact from './view/Contact';
+import Home from './view/Home';
+import Services from './view/Services';
+import Work from './view/Work';
 
 const container = document.querySelector('[data-region="container"]');
 
