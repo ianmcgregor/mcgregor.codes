@@ -4,7 +4,7 @@ const plumber = require('gulp-plumber');
 const postcss = require('gulp-postcss');
 const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
-const paths = require('./paths.json').styles;
+const paths = require('../package.json').paths.styles;
 
 const processors = [
     require('postcss-import')(),
@@ -35,7 +35,7 @@ function bundle() {
     return gulp.src(paths.entry)
         .pipe(plumber({errorHandler: logError}))
         .pipe(sourcemaps.init({loadMaps: true}))
-        .pipe(rename(paths.bundle))
+        .pipe(rename('styles.css'))
         .pipe(postcss(processors))
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(paths.dest));

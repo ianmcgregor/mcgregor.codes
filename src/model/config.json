@@ -1,4 +1,18 @@
 {
+    "title": "McGregor Codes",
+    "description": "Specialist in creative, experiential web sites, games and applications.",
+    "keywords": ["developer", "javascript", "css"],
+    "url": "http://mcgregor.codes",
+    "pages": [{
+        "title": "Projects",
+        "route": "/projects"
+    }, {
+        "title": "Services",
+        "route": "/services"
+    }, {
+        "title": "Contact",
+        "route": "/contact"
+    }],
     "projects": [{
         "title": "Inside Abbey Road",
         "year": 2015,

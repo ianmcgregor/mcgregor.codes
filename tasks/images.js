@@ -7,7 +7,7 @@ const rename = require('gulp-rename');
 const resize = require('gulp-image-resize');
 const webp = require('imagemin-webp');
 
-const paths = require('./paths.json').images;
+const paths = require('../package.json').paths.images;
 
 const config = require('../src/model/config.json');
 

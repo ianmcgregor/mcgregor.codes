@@ -35,7 +35,7 @@ export default function Footer() {
                     </a>
                 </li>
                 <li className="Footer-copyright">
-                    © Copyright 2015 McGregor Codes Ltd
+                    © Copyright 2016 McGregor Codes Ltd
                 </li>
             </ul>
         </footer>

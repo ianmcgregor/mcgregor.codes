@@ -40,7 +40,7 @@ class App extends React.Component {
 
         return (
             <div className="App">
-                <Header />
+                <Header title={store.getTitle()} pages={store.getPages()} />
                     {React.cloneElement(this.props.children, {filter})}
                 <Footer />
             </div>
@@ -48,8 +48,8 @@ class App extends React.Component {
     }
 
     _getDocTitle(pathname) {
-        const title = constants.DOC_TITLE;
-        return title + pathname
+        return store.getTitle()
+            .concat(pathname)
             .replace('_', ' ')
             .replace('/', ' / ')
             .toUpperCase();

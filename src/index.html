@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+	<meta name="description" content="<%= data.description %>">
+    <meta name="keywords" content="<%= data.keywords.join(', ') %>">
+	<meta name="author" content="<%= data.title %> Ltd">
+
+    <meta property="og:title" content="<%= data.title %>">
+    <meta property="og:site_name" content="<%= data.title %>">
+    <meta property="og:description" content="<%= data.description %>">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="<%= data.url %>">
+    <meta property="og:image" content="<%= data.url %>/img/mcgregor_codes/mcgregor_codes.png">
+
+	<title><%= title %></title>
+    <link href="<%= path %>/favicon.ico" rel="shortcut icon">
+	<link href="<%= path %>/css/styles.css" rel="stylesheet">
+	<script src="<%= path %>/js/modernizr<%= min %>.js"></script>
+</head>
+<body>
+	<div data-container></div>
+	<% if (debug) { %><script>window.isDebug = true;</script><% } %>
+	<script src="<%= path %>/js/bundle<%= min %>.js"></script>
+</body>
+</html>

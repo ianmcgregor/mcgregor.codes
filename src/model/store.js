@@ -77,14 +77,16 @@ class Store extends EventEmitter {
             })
         ));
 
-        const {srcSet} = config;
+        const {title, pages, srcSet} = config;
         const filters = [];
 
         this._model = Object.freeze({
-            tags,
+            pages,
             projects,
+            tags,
             filters,
-            srcSet
+            srcSet,
+            title
         });
     }
 
@@ -104,7 +106,6 @@ class Store extends EventEmitter {
     }
 
     _emitChange () {
-        console.log('emit change');
         this.emit('change');
     }
 
@@ -114,6 +115,14 @@ class Store extends EventEmitter {
 
     removeChangeListener (callback) {
         this.removeListener('change', callback);
+    }
+
+    getTitle() {
+        return this._model.title;
+    }
+
+    getPages() {
+        return this._model.pages;
     }
 
     getProjects() {

@@ -1,7 +1,7 @@
 const args = require('yargs').argv;
 const browserSync = require('browser-sync').create();
 const historyApiFallback = require('connect-history-api-fallback');
-const paths = require('./paths.json').connect;
+const paths = require('../package.json').paths.connect;
 
 module.exports = function() {
     browserSync.init({

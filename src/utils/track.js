@@ -11,8 +11,8 @@ export default {
 		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
         /*eslint-enable*/
 
-        ga('create', gaAccount, 'auto');
-        ga('send', 'pageview');
+        window.ga('create', gaAccount, 'auto');
+        window.ga('send', 'pageview');
     },
     page: function(page, title) {
         console.log('track.page:', page);

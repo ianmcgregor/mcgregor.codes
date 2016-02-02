@@ -11,7 +11,7 @@ import Home from './view/Home';
 import Services from './view/Services';
 import Work from './view/Work';
 
-const container = document.querySelector('[data-region="container"]');
+const container = document.querySelector('[data-container]');
 
 const routes = (
     <Route path="/" component={App} ignoreScrollBehavior={true}>
