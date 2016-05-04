@@ -15,9 +15,6 @@ class App extends React.Component {
         super(props);
 
         this._onChange = this._onChange.bind(this);
-
-        // init Google Analytics
-        track.init(constants.GA_ID);
     }
 
     _onChange () {

@@ -1,13 +1,10 @@
 const ACTION_TOGGLE_FILTER = 'ACTION_TOGGLE_FILTER';
 const ACTION_SELECT_PROJECT = 'ACTION_SELECT_PROJECT';
 
-const GA_ID = 'UA-66215708-1';
-
 const MQ_NARROW = '(min-width: 415px)';
 
 export default Object.freeze({
     ACTION_TOGGLE_FILTER,
     ACTION_SELECT_PROJECT,
-    GA_ID,
     MQ_NARROW
 });
