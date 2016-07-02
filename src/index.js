@@ -1,9 +1,6 @@
-'use strict';
-
 import React from 'react';
-import ReactDOM from 'react-dom';
-import {Router, Route, IndexRoute} from 'react-router';
-import {createHistory} from 'history';
+import {render} from 'react-dom';
+import {Router, Route, IndexRoute, browserHistory} from 'react-router';
 
 import App from './view/App';
 import Contact from './view/Contact';
@@ -25,6 +22,4 @@ const routes = (
     </Route>
 );
 
-const history = createHistory();
-
-ReactDOM.render(<Router history={history}>{routes}</Router>, container);
+render(<Router history={browserHistory}>{routes}</Router>, container);

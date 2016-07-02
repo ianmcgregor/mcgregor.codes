@@ -2,14 +2,13 @@ import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import {store} from '../model/store';
-import {History} from 'react-router';
-import ReactMixin from 'react-mixin';
 import track from '../utils/track';
-import constants from '../model/constants';
 
-
-// @ReactMixin.decorate(History)
 class App extends React.Component {
+
+    static contextTypes = {
+        router: React.PropTypes.object.isRequired
+    }
 
     constructor (props) {
         super(props);
@@ -21,9 +20,9 @@ class App extends React.Component {
         const filter = store.getFilter();
 
         if (filter) {
-            this.history.pushState(null, `/projects/${filter}`);
+            this.context.router.push(`/projects/${filter}`);
         } else {
-            this.history.pushState(null, '/projects');
+            this.context.router.push('/projects');
         }
     }
 
@@ -74,7 +73,5 @@ class App extends React.Component {
         store.removeChangeListener(this._onChange);
     }
 }
-
-ReactMixin.onClass(App, History);
 
 export {App as default};

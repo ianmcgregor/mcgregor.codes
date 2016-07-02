@@ -1,7 +1,5 @@
 import React from 'react';
 import Filter from './Filter';
-import {History} from 'react-router';
-import ReactMixin from 'react-mixin';
 import {selectProject} from '../model/actions';
 
 class Info extends React.Component {
@@ -49,7 +47,5 @@ class Info extends React.Component {
         );
     }
 }
-
-ReactMixin.onClass(Info, History);
 
 export {Info as default};

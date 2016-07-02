@@ -16,9 +16,9 @@ class Header extends React.Component {
                 </IndexLink>
                 <nav>
                     <ul className="Header-menu">
-                        {pages.map((page) => {
+                        {pages.map((page, i) => {
                             return (
-                                <li className="Header-menuItem">
+                                <li className="Header-menuItem" key={'Header-menuItem' + i}>
                                     <Link to={page.route} className="Header-link u-link" activeClassName="is-active">
                                         {page.title}
                                     </Link>
