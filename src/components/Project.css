@@ -2,8 +2,8 @@
     background-color: var(--bg-color-dark);
     box-shadow: 6px 8px 32px 4px var(--shadow-color);
     flex: 0 1 auto;
-    margin-bottom: 20px;
-    margin-top: 10px;
+    margin-bottom: var(--spacing-wide);
+    margin-top: var(--spacing-narrow);
 }
 
 .Project-carousel {

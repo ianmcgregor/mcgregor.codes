@@ -8,3 +8,7 @@ button:focus,
 a:focus {
     outline: none;
 }
+
+p {
+    font-size: var(--font-size-small);
+}

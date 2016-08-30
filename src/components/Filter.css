@@ -1,11 +1,11 @@
 .Filter {
     display: flex;
-    padding: var(--spacing-wide) var(--spacing);
+    padding: var(--spacing-wide) var(--spacing-narrow);
 }
 
 .Filter-item {
     font-size: var(--font-size-small);
-    line-height: 1.2;
+    line-height: 1.4;
     position: relative;
 
     &::after {
@@ -22,10 +22,11 @@
  */
 
 .Filter--work {
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    display: none;
 
     @media (--medium) {
+        display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
     }
 
@@ -75,7 +76,11 @@
 
     .Filter-item {
         color: var(--info-tag-color);
-        margin: 0 var(--spacing-wide) 0 var(--spacing);
+        margin: 0 var(--spacing-narrow) 0 4px;
+
+        @media (--medium) {
+            margin: 0 var(--spacing-wide) 0 var(--spacing-narrow);
+        }
 
         &::before {
             background-color: var(--info-tag-underline-color);

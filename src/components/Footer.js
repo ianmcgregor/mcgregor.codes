@@ -34,8 +34,11 @@ export default function Footer() {
                         StackOverflow
                     </a>
                 </li>
-                <li className="Footer-copyright">
-                    © Copyright 2016 McGregor Codes Ltd
+                <li>
+                    <a className="Footer-link u-link"
+                        href="mailto:ian@mcgregor.codes">
+                        ian@mcgregor.codes
+                    </a>
                 </li>
             </ul>
         </footer>

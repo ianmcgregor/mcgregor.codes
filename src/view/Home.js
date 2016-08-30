@@ -8,8 +8,8 @@ class Home extends React.Component {
         return (
             <main className="Home">
                 <h2 className="Home-title">Ian McGregor</h2>
-                <h3 className="Home-subtitle">Specialist in creative, experiential
-                web sites, games and applications.</h3>
+                <p className="Home-subtitle">Specialist in creative, experiential
+                web sites, games and applications.</p>
                 <Boids/>
             </main>
         );

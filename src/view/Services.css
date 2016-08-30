@@ -11,26 +11,33 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: var(--spacing-wide);
+    padding: var(--spacing);
     width: 100%;
 
     @media (--medium) {
         flex-direction: row;
+        padding: var(--spacing-wide);
     }
 }
 
 .Services-info {
     flex: 1;
-    margin-bottom: var(--spacing-wide);
+    margin-bottom: var(--spacing);
     margin-right: 10%;
+
+    @media (--medium) {
+        margin-bottom: var(--spacing-wide);
+    }
 
     > h2 {
         font-size: var(--font-size-x-large);
         font-weight: normal;
+        margin-bottom: var(--spacing);
     }
 
     > p {
-        margin-bottom: var(--spacing-wide);
+        font-size: var(--font-size-large);
+        margin-bottom: var(--spacing);
         text-transform: none;
     }
 }
@@ -44,7 +51,11 @@
     flex: 1;
     font-size: var(--font-size-small);
     margin: 0.8em 0;
-    padding: var(--spacing-wide);
+    padding: var(--spacing);
+
+    @media (--medium) {
+        padding: var(--spacing-wide);
+    }
 }
 
 .Services-group {
@@ -52,11 +63,12 @@
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: var(--spacing-wide);
+    margin-top: var(--spacing);
     position: relative;
 
-    @media (--narrow) {
+    @media (--medium) {
         flex-direction: row;
+        margin-top: var(--spacing-wide);
     }
 
     &:first-child {
@@ -65,7 +77,10 @@
 
     > li {
         min-width: 50%;
-        width: 50%;
+
+        @media (--medium) {
+            width: 50%;
+        }
 
         &.Services-name {
             color: var(--services-list-group-color);

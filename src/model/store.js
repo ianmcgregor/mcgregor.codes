@@ -53,7 +53,7 @@ class Store extends EventEmitter {
         const tags = uniq(config.projects
             .filter((project) => project.visible)
             .reduce((value, project) => value.concat(project.tags), [])
-            .map((tag) => getTag(tag)))
+            .map((tag) => getTag(tag.toLowerCase())))
             .sort((a, b) => b.count - a.count);
 
         //  create unique keys and slugs

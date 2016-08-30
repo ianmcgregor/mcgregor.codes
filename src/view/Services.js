@@ -4,8 +4,6 @@ export default function Services() {
     return (
         <main className="Services">
             <section className="Services-info">
-                <h2>About</h2>
-
                 <p>I love to push the limits of the technologies at hand.
                     I write robust, performant JavaScript and CSS.
                     The KISS, DRY and YAGNI principles are always on my mind.</p>
@@ -20,7 +18,9 @@ export default function Services() {
                     <li>JavaScript (ES5, ES6 + Babel)</li>
                     <li>CSS (Vanilla, Stylus, Sass)</li>
                     <li>Unit Tests (Karma, Mocha, Chai)</li>
-                    <li>Node, Gulp, AWS, GitFlow</li>
+                    <li>Node, Gulp, Webpack</li>
+                    <li>Git, GitFlow</li>
+                    <li>NGINX, AWS, Digital Ocean</li>
                 </ul>
                 <ul className="Services-group">
                     <li className="Services-name">Libraries/Apis</li>
@@ -34,7 +34,7 @@ export default function Services() {
                     <li>Web Audio API</li>
                     <li>Video, Canvas</li>
                     <li>Lodash, Handlebars</li>
-                    <li>p2.js, Tween.js, TweenMax</li>
+                    <li>GSAP, p2.js, Tween.js</li>
                     <li>Browserify, CommonJS</li>
                     <li>Modernizr, jQuery</li>
                     <li>YouTube, Facebook Apis</li>
@@ -43,10 +43,10 @@ export default function Services() {
                 </ul>
                 <ul className="Services-group">
                     <li className="Services-name">Non-coding</li>
-                    <li>UX</li>
-                    <li>Wireframes</li>
-                    <li>Tech Specs</li>
-                    <li>Timings</li>
+                    <li>Tech Lead/Lead Dev</li>
+                    <li>Specs/Timings</li>
+                    <li>Prototyping</li>
+                    <li>UX/Wireframes</li>
                 </ul>
             </section>
         </main>

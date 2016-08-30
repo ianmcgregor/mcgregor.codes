@@ -14,12 +14,20 @@
 .Header {
     align-items: center;
     background-color: var(--header-bg-color);
+    background-image: var(--header-bg-gradient);
     box-shadow: 0 0 3px 0 var(--shadow-color);
     display: flex;
     flex-shrink: 0;
-    justify-content: space-between;
-    padding: var(--spacing-wide);
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: var(--spacing);
     position: relative;
+
+    @media (--medium) {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        padding: var(--spacing) var(--spacing-wide);
+    }
 }
 
 .Header-titleLink {
@@ -33,15 +41,11 @@
 
 .Header-title {
     color: var(--header-title-color);
-    font-size: var(--font-size-small);
+    font-size: var(--font-size-x-large);
     font-weight: normal;
     line-height: 1;
     margin: 0;
     padding-right: 0.2em;
-
-    @media (--narrow) {
-        font-size: var(--font-size-x-large);
-    }
 }
 
 .Header-menu {
@@ -52,12 +56,16 @@
     display: block;
     margin: 0 var(--spacing-narrow);
 
-    @media (--narrow) {
+    @media (--medium) {
         margin: 0 var(--spacing);
     }
 
-    @media (--medium) {
-        margin: 0 var(--spacing-wide);
+    @media (--large) {
+        margin: 0 var(--spacing-medium);
+    }
+
+    &:first-child {
+        margin-left: 0;
     }
 
     &:last-child {

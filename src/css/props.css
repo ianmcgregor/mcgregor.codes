@@ -2,14 +2,14 @@
 
     /* font family */
 
-    --font: "Source Sans Pro", monospace, Courier;
+    /*--font: "Source Sans Pro", monospace, Courier;*/
+    --font: "Raleway";
 
     /* font size */
 
     --font-size-small: 12px;
-    --font-size-medium: 14px;
-    --font-size-large: 16px;
-    --font-size-x-large: 24px;
+    --font-size-large: 18px;
+    --font-size-x-large: 26px;
 
     /* icon font size */
 
@@ -19,31 +19,48 @@
 
     /* spacing */
 
-    --spacing-narrow: 4px;
-    --spacing: 8px;
-    --spacing-wide: 16px;
+    --spacing-narrow: 8px;
+    --spacing: 16px;
+    --spacing-medium: 36px;
+    --spacing-wide: 48px;
     --border-width: 3px;
 
     /* color palette */
 
-    --white: #fff;
-    --black: #000;
+    --white: #f1ede4;
+    --black: #222;
     --dark-grey: #212121;
-    --light-grey: #f2f1f1;
+    --light-grey: #f1f1f1;
     --mint: #6bffa1;
-    --semi-opaque: rgba(0, 0, 0, 0.15);
+    --semi-opaque: rgba(0, 0, 0, 0.25);
     --semi-opaque-dark: rgba(0, 0, 0, 0.6);
-
 
     /* background colors */
 
-    --bg-color-light: var(--white);
-    --bg-color-primary: var(--light-grey);
-    --bg-color-dark: var(--dark-grey);
+    /*--bg-color-light: var(--white);
+    --bg-color-primary: var(--light-grey);*/
+    --bg-color-light: transparent;
+    --bg-color-primary: #262b28;
+    /*--bg-color-dark: var(--dark-grey);*/
+    --bg-color-dark: #232526;
+    /*--bg-color-dark: #212121;*/
+
+    /*#262b28*/
+    /*#e2d9c5*/
 
     --grad-from: var(--bg-color-primary);
     --grad-to: var(--bg-color-light);
-    --bg-gradient: linear-gradient(135deg, var(--grad-from) 0%, var(--grad-to) 100%);
+    /*--bg-gradient: linear-gradient(135deg, var(--grad-from) 0%, var(--grad-to) 100%);*/
+    /*--bg-gradient: linear-gradient(90deg, #f7ff00 , #db36a4);
+    /*--bg-gradient: linear-gradient(135deg, #00dbde , #fc00ff);
+    /*--bg-gradient: linear-gradient(135deg, #70e1f5 , #ffd194);
+    /*--bg-fixed-gradient: linear-gradient(135deg, #003973 , #E5E5BE);*/
+    /*--bg-fixed-gradient: linear-gradient(135deg, #414345, #232526);*/
+    --bg-fixed-gradient: linear-gradient(135deg, #262b28, #232526);
+    /*--bg-fixed-gradient: linear-gradient(135deg, #434343, #212121);*/
+    /*--bg-fixed-gradient: linear-gradient(135deg, #262b28, #262b28);*/
+    --bg-gradient: transparent;
+    --header-bg-gradient: transparent;
 
     /* component colors */
 
@@ -52,7 +69,8 @@
     --shadow-color: var(--semi-opaque);
     --backdrop-color: var(--semi-opaque-dark);
 
-    --text-color-dark: var(--black);
+    --text-color: var(--white);
+    --text-color-dark: var(--white);
     --text-color-dark-underline: var(--accent-color);
 
     --text-color-light: var(--white);

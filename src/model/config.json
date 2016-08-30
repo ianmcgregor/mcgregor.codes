@@ -7,13 +7,128 @@
         "title": "Projects",
         "route": "/projects"
     }, {
-        "title": "Services",
-        "route": "/services"
+        "title": "About",
+        "route": "/about"
     }, {
         "title": "Contact",
         "route": "/contact"
     }],
     "projects": [{
+        "title": "Kindernauts",
+        "year": 2016,
+        "visible": true,
+        "layout": "center",
+        "images": [
+            "abbey_road/abbey_road_02",
+            "abbey_road/abbey_road_01",
+            "abbey_road/abbey_road_10",
+            "abbey_road/abbey_road_14"
+        ],
+        "text": [
+            "",
+            "",
+            "Tech: PIXI.js",
+            "Role: Senior Developer",
+            "Client: Goodboy Digital"
+        ],
+        "link": "https://www.example.com/",
+        "tags": [
+            "Game",
+            ""
+        ]
+    }, {
+        "title": "W+K London",
+        "year": 2016,
+        "visible": true,
+        "layout": "center",
+        "images": [
+            "abbey_road/abbey_road_02",
+            "abbey_road/abbey_road_01",
+            "abbey_road/abbey_road_10",
+            "abbey_road/abbey_road_14"
+        ],
+        "text": [
+            "",
+            "",
+            "Tech: ",
+            "Role: Lead Developer",
+            "Client: Wieden and Kennedy London"
+        ],
+        "link": "https://www.primotoys.com/",
+        "tags": [
+            "",
+            ""
+        ]
+    }, {
+        "title": "Primo Toys",
+        "year": 2016,
+        "visible": true,
+        "layout": "center",
+        "images": [
+            "abbey_road/abbey_road_02",
+            "abbey_road/abbey_road_01",
+            "abbey_road/abbey_road_10",
+            "abbey_road/abbey_road_14"
+        ],
+        "text": [
+            "",
+            "",
+            "Tech: ",
+            "Role: Lead Developer",
+            "Client: Primo Toys"
+        ],
+        "link": "https://www.primotoys.com/",
+        "tags": [
+            "",
+            ""
+        ]
+    }, {
+        "title": "Manchester City",
+        "year": 2016,
+        "visible": true,
+        "layout": "center",
+        "images": [
+            "abbey_road/abbey_road_02",
+            "abbey_road/abbey_road_01",
+            "abbey_road/abbey_road_10",
+            "abbey_road/abbey_road_14"
+        ],
+        "text": [
+            "",
+            "",
+            "Tech: Web Audio API",
+            "Role: Senior Developer",
+            "Client: Manchester City, Code and Theory"
+        ],
+        "link": "http://mancity.com/",
+        "tags": [
+            "",
+            ""
+        ]
+    }, {
+        "title": "Sky Fluid Viewing",
+        "year": 2015,
+        "visible": true,
+        "layout": "smallLeft",
+        "images": [
+            "abbey_road/abbey_road_02",
+            "abbey_road/abbey_road_01",
+            "abbey_road/abbey_road_10",
+            "abbey_road/abbey_road_14"
+        ],
+        "text": [
+            "FWA Site of the Day",
+            "",
+            "Tech: Web Audio API",
+            "Role: Lead Developer",
+            "Client: Sky, Stinkdigital"
+        ],
+        "link": "https://insideabbeyroad.withgoogle.com/",
+        "tags": [
+            "audio",
+            "3d"
+        ]
+    }, {
         "title": "Inside Abbey Road",
         "year": 2015,
         "visible": true,

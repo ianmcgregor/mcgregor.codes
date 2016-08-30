@@ -1,18 +1,23 @@
 :root {
-    --footer-background-color: var(--bg-color-dark);
+    --footer-background-color: var(--bg-color-light);
     --footer-text-color: var(--accent-color);
-    --footer-link-color: var(--text-color-light);
+    --footer-link-color: var(--text-color);
 }
 
 .Footer {
     background-color: var(--footer-background-color);
+    box-shadow: 0 -3px 3px -3px var(--shadow-color);
     flex-shrink: 0;
-    padding: var(--spacing-narrow) var(--spacing-wide);
+    padding: var(--spacing-narrow);
+    position: relative;
+
+    @media (--medium) {
+        padding: var(--spacing-narrow) var(--spacing-wide);
+    }
 }
 
 .Footer-list {
     align-items: center;
-    color: var(--footer-text-color);
     display: flex;
     flex-wrap: wrap;
     font-size: var(--font-size-small);
@@ -31,9 +36,4 @@
 
 .Footer-link::before {
     background-color: var(--footer-text-color);
-}
-
-.Footer-copyright {
-    min-width: 40%;
-    text-align: right;
 }

@@ -5,15 +5,17 @@
 
 .Contact {
     color: var(--contact-text-color);
-    padding: var(--spacing-wide);
+    font-size: var(--font-size-large);
+    padding: var(--spacing);
     text-transform: none;
 
     li:first-child {
-        margin-bottom: 10px;
+        margin-bottom: var(--spacing-narrow);
     }
 
-    @media (--narrow) {
+    @media (--medium) {
         font-size: var(--font-size-x-large);
+        padding: var(--spacing-wide);
     }
 }
 

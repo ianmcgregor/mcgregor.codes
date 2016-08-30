@@ -4,7 +4,18 @@
     height: 100vh;
 
     main {
-        background: var(--bg-color-primary) var(--bg-gradient);
         flex: 1 0 auto;
+
+        &::after {
+            background: var(--bg-color-primary);
+            background-image: var(--bg-fixed-gradient);
+            bottom: 0;
+            content: "";
+            left: 0;
+            position: fixed;
+            right: 0;
+            top: 0;
+            z-index: -2;
+        }
     }
 }

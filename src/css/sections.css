@@ -7,9 +7,10 @@ html {
 
 body {
     background-color: #fff;
-    color: #000;
+    color: var(--text-color);
     font-family: var(--font);
     height: 100%;
+    letter-spacing: 0.05em;
     line-height: 1.5;
     margin: 0;
     overflow-y: scroll;

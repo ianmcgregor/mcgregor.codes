@@ -16,7 +16,7 @@ const routes = (
         <Route path="projects" component={Work}>
             <Route path=":filter" component={Work}/>
         </Route>
-        <Route path="services" component={Services}/>
+        <Route path="about" component={Services}/>
         <Route path="contact" component={Contact}/>
         <Route path="*" component={Home}/>
     </Route>

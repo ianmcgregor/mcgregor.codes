@@ -18,6 +18,7 @@
     text-decoration: none;
     text-rendering: auto;
     user-select: none;
+    width: var(--icon-size-large);
 
     &::before {
         font-size: var(--icon-size-large);
@@ -25,12 +26,16 @@
 }
 
 .Icon--small {
+    width: var(--icon-size-small);
+
     &::before {
         font-size: var(--icon-size-small);
     }
 }
 
 .Icon--tag {
+    width: var(--icon-size-small);
+
     &::before {
         font-size: var(--icon-size-small);
     }
