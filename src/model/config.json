@@ -1,11 +1,10 @@
 {
     "title": "McGregor Codes",
     "description": "Specialist in creative, experiential web sites, games and applications.",
-    "keywords": ["developer", "javascript", "css"],
     "url": "http://mcgregor.codes",
     "pages": [{
-        "title": "Projects",
-        "route": "/projects"
+        "title": "Work",
+        "route": "/work"
     }, {
         "title": "About",
         "route": "/about"
@@ -13,10 +12,74 @@
         "title": "Contact",
         "route": "/contact"
     }],
+    "contacts": [{
+        "label": "ian@mcgregor.codes",
+        "href": "mailto:ian@mcgregor.codes",
+        "target": "_self"
+    }, {
+        "label": "@idmcgregor on LinkedIn",
+        "href": "https://uk.linkedin.com/in/idmcgregor",
+        "target": "_blank"
+    }, {
+        "label": "@ianmcgregor on GitHub",
+        "href": "https://github.com/ianmcgregor",
+        "target": "_blank"
+    }, {
+        "label": "@ianmcgregor on npm",
+        "href": "https://www.npmjs.com/~ianmcgregor",
+        "target": "_blank"
+    }, {
+        "label": "@imcg on Twitter",
+        "href": "https://twitter.com/imcg",
+        "target": "_blank"
+    }, {
+        "label": "@imcg on StackOverflow",
+        "href": "http://stackoverflow.com/users/1212727/imcg",
+        "target": "_blank"
+    }],
+    "about": [{
+        "title": "Basics",
+        "list": [
+            "JavaScript (ES5, ES6 + Babel)",
+            "CSS (Vanilla, Stylus, Sass)",
+            "Unit Tests (Karma, Mocha, Chai)",
+            "Node, Gulp",
+            "Browserify, Webpack, Rollup",
+            "Git, GitFlow",
+            "NGINX, AWS, Digital Ocean"
+        ]
+    }, {
+        "title": "Libraries/Apis",
+        "list": [
+            "React/Flux",
+            "Backbone/Marionette",
+            "Angular",
+            "SUIT CSS, PostCSS",
+            "PIXI.js",
+            "Three.js",
+            "Phaser.js",
+            "Web Audio API",
+            "Video, Canvas",
+            "Lodash, Handlebars",
+            "GSAP, p2.js, Tween.js",
+            "Modernizr, jQuery",
+            "YouTube, Facebook Apis",
+            "Express, Mongo",
+            "Socket IO, Passport"
+        ]
+    }, {
+        "title": "Non-coding",
+        "list": [
+            "Tech Lead/Lead Dev",
+            "Specs/Timings",
+            "Prototyping",
+            "UX/Wireframes"
+        ]
+    }],
     "projects": [{
-        "title": "Kindernauts",
+        "title": "Kindernauts Activity Map",
         "year": 2016,
-        "visible": true,
+        "featured": false,
         "layout": "center",
         "images": [
             "abbey_road/abbey_road_02",
@@ -25,13 +88,12 @@
             "abbey_road/abbey_road_14"
         ],
         "text": [
-            "",
-            "",
+            "Playful interactive activity map",
             "Tech: PIXI.js",
             "Role: Senior Developer",
             "Client: Goodboy Digital"
         ],
-        "link": "https://www.example.com/",
+        "link": "https://www.kindernauts.co.uk/#/activities",
         "tags": [
             "Game",
             ""
@@ -39,7 +101,7 @@
     }, {
         "title": "W+K London",
         "year": 2016,
-        "visible": true,
+        "featured": false,
         "layout": "center",
         "images": [
             "abbey_road/abbey_road_02",
@@ -48,8 +110,6 @@
             "abbey_road/abbey_road_14"
         ],
         "text": [
-            "",
-            "",
             "Tech: ",
             "Role: Lead Developer",
             "Client: Wieden and Kennedy London"
@@ -62,7 +122,7 @@
     }, {
         "title": "Primo Toys",
         "year": 2016,
-        "visible": true,
+        "featured": false,
         "layout": "center",
         "images": [
             "abbey_road/abbey_road_02",
@@ -85,7 +145,7 @@
     }, {
         "title": "Manchester City",
         "year": 2016,
-        "visible": true,
+        "featured": false,
         "layout": "center",
         "images": [
             "abbey_road/abbey_road_02",
@@ -96,9 +156,9 @@
         "text": [
             "",
             "",
-            "Tech: Web Audio API",
+            "Tech: Backbone, CSS, ES6",
             "Role: Senior Developer",
-            "Client: Manchester City, Code and Theory"
+            "Client: Code and Theory, Manchester City FC"
         ],
         "link": "http://mancity.com/",
         "tags": [
@@ -108,13 +168,10 @@
     }, {
         "title": "Sky Fluid Viewing",
         "year": 2015,
-        "visible": true,
+        "featured": false,
         "layout": "smallLeft",
         "images": [
-            "abbey_road/abbey_road_02",
-            "abbey_road/abbey_road_01",
-            "abbey_road/abbey_road_10",
-            "abbey_road/abbey_road_14"
+            "abbey_road/abbey_road_02"
         ],
         "text": [
             "FWA Site of the Day",
@@ -131,7 +188,7 @@
     }, {
         "title": "Inside Abbey Road",
         "year": 2015,
-        "visible": true,
+        "featured": true,
         "layout": "center",
         "images": [
             "abbey_road/abbey_road_02",
@@ -141,10 +198,10 @@
         ],
         "text": [
             "FWA Site of the Month",
-            "Classic effects recreated using the Web Audio API",
-            "Tech: Web Audio, Marionette, Three, Lodash, SUIT, PostCSS",
+            "Immersive tour of Abbey Road Studios",
+            "Tech: Web Audio API, Backbone, Three.js, SUIT CSS, PostCSS",
             "Role: Lead Developer",
-            "Client: Google, Abbey Road, Stinkdigital"
+            "Client: Stinkdigital, Google, Abbey Road Studios"
         ],
         "link": "https://insideabbeyroad.withgoogle.com/",
         "tags": [
@@ -154,7 +211,7 @@
     }, {
         "title": "Made",
         "year": 2014,
-        "visible": true,
+        "featured": true,
         "layout": "left",
         "images": [
             "made/made_01",
@@ -169,8 +226,6 @@
         ],
         "text": [
             "Platform runner game for mobile and desktop",
-            "Personalised with data from Facebook",
-            "Four full levels with bosses and powerups",
             "Tech: Phaser, PIXI, Tiled Map Editor",
             "Role: Lead Developer, Game design",
             "Client: Ray-Ban, Stinkdigital"
@@ -178,12 +233,12 @@
         "link": "http://game.ray-ban.com/",
         "tags": [
             "game",
-            "mobile first"
+            "mobile"
         ]
     }, {
         "title": "Monty's Christmas",
         "year": 2014,
-        "visible": true,
+        "featured": false,
         "layout": "right",
         "images": [
             "montys_christmas/montys_christmas_01",
@@ -193,9 +248,7 @@
             "montys_christmas/montys_christmas_18"
         ],
         "text": [
-            "Interactive storybook in 3d",
-            "Designed to work on Google Cardboard VR headsets",
-            "Additional non-vr versions for iPad and web",
+            "Interactive storybook for Google Cardboard",
             "Tech: Three.js, Web Audio API, Cordova",
             "Role: Technical Lead",
             "Client: John Lewis, Adam & Eve, Stinkdigital"
@@ -203,14 +256,14 @@
         "link": "http://www.johnlewis.com/christmas-advert-2014-montys-christmas/montys-360-world",
         "tags": [
             "game",
-            "mobile first",
+            "mobile",
             "3d",
             "audio"
         ]
     }, {
         "title": "Chance Chanel",
         "year": 2014,
-        "visible": true,
+        "featured": false,
         "layout": "left",
         "images": [
             "chance/chance_02",
@@ -227,13 +280,13 @@
         ],
         "link": "http://chance.archive.stinkdigital.com/en_GB",
         "tags": [
-            "mobile first",
-            "interactive film"
+            "mobile",
+            "film"
         ]
     }, {
         "title": "Revolutions in Sound",
         "year": 2014,
-        "visible": true,
+        "featured": false,
         "layout": "center",
         "images": [
             "revs_in_sound/revs_in_sound_01",
@@ -257,12 +310,12 @@
         ],
         "link": "http://archive.revolutionsinsound.com/",
         "tags": [
-            "data driven"
+            "data"
         ]
     }, {
         "title": "Imagepack",
         "year": 2015,
-        "visible": true,
+        "featured": false,
         "layout": "smallLeft",
         "images": [
             "imagepack/imagepack_04"
@@ -275,12 +328,12 @@
         "link": "https://www.npmjs.com/package/imagepack",
         "tags": [
             "open source",
-            "side project"
+            "experiment"
         ]
     }, {
         "title": "Point Cloud",
         "year": 2015,
-        "visible": true,
+        "featured": false,
         "layout": "smallRight",
         "images": [
             "pointcloud/pointcloud_05"
@@ -293,12 +346,12 @@
         "link": "http://codepen.io/ianmcgregor/pen/OPGemQ",
         "tags": [
             "3d",
-            "side project"
+            "experiment"
         ]
     }, {
         "title": "sono",
         "year": 2015,
-        "visible": true,
+        "featured": false,
         "layout": "right",
         "images": [
             "sono/sono_02"
@@ -317,7 +370,7 @@
     }, {
         "title": "Deep Sea Freediver",
         "year": 2014,
-        "visible": true,
+        "featured": false,
         "layout": "left",
         "images": [
             "deep_sea_freediver/deep_sea_freediver_01",
@@ -334,13 +387,13 @@
         "link": "http://ianmcgregor.me/games/deep-sea-freediver/",
         "tags": [
             "game",
-            "mobile first",
-            "side project"
+            "mobile",
+            "experiment"
         ]
     }, {
         "title": "Gif Inbox",
         "year": 2014,
-        "visible": true,
+        "featured": false,
         "layout": "smallRight",
         "images": [
             "gifinbox/gifinbox_02"
@@ -352,13 +405,13 @@
         ],
         "link": "http://gifinbox.appspot.com/",
         "tags": [
-            "side project",
-            "data driven"
+            "experiment",
+            "data"
         ]
     }, {
         "title": "Circloids",
         "year": 2014,
-        "visible": true,
+        "featured": false,
         "layout": "smallLeft",
         "images": [
             "circloids/circloids_05"
@@ -370,12 +423,12 @@
         ],
         "link": "http://ianmcgregor.me/experiments/circloids/",
         "tags": [
-            "side project"
+            "experiment"
         ]
     }, {
         "title": "My Time Is Now",
         "year": 2014,
-        "visible": true,
+        "featured": false,
         "layout": "center",
         "images": [
             "my_time_is_now/my_time_is_now_12",
@@ -395,12 +448,12 @@
         "link": "http://nikemytimeisnow.archive.stinkdigital.com/",
         "tags": [
             "game",
-            "interactive film"
+            "film"
         ]
     }, {
         "title": "Christmas Carole",
         "year": 2014,
-        "visible": false,
+        "featured": false,
         "layout": "right",
         "images": [
             "project_01",
@@ -414,12 +467,12 @@
         ],
         "link": "http://stella-carole.archive.stinkdigital.com/",
         "tags": [
-            "data driven"
+            "data"
         ]
     }, {
         "title": "Captain Ice",
         "year": 2014,
-        "visible": true,
+        "featured": false,
         "layout": "right",
         "images": [
             "captain_ice/captain_ice_04",
@@ -439,7 +492,7 @@
     }, {
         "title": "Unite All Originals",
         "year": 2013,
-        "visible": false,
+        "featured": false,
         "layout": "right",
         "images": [
             "project_01",
@@ -455,13 +508,13 @@
         ],
         "link": "http://adidas-fw13.archive.stinkdigital.com/",
         "tags": [
-            "interactive film",
+            "film",
             "audio"
         ]
     }, {
         "title": "Miru",
         "year": 2013,
-        "visible": true,
+        "featured": false,
         "layout": "left",
         "images": [
             "miru/miru_16",
@@ -481,7 +534,7 @@
     }, {
         "title": "Urban Tour",
         "year": 2013,
-        "visible": true,
+        "featured": true,
         "layout": "right",
         "images": [
             "urban_tour/urban_tour_09",
@@ -496,12 +549,12 @@
         ],
         "link": "https://vimeo.com/36039145",
         "tags": [
-            "interactive film"
+            "film"
         ]
     }, {
         "title": "Kino",
         "year": 2013,
-        "visible": true,
+        "featured": false,
         "layout": "left",
         "images": [
             "kino/kino_06",
@@ -517,12 +570,12 @@
         ],
         "link": "http://hugo-justdifferent.archive.stinkdigital.com/",
         "tags": [
-            "interactive film"
+            "film"
         ]
     }, {
         "title": "Happy Inside",
         "year": 2011,
-        "visible": true,
+        "featured": false,
         "layout": "right",
         "images": [
             "happy_inside/happy_inside_02",
@@ -539,12 +592,12 @@
         ],
         "link": "http://cats.archive.stinkdigital.com/",
         "tags": [
-            "data driven"
+            "data"
         ]
     }, {
         "title": "One Life",
         "year": 2011,
-        "visible": true,
+        "featured": false,
         "layout": "left",
         "images": [
             "one_life/one_life_06",
@@ -561,13 +614,13 @@
         ],
         "link": "http://bbc-onelife.archive.stinkdigital.com/",
         "tags": [
-            "interactive film",
-            "data driven"
+            "film",
+            "data"
         ]
     }, {
         "title": "Diesel Island",
         "year": 2011,
-        "visible": false,
+        "featured": false,
         "layout": "right",
         "images": [
             "project_01",
@@ -581,12 +634,12 @@
         ],
         "link": "http://diesel-island-ss11.archive.stinkdigital.com/",
         "tags": [
-            "data driven"
+            "data"
         ]
     }, {
         "title": "Dark Ride",
         "year": 2010,
-        "visible": true,
+        "featured": true,
         "layout": "right",
         "images": [
             "dark_ride/dark_ride_06",
@@ -608,12 +661,12 @@
         ],
         "link": "http://darkride.archive.stinkdigital.com/",
         "tags": [
-            "interactive film"
+            "film"
         ]
     }, {
         "title": "A Hundred Lovers",
         "year": 2010,
-        "visible": true,
+        "featured": false,
         "layout": "left",
         "images": [
             "a_hundred_lovers/a_hundred_lovers_29",
@@ -630,13 +683,13 @@
         ],
         "link": "http://diesel-hundredlovers.archive.stinkdigital.com/",
         "tags": [
-            "interactive film",
+            "film",
             "audio"
         ]
     }, {
         "title": "Carousel",
         "year": 2009,
-        "visible": true,
+        "featured": true,
         "layout": "center",
         "images": [
             "carousel/carousel_15",
@@ -653,7 +706,7 @@
         ],
         "link": "http://labs.tribalddb.nl/Cinema219/",
         "tags": [
-            "interactive film"
+            "film"
         ]
     }],
     "srcSet": [{

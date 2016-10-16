@@ -1,7 +1,16 @@
+* {
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
 button {
+    color: inherit;
     cursor: pointer;
     font-family: var(--font);
-    text-transform: uppercase;
 }
 
 button:focus,
@@ -9,6 +18,50 @@ a:focus {
     outline: none;
 }
 
+p,
+li {
+    font-size: var(--font-size-sm);
+
+    @media (--md) {
+        font-size: var(--font-size-sm--md);
+    }
+
+    @media (--lg) {
+        font-size: var(--font-size-sm--lg);
+    }
+}
+
 p {
-    font-size: var(--font-size-small);
+    margin: 1em auto;
+}
+
+h1,
+h2 {
+    font-size: var(--font-size-lg);
+    font-weight: normal;
+    margin: 1em auto;
+    text-align: center;
+
+    @media (--md) {
+        font-size: var(--font-size-lg--md);
+    }
+
+    @media (--lg) {
+        font-size: var(--font-size-lg--lg);
+    }
+}
+
+h3 {
+    font-size: var(--font-size-md);
+    font-weight: normal;
+    margin: 1em 0;
+    text-align: center;
+
+    @media (--md) {
+        font-size: var(--font-size-md--md);
+    }
+
+    @media (--lg) {
+        font-size: var(--font-size-md--lg);
+    }
 }

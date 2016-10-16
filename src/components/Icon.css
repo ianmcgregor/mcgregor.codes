@@ -18,26 +18,26 @@
     text-decoration: none;
     text-rendering: auto;
     user-select: none;
-    width: var(--icon-size-large);
+    /*width: var(--icon-size-lg);*/
 
     &::before {
-        font-size: var(--icon-size-large);
+        font-size: var(--icon-size-lg);
     }
 }
 
 .Icon--small {
-    width: var(--icon-size-small);
+    /*width: var(--icon-size-sm);*/
 
     &::before {
-        font-size: var(--icon-size-small);
+        font-size: var(--icon-size-sm);
     }
 }
 
 .Icon--tag {
-    width: var(--icon-size-small);
+    /*width: var(--icon-size-sm);*/
 
     &::before {
-        font-size: var(--icon-size-small);
+        font-size: var(--icon-size-sm);
     }
 }
 
@@ -67,7 +67,7 @@
 
 /* Filters */
 
-.Icon--side_project::before {
+.Icon--experiment::before {
     content: "\f0dd";
 }
 
@@ -81,15 +81,15 @@
     content: "\f0ba";
 }
 
-.Icon--mobile_first::before {
+.Icon--mobile::before {
     content: "\f038";
 }
 
-.Icon--interactive_film::before {
+.Icon--film::before {
     content: "\f056";
 }
 
-.Icon--data_driven::before {
+.Icon--data::before {
     content: "\f094";
 }
 

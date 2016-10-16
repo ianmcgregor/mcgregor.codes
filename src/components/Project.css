@@ -1,56 +1,14 @@
 .Project {
-    background-color: var(--bg-color-dark);
-    box-shadow: 6px 8px 32px 4px var(--shadow-color);
-    flex: 0 1 auto;
-    margin-bottom: var(--spacing-wide);
-    margin-top: var(--spacing-narrow);
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
 }
 
 .Project-carousel {
-    padding-top: 56.25%;
+    height: 100%;
     position: relative;
-}
-
-@media (--narrow) {
-    .Project.layout-center {
-        margin-left: 20%;
-        margin-right: 20%;
-        min-width: 320px;
-        width: 60%;
-    }
-
-    .Project.layout-right {
-        margin-left: 30%;
-        margin-right: 10%;
-        min-width: 320px;
-        width: 60%;
-    }
-
-    .Project.layout-left {
-        margin-left: 10%;
-        margin-right: 30%;
-        min-width: 320px;
-        width: 60%;
-    }
-
-    .Project.layout-smallLeft {
-        margin-left: 30%;
-        margin-right: 40%;
-        min-width: 280px;
-        width: 30%;
-    }
-
-    .Project.layout-smallRight {
-        margin-left: 40%;
-        margin-right: 30%;
-        min-width: 280px;
-        width: 30%;
-    }
-
-    .Project:first-of-type {
-        margin-left: 18%;
-        margin-right: 18%;
-        min-width: 320px;
-        width: 64%;
-    }
+    width: 100%;
 }

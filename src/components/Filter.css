@@ -1,20 +1,22 @@
 .Filter {
     display: flex;
-    padding: var(--spacing-wide) var(--spacing-narrow);
+    margin: 0 auto;
 }
 
 .Filter-item {
-    font-size: var(--font-size-small);
+    align-items: center;
+    display: flex;
     line-height: 1.4;
     position: relative;
+    text-transform: capitalize;
 
-    &::after {
-        content: "";
-        height: 100%;
-        left: -25px;
-        position: absolute;
-        width: 25px;
+    &::before {
+        background-color: var(--color-text);
     }
+}
+
+.Filter-label {
+    margin-left: 6px;
 }
 
 /*
@@ -22,41 +24,29 @@
  */
 
 .Filter--work {
-    display: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
-    @media (--medium) {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
+    .Filter-label {
+        display: none;
 
-    .Filter-item {
-        color: var(--work-tag-color);
-        margin: 0 var(--work-tag-spacing);
-
-        &::before {
-            background-color: var(--work-tag-hover-color);
+        @media (--md) {
+            display: block;
         }
     }
 
-    li {
-        min-width: 50%;
+    .Icon {
+        min-width: 16px;
 
-        @media (--medium) {
+        @media (--md) {
             min-width: 0;
         }
+    }
 
-        .Icon {
-            min-width: 16px;
-
-            @media (--medium) {
-                min-width: 0;
-            }
-        }
-
-        &:last-child .Filter-item {
-            margin-right: 0;
-        }
+    li:first-child .Filter-item,
+    li:last-child .Filter-item {
+        margin-right: 0;
     }
 }
 
@@ -66,24 +56,17 @@
 
 .Filter--info {
     align-items: center;
-    padding: 0 var(--spacing) var(--spacing);
     width: 100%;
 
     .Icon {
-        color: var(--info-tag-color);
-        font-size: var(--icon-size-x-small);
+        font-size: var(--icon-size-xsm);
     }
 
     .Filter-item {
-        color: var(--info-tag-color);
-        margin: 0 var(--spacing-narrow) 0 4px;
-
-        @media (--medium) {
-            margin: 0 var(--spacing-wide) 0 var(--spacing-narrow);
-        }
+        margin-right: 20px;
 
         &::before {
-            background-color: var(--info-tag-underline-color);
+            background-color: var(--white);
         }
     }
 }

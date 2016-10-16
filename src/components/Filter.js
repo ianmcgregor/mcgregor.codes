@@ -19,16 +19,16 @@ class Filter extends React.Component {
                     const {key, slug, name, count} = tag;
                     // const isSelected = includes(filters, slug);
                     const isSelected = slug === filter;
-                    const label = showCount ? `${name} (${count})` : name;
+                    const label = showCount ? `${name} [${count}]` : name;
                     const active = isSelected ? 'is-active' : '';
 
                     return (
                         <li key={key}>
-                            <span className={`Icon Icon--small Icon--${slug}`}></span>
                             <button
-                                className={`Filter-item u-link ${active}`}
+                                className={`Filter-item u-font-xsm u-link ${active}`}
                                 onClick={toggleFilter.bind(undefined, slug)}>
-                                {label}
+                                <span className={`Icon Icon--small Icon--${slug}`} />
+                                <span className="Filter-label">{label}</span>
                             </button>
                         </li>
                     );

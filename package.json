@@ -25,6 +25,7 @@
     "dat-gui": "^0.5.0",
     "events": "^1.1.1",
     "flux": "^2.1.1",
+    "gsap": "^1.19.0",
     "history": "^2.0.0-rc2",
     "lodash": "^4.15.0",
     "normalize.css": "^4.2.0",

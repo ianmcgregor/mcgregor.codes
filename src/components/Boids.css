@@ -1,15 +1,16 @@
 :root {
-    --boids-size: 15px;
-    --boids-opacity: 1;
-    --boids-color: var(--accent-color);
+    --boids-size: 5px;
+    --boids-opacity: 0.3;
+    --boids-color: var(--color-text);
 }
 
 .Boids {
-    height: 100%;
+    backface-visibility: hidden;
+    height: 100vh;
     left: 0;
-    overflow: hidden;
+    /*overflow: hidden;*/
     pointer-events: none;
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100%;
     z-index: -1;

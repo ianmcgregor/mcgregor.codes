@@ -1,10 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Picture from './Picture';
-import blockScrolling from '../utils/blockScrolling';
-import constants from '../model/constants';
 
-class Carousel extends React.Component {
+export default class Carousel extends React.Component {
 
     _time = 2000;
     _timeoutId = null;
@@ -13,31 +10,26 @@ class Carousel extends React.Component {
         super(props);
 
         this._next = this._next.bind(this);
-        this._zoom = this._zoom.bind(this);
     }
 
     static propTypes = {
-        images: React.PropTypes.array.isRequired,
-        autoPlay: React.PropTypes.bool.isRequired
+        images: React.PropTypes.array.isRequired
     }
 
     state = {
-        autoPlay: this.props.autoPlay,
         count: this.props.images.length,
         images: this.props.images,
-        index: 0,
-        isZoomed: false,
-        style: {}
+        index: 0
     }
 
     _cancel () {
         window.clearTimeout(this._timeoutId);
     }
 
-    _cueNext (first) {
+    _cueNext (isFirst) {
         this._cancel();
 
-        const time = first ? this._time / 2 : this._time;
+        const time = isFirst ? this._time / 2 : this._time;
 
         this._timeoutId = window.setTimeout(
             this._next,
@@ -57,65 +49,12 @@ class Carousel extends React.Component {
         });
     }
 
-    _zoom () {
-        const isWide = window.matchMedia(constants.MQ_NARROW).matches;
-
-        if (!isWide) {
-            return;
-        }
-
-        const isZoomed = !this.state.isZoomed;
-        const style = isZoomed ? this._getZoomRect() : {};
-        const autoPlay = isZoomed || this.state.autoPlay;
-
-        blockScrolling(isZoomed);
-
-        this.setState({
-            style,
-            isZoomed,
-            autoPlay
-        });
-    }
-
-    _getZoomRect () {
-        const el = ReactDOM.findDOMNode(this);
-        let {left, top, width, height} = el.getBoundingClientRect();
-
-        const viewportWidth = Math.min(window.innerWidth, document.documentElement.clientWidth);
-        const viewportHeight = window.innerHeight;
-        const scale = Math.min(viewportWidth / width, viewportHeight / height);
-
-        left = (viewportWidth - width) / 2 - left;
-        top = (viewportHeight - height) / 2 - top;
-
-        width = Math.floor(width * scale);
-        height = Math.floor(height * scale);
-
-        return {
-            transform: `translate(${left}px, ${top}px) scale(${scale})`
-        };
-    }
-
-    componentWillReceiveProps (props) {
-        const {autoPlay} = props;
-
-        this.setState({
-            autoPlay
-        });
-    }
-
     render () {
-        const {images, index, isZoomed, autoPlay, style} = this.state;
+        const {images, index} = this.state;
         const {srcSet} = this.props;
 
-        const classZoomed = isZoomed ? 'is-zoomed' : '';
-        const classPlaying = autoPlay ? 'is-playing' : '';
-
         return (
-            <section
-                className={`Carousel ${classZoomed} ${classPlaying}`}
-                style={style}
-                onClick={() => this._zoom()}>
+            <section className="Carousel">
                 <ul className="Carousel-list">
                     {images.map((image, i) => {
                         const {key, src, caption} = image;
@@ -132,27 +71,21 @@ class Carousel extends React.Component {
         );
     }
 
-    toggleAutoPlay (first) {
-        const {autoPlay, count} = this.state;
+    _play (isFirst) {
+        const {count} = this.state;
 
-        if (autoPlay && count > 1) {
-            this._cueNext(first);
+        if (count > 1) {
+            this._cueNext(isFirst);
         } else {
             this._cancel();
         }
     }
 
-    componentDidUpdate (prevProps, prevState) {
-        this.toggleAutoPlay(!prevState.autoPlay);
-    }
-
     componentDidMount () {
-        this.toggleAutoPlay(false);
+        this._play(true);
     }
 
     componentWillUnmount () {
         this._cancel();
     }
 }
-
-export {Carousel as default};

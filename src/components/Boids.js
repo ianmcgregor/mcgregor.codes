@@ -120,7 +120,8 @@ class Boids extends React.Component {
     }
 
     getHeight () {
-        const pageHeight = document.documentElement.scrollHeight - 160;
+        // const pageHeight = document.documentElement.scrollHeight;
+        const pageHeight = window.innerHeight;
         return `${pageHeight}px`;
     }
 
@@ -173,7 +174,7 @@ class Boids extends React.Component {
 
     render () {
 
-        return <section className="Boids"></section>;
+        return <section className="Boids" />;
     }
 
     componentWillUnmount () {

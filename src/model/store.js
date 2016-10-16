@@ -51,20 +51,19 @@ class Store extends EventEmitter {
         }
 
         const tags = uniq(config.projects
-            .filter((project) => project.visible)
             .reduce((value, project) => value.concat(project.tags), [])
+            .filter((tag) => !!tag)
             .map((tag) => getTag(tag.toLowerCase())))
             .sort((a, b) => b.count - a.count);
 
         //  create unique keys and slugs
         const projects = config.projects
-            .filter((project) => project.visible)
             .map((project) => (
             assign(project, {
                 key: uniqueId(),
                 slug: getSlug(project.title),
                 layout: (project.layout || 'center'),
-                tags: project.tags.map((tag) => cloneTag(tag)),
+                tags: project.tags.filter((tag) => !!tag).map((tag) => cloneTag(tag)),
                 images: project.images.map((image, i) => ({
                     key: uniqueId(),
                     src: `${imagePath}${image}`,
@@ -77,10 +76,12 @@ class Store extends EventEmitter {
             })
         ));
 
-        const {title, pages, srcSet} = config;
+        const {title, about, contacts, pages, srcSet} = config;
         const filters = [];
 
         this._model = Object.freeze({
+            about,
+            contacts,
             pages,
             projects,
             tags,
@@ -121,12 +122,24 @@ class Store extends EventEmitter {
         return this._model.title;
     }
 
+    getContacts() {
+        return this._model.contacts;
+    }
+
+    getAbout() {
+        return this._model.about;
+    }
+
     getPages() {
         return this._model.pages;
     }
 
     getProjects() {
         return this._model.projects;
+    }
+
+    getProjectBySlug(slug) {
+        return this._model.projects.filter((p) => p.slug === slug)[0];
     }
 
     getTags() {
@@ -160,7 +173,7 @@ class Store extends EventEmitter {
     getFilteredProjects (filter) {
         const {projects} = this._model;
         if (!filter) {
-            return projects;
+            return projects.filter((project) => project.featured);
         }
         return projects.filter((project) => {
             return project.slug === filter || this._hasTag(project, filter);
@@ -182,9 +195,10 @@ class Store extends EventEmitter {
 
     selectProject (value) {
         console.debug('selectProject', value);
-        if (!this._addFilter(value)) {
-            this.clearFilters();
-        }
+        this.selectedProject = value;
+        // if (!this._addFilter(value)) {
+        //     this.clearFilters();
+        // }
         this._emitChange();
     }
 }

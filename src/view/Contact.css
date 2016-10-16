@@ -1,34 +1,35 @@
 :root {
-    --contact-text-color: var(--text-color-dark);
-    --contact-link-color: var(--text-color-dark);
+    --contact-text-color: var(--color-text);
+    --contact-link-color: var(--color-text);
 }
 
 .Contact {
     color: var(--contact-text-color);
-    font-size: var(--font-size-large);
-    padding: var(--spacing);
-    text-transform: none;
+    font-size: var(--font-size-lg);
+    margin-bottom: 4em;
 
-    li:first-child {
-        margin-bottom: var(--spacing-narrow);
+    li {
+        margin: 0.75em auto;
+        text-align: center;
     }
 
-    @media (--medium) {
-        font-size: var(--font-size-x-large);
-        padding: var(--spacing-wide);
+    li:first-child {
+        margin-bottom: 3em;
+    }
+
+    @media (--md) {
+        font-size: var(--font-size-lg--md);
+    }
+
+    @media (--lg) {
+        font-size: var(--font-size-lg--lg);
     }
 }
 
 .Contact-link {
-    background: linear-gradient(var(--contact-link-color), var(--contact-link-color)) no-repeat;
-    background-position: 0 1.1em;
-    background-size: 100% 2px;
     color: var(--contact-link-color);
-    font-weight: 700;
-    text-decoration: none;
-    text-shadow:
-        -1px -1px 0 var(--bg-color-primary),
-        1px -1px 0 var(--bg-color-primary),
-        -1px 1px 0 var(--bg-color-primary),
-        1px 1px 0 var(--bg-color-primary);
+
+    &::before {
+        background-color: var(--color-text);
+    }
 }

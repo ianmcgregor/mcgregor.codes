@@ -1,17 +1,14 @@
-:root {
-    --work-tag-spacing: 6px;
-    --work-tag-color: var(--text-color-dark);
-    --work-tag-hover-color: var(--text-color-dark-underline);
+.Work {
+    width: 100%;
 }
 
-/*.Work {}*/
-
 .Work-tags {
-    padding: 4px calc(var(--spacing-wide) - var(--work-tag-spacing));
+    margin: 0 auto;
 }
 
 .Work-projects {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     width: 100%;
 }

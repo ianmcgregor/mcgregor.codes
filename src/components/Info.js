@@ -1,12 +1,13 @@
 import React from 'react';
 import Filter from './Filter';
-import {selectProject} from '../model/actions';
+import {Link} from 'react-router';
 
-class Info extends React.Component {
+export default class Info extends React.Component {
 
     static propTypes = {
         filter: React.PropTypes.string,
         project: React.PropTypes.shape({
+            link: React.PropTypes.string.isRequired,
             title: React.PropTypes.string.isRequired,
             year: React.PropTypes.number.isRequired,
             text: React.PropTypes.array.isRequired,
@@ -16,36 +17,39 @@ class Info extends React.Component {
 
     render () {
         const {project, filter} = this.props;
-        const {title, year, text, tags, link, slug} = project;
+        const {link, title, year, text, tags} = project;
 
         return (
             <section className="Info">
-                <header className="Info-header" ref="info">
+                <header className="Info-header u-padH" ref="info">
                         <h3 className="Info-title">
                             {title}
                         </h3>
-                        <button
-                            className="Info-year"
-                            onClick={selectProject.bind(undefined, slug)}>
+                        <span className="Info-year">
                             {year}
-                        </button>
+                        </span>
                 </header>
-                <ul className="Info-text">
-                    {text.map((item) => (
-                        <li key={item.key}>{item.value}</li>
-                    ))}
-                </ul>
-                <Filter
-                    filter={filter}
-                    tags={tags}
-                    modifier="Filter--info"
-                    showCount={false}/>
-                <a className="Info-link" href={link} target="_blank">
-                    <span className="Icon Icon--link">View Project</span>
-                </a>
+                <div className="Info-inner">
+                    <ul className="Info-text u-padH">
+                        {text.map((item) => (
+                            <li key={item.key}>{item.value}</li>
+                        ))}
+                    </ul>
+                    <div className="Info-filters u-pad">
+                        <Filter
+                            filter={filter}
+                            tags={tags}
+                            modifier="Filter--info"
+                            showCount={false}/>
+                    </div>
+                    <a className="Info-link u-pad" href={link} target="_blank">
+                        <span className="Icon Icon--link">View Project</span>
+                    </a>
+                    <Link to="/work" className="Info-close u-pad">
+                        <span className="Icon Icon--close">Close</span>
+                    </Link>
+                </div>
             </section>
         );
     }
 }
-
-export {Info as default};

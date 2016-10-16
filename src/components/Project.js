@@ -2,8 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Carousel from './Carousel';
 import Info from './Info';
-import inViewport from '../utils/inViewport';
-
 
 class Project extends React.Component {
 
@@ -18,38 +16,14 @@ class Project extends React.Component {
         })
     }
 
-    state = {
-        inView: false
-    }
-
-    _updateInView () {
-        const el = ReactDOM.findDOMNode(this);
-        const inView = inViewport(el, -80);
-
-        this.setState({
-            inView: inView
-        });
-    }
-
-    componentWillReceiveProps (nextProps) {
-        this._updateInView();
-    }
-
-    shouldComponentUpdate (nextProps, nextState) {
-        const filterChange = this.props.filter !== nextProps.filter;
-        const inViewChange = this.state.inView !== nextState.inView;
-        return filterChange || inViewChange;
-    }
-
     render () {
         const {project, filter, srcSet} = this.props;
-        const {layout, images} = project;
-        const {inView} = this.state;
+        const {images} = project;
 
         return (
-            <article className={`Project layout-${layout}`}>
+            <article className="Project">
                 <div className="Project-carousel">
-                    <Carousel images={images} srcSet={srcSet} autoPlay={inView} />
+                    <Carousel images={images} srcSet={srcSet} />
                 </div>
                 <Info project={project} filter={filter}/>
             </article>
@@ -57,8 +31,9 @@ class Project extends React.Component {
     }
 
     componentDidMount () {
+        const el = ReactDOM.findDOMNode(this);
         window.requestAnimationFrame(
-            () => this._updateInView()
+            () => el.classList.add('is-project')
         );
     }
 }

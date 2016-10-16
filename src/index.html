@@ -6,7 +6,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 
 	<meta name="description" content="<%= data.description %>">
-    <meta name="keywords" content="<%= data.keywords.join(', ') %>">
 	<meta name="author" content="<%= data.title %> Ltd">
 
     <meta property="og:title" content="<%= data.title %>">
@@ -17,8 +16,9 @@
     <meta property="og:image" content="<%= data.url %>/<%= path %>/img/mcgregor_codes/mcgregor_codes.png">
 
 	<title><%= title %></title>
-    <link href="<%= path %>/favicon.ico" rel="shortcut icon">
-	<link href="<%= path %>/css/styles.css" rel="stylesheet">
+    <link href="<%= path %>/favicon-32.png" rel="icon" sizes="32x32">
+    <link href="<%= path %>/favicon-152.png" rel="apple-touch-icon-precomposed">
+    <link href="<%= path %>/css/styles.css" rel="stylesheet">
 	<script src="<%= path %>/js/modernizr<%= min %>.js"></script>
 </head>
 <body>

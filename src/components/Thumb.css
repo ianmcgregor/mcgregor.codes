@@ -1,0 +1,43 @@
+.Thumb {
+    cursor: zoom-in;
+    flex: 0 1 auto;
+    position: relative;
+    width: 100%;
+
+    &.is-selected {
+        cursor: default;
+    }
+}
+
+.Thumb-image {
+    border-top: 1px solid var(--white);
+    padding-top: 28.125%;
+    position: relative;
+    transition: padding-top 0.4s ease;
+
+    @media (--md) {
+        padding-top: 16%;
+    }
+
+    .Thumb:first-of-type & {
+        padding-top: 56.25%;
+
+        @media (--md) {
+            padding-top: 32%;
+        }
+    }
+
+    .Thumb.is-selected & {
+        padding-top: 100vh;
+    }
+
+    img {
+        display: block;
+        height: 100%;
+        left: 0;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+}

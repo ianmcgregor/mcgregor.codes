@@ -4,7 +4,6 @@
 }
 
 .Carousel {
-    cursor: zoom-in;
     height: 100%;
     left: 0;
     position: absolute;
@@ -13,7 +12,7 @@
     width: 100%;
 
     &::before {
-        background-color: var(--backdrop-color);
+        /*background-color: var(--color-overlay);*/
         content: "";
         height: 1000em;
         left: -500em;
@@ -23,21 +22,6 @@
         top: -500em;
         transition: opacity 0.2s ease-in 0.2s;
         width: 1000em;
-    }
-
-    &.is-playing {
-        z-index: 1;
-    }
-
-    &.is-zoomed {
-        cursor: zoom-out;
-        z-index: 2;
-
-        &::before {
-            opacity: 1;
-            pointer-events: all;
-            transition-timing-function: ease-out;
-        }
     }
 }
 
@@ -59,6 +43,7 @@
         display: block;
         height: 100%;
         left: 0;
+        object-fit: cover;
         position: absolute;
         top: 0;
         width: 100%;
