@@ -41,7 +41,7 @@
         "title": "Basics",
         "list": [
             "JavaScript (ES5, ES6 + Babel)",
-            "CSS (Vanilla, Stylus, Sass)",
+            "CSS (Vanilla, Sass)",
             "Unit Tests (Karma, Mocha, Chai)",
             "Node, Gulp",
             "Browserify, Webpack, Rollup",
@@ -51,21 +51,21 @@
     }, {
         "title": "Libraries/Apis",
         "list": [
-            "React/Flux",
-            "Backbone/Marionette",
-            "Angular",
-            "SUIT CSS, PostCSS",
             "PIXI.js",
+            "React",
+            "Backbone",
+            "Angular",
             "Three.js",
             "Phaser.js",
             "Web Audio API",
             "Video, Canvas",
             "Lodash, Handlebars",
-            "GSAP, p2.js, Tween.js",
+            "GSAP, Tween.js",
             "Modernizr, jQuery",
-            "YouTube, Facebook Apis",
+            "YouTube, Facebook",
             "Express, Mongo",
-            "Socket IO, Passport"
+            "Socket IO, Passport",
+            "SUIT CSS, BEM, PostCSS"
         ]
     }, {
         "title": "Non-coding",
@@ -77,105 +77,77 @@
         ]
     }],
     "projects": [{
-        "title": "Kindernauts Activity Map",
+        "title": "Kindernauts",
         "year": 2016,
-        "featured": false,
-        "layout": "center",
         "images": [
-            "abbey_road/abbey_road_02",
-            "abbey_road/abbey_road_01",
-            "abbey_road/abbey_road_10",
-            "abbey_road/abbey_road_14"
+            "kindernauts/kindernauts"
         ],
         "text": [
             "Playful interactive activity map",
-            "Tech: PIXI.js",
             "Role: Senior Developer",
-            "Client: Goodboy Digital"
+            "Tech: PIXI.js, GSAP",
+            "Client: Goodboy Digital, Kinder"
         ],
         "link": "https://www.kindernauts.co.uk/#/activities",
         "tags": [
-            "Game",
-            ""
+            "pinned",
+            "game"
         ]
     }, {
         "title": "W+K London",
         "year": 2016,
-        "featured": false,
-        "layout": "center",
         "images": [
-            "abbey_road/abbey_road_02",
-            "abbey_road/abbey_road_01",
-            "abbey_road/abbey_road_10",
-            "abbey_road/abbey_road_14"
+            "abbey_road/abbey_road_02"
         ],
         "text": [
-            "Tech: ",
             "Role: Lead Developer",
+            "Tech: SUIT CSS, PostCSS, ES6, Wordpress",
             "Client: Wieden and Kennedy London"
         ],
-        "link": "https://www.primotoys.com/",
+        "link": "https://www.wklondon.com/",
         "tags": [
-            "",
-            ""
+            "website"
         ]
     }, {
         "title": "Primo Toys",
         "year": 2016,
-        "featured": false,
-        "layout": "center",
         "images": [
-            "abbey_road/abbey_road_02",
-            "abbey_road/abbey_road_01",
-            "abbey_road/abbey_road_10",
-            "abbey_road/abbey_road_14"
+            "abbey_road/abbey_road_02"
         ],
         "text": [
-            "",
-            "",
-            "Tech: ",
+            "Website for exciting tech startup with ecommerce",
             "Role: Lead Developer",
+            "Tech: SUIT CSS, PostCSS, ES6, Wordpress",
             "Client: Primo Toys"
         ],
         "link": "https://www.primotoys.com/",
         "tags": [
-            "",
-            ""
+            "website"
         ]
     }, {
         "title": "Manchester City",
         "year": 2016,
-        "featured": false,
-        "layout": "center",
         "images": [
-            "abbey_road/abbey_road_02",
-            "abbey_road/abbey_road_01",
-            "abbey_road/abbey_road_10",
-            "abbey_road/abbey_road_14"
+            "abbey_road/abbey_road_02"
         ],
         "text": [
-            "",
-            "",
-            "Tech: Backbone, CSS, ES6",
+            "Large scale website",
+            "Tech: Backbone, Sass, ES6",
             "Role: Senior Developer",
             "Client: Code and Theory, Manchester City FC"
         ],
         "link": "http://mancity.com/",
         "tags": [
-            "",
-            ""
+            "website"
         ]
     }, {
         "title": "Sky Fluid Viewing",
         "year": 2015,
-        "featured": false,
-        "layout": "smallLeft",
         "images": [
             "abbey_road/abbey_road_02"
         ],
         "text": [
             "FWA Site of the Day",
-            "",
             "Tech: Web Audio API",
             "Role: Lead Developer",
             "Client: Sky, Stinkdigital"
@@ -188,8 +160,6 @@
     }, {
         "title": "Inside Abbey Road",
         "year": 2015,
-        "featured": true,
-        "layout": "center",
         "images": [
             "abbey_road/abbey_road_02",
             "abbey_road/abbey_road_01",
@@ -205,14 +175,13 @@
         ],
         "link": "https://insideabbeyroad.withgoogle.com/",
         "tags": [
+            "pinned",
             "audio",
             "3d"
         ]
     }, {
         "title": "Made",
         "year": 2014,
-        "featured": true,
-        "layout": "left",
         "images": [
             "made/made_01",
             "made/made_02",
@@ -226,20 +195,18 @@
         ],
         "text": [
             "Platform runner game for mobile and desktop",
-            "Tech: Phaser, PIXI, Tiled Map Editor",
-            "Role: Lead Developer, Game design",
+            "Tech: PIXI, Phaser, Tiled Map Editor",
+            "Role: Lead Developer",
             "Client: Ray-Ban, Stinkdigital"
         ],
         "link": "http://game.ray-ban.com/",
         "tags": [
-            "game",
-            "mobile"
+            "pinned",
+            "game"
         ]
     }, {
         "title": "Monty's Christmas",
         "year": 2014,
-        "featured": false,
-        "layout": "right",
         "images": [
             "montys_christmas/montys_christmas_01",
             "montys_christmas/montys_christmas_03",
@@ -256,15 +223,12 @@
         "link": "http://www.johnlewis.com/christmas-advert-2014-montys-christmas/montys-360-world",
         "tags": [
             "game",
-            "mobile",
             "3d",
             "audio"
         ]
     }, {
         "title": "Chance Chanel",
         "year": 2014,
-        "featured": false,
-        "layout": "left",
         "images": [
             "chance/chance_02",
             "chance/chance_05",
@@ -280,14 +244,11 @@
         ],
         "link": "http://chance.archive.stinkdigital.com/en_GB",
         "tags": [
-            "mobile",
             "film"
         ]
     }, {
         "title": "Revolutions in Sound",
         "year": 2014,
-        "featured": false,
-        "layout": "center",
         "images": [
             "revs_in_sound/revs_in_sound_01",
             "revs_in_sound/revs_in_sound_02",
@@ -301,9 +262,7 @@
             "revs_in_sound/revs_in_sound_23"
         ],
         "text": [
-            "Living archive of UK club culture",
-            "User generated content and user profiles",
-            "Google+, YouTube and SoundCloud integration",
+            "Living archive of UK club culture with UGC",
             "Tech: Angular, PIXI, Box2d, Sass",
             "Role: Lead Developer",
             "Client: Red Bull, Google, Stinkdigital"
@@ -315,8 +274,6 @@
     }, {
         "title": "Imagepack",
         "year": 2015,
-        "featured": false,
-        "layout": "smallLeft",
         "images": [
             "imagepack/imagepack_04"
         ],
@@ -327,14 +284,11 @@
         ],
         "link": "https://www.npmjs.com/package/imagepack",
         "tags": [
-            "open source",
-            "experiment"
+            "open"
         ]
     }, {
         "title": "Point Cloud",
         "year": 2015,
-        "featured": false,
-        "layout": "smallRight",
         "images": [
             "pointcloud/pointcloud_05"
         ],
@@ -345,33 +299,26 @@
         ],
         "link": "http://codepen.io/ianmcgregor/pen/OPGemQ",
         "tags": [
-            "3d",
-            "experiment"
+            "3d"
         ]
     }, {
         "title": "sono",
         "year": 2015,
-        "featured": false,
-        "layout": "right",
         "images": [
             "sono/sono_02"
         ],
         "text": [
             "Open source library for creative audio",
-            "Aims to help bring a new level of flourish to audio",
-            "Used on several big projects",
             "Tech: Web Audio API"
         ],
-        "link": "http://prototypes.stinkdigital.com/webaudio/sono/examples/",
+        "link": "https://github.com/Stinkdigital/sono",
         "tags": [
             "audio",
-            "open source"
+            "open"
         ]
     }, {
         "title": "Deep Sea Freediver",
         "year": 2014,
-        "featured": false,
-        "layout": "left",
         "images": [
             "deep_sea_freediver/deep_sea_freediver_01",
             "deep_sea_freediver/deep_sea_freediver_03",
@@ -380,56 +327,43 @@
         ],
         "text": [
             "Made in 48 hours for the Ludum Dare game jam",
-            "Works on mobile devices using the accelerometer",
-            "As per competition rules I made all the code graphics and audio",
             "Tech: Phaser, PIXI"
         ],
         "link": "http://ianmcgregor.me/games/deep-sea-freediver/",
         "tags": [
-            "game",
-            "mobile",
-            "experiment"
+            "game"
         ]
     }, {
         "title": "Gif Inbox",
         "year": 2014,
-        "featured": false,
-        "layout": "smallRight",
         "images": [
             "gifinbox/gifinbox_02"
         ],
         "text": [
             "Gifs that arrive in my email inbox",
-            "The app pulls them onto the web",
             "Tech: Python, Google AppEngine"
         ],
         "link": "http://gifinbox.appspot.com/",
         "tags": [
-            "experiment",
             "data"
         ]
     }, {
         "title": "Circloids",
         "year": 2014,
-        "featured": false,
-        "layout": "smallLeft",
         "images": [
             "circloids/circloids_05"
         ],
         "text": [
             "Experiment using boids (flocking behaviours)",
-            "Simple shapes paired with organic movements",
             "Tech: Canvas"
         ],
         "link": "http://ianmcgregor.me/experiments/circloids/",
         "tags": [
-            "experiment"
+            "open"
         ]
     }, {
         "title": "My Time Is Now",
         "year": 2014,
-        "featured": false,
-        "layout": "center",
         "images": [
             "my_time_is_now/my_time_is_now_12",
             "my_time_is_now/my_time_is_now_24",
@@ -441,7 +375,6 @@
         ],
         "text": [
             "Interactive film filled with rabbit holes that take you into mini-games",
-            "Hugely popular with millions of visitors who battled to be first to discover all the content",
             "Role: Lead Developer",
             "Client: Nike, W+K, Stinkdigital"
         ],
@@ -453,15 +386,13 @@
     }, {
         "title": "Christmas Carole",
         "year": 2014,
-        "featured": false,
-        "layout": "right",
         "images": [
             "project_01",
             "project_02",
             "project_03"
         ],
         "text": [
-            "The app takes the users address and composites images from Google Streetview into green screen footage to make it appear like Carole is coming to your house",
+            "Realtime compositing of Google Streetview into green screen footage",
             "Role: Lead Developer",
             "Client: Stella Artois, Mother, Stinkdigital"
         ],
@@ -472,8 +403,6 @@
     }, {
         "title": "Captain Ice",
         "year": 2014,
-        "featured": false,
-        "layout": "right",
         "images": [
             "captain_ice/captain_ice_04",
             "captain_ice/captain_ice_01",
@@ -492,8 +421,6 @@
     }, {
         "title": "Unite All Originals",
         "year": 2013,
-        "featured": false,
-        "layout": "right",
         "images": [
             "project_01",
             "project_02",
@@ -501,7 +428,6 @@
         ],
         "text": [
             "Web Speech API experience with Hip-Hop legends Run DMC",
-            "Certain keywords change the film as the user watches",
             "Tech: Web Speech API, Audio, Video",
             "Role: Lead Developer",
             "Client: Adidas, Sid Lee, Stinkdigital"
@@ -514,8 +440,6 @@
     }, {
         "title": "Miru",
         "year": 2013,
-        "featured": false,
-        "layout": "left",
         "images": [
             "miru/miru_16",
             "miru/miru_09",
@@ -523,7 +447,6 @@
         ],
         "text": [
             "An interactive 360 film shot using an octocopter",
-            "Custom shader to optimise the playback as existing 3d libraries were too slow",
             "Role: Lead Developer",
             "Client: Menicon, Mori, Stinkdigital"
         ],
@@ -534,8 +457,6 @@
     }, {
         "title": "Urban Tour",
         "year": 2013,
-        "featured": true,
-        "layout": "right",
         "images": [
             "urban_tour/urban_tour_09",
             "urban_tour/urban_tour_20",
@@ -549,13 +470,12 @@
         ],
         "link": "https://vimeo.com/36039145",
         "tags": [
+            "pinned",
             "film"
         ]
     }, {
         "title": "Kino",
         "year": 2013,
-        "featured": false,
-        "layout": "left",
         "images": [
             "kino/kino_06",
             "kino/kino_30",
@@ -564,7 +484,6 @@
         ],
         "text": [
             "Camera API allows the user to 'See things differently' by tilting their head",
-            "The film and audio changes seamlessly when they tilt their head from side to side",
             "Role: Senior Developer",
             "Client: Hugo Boss, Blast Radius, Stinkdigital"
         ],
@@ -575,8 +494,6 @@
     }, {
         "title": "Happy Inside",
         "year": 2011,
-        "featured": false,
-        "layout": "right",
         "images": [
             "happy_inside/happy_inside_02",
             "happy_inside/happy_inside_03",
@@ -585,8 +502,6 @@
         ],
         "text": [
             "A competition encouraging Facebook shares",
-            "We filmed cats wandering through Ikea",
-            "Users win a product by choosing the right cat",
             "Role: Lead Developer",
             "Client: Ikea, Mother, Stinkdigital"
         ],
@@ -597,8 +512,6 @@
     }, {
         "title": "One Life",
         "year": 2011,
-        "featured": false,
-        "layout": "left",
         "images": [
             "one_life/one_life_06",
             "one_life/one_life_19",
@@ -607,8 +520,6 @@
         ],
         "text": [
             "Interactive film trailer for a BBC nature film",
-            "Swipe for contextual content at any time",
-            "Interface reflects average colour of the frame, highlighting the rich visuals",
             "Role: Lead Developer",
             "Client: BBC, Brooklyn Brothers, Stinkdigital"
         ],
@@ -620,8 +531,6 @@
     }, {
         "title": "Diesel Island",
         "year": 2011,
-        "featured": false,
-        "layout": "right",
         "images": [
             "project_01",
             "project_02",
@@ -639,8 +548,6 @@
     }, {
         "title": "Dark Ride",
         "year": 2010,
-        "featured": true,
-        "layout": "right",
         "images": [
             "dark_ride/dark_ride_06",
             "dark_ride/dark_ride_14",
@@ -652,22 +559,18 @@
             "dark_ride/dark_ride_56"
         ],
         "text": [
-            "Branching narrative with elements of user content",
-            "Quick fire decisions change the film",
-            "Interview gathers user info and audio recordings",
             "FWA People's Choice Site of the Year",
             "Role: Lead Developer",
             "Client: Lexus, Vitro, Stinkdigital"
         ],
         "link": "http://darkride.archive.stinkdigital.com/",
         "tags": [
+            "pinned",
             "film"
         ]
     }, {
         "title": "A Hundred Lovers",
         "year": 2010,
-        "featured": false,
-        "layout": "left",
         "images": [
             "a_hundred_lovers/a_hundred_lovers_29",
             "a_hundred_lovers/a_hundred_lovers_32",
@@ -677,7 +580,6 @@
         ],
         "text": [
             "Music video slash fashion catalogue",
-            "Roll over the film to see featured clothes",
             "Role: Lead Developer",
             "Client: Diesel, Anomaly, Stinkdigital"
         ],
@@ -689,23 +591,20 @@
     }, {
         "title": "Carousel",
         "year": 2009,
-        "featured": true,
-        "layout": "center",
         "images": [
             "carousel/carousel_15",
             "carousel/carousel_09",
             "carousel/carousel_22"
         ],
         "text": [
-            "Groundbreaking interactive film",
-            "Ambilight effect samples colour from the video",
-            "Segue seamlessly into behind the scenes films",
             "Stinkdigital's first FWA and Cannes Grand Prix",
+            "Segue seamlessly into behind the scenes films",
             "Role: Lead Developer",
             "Client: Philips, Tribal DDB, Stinkdigital"
         ],
         "link": "http://labs.tribalddb.nl/Cinema219/",
         "tags": [
+            "pinned",
             "film"
         ]
     }],

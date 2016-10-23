@@ -2,7 +2,7 @@ import {uniqueId, uniq, assign} from 'lodash';
 import {Dispatcher} from 'flux';
 import {EventEmitter} from 'events';
 import constants from './constants';
-
+const defaultFilter = 'pinned';
 
 class Store extends EventEmitter {
 
@@ -50,11 +50,21 @@ class Store extends EventEmitter {
             return t;
         }
 
+        config.projects.forEach((project) => {
+            project.tags.push('all');
+        });
+
         const tags = uniq(config.projects
             .reduce((value, project) => value.concat(project.tags), [])
             .filter((tag) => !!tag)
             .map((tag) => getTag(tag.toLowerCase())))
-            .sort((a, b) => b.count - a.count);
+            // .sort((a, b) => b.count - a.count)
+            .sort((a, b) => {
+                if (a.slug === defaultFilter) {
+                    return -1;
+                }
+                return b.count - a.count;
+            });
 
         //  create unique keys and slugs
         const projects = config.projects
@@ -159,7 +169,8 @@ class Store extends EventEmitter {
     }
 
     clearFilters () {
-        this._model.filters.length = 0;
+        // this._model.filters.length = 0;
+        this._model.filters[0] = defaultFilter;
     }
 
     _hasTag (project, filter) {
@@ -173,7 +184,8 @@ class Store extends EventEmitter {
     getFilteredProjects (filter) {
         const {projects} = this._model;
         if (!filter) {
-            return projects.filter((project) => project.featured);
+            filter = defaultFilter;
+            // return projects.filter((project) => this._hasTag(project, 'pinned'));
         }
         return projects.filter((project) => {
             return project.slug === filter || this._hasTag(project, filter);
@@ -195,11 +207,19 @@ class Store extends EventEmitter {
 
     selectProject (value) {
         console.debug('selectProject', value);
-        this.selectedProject = value;
+        this._selectedProject = value;
         // if (!this._addFilter(value)) {
         //     this.clearFilters();
         // }
         this._emitChange();
+    }
+
+    getSelectedProject() {
+        return this._selectedProject;
+    }
+
+    getDefaultFilter() {
+        return defaultFilter;
     }
 }
 

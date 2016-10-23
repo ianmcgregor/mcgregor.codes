@@ -16,7 +16,7 @@ const sizes = _.uniq(config.srcSet.map(function(src) {
 }), 'width');
 
 function listImages(search) {
-    const projects = config.projects;
+    let projects = config.projects;
     if (search) {
         projects = projects.filter(function(project) {
             return project.title.toLowerCase().indexOf(search) > -1;

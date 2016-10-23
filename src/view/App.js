@@ -5,7 +5,7 @@ import Header from './Header';
 import Work from './Work';
 import About from './About';
 import Contact from './Contact';
-import getScrollTop from '../utils/getScrollTop';
+import getScrollTop from 'usfl/dom/getScrollTop';
 import animScrollTo from '../utils/animScrollTo';
 
 class App extends React.Component {
@@ -20,14 +20,26 @@ class App extends React.Component {
         this._onChange = this._onChange.bind(this);
     }
 
+    state = {
+        filter: null,
+        project: null
+    }
+
     _onChange () {
         const filter = store.getFilter();
-        const selectedProject = store.selectedProject;
+        const project = store.getSelectedProject();
         const base = 'work';
 
-        if (selectedProject) {
-            this.context.router.push(`/${base}/${selectedProject}`);
-        } else if (filter) {
+        console.debug('App._onChange', filter, project);
+
+        this.setState({
+            project,
+            filter
+        });
+
+        if (project) {
+            this.context.router.push(`/${base}/${project}`);
+        } else if (filter !== store.getDefaultFilter()) {
             this.context.router.push(`/${base}/filter/${filter}`);
         } else {
             this.context.router.push(`/${base}`);
@@ -36,17 +48,9 @@ class App extends React.Component {
 
     render () {
 
-        const {filter, project} = this.props.params;
+        const {filter, project} = this.state;
 
         console.debug('App.render', filter, project);
-
-        if (!filter) {
-            store.clearFilters();
-        }
-
-        if (!project) {
-            store.selectedProject = null;
-        }
 
         return (
             <div className="App">
@@ -66,7 +70,7 @@ class App extends React.Component {
             .toUpperCase();
     }
 
-    _pathChanged () {
+    _pathChanged (projectTransition = false) {
         const {location} = this.props;
         const {pathname} = location;
         // console.debug('Route changed: ', pathname);
@@ -79,26 +83,33 @@ class App extends React.Component {
         if (this.tween) {
             this.tween.kill();
         }
-        // const path = location.pathname.slice(1);
         const path = location.pathname.slice(location.pathname.lastIndexOf('/') + 1);
         console.debug('---> path', path);
-        // console.debug(document.querySelector(`[data-path="${path}"]`));
-        if (path && document.getElementById(path)) {
-            const el = document.getElementById(path);
-            const {top} = el.getBoundingClientRect();
-            const y = top + getScrollTop();
-            // const dist = y - getScrollTop();
-            // console.log('scroll to:', y, dist);
-            this.tween = animScrollTo(y, 1);
+        const el = path && document.querySelector(`[data-path="${path}"]`);
+        if (el) {
+            if (projectTransition) {
+                window.setTimeout(() => this.scrollToEl(el), 500);
+            } else {
+                this.scrollToEl(el);
+            }
         }
     }
 
-    componentDidUpdate () {
-        this._pathChanged();
+    scrollToEl (el) {
+        const {top} = el.getBoundingClientRect();
+        const y = top + getScrollTop();
+        this.tween = animScrollTo(y, 1);
+    }
+
+    componentDidUpdate (prevProps, prevState) {
+        this._pathChanged(prevState.project && this.state.project);
     }
 
     componentDidMount () {
         store.addChangeListener(this._onChange);
+        const {filter, project} = this.props.params;
+        store.toggleFilter(filter);
+        store.selectProject(project);
         this._pathChanged();
     }
 

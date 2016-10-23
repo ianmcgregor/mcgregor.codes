@@ -6,7 +6,7 @@ export default function Contact() {
 
     return (
         <article className="Contact u-padH">
-            <h2 id="contact" data-path="contact">Contact</h2>
+            <h2 data-path="contact">Contact</h2>
             <ul>
             {contacts.map((contact, i) => {
                 return (

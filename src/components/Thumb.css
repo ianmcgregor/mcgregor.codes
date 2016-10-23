@@ -11,6 +11,7 @@
 
 .Thumb-image {
     border-top: 1px solid var(--white);
+    /*overflow: hidden;*/
     padding-top: 28.125%;
     position: relative;
     transition: padding-top 0.4s ease;
@@ -27,17 +28,24 @@
         }
     }
 
-    .Thumb.is-selected & {
-        padding-top: 100vh;
-    }
-
     img {
         display: block;
         height: 100%;
+        /*height: 56.25vw;*/
         left: 0;
         object-fit: cover;
         position: absolute;
-        top: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        /*transition: top 0.2s ease;*/
         width: 100%;
+    }
+
+    .Thumb.is-selected & {
+        padding-top: 100vh;
+
+        /*img {
+            height: 100%;
+        }*/
     }
 }

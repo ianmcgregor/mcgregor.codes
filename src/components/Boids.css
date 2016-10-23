@@ -1,6 +1,6 @@
 :root {
     --boids-size: 5px;
-    --boids-opacity: 0.3;
+    --boids-opacity: 0.125;
     --boids-color: var(--color-text);
 }
 
@@ -15,7 +15,7 @@
     width: 100%;
     z-index: -1;
 
-    > b {
+    /*> b {
         border-bottom: solid transparent;
         border-left: solid var(--boids-color);
         border-top: solid transparent;
@@ -25,5 +25,15 @@
         opacity: var(--boids-opacity);
         position: absolute;
         width: 0;
+    }*/
+
+    > b {
+        border: 1px solid var(--boids-color);
+        border-radius: 50%;
+        display: block;
+        height: 20px;
+        opacity: var(--boids-opacity);
+        position: absolute;
+        width: 20px;
     }
 }

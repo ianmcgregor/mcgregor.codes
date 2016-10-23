@@ -5,8 +5,8 @@
     --header-y--md: 100px;
     --info-y--md: 180px;
 
-    --header-y--lg: 120px;
-    --info-y--lg: 200px;
+    --header-y--lg: 160px;
+    --info-y--lg: 240px;
 }
 
 .Info {
@@ -63,11 +63,13 @@
 
 .Info-inner {
     opacity: 0;
+    pointer-events: none;
     transition: opacity 0.3s ease-out;
     transition-delay: 0s;
 
     .is-selected & {
         opacity: 1;
+        pointer-events: all;
         transition: opacity 0.8s ease-out;
         transition-delay: 0.6s;
     }
@@ -113,6 +115,14 @@
     bottom: 0;
     position: absolute;
     right: 0;
+
+    a::before {
+        background-color: var(--color-bg);
+    }
+}
+
+.Info-linkLabel {
+    margin-right: 8px;
 }
 
 .Info-close {

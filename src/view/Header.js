@@ -32,7 +32,7 @@ class Header extends React.Component {
                     Specialist in creative, experiential
                     web sites, games and applications.
                 </p>
-                <Boids />
+                {/* <Boids /> */}
             </header>
         );
     }

@@ -28,7 +28,7 @@ export default function Picture(props) {
                 srcSet={srcSetWebp}/>
             <img src={srcDefault}
                 srcSet={srcSetJpg}
-                alt={alt}/>
+                alt={alt} />
         </picture>
     );
 }

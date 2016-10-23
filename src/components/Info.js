@@ -1,6 +1,7 @@
 import React from 'react';
 import Filter from './Filter';
 import {Link} from 'react-router';
+import {store} from '../model/store';
 
 export default class Info extends React.Component {
 
@@ -25,7 +26,7 @@ export default class Info extends React.Component {
                         <h3 className="Info-title">
                             {title}
                         </h3>
-                        <span className="Info-year">
+                        <span className="Info-year u-font-xsm">
                             {year}
                         </span>
                 </header>
@@ -42,12 +43,17 @@ export default class Info extends React.Component {
                             modifier="Filter--info"
                             showCount={false}/>
                     </div>
-                    <a className="Info-link u-pad" href={link} target="_blank">
-                        <span className="Icon Icon--link">View Project</span>
-                    </a>
-                    <Link to="/work" className="Info-close u-pad">
+                    <div className="Info-link u-pad">
+                        <a className="u-link" href={link} target="_blank">
+                            <span className="Info-linkLabel u-font-xsm">View Project</span>
+                            <span className="Icon Icon--link" />
+                        </a>
+                    </div>
+                    <button
+                        className="Info-close u-pad"
+                        onClick={() => store.selectProject(null)}>
                         <span className="Icon Icon--close">Close</span>
-                    </Link>
+                    </button>
                 </div>
             </section>
         );

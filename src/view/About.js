@@ -7,7 +7,7 @@ export default function About() {
     return (
         <article className="About u-padH">
             <section className="About-info">
-                <h2 id="about" data-path="about">About</h2>
+                <h2 data-path="about">About</h2>
                 <p>I love to push the limits of the technologies at hand.
                     I write robust, performant JavaScript and CSS.
                     The KISS, DRY and YAGNI principles are always on my mind.</p>

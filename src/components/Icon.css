@@ -49,8 +49,35 @@
     content: "\f078";
 }
 
-.Icon--close::before {
+/*.Icon--close::before {
     content: "\f081";
+}*/
+
+.Icon--close {
+    color: transparent;
+    position: relative;
+    width: 20px;
+
+    &::before,
+    &::after {
+        background: var(--white);
+        content: "";
+        display: inline-block;
+        height: 24px;
+        left: 50%;
+        margin: -12px -12px 0 0;
+        position: absolute;
+        top: 50%;
+        width: 1px;
+    }
+
+    &::before {
+        transform: rotate(45deg);
+    }
+
+    &::after {
+        transform: rotate(-45deg);
+    }
 }
 
 .Icon--tag::before {
@@ -71,10 +98,10 @@
     content: "\f0dd";
 }
 
+.Icon--open::before,
 .Icon--open_source::before {
-    content: "\f00a";
-
-    /*content: "\f042";*/
+    /*content: "\f00a";*/
+    content: "\f0dd";
 }
 
 .Icon--audio::before {
@@ -103,4 +130,20 @@
 
 .Icon--game::before {
     content: "\f09d";
+}
+
+.Icon--pinned::before {
+    content: "\f041";
+}
+
+.Icon--featured::before {
+    content: "\2665";
+}
+
+.Icon--all::before {
+    content: "\f096";
+}
+
+.Icon--website::before {
+    content: "\f0b6";
 }

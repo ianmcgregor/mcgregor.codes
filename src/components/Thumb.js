@@ -2,8 +2,6 @@ import React from 'react';
 import Info from './Info';
 import Picture from './Picture';
 import {selectProject} from '../model/actions';
-import Filter from './Filter';
-import {Link} from 'react-router';
 
 export default class Thumb extends React.Component {
 
@@ -25,10 +23,10 @@ export default class Thumb extends React.Component {
 
         return (
             <div
-                id={slug}
                 className={'Thumb' + (selected ? ' is-selected' : '')}
+                data-path={slug}
                 onClick={selected ? null : selectProject.bind(undefined, slug)}>
-                <div className="Thumb-image">
+                <div className="Thumb-image" ref={(img) => this._img = img}>
                     <Picture src={src} alt={caption} srcSet={srcSet} />
                 </div>
                 <Info project={project} filter={filter} />
