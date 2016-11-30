@@ -93,7 +93,8 @@ export default class App extends React.Component {
         if (this.tween) {
             this.tween.kill();
         }
-        const path = location.pathname.slice(location.pathname.lastIndexOf('/') + 1);
+        const penultimateSlash = pathname.slice(0, -1).lastIndexOf('/');
+        const path = pathname.slice(penultimateSlash + 1).slice(0, -1);
         console.debug('---> path', path);
         const el = path && document.querySelector(`[data-path="${path}"]`);
 
