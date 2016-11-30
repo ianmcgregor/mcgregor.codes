@@ -28,7 +28,6 @@ export default class App extends React.Component {
     _onChange () {
         const filter = store.getFilter();
         const project = store.getSelectedProject();
-        const base = 'work';
 
         console.debug('App._onChange', filter, project);
 
@@ -37,7 +36,7 @@ export default class App extends React.Component {
             filter
         });
 
-        let path = `/${base}`;
+        let path = '';
 
         if (filter !== store.getDefaultFilter()) {
             path += `/${filter}`;
@@ -47,7 +46,9 @@ export default class App extends React.Component {
             path += `/${project}`;
         }
 
-        this.context.router.push(path);
+        if (path) {
+            this.context.router.push(`/work${path}`);
+        }
     }
 
     componentWillReceiveProps (nextProps) {
