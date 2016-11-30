@@ -47,7 +47,7 @@ export default class App extends React.Component {
         }
 
         if (path) {
-            this.context.router.push(`/work${path}`);
+            this.context.router.push(`/work${path}/`);
         }
     }
 

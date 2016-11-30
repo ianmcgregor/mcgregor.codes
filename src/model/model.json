@@ -4,13 +4,13 @@
     "url": "http://mcgregor.codes",
     "pages": [{
         "title": "Work",
-        "route": "/work"
+        "route": "/work/"
     }, {
         "title": "About",
-        "route": "/about"
+        "route": "/about/"
     }, {
         "title": "Contact",
-        "route": "/contact"
+        "route": "/contact/"
     }],
     "contacts": [{
         "label": "ian@mcgregor.codes",
@@ -83,6 +83,7 @@
     "projects": [{
         "title": "Kindernauts",
         "year": 2016,
+        "priority": 1,
         "images": [
             "kindernauts"
         ],
@@ -131,7 +132,7 @@
     }, {
         "title": "Manchester City",
         "year": 2016,
-        "priority": 1,
+        "priority": 2,
         "images": [
             "mancity"
         ],
@@ -143,6 +144,7 @@
         ],
         "link": "http://mancity.com/",
         "tags": [
+            "pinned",
             "website"
         ]
     }, {
