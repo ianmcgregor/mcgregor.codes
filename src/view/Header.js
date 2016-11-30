@@ -1,8 +1,8 @@
 import React from 'react';
 import {Link, IndexLink} from 'react-router';
-import Boids from '../components/Boids';
+// import Boids from '../components/Boids';
 
-class Header extends React.Component {
+export default class Header extends React.Component {
 
     render () {
 
@@ -37,5 +37,3 @@ class Header extends React.Component {
         );
     }
 }
-
-export {Header as default};

@@ -1,7 +1,7 @@
 import React from 'react';
 import {toggleFilter} from '../model/actions';
 
-class Filter extends React.Component {
+export default class Filter extends React.Component {
 
     static propTypes = {
         filter: React.PropTypes.string,
@@ -15,9 +15,8 @@ class Filter extends React.Component {
 
         return (
             <ul className={`Filter ${modifier}`}>
-                {tags.map((tag) => {
+                {tags.filter((tag) => tag.renderable).map((tag) => {
                     const {key, slug, name, count} = tag;
-                    // const isSelected = includes(filters, slug);
                     const isSelected = slug === filter;
                     const label = showCount ? `${name} [${count}]` : name;
                     const active = isSelected ? 'is-active' : '';
@@ -37,5 +36,3 @@ class Filter extends React.Component {
         );
     }
 }
-
-export {Filter as default};

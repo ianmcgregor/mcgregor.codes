@@ -4,7 +4,7 @@ import {debounce} from 'lodash';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-class Boids extends React.Component {
+export default class Boids extends React.Component {
 
     numBoids = 50;
 
@@ -185,5 +185,3 @@ class Boids extends React.Component {
         window.removeEventListener('resize', this.onResize);
     }
 }
-
-export {Boids as default};

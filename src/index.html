@@ -13,13 +13,13 @@
     <meta property="og:description" content="<%= data.description %>">
     <meta property="og:type" content="website">
     <meta property="og:url" content="<%= data.url %>">
-    <meta property="og:image" content="<%= data.url %>/<%= path %>/img/mcgregor_codes/mcgregor_codes.png">
+    <meta property="og:image" content="">
 
 	<title><%= title %></title>
     <link href="<%= path %>/favicon_32.png" rel="icon" sizes="32x32">
     <link href="<%= path %>/favicon_152.png" rel="apple-touch-icon-precomposed">
     <link href="<%= path %>/css/styles.css" rel="stylesheet">
-	<script src="<%= path %>/js/modernizr<%= min %>.js"></script>
+	<script src="<%= path %>/js/modernizr.js"></script>
 </head>
 <body>
     <!-- Google Tag Manager -->
@@ -33,6 +33,6 @@
     <!-- End Google Tag Manager -->
 	<div data-container></div>
 	<% if (debug) { %><script>window.isDebug = true;</script><% } %>
-	<script src="<%= path %>/js/bundle<%= min %>.js"></script>
+	<script src="<%= path %>/js/bundle.js"></script>
 </body>
 </html>

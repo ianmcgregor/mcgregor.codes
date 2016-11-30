@@ -7,30 +7,20 @@ const debug = require('gulp-debug');
 const template = require('gulp-template');
 
 const paths = require('../package.json').paths.html;
-const config = require('../src/model/config.json');
-const isProduction = args.min; // eg: gulp --min
-
+const config = require('../src/model/model.json');
+const isDebug = args.debug; // eg: gulp --debug
 
 function logError(msg) {
     console.log(chalk.bold.red('[ERROR] ' + msg.toString()));
 }
 
-function renderPage(page, name) {
+function renderPage(name) {
     const templateData = {
+        path: '',
         data: config,
-        debug: !isProduction,
-        min: isProduction ? '.min' : '',
-        path: isProduction ? paths.dest : '',
+        debug: !!isDebug,
         title: config.title.toUpperCase()
     };
-
-    var dest = isProduction ? paths.destMin : paths.dest;
-
-    if (page) {
-        dest += page.route.slice(1);
-        templateData.path = '../' + templateData.path;
-        templateData.title += ' / ' + page.title.toUpperCase();
-    }
 
     return gulp.src(paths.entry)
         .pipe(template(templateData)
@@ -38,19 +28,13 @@ function renderPage(page, name) {
             logError(err);
         }))
         .pipe(gulpif(!!name, rename(name)))
-        .pipe(gulp.dest(dest))
+        .pipe(gulp.dest(paths.dest))
         .pipe(debug({title: 'html'}));
 }
 
 function render() {
     renderPage();
-
-    if (isProduction) {
-        renderPage(null, '404.html');
-        config.pages.forEach(function(page) {
-            renderPage(page);
-        });
-    }
+    renderPage('404.html');
 }
 
 function watch() {

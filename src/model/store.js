@@ -2,7 +2,9 @@ import {uniqueId, uniq, assign} from 'lodash';
 import {Dispatcher} from 'flux';
 import {EventEmitter} from 'events';
 import constants from './constants';
+
 const defaultFilter = 'pinned';
+const allFilter = 'all';
 
 class Store extends EventEmitter {
 
@@ -11,18 +13,7 @@ class Store extends EventEmitter {
 
         this.setMaxListeners(1);
 
-        // function getCaption(project, index) {
-        //     const {text} = project;
-        //     if (!Array.isArray(text)) {
-        //         return text;
-        //     }
-        //     if (index > text.length - 1) {
-        //         return text[text.length - 1];
-        //     }
-        //     return text[index];
-        // }
-
-        const imagePath = (window.isDebug ? '' : '/dist/') + '/img/';
+        const imagePath = '/img/';
 
         function getSlug(str) {
             return str
@@ -38,7 +29,8 @@ class Store extends EventEmitter {
                 key: uniqueId(),
                 name: tag,
                 slug: getSlug(tag),
-                count: 0
+                count: 0,
+                renderable: tag !== allFilter
             };
             tagMap[tag].count++;
             return tagMap[tag];
@@ -51,7 +43,7 @@ class Store extends EventEmitter {
         }
 
         config.projects.forEach((project) => {
-            project.tags.push('all');
+            project.tags.push(allFilter);
         });
 
         const tags = uniq(config.projects
@@ -71,13 +63,14 @@ class Store extends EventEmitter {
             .map((project) => (
             assign(project, {
                 key: uniqueId(),
+                priority: project.priority || 10,
                 slug: getSlug(project.title),
                 layout: (project.layout || 'center'),
                 tags: project.tags.filter((tag) => !!tag).map((tag) => cloneTag(tag)),
                 images: project.images.map((image, i) => ({
                     key: uniqueId(),
                     src: `${imagePath}${image}`,
-                    caption: project.title
+                    alt: project.title
                 })),
                 text: project.text.map((text) => ({
                     key: uniqueId(),
@@ -102,15 +95,12 @@ class Store extends EventEmitter {
     }
 
     _hasFilter (value) {
-        // return this._model.filters.indexOf(value) > -1;
         return this._model.filters[0] === value;
     }
 
     _addFilter (value) {
         if (!this._hasFilter(value)) {
-            // this._model.filters.push(value);
             this._model.filters[0] = value;
-            // this._emitChange();
             return true;
         }
         return false;
@@ -169,7 +159,6 @@ class Store extends EventEmitter {
     }
 
     clearFilters () {
-        // this._model.filters.length = 0;
         this._model.filters[0] = defaultFilter;
     }
 
@@ -182,48 +171,55 @@ class Store extends EventEmitter {
     }
 
     getFilteredProjects (filter) {
-        const {projects} = this._model;
         if (!filter) {
             filter = defaultFilter;
-            // return projects.filter((project) => this._hasTag(project, 'pinned'));
         }
-        return projects.filter((project) => {
-            return project.slug === filter || this._hasTag(project, filter);
-        });
+        const {projects} = this._model;
+        return projects
+            .filter((project) => {
+                return project.slug === filter || this._hasTag(project, filter);
+            })
+            .sort((a, b) => a.priority - b.priority);
     }
 
-    toggleFilter (value) {
+    toggleFilter (value, emit = true) {
         console.debug('toggleFilter', value);
         if (!this._addFilter(value)) {
             this.clearFilters();
         }
+        this._selectedProject = null;
         // if (!this.hasFilter(value)) {
         //     this._model.filters.push(value);
         // } else {
         //     this._model.filters.splice(this._model.filters.indexOf(value), 1);
         // }
-        this._emitChange();
+        if (emit) {
+            this._emitChange();
+        }
     }
 
-    selectProject (value) {
+    selectProject (value, emit = true) {
         console.debug('selectProject', value);
         this._selectedProject = value;
-        // if (!this._addFilter(value)) {
-        //     this.clearFilters();
-        // }
-        this._emitChange();
+        if (emit) {
+            this._emitChange();
+        }
     }
 
-    getSelectedProject() {
+    getSelectedProject () {
         return this._selectedProject;
     }
 
-    getDefaultFilter() {
+    getDefaultFilter () {
         return defaultFilter;
+    }
+
+    getAllFilter () {
+        return allFilter;
     }
 }
 
-const store = new Store(require('./config.json'));
+const store = new Store(require('./model.json'));
 const dispatcher = new Dispatcher();
 
 dispatcher.register(function(action) {

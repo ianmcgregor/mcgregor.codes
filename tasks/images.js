@@ -1,99 +1,60 @@
-const _ = require('lodash');
-const args = require('yargs').argv;
-const path = require('path');
-const gulp = require('gulp');
-const debug = require('gulp-debug');
-const rename = require('gulp-rename');
-const resize = require('gulp-image-resize');
-const webp = require('imagemin-webp');
+// Requires vips:
+// brew install homebrew/science/vips --with-webp --with-graphicsmagick
 
+const gulp = require('gulp');
+const resize = require('gulp-responsive');
+// const changed = require('gulp-changed');
 const paths = require('../package.json').paths.images;
 
-const config = require('../src/model/config.json');
+// function scaleImg(scale) {
+//     return resize({
+//         '*': {
+//             width: (scale * 100) + '%',
+//             rename: {suffix: '@' + scale + 'x'}
+//         }
+//     }, {
+//         quality: 90,
+//         progressive: true,
+//         compressionLevel: 9,
+//         withMetadata: false
+//     });
+// }
 
-const sizes = _.uniq(config.srcSet.map(function(src) {
-    return _.omit(src, 'vw');
-}), 'width');
+function sizeImages(sizes, formats) {
 
-function listImages(search) {
-    let projects = config.projects;
-    if (search) {
-        projects = projects.filter(function(project) {
-            return project.title.toLowerCase().indexOf(search) > -1;
-        });
-    }
+    const images = sizes.reduce((arr, size) => {
+        return arr.concat(formats.map((format) => {
+            return {
+                width: size,
+                rename: {
+                    suffix: '_' + size,
+                    extname: '.' + format
+                }
+            };
+        }));
+    }, []);
 
-    return projects
-        .filter(function(project) {
-            return project.visible;
-        })
-        .map(function(project) {
-            return project.images;
-        })
-        .reduce(function(value, images) {
-            return value.concat(images);
-        }, []);
-}
-
-function getSrcImages(search) {
-    return listImages(search)
-        .map(function(image) {
-            return paths.entry + '/**/' + path.basename(image, '.jpg') + '.png';
-        });
-}
-
-function convertJPG(quality) {
+    console.log(images);
     return resize({
-        format: 'jpg',
-        quality: quality
-    });
-}
-
-function convertWebP(quality) {
-    return webp({
-        quality: quality
-    })();
-}
-
-function resizePNG(size) {
-    return resize({
-        width: size.width,
-        height: size.height,
-        crop: false,
-        upscale: false,
-        filter: 'Catrom',
-        sharpen: true
-    });
-}
-
-function convert() {
-    sizes.forEach(function(size) {
-
-        gulp.src(getSrcImages(args.project))
-            .pipe(debug())
-            .pipe(resizePNG(size))
-            .pipe(convertJPG(0.9))
-            .pipe(rename({
-                suffix: '_' + size.width + 'x' + size.height
-            }))
-            .pipe(gulp.dest(paths.dest));
-
-        gulp.src(getSrcImages(args.project))
-            .pipe(debug())
-            .pipe(resizePNG(size))
-            .pipe(convertWebP(90))
-            .pipe(rename({
-                suffix: '_' + size.width + 'x' + size.height
-            }))
-            .pipe(gulp.dest(paths.dest));
+        '*': images
+    }, {
+        quality: 90,
+        progressive: true,
+        compressionLevel: 9,
+        withMetadata: false,
+        errorOnEnlargement: false
     });
 }
 
 module.exports = {
-    convert: convert,
-    ls: function() {
-        listImages().forEach(function(image) {
-            console.log(image);
-        });
+    size: function() {
+        const sizes = [1536, 1280, 1024, 768, 640];
+        const formats = ['jpg', 'webp'];
+
+        gulp.src(paths.entry)
+            // .pipe(require('gulp-debug')())
+            // .pipe(changed(entry))
+            .pipe(sizeImages(sizes, formats))
+            .pipe(gulp.dest(paths.dest));
     }
 };

@@ -3,7 +3,7 @@
 const isString = require('lodash').isString;
 
 describe('Config JSON', function() {
-    const configJson = require('../src/model/config.json');
+    const configJson = require('../src/model/model.json');
     const config = JSON.parse(JSON.stringify(configJson));
 
     it('should be an object', function() {
@@ -21,8 +21,6 @@ describe('Config JSON', function() {
             it('should have properties', function() {
                 expect(project.title).to.be.a('string');
                 expect(project.year).to.be.a('number');
-                expect(project.visible).to.be.a('boolean');
-                expect(project.layout).to.be.a('string');
                 expect(project.images).to.be.instanceof(Array);
                 expect(project.images.every(isString)).to.be.true;
                 expect(project.text).to.be.instanceof(Array);
@@ -44,7 +42,6 @@ describe('Config JSON', function() {
         config.srcSet.forEach(function(src) {
             it('should have properties', function() {
                 expect(src.width).to.be.a('number');
-                expect(src.height).to.be.a('number');
                 expect(src.vw).to.be.a('number');
             });
         });

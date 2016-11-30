@@ -2,22 +2,20 @@ const args = require('yargs').argv;
 const browserify = require('browserify');
 const buffer = require('vinyl-buffer');
 const chalk = require('chalk');
-const debug = require('gulp-debug');
 const gulp = require('gulp');
 const gulpif = require('gulp-if');
 const eslint = require('gulp-eslint');
-const rename = require('gulp-rename');
 const source = require('vinyl-source-stream');
 const strip = require('gulp-strip-debug');
 const uglify = require('gulp-uglify');
 const watchify = require('watchify');
 
 const paths = require('../package.json').paths.scripts;
-const isProduction = args.min; // eg: gulp --min
+const isDebug = args.debug; // eg: gulp --debug
 
-var bundler = browserify({
+let bundler = browserify({
     entries: paths.entry,
-    debug: !isProduction
+    debug: isDebug
 });
 
 function logError(msg) {
@@ -36,11 +34,8 @@ function bundle() {
         .on('error', logError)
         .pipe(source('bundle.js'))
         .pipe(buffer())
-        .pipe(gulpif(isProduction, uglify()))
-        .pipe(gulpif(isProduction, strip()))
-        .pipe(gulpif(isProduction, rename({
-            suffix: '.min'
-        })))
+        .pipe(gulpif(!isDebug, uglify()))
+        .pipe(gulpif(!isDebug, strip()))
         .pipe(gulp.dest(paths.dest));
 }
 
@@ -54,9 +49,6 @@ function modernizr() {
     return gulp.src(paths.modernizr.entry)
         .pipe(gulp.dest(paths.modernizr.dest))
         .pipe(uglify())
-        .pipe(rename({
-            suffix: '.min'
-        }))
         .pipe(gulp.dest(paths.modernizr.dest));
 }
 

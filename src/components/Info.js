@@ -1,6 +1,5 @@
 import React from 'react';
 import Filter from './Filter';
-import {Link} from 'react-router';
 import {store} from '../model/store';
 
 export default class Info extends React.Component {

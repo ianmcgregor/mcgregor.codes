@@ -19,8 +19,8 @@ gulp.task('html', require('./tasks/html').render);
 gulp.task('html:watch', require('./tasks/html').watch);
 
 // images
-gulp.task('img:convert', require('./tasks/images').convert);
-gulp.task('img:ls', require('./tasks/images').ls);
+gulp.task('images', require('./tasks/images').size);
+
 
 // build
 gulp.task('build', [

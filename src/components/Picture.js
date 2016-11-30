@@ -1,7 +1,7 @@
 import React from 'react';
 
 function getUrl (base, src, ext) {
-    return `${base}_${src.width}x${src.height}.${ext}`;
+    return `${base}_${src.width}.${ext}`;
 }
 
 function getSrcSet (arr, base, ext) {
@@ -16,8 +16,13 @@ function getDefault (arr, base, ext) {
 }
 
 export default function Picture(props) {
-    const {src, alt, srcSet} = props;
+    const {img, srcSet} = props;
 
+    if (!img) {
+        return null;
+    }
+
+    const {src, alt} = img;
     const srcSetJpg = getSrcSet(srcSet, src, 'jpg');
     const srcSetWebp = getSrcSet(srcSet, src, 'webp');
     const srcDefault = getDefault(srcSet, src, 'jpg');

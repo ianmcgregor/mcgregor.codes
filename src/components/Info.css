@@ -10,17 +10,43 @@
 }
 
 .Info {
-    background: var(--color-overlay);
     bottom: 0;
     color: var(--color-bg);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     left: 0;
+    opacity: 0;
     position: absolute;
     top: 0;
+    transition: opacity 0.3s ease-out 0.3s;
     width: 100%;
     z-index: 1;
+
+    .is-loaded & {
+        opacity: 1;
+    }
+
+    &::after {
+        background-color: var(--color-overlay);
+        background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        content: "";
+        height: 100%;
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        transition: opacity 0.3s ease-out;
+        width: 100%;
+        z-index: -1;
+
+        .is-selected & {
+            opacity: 1;
+        }
+    }
 }
 
 .Info-header {
@@ -40,6 +66,7 @@
 
     h3 {
         text-align: left;
+        text-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
     }
 
     .is-selected & {
@@ -83,6 +110,12 @@
     text-align: left;
     top: 0;
     transform: translateY(var(--info-y));
+
+    /*text-shadow:
+            -1px -1px 0 var(--black-semi-opaque),
+            1px -1px 0 var(--black-semi-opaque),
+            -1px 1px 0 var(--black-semi-opaque),
+            1px 1px 0 var(--black-semi-opaque);*/
 
     @media (--md) {
         transform: translateY(var(--info-y--md));

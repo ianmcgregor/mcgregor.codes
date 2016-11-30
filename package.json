@@ -61,6 +61,7 @@
     "gulp-plumber": "^1.1.0",
     "gulp-postcss": "^6.1.1",
     "gulp-rename": "^1.2.2",
+    "gulp-responsive": "^2.6.0",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-strip-debug": "^1.1.0",
     "gulp-template": "^4.0.0",
@@ -106,8 +107,7 @@
   },
   "paths": {
     "connect": {
-      "dirMin": "./",
-      "dir": "dist",
+      "dir": "./dist",
       "files": [
         "dist/**/*",
         "index.html"
@@ -115,11 +115,10 @@
     },
     "html": {
       "entry": "src/index.html",
-      "dest": "dist",
-      "destMin": ""
+      "dest": "dist"
     },
     "images": {
-      "entry": "src/img/png",
+      "entry": "src/img/**/*{.png,.jpg}",
       "dest": "dist/img"
     },
     "scripts": {

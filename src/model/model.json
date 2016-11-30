@@ -40,52 +40,56 @@
     "about": [{
         "title": "Basics",
         "list": [
-            "JavaScript (ES5, ES6 + Babel)",
-            "CSS (Vanilla, Sass)",
+            "JavaScript (ES5, ES6)",
+            "CSS (Vanilla, Sass), HTML",
             "Unit Tests (Karma, Mocha, Chai)",
-            "Node, Gulp",
+            "Gulp, NPM, Grunt",
+            "Node, Express, Socket IO",
             "Browserify, Webpack, Rollup",
             "Git, GitFlow",
-            "NGINX, AWS, Digital Ocean"
+            "Ubuntu, NGINX",
+            "AWS, Digital Ocean"
         ]
     }, {
         "title": "Libraries/Apis",
         "list": [
+            "React, Backbone, Angular",
             "PIXI.js",
-            "React",
-            "Backbone",
-            "Angular",
-            "Three.js",
+            "Web GL, Three.js",
+            "Web Audio",
+            "Babel, Core JS",
             "Phaser.js",
-            "Web Audio API",
             "Video, Canvas",
-            "Lodash, Handlebars",
+            "Lodash, Modernizr, jQuery",
             "GSAP, Tween.js",
-            "Modernizr, jQuery",
-            "YouTube, Facebook",
-            "Express, Mongo",
-            "Socket IO, Passport",
-            "SUIT CSS, BEM, PostCSS"
+            "Express, Socket IO",
+            "SUIT CSS, BEM, PostCSS",
+            "Social APIs"
         ]
     }, {
-        "title": "Non-coding",
+        "title": "Other",
         "list": [
             "Tech Lead/Lead Dev",
-            "Specs/Timings",
             "Prototyping",
-            "UX/Wireframes"
+            "Accessibility, Usability",
+            "Performance optimisation",
+            "Mobile app packaging",
+            "Design patterns",
+            "Animation techniques",
+            "Agile methodologies",
+            "Basic PHP, Python, C#"
         ]
     }],
     "projects": [{
         "title": "Kindernauts",
         "year": 2016,
         "images": [
-            "kindernauts/kindernauts"
+            "kindernauts"
         ],
         "text": [
             "Playful interactive activity map",
             "Role: Senior Developer",
-            "Tech: PIXI.js, GSAP",
+            "Tech: PIXI.js, GSAP, ES6",
             "Client: Goodboy Digital, Kinder"
         ],
         "link": "https://www.kindernauts.co.uk/#/activities",
@@ -97,7 +101,7 @@
         "title": "W+K London",
         "year": 2016,
         "images": [
-            "abbey_road/abbey_road_02"
+            "wk"
         ],
         "text": [
             "Role: Lead Developer",
@@ -112,7 +116,7 @@
         "title": "Primo Toys",
         "year": 2016,
         "images": [
-            "abbey_road/abbey_road_02"
+            "primotoys_01"
         ],
         "text": [
             "Website for exciting tech startup with ecommerce",
@@ -127,12 +131,13 @@
     }, {
         "title": "Manchester City",
         "year": 2016,
+        "priority": 1,
         "images": [
-            "abbey_road/abbey_road_02"
+            "mancity"
         ],
         "text": [
             "Large scale website",
-            "Tech: Backbone, Sass, ES6",
+            "Tech: Backbone, ES6, Sass, Node",
             "Role: Senior Developer",
             "Client: Code and Theory, Manchester City FC"
         ],
@@ -144,7 +149,7 @@
         "title": "Sky Fluid Viewing",
         "year": 2015,
         "images": [
-            "abbey_road/abbey_road_02"
+            "sky_q"
         ],
         "text": [
             "FWA Site of the Day",
@@ -154,17 +159,13 @@
         ],
         "link": "https://insideabbeyroad.withgoogle.com/",
         "tags": [
-            "audio",
-            "3d"
+            "audio"
         ]
     }, {
         "title": "Inside Abbey Road",
         "year": 2015,
         "images": [
-            "abbey_road/abbey_road_02",
-            "abbey_road/abbey_road_01",
-            "abbey_road/abbey_road_10",
-            "abbey_road/abbey_road_14"
+            "abbey_road"
         ],
         "text": [
             "FWA Site of the Month",
@@ -183,15 +184,7 @@
         "title": "Made",
         "year": 2014,
         "images": [
-            "made/made_01",
-            "made/made_02",
-            "made/made_03",
-            "made/made_09",
-            "made/made_19",
-            "made/made_25",
-            "made/made_30",
-            "made/made_36",
-            "made/made_39"
+            "made"
         ],
         "text": [
             "Platform runner game for mobile and desktop",
@@ -199,7 +192,7 @@
             "Role: Lead Developer",
             "Client: Ray-Ban, Stinkdigital"
         ],
-        "link": "http://game.ray-ban.com/",
+        "link": "http://prototypes.stinkdigital.com/rayban/game/?noFB=true",
         "tags": [
             "pinned",
             "game"
@@ -208,11 +201,12 @@
         "title": "Monty's Christmas",
         "year": 2014,
         "images": [
-            "montys_christmas/montys_christmas_01",
-            "montys_christmas/montys_christmas_03",
-            "montys_christmas/montys_christmas_06",
-            "montys_christmas/montys_christmas_07",
-            "montys_christmas/montys_christmas_18"
+            "montys_christmas_1",
+            "montys_christmas_01",
+            "montys_christmas_03",
+            "montys_christmas_06",
+            "montys_christmas_07",
+            "montys_christmas_18"
         ],
         "text": [
             "Interactive storybook for Google Cardboard",
@@ -230,15 +224,11 @@
         "title": "Chance Chanel",
         "year": 2014,
         "images": [
-            "chance/chance_02",
-            "chance/chance_05",
-            "chance/chance_07"
+            "chance_02"
         ],
         "text": [
-            "Interactive branching film",
-            "Fully responsive and progressively enhanced",
-            "Supports numerous mobile and desktop platforms",
-            "Tech: PIXI, Handlebars, Sass",
+            "Responsive, progressively enhanced interactive film experience",
+            "Tech: PIXI, Video, Handlebars, Sass",
             "Role: Lead Developer",
             "Client: Chanel, Stinkdigital"
         ],
@@ -250,16 +240,7 @@
         "title": "Revolutions in Sound",
         "year": 2014,
         "images": [
-            "revs_in_sound/revs_in_sound_01",
-            "revs_in_sound/revs_in_sound_02",
-            "revs_in_sound/revs_in_sound_06",
-            "revs_in_sound/revs_in_sound_12",
-            "revs_in_sound/revs_in_sound_13",
-            "revs_in_sound/revs_in_sound_14",
-            "revs_in_sound/revs_in_sound_15",
-            "revs_in_sound/revs_in_sound_16",
-            "revs_in_sound/revs_in_sound_19",
-            "revs_in_sound/revs_in_sound_23"
+            "revs_in_sound"
         ],
         "text": [
             "Living archive of UK club culture with UGC",
@@ -274,9 +255,7 @@
     }, {
         "title": "Imagepack",
         "year": 2015,
-        "images": [
-            "imagepack/imagepack_04"
-        ],
+        "images": [],
         "text": [
             "Utility to pack images into a binary file",
             "Reduces load times for image sequences",
@@ -287,25 +266,11 @@
             "open"
         ]
     }, {
-        "title": "Point Cloud",
-        "year": 2015,
-        "images": [
-            "pointcloud/pointcloud_05"
-        ],
-        "text": [
-            "Experiment with Point Clouds in Three.js",
-            "A Torus Knot serves as the geometry for the points",
-            "Tech: Three.js, Canvas"
-        ],
-        "link": "http://codepen.io/ianmcgregor/pen/OPGemQ",
-        "tags": [
-            "3d"
-        ]
-    }, {
         "title": "sono",
-        "year": 2015,
+        "year": 2016,
+        "priority": 1,
         "images": [
-            "sono/sono_02"
+            "sono_01"
         ],
         "text": [
             "Open source library for creative audio",
@@ -320,10 +285,7 @@
         "title": "Deep Sea Freediver",
         "year": 2014,
         "images": [
-            "deep_sea_freediver/deep_sea_freediver_01",
-            "deep_sea_freediver/deep_sea_freediver_03",
-            "deep_sea_freediver/deep_sea_freediver_04",
-            "deep_sea_freediver/deep_sea_freediver_06"
+            "deep_sea_freediver"
         ],
         "text": [
             "Made in 48 hours for the Ludum Dare game jam",
@@ -337,7 +299,7 @@
         "title": "Gif Inbox",
         "year": 2014,
         "images": [
-            "gifinbox/gifinbox_02"
+            "gifinbox_02"
         ],
         "text": [
             "Gifs that arrive in my email inbox",
@@ -348,16 +310,16 @@
             "data"
         ]
     }, {
-        "title": "Circloids",
+        "title": "Boid",
         "year": 2014,
         "images": [
-            "circloids/circloids_05"
+            "circloids"
         ],
         "text": [
-            "Experiment using boids (flocking behaviours)",
-            "Tech: Canvas"
+            "JavaScript library that produces natural looking movement",
+            "Tech: JS"
         ],
-        "link": "http://ianmcgregor.me/experiments/circloids/",
+        "link": "https://github.com/ianmcgregor/boid",
         "tags": [
             "open"
         ]
@@ -365,13 +327,7 @@
         "title": "My Time Is Now",
         "year": 2014,
         "images": [
-            "my_time_is_now/my_time_is_now_12",
-            "my_time_is_now/my_time_is_now_24",
-            "my_time_is_now/my_time_is_now_26",
-            "my_time_is_now/my_time_is_now_43",
-            "my_time_is_now/my_time_is_now_53",
-            "my_time_is_now/my_time_is_now_57",
-            "my_time_is_now/my_time_is_now_66"
+            "my_time_is_now_01"
         ],
         "text": [
             "Interactive film filled with rabbit holes that take you into mini-games",
@@ -387,9 +343,7 @@
         "title": "Christmas Carole",
         "year": 2014,
         "images": [
-            "project_01",
-            "project_02",
-            "project_03"
+            "christmas_carole"
         ],
         "text": [
             "Realtime compositing of Google Streetview into green screen footage",
@@ -404,10 +358,10 @@
         "title": "Captain Ice",
         "year": 2014,
         "images": [
-            "captain_ice/captain_ice_04",
-            "captain_ice/captain_ice_01",
-            "captain_ice/captain_ice_09",
-            "captain_ice/captain_ice_10"
+            "captain_ice_04",
+            "captain_ice_01",
+            "captain_ice_09",
+            "captain_ice_10"
         ],
         "text": [
             "A game that blends video clips and pixel art",
@@ -422,9 +376,7 @@
         "title": "Unite All Originals",
         "year": 2013,
         "images": [
-            "project_01",
-            "project_02",
-            "project_03"
+            "adidas_originals_1"
         ],
         "text": [
             "Web Speech API experience with Hip-Hop legends Run DMC",
@@ -441,9 +393,9 @@
         "title": "Miru",
         "year": 2013,
         "images": [
-            "miru/miru_16",
-            "miru/miru_09",
-            "miru/miru_01"
+            "miru_16",
+            "miru_09",
+            "miru_01"
         ],
         "text": [
             "An interactive 360 film shot using an octocopter",
@@ -458,10 +410,7 @@
         "title": "Urban Tour",
         "year": 2013,
         "images": [
-            "urban_tour/urban_tour_09",
-            "urban_tour/urban_tour_20",
-            "urban_tour/urban_tour_25",
-            "urban_tour/urban_tour_27"
+            "urban_tour"
         ],
         "text": [
             "Interactive fashion catalogue slash music video",
@@ -477,10 +426,7 @@
         "title": "Kino",
         "year": 2013,
         "images": [
-            "kino/kino_06",
-            "kino/kino_30",
-            "kino/kino_07",
-            "kino/kino_10"
+            "kino"
         ],
         "text": [
             "Camera API allows the user to 'See things differently' by tilting their head",
@@ -495,10 +441,10 @@
         "title": "Happy Inside",
         "year": 2011,
         "images": [
-            "happy_inside/happy_inside_02",
-            "happy_inside/happy_inside_03",
-            "happy_inside/happy_inside_09",
-            "happy_inside/happy_inside_10"
+            "happy_inside_02",
+            "happy_inside_03",
+            "happy_inside_09",
+            "happy_inside_10"
         ],
         "text": [
             "A competition encouraging Facebook shares",
@@ -513,13 +459,13 @@
         "title": "One Life",
         "year": 2011,
         "images": [
-            "one_life/one_life_06",
-            "one_life/one_life_19",
-            "one_life/one_life_27",
-            "one_life/one_life_32"
+            "one_life_06",
+            "one_life_19",
+            "one_life_27",
+            "one_life_32"
         ],
         "text": [
-            "Interactive film trailer for a BBC nature film",
+            "Film trailer with contextual hotspots for the BBC nature film",
             "Role: Lead Developer",
             "Client: BBC, Brooklyn Brothers, Stinkdigital"
         ],
@@ -532,9 +478,7 @@
         "title": "Diesel Island",
         "year": 2011,
         "images": [
-            "project_01",
-            "project_02",
-            "project_03"
+            "diesel_island_2"
         ],
         "text": [
             "An island community powered by Facebook",
@@ -549,14 +493,14 @@
         "title": "Dark Ride",
         "year": 2010,
         "images": [
-            "dark_ride/dark_ride_06",
-            "dark_ride/dark_ride_14",
-            "dark_ride/dark_ride_17",
-            "dark_ride/dark_ride_19",
-            "dark_ride/dark_ride_26",
-            "dark_ride/dark_ride_43",
-            "dark_ride/dark_ride_51",
-            "dark_ride/dark_ride_56"
+            "dark_ride_06",
+            "dark_ride_14",
+            "dark_ride_17",
+            "dark_ride_19",
+            "dark_ride_26",
+            "dark_ride_43",
+            "dark_ride_51",
+            "dark_ride_56"
         ],
         "text": [
             "FWA People's Choice Site of the Year",
@@ -572,11 +516,7 @@
         "title": "A Hundred Lovers",
         "year": 2010,
         "images": [
-            "a_hundred_lovers/a_hundred_lovers_29",
-            "a_hundred_lovers/a_hundred_lovers_32",
-            "a_hundred_lovers/a_hundred_lovers_33",
-            "a_hundred_lovers/a_hundred_lovers_35",
-            "a_hundred_lovers/a_hundred_lovers_02"
+            "hundred_lovers"
         ],
         "text": [
             "Music video slash fashion catalogue",
@@ -592,9 +532,7 @@
         "title": "Carousel",
         "year": 2009,
         "images": [
-            "carousel/carousel_15",
-            "carousel/carousel_09",
-            "carousel/carousel_22"
+            "carousel"
         ],
         "text": [
             "Stinkdigital's first FWA and Cannes Grand Prix",
@@ -609,28 +547,19 @@
         ]
     }],
     "srcSet": [{
-        "width": 1920,
-        "height": 1080,
-        "vw": 3840
-    }, {
-        "width": 1024,
-        "height": 576,
-        "vw": 2048
-    }, {
-        "width": 768,
-        "height": 432,
+        "width": 1536,
         "vw": 1536
     }, {
-        "width": 640,
-        "height": 360,
+        "width": 1280,
         "vw": 1280
     }, {
+        "width": 1024,
+        "vw": 1024
+    }, {
         "width": 768,
-        "height": 432,
         "vw": 768
     }, {
         "width": 640,
-        "height": 360,
         "vw": 640
     }]
 }

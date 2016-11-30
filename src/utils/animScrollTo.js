@@ -8,7 +8,7 @@ export default function animScrollTo(y, duration, onComplete) {
             x: 0,
             y,
             // autoKill: y > 0
-            autoKill: false
+            autoKill: true
         },
         onComplete
     });

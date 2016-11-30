@@ -10,8 +10,9 @@ const routes = (
     <Route path="/" component={App} ignoreScrollBehavior={true}>
         <IndexRoute component={App}/>
         <Route path="work" component={App}>
-            <Route path=":project" component={App}/>
-            <Route path="filter/:filter" component={App}/>
+            <Route path=":filter" component={App}>
+                <Route path=":project" component={App}/>
+            </Route>
         </Route>
         <Route path="about" component={App}/>
         <Route path="contact" component={App}/>
