@@ -1,22 +1,11 @@
-/*
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700);
-@import url(http://fonts.googleapis.com/css?family=Nunito:400,700,300);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700);
-@import url(http://fonts.googleapis.com/css?family=Inconsolata:400,700);
-*/
-/*@import 'https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900';*/
-@import 'https://fonts.googleapis.com/css?family=Raleway:300';
+/*@import "https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900";*/
+
+@import "https://fonts.googleapis.com/css?family=Raleway:300";
 
 /*@font-face {
-    font-family: "Source Sans Pro";
+    font-family: "Raleway";
     font-style: normal;
-    font-weight: 400;
-    src: url("../font/source_sans_pro/source_sans_pro_400.woff") format("woff");
+    font-weight: 300;
+    src: url("../font/raleway/raleway_300.woff") format("woff");
 }
-
-@font-face {
-    font-family: "Source Sans Pro";
-    font-style: normal;
-    font-weight: 700;
-    src: url("../font/source_sans_pro/source_sans_pro_700.woff") format("woff");
-}*/
+*/

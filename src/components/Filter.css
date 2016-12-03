@@ -16,7 +16,12 @@
 }
 
 .Filter-label {
+    display: none;
     margin-left: 6px;
+
+    @media (--md) {
+        display: block;
+    }
 }
 
 /*
@@ -27,14 +32,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
-    .Filter-label {
-        display: none;
-
-        @media (--md) {
-            display: block;
-        }
-    }
 
     .Icon {
         min-width: 16px;

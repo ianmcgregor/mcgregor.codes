@@ -1,3 +1,4 @@
+const args = require('yargs').argv;
 const chalk = require('chalk');
 const gulp = require('gulp');
 const plumber = require('gulp-plumber');
@@ -5,6 +6,8 @@ const postcss = require('gulp-postcss');
 const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
 const paths = require('../package.json').paths.styles;
+
+const isDebug = args.debug; // eg: gulp --debug
 
 const processors = [
     require('postcss-import')(),
@@ -23,9 +26,12 @@ const processors = [
     require('autoprefixer')({
         browsers: ['last 2 version'],
         cascade: false
-    }),
-    require('cssnano')()
+    })
 ];
+
+const postProcessors = isDebug ? processors : processors.concat([
+    require('cssnano')()
+]);
 
 function logError(msg) {
     console.log(chalk.bold.red('[ERROR] ' + msg.toString()));
@@ -36,7 +42,7 @@ function bundle() {
         .pipe(plumber({errorHandler: logError}))
         .pipe(sourcemaps.init({loadMaps: true}))
         .pipe(rename('styles.css'))
-        .pipe(postcss(processors))
+        .pipe(postcss(postProcessors))
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(paths.dest));
 }

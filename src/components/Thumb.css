@@ -10,24 +10,9 @@
 }
 
 .Thumb-image {
-    padding-top: 28.125%;
     padding-top: 0;
     position: relative;
     transition: padding-top 0.4s ease;
-
-    @media (--md) {
-        padding-top: 16%;
-        padding-top: 0;
-    }
-
-    .Thumb:first-of-type & {
-        padding-top: 56.25%;
-
-        @media (--md) {
-            padding-top: 32%;
-            padding-top: 0;
-        }
-    }
 
     img {
         display: block;
@@ -46,7 +31,7 @@
 
 .Thumb.is-loaded .Thumb-image {
     padding-top: 28.125%;
-    transition-delay: 0.2s;
+    transition-delay: 0.3s;
 
     @media (--md) {
         padding-top: 16%;
@@ -61,12 +46,7 @@
     }
 }
 
-.Thumb.is-loaded.is-selected .Thumb-image {
-    padding-top: 100vh;
-    transition-delay: 0s;
-}
-
-.Thumb.is-loaded {
+/*.Thumb.is-loaded {
     &:nth-of-type(2) .Thumb-image {
         transition-delay: 0.1s;
     }
@@ -98,4 +78,9 @@
     &:nth-of-type(9) .Thumb-image {
         transition-delay: 0.8s;
     }
+}*/
+
+.Thumb.is-loaded.is-selected .Thumb-image {
+    padding-top: 100vh;
+    transition-delay: 0s;
 }
