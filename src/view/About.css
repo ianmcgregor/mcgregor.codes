@@ -3,6 +3,10 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+
+    a::before {
+        background-color: var(--color-text);
+    }
 }
 
 .About-info {

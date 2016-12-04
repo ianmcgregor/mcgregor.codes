@@ -1,5 +1,3 @@
-'use strict';
-
 export default {
     page: function(page) {
         console.log('track.page:', page);
