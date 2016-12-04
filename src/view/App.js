@@ -7,17 +7,25 @@ import About from './About';
 import Contact from './Contact';
 import getScrollTop from 'usfl/dom/getScrollTop';
 import animScrollTo from '../utils/animScrollTo';
+import scroll from 'usfl/dom/scroll';
+import eventBus from 'usfl/events/eventBus';
 
 export default class App extends React.Component {
 
-    static contextTypes = {
-        router: React.PropTypes.object.isRequired
-    }
+    // static contextTypes = {
+    //     router: React.PropTypes.object.isRequired
+    // }
 
     constructor (props) {
         super(props);
 
         this._onChange = this._onChange.bind(this);
+        this._onScroll = this._onScroll.bind(this);
+
+        window.onpopstate = function(event) {
+            console.debug('onpopstate:', JSON.stringify(event.state));
+            console.debug('path:', document.location.pathname);
+        };
     }
 
     // state = {
@@ -49,6 +57,14 @@ export default class App extends React.Component {
         if (path) {
             this.context.router.push(`/work${path}/`);
         }
+    }
+
+    _onScroll(y) {
+        const els = Array.from(document.querySelectorAll('[data-path]'));
+        els.forEach((el) => {
+            const {top} = el.getBoundingClientRect();
+            // console.log(el.getAttribute('data-path'), (top + getScrollTop()) - y);
+        });
     }
 
     componentWillReceiveProps (nextProps) {
@@ -96,6 +112,10 @@ export default class App extends React.Component {
         const penultimateSlash = pathname.slice(0, -1).lastIndexOf('/');
         const path = pathname.slice(penultimateSlash + 1).slice(0, -1);
         console.debug('---> path', path);
+        this.getElFromPath(path, projectTransition);
+    }
+
+    getElFromPath(path, projectTransition) {
         const el = path && document.querySelector(`[data-path="${path}"]`);
 
         console.debug(el, projectTransition);
@@ -115,21 +135,30 @@ export default class App extends React.Component {
     }
 
     componentDidUpdate (prevProps, prevState) {
-        // this._pathChanged(prevState.project && this.state.project);
-        // const {filter, project} = this.props.params;
-        // store.toggleFilter(filter, false);
-        // store.selectProject(project, false);
-        this._pathChanged(this.state.project);
+        const project = false;
+        this._pathChanged(project);
     }
 
     componentDidMount () {
         store.addChangeListener(this._onChange);
-        const {filter, project} = this.props.params;
+        // const {filter, project} = this.props.params;
         // const {filter, project} = this.state;
-        console.debug('componentDidMount', filter, project);
-        store.toggleFilter(filter, false);
-        store.selectProject(project, true);
+        // console.debug('componentDidMount', filter, project);
+        // store.toggleFilter(filter, false);
+        // store.selectProject(project, true);
         // this._pathChanged(!!project, 1000);
+
+        const path = document.location.pathname;
+        const parts = path.split('/').filter((part) => !!part);
+        console.debug('url parts', parts);
+
+        const section = parts[parts.length - 1];
+        console.debug('section:', section);
+
+        this.getElFromPath(section);
+
+        eventBus.on('scroll', this._onScroll);
+        scroll();
     }
 
     componentWillUnmount () {
