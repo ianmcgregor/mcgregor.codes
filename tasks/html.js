@@ -19,7 +19,7 @@ function renderPage(name) {
         path: '',
         data: config,
         debug: !!isDebug,
-        title: config.title.toUpperCase()
+        title: config.title
     };
 
     return gulp.src(paths.entry)
