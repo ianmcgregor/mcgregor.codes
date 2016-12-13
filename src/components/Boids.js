@@ -1,6 +1,6 @@
 import Boid from 'boid';
-// import dat from 'dat-gui';
-import {debounce} from 'lodash';
+import dat from 'dat-gui';
+import debounce from 'lodash/debounce';
 import React from 'react';
 import ReactDOM from 'react-dom';
 

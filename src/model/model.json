@@ -2,15 +2,15 @@
     "title": "McGregor Codes",
     "description": "Specialist in creative, experiential web sites, games and applications.",
     "url": "http://mcgregor.codes",
-    "pages": [{
+    "sections": [{
         "title": "Work",
-        "route": "/work/"
+        "slug": "work"
     }, {
         "title": "About",
-        "route": "/about/"
+        "slug": "about"
     }, {
         "title": "Contact",
-        "route": "/contact/"
+        "slug": "contact"
     }],
     "contacts": [{
         "label": "ian@mcgregor.codes",

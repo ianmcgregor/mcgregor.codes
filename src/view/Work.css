@@ -1,9 +1,12 @@
 .Work {
+    /*display: flex;
+    flex-direction: column;*/
     width: 100%;
 }
 
 .Work-tags {
     margin: 0 auto;
+    width: 100%;
 }
 
 .Work-projects {

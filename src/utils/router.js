@@ -1,16 +1,26 @@
-export default function(cb) {
+import {EventEmitter} from 'events';
 
-    window.addEventListener('popstate', (event) => {
-        console.debug('onpopstate:', JSON.stringify(event.state));
-        console.debug('path:', document.location.pathname);
-        cb(event);
-    });
+export default class Router extends EventEmitter {
+    constructor() {
+        super();
 
-    function push(url) {
-        window.history.pushState(null, null, url);
+        window.addEventListener('popstate', (event) => {
+            this.emit('pop', document.location.pathname);
+        });
     }
 
-    return {
-        push
-    };
+    push(path) {
+        if (path === this.path) {
+            return;
+        }
+        window.history.pushState(null, null, path);
+    }
+
+    replace(path) {
+        window.history.replaceState(null, null, path);
+    }
+
+    get path() {
+        return document.location.pathname;
+    }
 }

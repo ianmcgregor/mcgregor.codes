@@ -1,0 +1,21 @@
+.IconButton {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    line-height: 1.4;
+    position: relative;
+    text-transform: capitalize;
+
+    &::before {
+        background-color: var(--color-text);
+    }
+}
+
+.IconButton-label {
+    display: none;
+    margin-left: 6px;
+
+    @media (--md) {
+        display: block;
+    }
+}

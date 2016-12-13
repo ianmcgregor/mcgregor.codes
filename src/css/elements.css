@@ -39,7 +39,8 @@ h1,
 h2 {
     font-size: var(--font-size-lg);
     font-weight: normal;
-    margin: 1em auto;
+    margin: 0 auto 1em;
+    padding-top: 1.5em;
     text-align: center;
 
     @media (--md) {

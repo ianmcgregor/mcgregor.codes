@@ -5,9 +5,9 @@ export default function About() {
     const items = store.getAbout();
 
     return (
-        <article className="About u-padH">
+        <article className="About u-padH" data-path="about">
             <section className="About-info">
-                <h2 data-path="about">About</h2>
+                <h2>About</h2>
                 <p>I love to push the limits of the technologies at hand.
                     I write robust, performant JavaScript and CSS.
                 The <a className="u-link" href="https://en.wikipedia.org/wiki/KISS_principle" target="_blank">
