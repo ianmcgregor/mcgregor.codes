@@ -3,24 +3,12 @@
     margin: 0 auto;
 }
 
-.Filter-item {
-    align-items: center;
-    display: flex;
-    line-height: 1.4;
-    position: relative;
-    text-transform: capitalize;
-
-    &::before {
-        background-color: var(--color-text);
-    }
-}
-
-.Filter-label {
+.Filter-count {
     display: none;
-    margin-left: 6px;
+    font-size: 80%;
 
-    @media (--md) {
-        display: block;
+    @media (--lg) {
+        display: inline;
     }
 }
 
@@ -40,11 +28,6 @@
             min-width: 0;
         }
     }
-
-    li:first-child .Filter-item,
-    li:last-child .Filter-item {
-        margin-right: 0;
-    }
 }
 
 /*
@@ -59,10 +42,10 @@
         font-size: var(--icon-size-xsm);
     }
 
-    .Filter-item {
+    li {
         margin-right: 20px;
 
-        &::before {
+        .IconButton::before {
             background-color: var(--white);
         }
     }

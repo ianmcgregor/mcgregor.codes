@@ -17,4 +17,19 @@ function selectProject(slug) {
     });
 }
 
-export {toggleFilter, selectProject};
+function setPath(path) {
+    const type = constants.ACTION_SET_PATH;
+    dispatcher.dispatch({
+        type,
+        path
+    });
+}
+
+function setMounted() {
+    const type = constants.ACTION_SET_MOUNTED;
+    dispatcher.dispatch({
+        type
+    });
+}
+
+export {toggleFilter, selectProject, setPath, setMounted};

@@ -131,7 +131,7 @@
     }
 }
 
-.Info-filters {
+.Info-tags {
     bottom: 0;
     left: 0;
     position: absolute;
@@ -145,10 +145,6 @@
     a::before {
         background-color: var(--color-bg);
     }
-}
-
-.Info-linkLabel {
-    margin-right: 8px;
 }
 
 .Info-close {

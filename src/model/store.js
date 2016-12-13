@@ -1,14 +1,17 @@
-import {uniqueId, uniq, assign} from 'lodash';
+import uniqueId from 'lodash/uniqueId';
+import uniq from 'lodash/uniq';
+import assign from 'lodash/assign';
 import {Dispatcher} from 'flux';
 import {EventEmitter} from 'events';
 import constants from './constants';
+import capitalize from 'usfl/string/capitalize';
 
-const defaultFilter = 'pinned';
-const allFilter = 'all';
+const defaultTag = 'pinned';
+const allTag = 'all';
+const work = 'work';
 
 class Store extends EventEmitter {
-
-    constructor(config) {
+    constructor(json) {
         super();
 
         this.setMaxListeners(1);
@@ -30,7 +33,7 @@ class Store extends EventEmitter {
                 name: tag,
                 slug: getSlug(tag),
                 count: 0,
-                renderable: tag !== allFilter
+                renderable: tag !== allTag
             };
             tagMap[tag].count++;
             return tagMap[tag];
@@ -42,24 +45,24 @@ class Store extends EventEmitter {
             return t;
         }
 
-        config.projects.forEach((project) => {
-            project.tags.push(allFilter);
+        json.projects.forEach((project) => {
+            project.tags.push(allTag);
         });
 
-        const tags = uniq(config.projects
+        const tags = uniq(json.projects
             .reduce((value, project) => value.concat(project.tags), [])
             .filter((tag) => !!tag)
             .map((tag) => getTag(tag.toLowerCase())))
             // .sort((a, b) => b.count - a.count)
             .sort((a, b) => {
-                if (a.slug === defaultFilter) {
+                if (a.slug === defaultTag) {
                     return -1;
                 }
                 return b.count - a.count;
             });
 
         //  create unique keys and slugs
-        const projects = config.projects
+        const projects = json.projects
             .map((project) => (
             assign(project, {
                 key: uniqueId(),
@@ -79,31 +82,23 @@ class Store extends EventEmitter {
             })
         ));
 
-        const {title, about, contacts, pages, srcSet} = config;
-        const filters = [];
+        const {title, about, contacts, sections, srcSet} = json;
 
         this._model = Object.freeze({
             about,
             contacts,
-            pages,
+            sections,
             projects,
             tags,
-            filters,
             srcSet,
             title
         });
-    }
 
-    _hasFilter (value) {
-        return this._model.filters[0] === value;
-    }
-
-    _addFilter (value) {
-        if (!this._hasFilter(value)) {
-            this._model.filters[0] = value;
-            return true;
-        }
-        return false;
+        this._fromScroll = false;
+        this._section = null;
+        this._tag = null;
+        this._project = null;
+        this._mounted = false;
     }
 
     _emitChange () {
@@ -118,8 +113,12 @@ class Store extends EventEmitter {
         this.removeListener('change', callback);
     }
 
-    getTitle() {
-        return this._model.title;
+    _addFilter (value) {
+        if (this._tag === value) {
+            return false;
+        }
+        this._tag = value;
+        return true;
     }
 
     getContacts() {
@@ -130,92 +129,132 @@ class Store extends EventEmitter {
         return this._model.about;
     }
 
-    getPages() {
-        return this._model.pages;
-    }
-
-    getProjects() {
-        return this._model.projects;
-    }
-
-    getProjectBySlug(slug) {
-        return this._model.projects.filter((p) => p.slug === slug)[0];
+    getSections() {
+        return this._model.sections;
     }
 
     getTags() {
         return this._model.tags;
     }
 
-    getFilters () {
-        return this._model.filters;
-    }
-
     getSrcSet () {
         return this._model.srcSet;
     }
 
-    getFilter () {
-        return this._model.filters[0];
+    _hasTag (project, slug) {
+        return project.tags.some((tag) => tag.slug === slug);
     }
 
-    clearFilters () {
-        this._model.filters[0] = defaultFilter;
-    }
-
-    _hasTag (project, filter) {
-        return project.tags.some((tag) => tag.slug === filter);
-    }
-
-    _hasSlug (project, slug) {
-        return project.slug === slug;
-    }
-
-    getFilteredProjects (filter) {
-        if (!filter) {
-            filter = defaultFilter;
+    getFilteredProjects (tag) {
+        if (!tag) {
+            tag = defaultTag;
         }
         const {projects} = this._model;
         return projects
             .filter((project) => {
-                return project.slug === filter || this._hasTag(project, filter);
+                return project.slug === tag || this._hasTag(project, tag);
             })
             .sort((a, b) => a.priority - b.priority);
     }
 
-    toggleFilter (value, emit = true) {
-        console.debug('toggleFilter', value);
+    toggleFilter (value) {
         if (!this._addFilter(value)) {
-            this.clearFilters();
+            this._tag = defaultTag;
         }
-        this._selectedProject = null;
-        // if (!this.hasFilter(value)) {
-        //     this._model.filters.push(value);
-        // } else {
-        //     this._model.filters.splice(this._model.filters.indexOf(value), 1);
-        // }
+        this._section = work;
+        this._project = null;
+        this._emitChange();
+    }
+
+    selectProject (value) {
+        this._section = work;
+        this._project = value;
+        this._emitChange();
+    }
+
+    setSectionFromScroll (value) {
+        if (this._section === value) {
+            return;
+        }
+        this._fromScroll = true;
+        this._section = value;
+        this._emitChange();
+    }
+
+    getState () {
+        const fromScroll = this._fromScroll;
+        this._fromScroll = false;
+        return {
+            path: this.getPathName(),
+            title: this.getDocTitle(),
+            section: this._section,
+            tag: this._tag,
+            project: this._project,
+            mounted: this._mounted,
+            fromScroll
+        };
+    }
+
+    setStateFromPath (path, emit = true) {
+        const parts = path.toLowerCase().split('/').filter((part) => !!part);
+
+        const {sections, tags, projects} = this._model;
+        const [a, b, c] = parts;
+
+        const section = sections.filter((s) => s.slug === a)[0];
+        this._section = (section && section.slug) || '';
+
+        const tag = tags.filter((t) => t.slug === b)[0];
+        this._tag = (tag && tag.slug) || defaultTag;
+
+        const project = projects.filter((p) => p.slug === b || p.slug === c);
+        this._project = (project && project.slug) || null;
+
         if (emit) {
             this._emitChange();
         }
     }
 
-    selectProject (value, emit = true) {
-        console.debug('selectProject', value);
-        this._selectedProject = value;
-        if (emit) {
-            this._emitChange();
+    getPathName() {
+        const {_section: section, _tag: tag, _project: project} = this;
+
+        let path = '/';
+
+        if (section) {
+            path += `${section}/`;
         }
+
+        if (section === work && tag !== defaultTag) {
+            path += `${tag}/`;
+        }
+
+        if (section === work && project) {
+            path += `${project}/`;
+        }
+
+        return path;
     }
 
-    getSelectedProject () {
-        return this._selectedProject;
+    getDocTitle() {
+        const {sections, projects} = this._model;
+        const section = sections.filter((s) => s.slug === this._section)[0];
+        const project = projects.filter((p) => p.slug === this._project)[0];
+
+        const parts = [this._model.title];
+        if (section) {
+            parts.push(section.title);
+        }
+        if (this._tag !== defaultTag) {
+            parts.push(capitalize(this._tag));
+        }
+        if (project) {
+            parts.push(project.title);
+        }
+        return parts.join(' / ');
     }
 
-    getDefaultFilter () {
-        return defaultFilter;
-    }
-
-    getAllFilter () {
-        return allFilter;
+    setMounted() {
+        this._mounted = true;
     }
 }
 
@@ -223,13 +262,18 @@ const store = new Store(require('./model.json'));
 const dispatcher = new Dispatcher();
 
 dispatcher.register(function(action) {
-    console.debug('--> dispatcher action:', JSON.stringify(action, null, 2));
     switch (action.type) {
         case constants.ACTION_TOGGLE_FILTER:
             store.toggleFilter(action.slug);
             break;
         case constants.ACTION_SELECT_PROJECT:
             store.selectProject(action.slug);
+            break;
+        case constants.ACTION_SET_PATH:
+            store.setStateFromPath(action.path);
+            break;
+        case constants.ACTION_SET_MOUNTED:
+            store.setMounted();
             break;
         default:
     }

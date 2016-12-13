@@ -1,6 +1,6 @@
 export default {
     page: function(page) {
-        console.log('track.page:', page);
+        // console.log('track.page:', page);
 
         if (!window.dataLayer) {
             window.dataLayer = {};
