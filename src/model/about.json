@@ -1,0 +1,45 @@
+{
+    "about": [{
+        "title": "Basics",
+        "list": [
+            "JavaScript (ES5, ES6)",
+            "CSS (Vanilla, Sass), HTML",
+            "Unit Tests (Karma, Mocha, Chai)",
+            "Gulp, NPM, Grunt",
+            "Node, Express, Socket IO",
+            "Browserify, Webpack, Rollup",
+            "Git, GitFlow",
+            "Ubuntu, NGINX",
+            "AWS, Digital Ocean"
+        ]
+    }, {
+        "title": "Libraries/Apis",
+        "list": [
+            "React, Backbone, Angular",
+            "PIXI.js",
+            "Web GL, Three.js",
+            "Web Audio",
+            "Babel, Core JS",
+            "Phaser.js",
+            "Video, Canvas",
+            "Lodash, Modernizr, jQuery",
+            "GSAP, Tween.js",
+            "Express, Socket IO",
+            "SUIT CSS, BEM, PostCSS",
+            "Social APIs"
+        ]
+    }, {
+        "title": "Other",
+        "list": [
+            "Tech Lead/Lead Dev",
+            "Prototyping",
+            "Accessibility, Usability",
+            "Performance optimisation",
+            "Mobile app packaging",
+            "Design patterns",
+            "Animation techniques",
+            "Agile methodologies",
+            "Basic PHP, Python, C#"
+        ]
+    }]
+}

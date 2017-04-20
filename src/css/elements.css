@@ -10,7 +10,7 @@ a {
 button {
     color: inherit;
     cursor: pointer;
-    font-family: var(--font);
+    font: inherit;
 }
 
 button:focus,

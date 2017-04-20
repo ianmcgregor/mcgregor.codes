@@ -5,13 +5,26 @@
   "keywords": [
     "react",
     "js",
-    "javascript",
-    "gulp",
-    "browserify"
+    "javascript"
   ],
   "main": "src/js/index.js",
   "scripts": {
-    "test": "karma start"
+    "start": "npm run build && run-p watch:* browser",
+    "test": "karma start",
+    "build": "run-s js css",
+    "js:debug": "browserify src/index.js -o dist/js/bundle.js -t babelify",
+    "js": "browserify src/index.js -t babelify | uglifyjs -m -c warnings=false > dist/js/bundle.js",
+    "css": "postcss -o 'dist/css/styles.css' 'src/index.css'",
+    "images": "node ./tasks/images.js 'src/img/**/*{.png,.jpg}' -o 'dist/img' -t 'jpg, webp' -q 80 -s '1536, 1280, 1024, 768, 640'",
+    "html": "node ./tasks/html.js 'src/index.html' -o 'dist' -d 'src/model/model.json' --path ''",
+    "modernizr": "uglifyjs -m -c warnings=false src/utils/modernizr.js > dist/js/modernizr.js",
+    "browser": "browser-sync start --config bs-config.js",
+    "watch:js": "onchange 'src/**/*.js' -- npm run js:debug",
+    "watch:css": "onchange 'src/**/*.css' -- npm run css",
+    "__watch:test": "npm test -- --watch",
+    "lint:css": "stylelint 'src/**/*.css'; exit 0",
+    "lint:js": "eslint 'src/**/*.js'; exit 0",
+    "lint": "run-s lint:*"
   },
   "repository": {
     "type": "git",
@@ -21,126 +34,56 @@
   "license": "MIT",
   "readmeFilename": "README.md",
   "dependencies": {
-    "boid": "^0.2.4",
+    "boid": "^0.3.3",
     "dat-gui": "^0.5.0",
     "events": "^1.1.1",
-    "flux": "^2.1.1",
-    "gsap": "^1.19.0",
-    "lodash": "^4.15.0",
-    "normalize.css": "^4.2.0",
-    "react": "^15.3.1",
-    "react-dom": "^15.3.1",
+    "gsap": "^1.19.1",
+    "lodash": "^4.17.4",
+    "normalize.css": "^6.0.0",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-micro-router": "^1.1.0",
+    "react-redux": "^5.0.4",
+    "redux": "^3.6.0",
     "suitcss-base": "^2.0.0",
-    "usfl": "^2.0.6"
+    "usfl": "^2.2.6"
   },
   "devDependencies": {
-    "autoprefixer": "^6.4.0",
-    "babel-eslint": "^6.1.2",
-    "babel-preset-es2015": "^6.14.0",
-    "babel-preset-react": "^6.11.1",
-    "babel-preset-stage-0": "^6.5.0",
+    "autoprefixer": "^6.7.7",
+    "babel-eslint": "^7.2.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
     "babelify": "^7.3.0",
-    "browser-sync": "^2.14.0",
-    "browserify": "^13.1.0",
+    "browser-sync": "^2.18.8",
+    "browserify": "^14.3.0",
     "chai": "^3.5.0",
     "chalk": "^1.1.3",
     "connect-history-api-fallback": "^1.3.0",
-    "cssnano": "^3.7.4",
-    "eslint": "^3.4.0",
-    "eslint-plugin-react": "^6.2.0",
-    "esprima-fb": "^15001.1001.0-dev-harmony-fb",
-    "gulp": "^3.9.1",
-    "gulp-debug": "^2.1.2",
-    "gulp-eslint": "^3.0.1",
-    "gulp-if": "^2.0.1",
-    "gulp-image-resize": "^0.10.0",
-    "gulp-imagemin": "^3.0.3",
-    "gulp-plumber": "^1.1.0",
-    "gulp-postcss": "^6.1.1",
-    "gulp-rename": "^1.2.2",
-    "gulp-responsive": "^2.6.0",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-strip-debug": "^1.1.0",
-    "gulp-template": "^4.0.0",
-    "gulp-uglify": "^2.0.0",
-    "history": "^3.0.0",
-    "imagemin-webp": "^4.0.0",
-    "karma": "^1.2.0",
-    "karma-browserify": "^5.1.0",
+    "cssnano": "^3.10.0",
+    "eslint": "^3.19.0",
+    "eslint-plugin-react": "^6.10.3",
+    "glob": "^7.1.1",
+    "karma": "^1.6.0",
+    "karma-browserify": "^5.1.1",
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^2.0.0",
-    "karma-firefox-launcher": "^1.0.0",
-    "karma-mocha": "^1.1.1",
-    "mocha": "^3.0.2",
-    "postcss-bem-linter": "^2.5.1",
+    "karma-firefox-launcher": "^1.0.1",
+    "karma-mocha": "^1.3.0",
+    "mocha": "^3.2.0",
+    "npm-run-all": "^4.0.2",
+    "onchange": "^3.2.1",
+    "postcss-bem-linter": "^2.7.0",
     "postcss-calc": "^5.3.1",
+    "postcss-cli": "^3.1.1",
     "postcss-custom-media": "^5.0.1",
-    "postcss-custom-properties": "^5.0.1",
+    "postcss-custom-properties": "^5.0.2",
     "postcss-easings": "^0.3.0",
-    "postcss-import": "^8.1.2",
+    "postcss-import": "^9.1.0",
     "postcss-nested": "^1.0.0",
-    "postcss-url": "^5.1.2",
-    "sitemap": "^1.8.1",
-    "stylelint": "^7.1.0",
-    "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0",
-    "watchify": "^3.7.0",
-    "yargs": "^5.0.0"
-  },
-  "browser": {},
-  "browserify": {
-    "transform": [
-      [
-        "babelify",
-        {
-          "presets": [
-            "es2015",
-            "stage-0",
-            "react"
-          ]
-        }
-      ]
-    ]
-  },
-  "paths": {
-    "connect": {
-      "dir": "./dist",
-      "files": [
-        "dist/**/*{.js,.css,.html}",
-        "index.html"
-      ]
-    },
-    "html": {
-      "entry": "src/index.html",
-      "dest": "dist"
-    },
-    "images": {
-      "entry": "src/img/**/*{.png,.jpg}",
-      "dest": "dist/img"
-    },
-    "scripts": {
-      "entry": "src/index.js",
-      "dest": "dist/js",
-      "modernizr": {
-        "entry": "src/utils/modernizr.js",
-        "dest": "dist/js"
-      },
-      "lint": [
-        "src/**/*.js",
-        "tasks/**/*.js",
-        "!src/utils/modernizr.js"
-      ]
-    },
-    "styles": {
-      "entry": "src/index.css",
-      "dest": "dist/css/",
-      "watch": [
-        "src/**/*.css"
-      ],
-      "lint": [
-        "src/**/*.css",
-        "!src/font/**/*.css"
-      ]
-    }
+    "postcss-url": "^6.0.4",
+    "sharp": "^0.17.3",
+    "stylelint": "^7.10.1",
+    "yargs": "^7.0.2"
   }
 }

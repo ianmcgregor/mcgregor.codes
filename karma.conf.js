@@ -27,19 +27,14 @@ module.exports = function(config) {
 
         ],
 
-        // Browserify config (all optional)
-        browserify: {
-            // extensions: ['.coffee'],
-            // ignore: [],
-            // transform: ['coffeeify'],
-            // debug: true,
-            // noParse: ['jquery'],
-            // watch: true
-        },
-
         // Add browserify to preprocessors
         preprocessors: {
             'test/**/*.js': ['browserify']
+        },
+
+        browserify: {
+            debug: true,
+            transform: ['babelify']
         },
 
         // test results reporter to use

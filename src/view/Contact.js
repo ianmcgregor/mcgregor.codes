@@ -1,8 +1,8 @@
 import React from 'react';
-import {store} from '../model/store';
+import {connect} from 'react-redux';
 
-export default function Contact() {
-    const contacts = store.getContacts();
+function Contact(props) {
+    const {contacts} = props;
 
     return (
         <article className="Contact u-padH" data-path="contact">
@@ -10,7 +10,7 @@ export default function Contact() {
             <ul>
                 {contacts.map((contact, i) => {
                     return (
-                        <li key={'contact' + i}>
+                        <li key={`contact${i}`}>
                             <a
                                 className="Contact-link u-link"
                                 href={contact.href}
@@ -24,3 +24,7 @@ export default function Contact() {
         </article>
     );
 }
+
+export default connect(
+  state => state
+)(Contact);

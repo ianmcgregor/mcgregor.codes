@@ -1,24 +1,25 @@
 import React from 'react';
 // import Boids from '../components/Boids';
 import Link from '../components/Link';
+import {connect} from 'react-redux';
 
-export default function Header(props) {
-    const {sections, currentSection} = props;
+function Header(props) {
+    const {currentSection, sections} = props;
 
     return (
         <header className="Header u-padH" data-path="">
-            <Link path="/" currentSection={currentSection} className="Header-titleLink" activeClassName="is-active">
+            <Link to="/" currentSection={currentSection} className="Header-titleLink" activeClassName="is-active">
                 <h1 className="Header-title">
                     M<sup>c</sup>Gregor Codes
                 </h1>
             </Link>
             <nav className="Header-nav">
                 <ul className="Header-menu">
-                    {sections.map((section, i) => {
+                    {sections.filter(section => !!section.slug).map((section, i) => {
                         return (
-                            <li className="Header-menuItem" key={'Header-menuItem' + i}>
+                            <li className="Header-menuItem" key={`Header-menuItem${i}`}>
                                 <Link
-                                    path={`/${section.slug}/`}
+                                    to={`/${section.slug}/`}
                                     currentSection={currentSection}
                                     className="Header-link u-link"
                                     activeClassName="is-active">
@@ -37,3 +38,7 @@ export default function Header(props) {
         </header>
     );
 }
+
+export default connect(
+  state => state
+)(Header);

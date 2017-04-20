@@ -1,34 +1,37 @@
 import React from 'react';
 import Filter from '../components/Filter';
 import Project from '../components/Project';
-import {store} from '../model/store';
+import {connect} from 'react-redux';
 
-export default function Work(props) {
-    const {tag, project, first} = props;
-    const projects = store.getFilteredProjects(tag);
-    const srcSet = store.getSrcSet();
+function Work(props) {
+    const {currentProject, first, selectedProjects, srcSet, tag, tags} = props;
 
     return (
         <article className="Work" data-path="work">
             <h2>Work</h2>
             <nav className="Work-tags u-pad">
                 <Filter
-                    tags={store.getTags()}
+                    tags={tags}
                     currentTag={tag}
                     modifier="Filter--work"
-                    showCount={true}/>
+                    showCount={true}
+                />
             </nav>
             <section className="Work-projects">
-                {projects.map((p) => (
+                {selectedProjects.map(project => (
                     <Project
-                        key={p.key}
+                        key={project.key}
                         currentTag={tag}
-                        project={p}
+                        project={project}
                         srcSet={srcSet}
                         loaded={first}
-                        selected={project === p.slug}/>
+                        selected={currentProject === project}/>
                 ))}
             </section>
         </article>
     );
 }
+
+export default connect(
+  state => state
+)(Work);

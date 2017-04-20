@@ -1,5 +1,5 @@
 import React from 'react';
-import {store} from '../model/store';
+import {connect} from 'react-redux';
 import track from '../utils/track';
 import Header from './Header';
 import Work from './Work';
@@ -11,44 +11,46 @@ import scroll from 'usfl/dom/scroll';
 import resize from 'usfl/dom/resize';
 import eventBus from 'usfl/events/eventBus';
 import Router from '../utils/Router';
-import {setPath, setMounted} from '../model/actions';
+import renderDocTitle from '../utils/renderDocTitle';
+import {setMounted, setPath, setSectionFromScroll} from '../actions';
 
-export default class App extends React.Component {
+class App extends React.Component {
     constructor (props) {
         super(props);
 
-        this._onChange = this._onChange.bind(this);
+        const {dispatch} = props;
+        this.router = new Router();
+        this.router.on('pop', pathname => dispatch(setPath(pathname)));
+        dispatch(setPath(this.router.path));
+
         this._onScroll = this._onScroll.bind(this);
         this._updateSections = this._updateSections.bind(this);
-
-        this.router = new Router();
-        setPath(this.router.path);
-        this.router.replace(store.getPathName());
-        this.router.on('pop', (path) => setPath(path));
-
-        this.state = store.getState();
-    }
-
-    _onChange () {
-        this.setState(store.getState());
     }
 
     _onScroll(y) {
-        let sel = null;
+        const {dispatch} = this.props;
 
-        this.sections.forEach((section) => {
-            const top = getScrollTop() > section.top - window.innerHeight / 2;
-            const bottom = getScrollTop() < section.bottom;
+        const scrollPos = getScrollTop();
+
+        if (scrollPos < 10) {
+            dispatch(setSectionFromScroll(''));
+            return;
+        }
+
+        let sectionSlug = '';
+        this.sections.forEach(section => {
+            const top = scrollPos > section.top - window.innerHeight / 2;
+            const bottom = scrollPos < section.bottom;
             if (top && bottom) {
-                sel = section.slug;
+                sectionSlug = section.slug;
             }
         });
-
-        store.setSectionFromScroll(sel || '');
+        dispatch(setSectionFromScroll(sectionSlug));
     }
 
     _updateSections() {
-        this.sections = store.getSections().map((section) => {
+        const {sections} = this.props;
+        this.sections = sections.map(section => {
             const {slug} = section;
             const el = document.querySelector(`[data-path="${slug}"]`);
             const top = el.offsetTop;
@@ -62,33 +64,21 @@ export default class App extends React.Component {
         });
     }
 
-    componentWillReceiveProps (nextProps) {
-
-    }
-
     render () {
-        const {section, tag, project, mounted} = this.state;
+        const {mounted, path, project, section, sections, tag} = this.props;
+
+        document.title = renderDocTitle(this.props);
+
+        this.router.push(path);
 
         return (
             <div className="App">
-                <Header sections={store.getSections()} currentSection={section} />
+                <Header sections={sections} currentSection={section} />
                 <Work tag={tag} project={project} first={!mounted} />
                 <About/>
                 <Contact/>
             </div>
         );
-    }
-
-    _pathChanged () {
-        const {title, path, fromScroll} = this.state;
-
-        document.title = title;
-        this.router.push(path);
-        track.page(path);
-
-        if (!fromScroll) {
-            this._scrollToEl(path);
-        }
     }
 
     _scrollToEl (path) {
@@ -114,14 +104,21 @@ export default class App extends React.Component {
     }
 
     componentDidUpdate (prevProps, prevState) {
-        this._pathChanged();
+        const {path, fromScroll} = this.props;
+
+        track.page(path);
+
+        if (!fromScroll) {
+            this._scrollToEl(path);
+        }
     }
 
     componentDidMount () {
-        setMounted();
+        const {dispatch, path} = this.props;
 
-        store.addChangeListener(this._onChange);
-        this._pathChanged();
+        dispatch(setMounted());
+
+        this.router.replace(path);
 
         scroll();
         resize();
@@ -129,12 +126,12 @@ export default class App extends React.Component {
         eventBus.on('scroll', this._onScroll);
         eventBus.on('scrollend', this._updateSections);
         eventBus.on('resize', this._updateSections);
-
         this._updateSections();
-        this._scrollToEl(this.state.path);
-    }
 
-    componentWillUnmount () {
-        store.removeChangeListener(this._onChange);
+        this._scrollToEl(this.props.path);
     }
 }
+
+export default connect(
+  state => state
+)(App);

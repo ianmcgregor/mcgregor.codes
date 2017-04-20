@@ -1,24 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {connect} from 'react-redux';
 import Info from './Info';
 import Picture from './Picture';
-import {selectProject} from '../model/actions';
+import {selectProject} from '../actions';
 
-export default class Project extends React.Component {
+class Project extends React.Component {
 
     constructor (props) {
         super(props);
     }
 
-    static propTypes = {
-        project: React.PropTypes.shape({
-            images: React.PropTypes.array.isRequired,
-            layout: React.PropTypes.string.isRequired
-        })
-    }
+    // static propTypes = {
+    //     project: React.PropTypes.shape({
+    //         images: React.PropTypes.array.isRequired
+    //     })
+    // }
 
     render () {
-        const {project, srcSet, selected, currentTag, loaded} = this.props;
+        const {dispatch, project, srcSet, selected, currentTag, loaded} = this.props;
+        // console.log('project', project);
         const {images, slug} = project;
         const [img] = images;
         const picture = img ? <Picture img={img} srcSet={srcSet} /> : '';
@@ -37,7 +38,7 @@ export default class Project extends React.Component {
             <div
                 className={classNames}
                 data-path={slug}
-                onClick={selected ? null : selectProject.bind(undefined, slug)}>
+                onClick={selected ? null : () => dispatch(selectProject(slug))}>
                 <div className="Project-image">{picture}</div>
                 <Info project={project} currentTag={currentTag} />
             </div>
@@ -59,3 +60,7 @@ export default class Project extends React.Component {
         this.show();
     }
 }
+
+export default connect(
+  state => state
+)(Project);

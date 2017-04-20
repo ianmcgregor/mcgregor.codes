@@ -1,49 +1,31 @@
-const args = require('yargs').argv;
-const chalk = require('chalk');
-const gulp = require('gulp');
-const gulpif = require('gulp-if');
-const rename = require('gulp-rename');
-const debug = require('gulp-debug');
-const template = require('gulp-template');
+const fs = require('fs');
+const argv = require('yargs').argv;
+const _ = require('lodash');
+const glob = require('glob');
+const path = require('path');
 
-const paths = require('../package.json').paths.html;
-const config = require('../src/model/model.json');
-const isDebug = args.debug; // eg: gulp --debug
+const cwd = process.cwd();
+const input = argv.i || argv._[0];
+const output = argv.o;
+const debug = !!argv.debug;
+const dataPath = argv.d || argv.data;
+const data = require(`${cwd}/${dataPath}`);
+const tmplData = Object.assign({}, argv, data, {
+    data,
+    debug
+});
 
-function logError(msg) {
-    console.log(chalk.bold.red('[ERROR] ' + msg.toString()));
-}
+glob(input, (err, files) => {
+    if (err) {
+        console.error(err);
+        return;
+    }
 
-function renderPage(name) {
-    const templateData = {
-        path: '',
-        data: config,
-        debug: !!isDebug,
-        title: config.title
-    };
+    const dir = path.resolve(cwd, output);
 
-    return gulp.src(paths.entry)
-        .pipe(template(templateData)
-        .on('error', function(err) {
-            logError(err);
-        }))
-        .pipe(gulpif(!!name, rename(name)))
-        .pipe(gulp.dest(paths.dest))
-        .pipe(debug({title: 'html'}));
-}
-
-function render() {
-    renderPage();
-    renderPage('404.html');
-}
-
-function watch() {
-    gulp.watch(paths.entry, {
-        interval: 500
-    }, render);
-}
-
-module.exports = {
-    render: render,
-    watch: watch
-};
+    files.forEach(file => {
+        const tmpl = fs.readFileSync(file).toString();
+        const name = path.basename(file);//.slice(0, 0 - path.extname(src).length);
+        fs.writeFileSync(`${dir}/${name}`, _.template(tmpl)(tmplData));
+    });
+});

@@ -1,9 +1,10 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import Filter from './Filter';
-import {store} from '../model/store';
+import {selectProject} from '../actions';
 
-export default function Info(props) {
-    const {project, currentTag} = props;
+function Info(props) {
+    const {dispatch, project, currentTag} = props;
     const {link, title, year, text, tags} = project;
 
     return (
@@ -39,10 +40,14 @@ export default function Info(props) {
                 </div>
                 <button
                     className="Info-close u-pad"
-                    onClick={() => store.selectProject(null)}>
+                    onClick={() => dispatch(selectProject())}>
                     <span className="Icon Icon--close">Close</span>
                 </button>
             </div>
         </section>
     );
 }
+
+export default connect(
+  state => state
+)(Info);

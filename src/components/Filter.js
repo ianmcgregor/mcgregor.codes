@@ -1,8 +1,9 @@
 import React from 'react';
-import {toggleFilter} from '../model/actions';
+import {connect} from 'react-redux';
+import {toggleFilter} from '../actions';
 
-export default function Filter(props) {
-    const {currentTag, tags, modifier, showCount} = props;
+function Filter(props) {
+    const {dispatch, currentTag, tags, modifier, showCount} = props;
 
     return (
         <ul className={`Filter ${modifier}`}>
@@ -16,7 +17,7 @@ export default function Filter(props) {
                     <li key={key}>
                         <a
                             className={`IconButton u-font-xsm u-link ${active}`}
-                            onClick={toggleFilter.bind(undefined, slug)}>
+                            onClick={() => dispatch(toggleFilter(slug))}>
                             <span className={`Icon Icon--small Icon--${slug}`} />
                             <span className="IconButton-label">{name} {append}</span>
                         </a>
@@ -26,3 +27,7 @@ export default function Filter(props) {
         </ul>
     );
 }
+
+export default connect(
+  state => state
+)(Filter);
