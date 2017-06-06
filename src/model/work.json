@@ -1,0 +1,658 @@
+{
+    "work": [{
+        "title": "Comic Relief — Comic Adventure",
+        "year": 2017,
+        "priority": 1,
+        "images": [
+            "comic-adventure"
+        ],
+        "video": [
+            "comic_adventure.mp4"
+        ],
+        "text": [
+            "I worked with Goodboy Digital to create this interactive animated comicbook with minigames, interactions and a dynamic user-voted ending. It was built to work across mobile and desktop devices using PixiJS, Pixi Animate and sono."
+        ],
+        "client": [{
+            "name": "Goodboy Digital",
+            "link": "http://www.goodboydigital.com/"
+        }, {
+            "name": "Comic Relief",
+            "link": "https://www.comicrelief.com/"
+        }],
+        "link": "https://comicadventure.rednoseday.com/",
+        "tags": [
+            "pinned",
+            "game"
+        ]
+    }, {
+        "title": "Kinder — Kindernauts",
+        "year": 2016,
+        "priority": 1,
+        "images": [
+            "kindernauts"
+        ],
+        "text": [
+            "I was responsible for coding the playful interactive map which forms centrepiece of the Kindernauts website. Made using PixiJS, it involved lots of programmatic motion along with zoom and pan controls. I designed it as an isolated app to trivialise integration into the main site."
+        ],
+        "client": [{
+            "name": "Goodboy Digital",
+            "link": "http://www.goodboydigital.com/"
+        }, {
+            "name": "Kinder",
+            "link": "http://www.kinder.co.uk/"
+        }],
+        "link": "https://www.kindernauts.co.uk/#/activities",
+        "tags": [
+            "pinned"
+        ]
+    }, {
+        "title": "W+K London — wklondon.com",
+        "year": 2016,
+        "images": [
+            "wk"
+        ],
+        "text": [
+            "On this project I worked directly with the team at W+K London to build this brand new website, running on Wordpress with a modern responsive front-end built on SUIT CSS and ES6 JS."
+        ],
+        "client": [{
+            "name": "W+K London",
+            "link": "https://www.wklondon.com/"
+        }],
+        "link": "https://www.wklondon.com/",
+        "tags": [
+            "website"
+        ]
+    }, {
+        "title": "Primo Toys — primotoys.com",
+        "year": 2016,
+        "images": [
+            "primotoys_01"
+        ],
+        "text": [
+            "After the conclusion of a very successful Kickstarter, Primo Toys needed a new website and ecommerce store to enable them to sell their product directly. I built this responsive site and store and additionally created a small node.js app to help manage orders."
+        ],
+        "client": [{
+            "name": "Primo Toys",
+            "link": "https://www.primotoys.com/"
+        }],
+        "link": "https://www.primotoys.com/",
+        "tags": [
+            "website"
+        ]
+    }, {
+        "title": "Manchester City — mancity.com",
+        "year": 2016,
+        "priority": 2,
+        "images": [
+            "mancity"
+        ],
+        "video": [
+            "man_city.mp4"
+        ],
+        "text": [
+            "Working with the talented team at Code and Theory, I helped create this innovative new site with 2 other devs over a period of 8 months. Among other duties, I was tasked with coding powerful [video features](https://www.mancity.com/citytv/)."
+        ],
+        "client": [{
+            "name": "Code and Theory",
+            "link": "http://www.codeandtheory.com/"
+        }, {
+            "name": "Manchester City",
+            "link": "http://mancity.com/"
+        }],
+        "link": "http://mancity.com/",
+        "tags": [
+            "pinned",
+            "website"
+        ]
+    }, {
+        "title": "Google — Inside Abbey Road",
+        "year": 2015,
+        "images": [
+            "abbey_road"
+        ],
+        "video": [
+            "abbey_road.mp4"
+        ],
+        "text": [
+            "I enjoyed pushing the Web Audio API to its limits on this virtual tour of Abbey Road studios which also entailed lots of WebGL and intricate UI work. I led the development over its year-long gestation. It was well received and won the [FWA Site of the Month.](https://thefwa.com/cases/inside-abbey-road) and the Webby Award in the music category."
+        ],
+        "client": [{
+            "name": "Stink Studios",
+            "link": "https://www.stinkstudios.com/"
+        }, {
+            "name": "Abbey Road Studios",
+            "link": "https://www.abbeyroad.com/"
+        }, {
+            "name": "Google",
+            "link": "https://www.google.com"
+        }],
+        "link": "https://insideabbeyroad.withgoogle.com/",
+        "tags": [
+            "pinned",
+            "experiential",
+            "website"
+        ]
+    }, {
+        "title": "Sky — Fluid Viewing",
+        "year": 2015,
+        "images": [
+            "sky_q"
+        ],
+        "text": [
+            "The goal of this campaign site was to announce Sky’s new ‘fluid viewing’ product. I led the development team, building a dynamic video experience complemented with interactive audio effects using my audio library sono."
+        ],
+        "client": [{
+            "name": "Stink Studios",
+            "link": "https://www.stinkstudios.com/"
+        }, {
+            "name": "Sky",
+            "link": "https://www.sky.com/"
+        }],
+        "link": "",
+        "tags": [
+            "experiential"
+        ]
+    }, {
+        "title": "Ray-Ban — Made",
+        "year": 2014,
+        "images": [
+            "made"
+        ],
+        "text": [
+            "Made is a quirky platform runner game for both mobile and desktop. I led the development, using PixiJS, Phaser and Tiled Map Editor. The game features 4 distinct levels and boss battles, as well as power-ups based on Ray-Ban sunglasses and various cutscenes. It was a lot of fun to make and won an [FWA SOTD and MOTD](https://thefwa.com/cases/made)."
+        ],
+        "client": [{
+            "name": "Stink Studios",
+            "link": "https://www.stinkstudios.com/"
+        }, {
+            "name": "Ray-Ban",
+            "link": "https://www.ray-ban.com/"
+        }],
+        "link": "http://prototypes.stinkdigital.com/rayban/game/?noFB=true",
+        "tags": [
+            "pinned",
+            "game"
+        ]
+    }, {
+        "title": "John Lewis — Monty's Christmas",
+        "year": 2014,
+        "images": [
+            "montys_christmas_1",
+            "montys_christmas_01",
+            "montys_christmas_03",
+            "montys_christmas_06",
+            "montys_christmas_07",
+            "montys_christmas_18"
+        ],
+        "text": [
+            "I worked on this interactive 3d storybook designed for Google Cardboard. I was technical lead on the project, building the initial prototype and supporting the team as they expanded it out into the final product. The tech used included THREE.js, the Web Audio API and Cordova."
+        ],
+        "client": [{
+            "name": "Stink Studios",
+            "link": "https://www.stinkstudios.com/"
+        }, {
+            "name": "John Lewis",
+            "link": "https://www.johnlewis.com/"
+        }, {
+            "name": "Adam & Eve",
+            "link": "http://www.adamandeveddb.com/"
+        }],
+        "link": "http://www.johnlewis.com/christmas-advert-2014-montys-christmas/montys-360-world",
+        "tags": [
+            "game"
+        ]
+    }, {
+        "title": "Chanel — Chance Chanel",
+        "year": 2014,
+        "images": [
+            "chance"
+        ],
+        "text": [
+            "I was responsible for leading the development of this responsive interactive film experience for Chanel that was progressively enhanced to work across the limitations of many different platforms. It was built using HTML5 video, PixiJS and Sass."
+        ],
+        "client": [{
+            "name": "Stink Studios",
+            "link": "https://www.stinkstudios.com/"
+        }, {
+            "name": "Chanel",
+            "link": "https://www.chanel.com/"
+        }],
+        "link": "http://chance.archive.stinkdigital.com/en_GB",
+        "tags": [
+            "experiential"
+        ]
+    }, {
+        "title": "Red Bull — Revolutions in Sound",
+        "year": 2014,
+        "images": [
+            "revs_in_sound"
+        ],
+        "video": [
+            "revs_in_sound.mp4"
+        ],
+        "text": [
+            "The idea behind this project was to tell the story of UK club culture by connecting large datasets of content from various sources. I led development, using Angular and Google services with content drawn from users, as well as Firebase, SoundCloud and YouTube. Close attention to detail was required in designing the UX and app structure to handle the web of interlinked content."
+        ],
+        "client": [{
+            "name": "Stink Studios",
+            "link": "https://www.stinkstudios.com/"
+        }, {
+            "name": "Red Bull",
+            "link": "https://www.redbull.com"
+        }, {
+            "name": "Google",
+            "link": "https://www.google.com"
+        }],
+        "link": "http://archive.revolutionsinsound.com/",
+        "tags": [
+            "data",
+            "website"
+        ]
+    }, {
+        "title": "Open Source — Imagepack",
+        "year": 2015,
+        "images": [
+            "imagepack"
+        ],
+        "text": [
+            "Imagepack is a node.js utility that packs images into a binary file, reducing load times for large image sequences. It has since been used on multiple projects."
+        ],
+        "client": [{
+            "name": "mcgregor.codes",
+            "link": "https://mcgregor.codes"
+        }],
+        "link": "https://www.npmjs.com/package/imagepack",
+        "tags": [
+            "open source"
+        ]
+    }, {
+        "title": "Open Source — sono",
+        "year": 2016,
+        "priority": 1,
+        "images": [
+            "sono_01"
+        ],
+        "text": [
+            "I created and continue to maintain this open source library for creative audio using the Web Audio API with a fallback to HTML5 audio for older browsers. It facilitates all aspects of audio management and makes it easy to add effects such as echo or distortion."
+        ],
+        "client": [{
+            "name": "mcgregor.codes",
+            "link": "https://mcgregor.codes"
+        }],
+        "link": "https://github.com/Stinkdigital/sono",
+        "tags": [
+            "open source"
+        ]
+    }, {
+        "title": "Ludum Dare — Deep Sea Freediver",
+        "year": 2014,
+        "images": [
+            "deep_sea_freediver"
+        ],
+        "text": [
+            "I made this mobile mini-game creating the art, code and music in 48 hours for the Ludum Dare game jam using PixiJS and the Phaser game engine. On mobile the player can tilt their device to guide the diver past various obstacles."
+        ],
+        "client": [{
+            "name": "mcgregor.codes",
+            "link": "https://mcgregor.codes"
+        }],
+        "link": "http://ianmcgregor.me/games/deep-sea-freediver/",
+        "tags": [
+            "open source",
+            "game"
+        ]
+    }, {
+        "title": "Experiment — Gif Inbox",
+        "year": 2014,
+        "images": [
+            "gifinbox_02"
+        ],
+        "text": [
+            "Experimenting with Python and Google AppEngine, I made this app that extracted and collated the many weird gifs arriving in my email inbox."
+        ],
+        "client": [{
+            "name": "mcgregor.codes",
+            "link": "https://mcgregor.codes"
+        }],
+        "link": "http://gifinbox.appspot.com/",
+        "tags": [
+            "open source"
+        ],
+        "priority": 11
+    }, {
+        "title": "Open Source — Boid",
+        "year": 2014,
+        "images": [
+            "circloids"
+        ],
+        "text": [
+            "This is a JavaScript library that produces natural looking movement, based on the famous [Boids](https://en.wikipedia.org/wiki/Boids) flocking behaviours. I have used it in various projects."
+        ],
+        "client": [{
+            "name": "mcgregor.codes",
+            "link": "https://mcgregor.codes"
+        }],
+        "link": "https://github.com/ianmcgregor/boid",
+        "tags": [
+            "open source"
+        ],
+        "priority": 1
+    }, {
+        "title": "Nike — My Time Is Now",
+        "year": 2014,
+        "images": [
+            "my_time_is_now_01"
+        ],
+        "text": [
+            "Working closely with W+K London, I led development on this interactive film project for Nike filled with rabbit holes that take you into mini-games. It won several awards at Cannes as well as an FWA SOTD."
+        ],
+        "client": [{
+            "name": "Stink Studios",
+            "link": "https://www.stinkstudios.com/"
+        }, {
+            "name": "Nike",
+            "link": "https://www.nike.com"
+        }, {
+            "name": "W+K London",
+            "link": "https://www.wklondon.com"
+        }],
+        "link": "http://nikemytimeisnow.archive.stinkdigital.com/",
+        "tags": [
+            "film"
+        ]
+    }, {
+        "title": "Stella Artois — Christmas Carole",
+        "year": 2014,
+        "images": [
+            "christmas_carole"
+        ],
+        "text": [
+            "I was the lead developer on this fun project where we achieved convincing real time compositing of Google Streetview images into green screen film footage to produce a video showing the band driving to your house to play you a song. It won an FWA SOTD."
+        ],
+        "client": [{
+            "name": "Stink Studios",
+            "link": "https://www.stinkstudios.com/"
+        }, {
+            "name": "Stella Artois",
+            "link": "https://www.stellaartois.com/"
+        }, {
+            "name": "Mother",
+            "link": "https://www.motherlondon.com/"
+        }],
+        "link": "http://stella-carole.archive.stinkdigital.com/",
+        "tags": [
+            "data"
+        ]
+    }, {
+        "title": "Vigorsol — Captain Ice",
+        "year": 2014,
+        "images": [
+            "captain_ice_04",
+            "captain_ice_01",
+            "captain_ice_09",
+            "captain_ice_10"
+        ],
+        "text": [
+            "Captain Ice is a mini-game created using an interesting blend of video footage and pixel art. The player has to hit the correct key combo within a tight time limit to score a hit."
+        ],
+        "client": [{
+            "name": "Stink Studios",
+            "link": "https://www.stinkstudios.com/"
+        }, {
+            "name": "Vigorsol",
+            "link": "http://www.vigorsoleasy.it/"
+        }, {
+            "name": "BBH",
+            "link": "https://www.bartleboglehegarty.com/"
+        }],
+        "link": "http://www.vigorsolcaptainice.com/",
+        "tags": [
+            "game"
+        ]
+    }, {
+        "title": "Adidas — Unite All Originals",
+        "year": 2013,
+        "images": [
+            "adidas_originals_1"
+        ],
+        "text": [
+            "This project makes use of the Web Speech API to create an interactive music video, featuring Hip-Hop legends Run DMC, with hidden animations that can be triggered by saying the right keyword. The Adidas products featured in the video can be viewed contextually at any time, pausing the video."
+        ],
+        "client": [{
+            "name": "Stink Studios",
+            "link": "https://www.stinkstudios.com/"
+        }, {
+            "name": "Adidas",
+            "link": "http://www.adidas.com/"
+        }, {
+            "name": "Sid Lee",
+            "link": "https://sidlee.com/"
+        }],
+        "link": "http://adidas-fw13.archive.stinkdigital.com/",
+        "tags": [
+            "experiential"
+        ]
+    }, {
+        "title": "Menicon — Miru",
+        "year": 2013,
+        "images": [
+            "miru_16",
+            "miru_09",
+            "miru_01"
+        ],
+        "text": [
+            "This project comprises a sublime 360 film shot using a custom-made octocopter camera rig. I was responsible for building a custom 3d skybox video player to render the film in browser."
+        ],
+        "client": [{
+            "name": "Stink Studios",
+            "link": "https://www.stinkstudios.com/"
+        }, {
+            "name": "Menicon",
+            "link": "http://www.menicon.com/"
+        }, {
+            "name": "Mori",
+            "link": "http://mori-inc.jp/"
+        }],
+        "link": "http://miru.menicon.com/tosee/",
+        "tags": [
+
+        ]
+    }, {
+        "title": "Asos — Urban Tour",
+        "year": 2013,
+        "images": [
+            "urban_tour"
+        ],
+        "text": [
+            "The idea behind this project was to create an interactive fashion catalogue slash music video. The user can 'freeze' the scene, see a 360 view of the clothes and access details and ecommerce links. I led the development team and the project went on to win 3 Cannes Lions, a Webby and FWA SOTD."
+        ],
+        "client": [{
+            "name": "Stink Studios",
+            "link": "https://www.stinkstudios.com/"
+        }, {
+            "name": "Asos",
+            "link": "http://www.asos.com/"
+        }, {
+            "name": "BBH",
+            "link": "https://www.bartleboglehegarty.com/"
+        }],
+        "link": "https://vimeo.com/36039145",
+        "tags": [
+            "film"
+        ]
+    }, {
+        "title": "Hugo Boss — Kino",
+        "year": 2013,
+        "images": [
+            "kino"
+        ],
+        "text": [
+            "In this project we used the Camera API to allow the user to 'See things differently' by tilting their head, thus toggling different layers of surreal film content. It won the FWA SOTD award."
+        ],
+        "client": [{
+            "name": "Stink Studios",
+            "link": "https://www.stinkstudios.com/"
+        }, {
+            "name": "Hugo Boss",
+            "link": "https://www.hugoboss.com/"
+        }, {
+            "name": "Blast Radius",
+            "link": "https://www.blastradius.com/"
+        }],
+        "link": "http://hugo-justdifferent.archive.stinkdigital.com/",
+        "tags": [
+            "experiential"
+        ]
+    }, {
+        "title": "IKEA — Happy Inside",
+        "year": 2011,
+        "images": [
+            "happy_inside_02",
+            "happy_inside_03",
+            "happy_inside_09",
+            "happy_inside_10"
+        ],
+        "text": [
+            "This website for IKEA is a competition where users can win a product by guessing which of the cats roaming the store would be attracted to it. It involved Facebook integration and a game mechanic stitching videos together to reveal the outcome. It was a big viral hit to the point where it was temporarily blocked from Facebook for generating too many posts!"
+        ],
+        "client": [{
+            "name": "Stink Studios",
+            "link": "https://www.stinkstudios.com/"
+        }, {
+            "name": "IKEA",
+            "link": "https://www.ikea.com/"
+        }, {
+            "name": "Mother",
+            "link": "https://www.motherlondon.com/"
+        }],
+        "link": "http://cats.archive.stinkdigital.com/",
+        "tags": [
+            "data"
+        ]
+    }, {
+        "title": "BBC — One Life",
+        "year": 2011,
+        "images": [
+            "one_life_06",
+            "one_life_19",
+            "one_life_27",
+            "one_life_32"
+        ],
+        "text": [
+            "The idea behind this project was to create an interactive film trailer for a BBC nature film. Users can drag up at any time during the trailer to get additional content related to the shot currently on screen. Dragging down accesses global content such as audience reactions and interviews. The background changes based on the average color of the current frame. It won an FWA SOTD."
+        ],
+        "client": [{
+            "name": "Stink Studios",
+            "link": "https://www.stinkstudios.com/"
+        }, {
+            "name": "BBC",
+            "link": "https://www.bbc.co.uk/"
+        }, {
+            "name": "Brooklyn Brothers",
+            "link": "https://thebrooklynbrothers.com/"
+        }],
+        "link": "http://bbc-onelife.archive.stinkdigital.com/",
+        "tags": [
+            "data"
+        ]
+    }, {
+        "title": "Diesel — Diesel Island",
+        "year": 2011,
+        "images": [
+            "diesel_island"
+        ],
+        "text": [
+            "This project realised an island community populated by Facebook users and filled with stupid fun features including a pirate radio station and 3d 'Islandview' fashion catalogue that users can navigate like Streetview. It won an FWA SOTD and Cannes Cyber Lion."
+        ],
+        "client": [{
+            "name": "Stink Studios",
+            "link": "https://www.stinkstudios.com/"
+        }, {
+            "name": "Diesel",
+            "link": "https://www.diesel.com/"
+        }, {
+            "name": "Santo London",
+            "link": "http://www.santo.net/"
+        }],
+        "link": "http://diesel-island-ss11.archive.stinkdigital.com/",
+        "tags": [
+            "data"
+        ]
+    }, {
+        "title": "Lexus — Dark Ride",
+        "year": 2010,
+        "images": [
+            "dark_ride_06",
+            "dark_ride_14",
+            "dark_ride_17",
+            "dark_ride_19",
+            "dark_ride_26",
+            "dark_ride_43",
+            "dark_ride_51",
+            "dark_ride_56"
+        ],
+        "text": [
+            "I led development of this groundbreaking interactive short film with a branching narrative. It incorporates dialogue recorded by the user and several decision points which change the film along with pannable scenes and immersive sound design. It won the [FWA People's Choice Site of the Year](https://thefwa.com/cases/lexus-dark-ride?c=SOTYPCA)"
+        ],
+        "client": [{
+            "name": "Stink Studios",
+            "link": "https://www.stinkstudios.com/"
+        }, {
+            "name": "Lexus",
+            "link": "https://www.lexus.com/"
+        }, {
+            "name": "Vitro",
+            "link": "http://www.vitroagency.com/"
+        }],
+        "link": "http://darkride.archive.stinkdigital.com/",
+        "tags": [
+            "film"
+        ]
+    }, {
+        "title": "Diesel — A Hundred Lovers",
+        "year": 2010,
+        "images": [
+            "hundred_lovers"
+        ],
+        "text": [
+            "A Hundred Lovers is an interactive music video slash fashion catalogue featuring very cool 'match-cut' film editing. All the clothes and participants were tagged and their details revealed by hovering over them. As well as code the site, I made an app to tag the hotspots in the film. The project won an FWA SOTD."
+        ],
+        "client": [{
+            "name": "Stink Studios",
+            "link": "https://www.stinkstudios.com/"
+        }, {
+            "name": "Diesel",
+            "link": "https://www.diesel.com/"
+        }, {
+            "name": "Anomaly",
+            "link": "http://anomaly.com/"
+        }],
+        "link": "http://diesel-hundredlovers.archive.stinkdigital.com/",
+        "tags": [
+            "film"
+        ]
+    }, {
+        "title": "Philips — Carousel",
+        "year": 2009,
+        "images": [
+            "carousel"
+        ],
+        "text": [
+            "I was responsible for leading the development of this innovative interactive film project. It features a dynamic recreation of the ambilight effect and allows users to segue seamlessly into behind the scenes footage. It won my first FWA SOTD and ultimately the Cannes Grand Prix. Its impact was such that it even has a [Wikipedia page](https://en.wikipedia.org/wiki/Carousel_%28advertisement%29)!"
+        ],
+        "client": [{
+            "name": "Stink Studios",
+            "link": "https://www.stinkstudios.com/"
+        }, {
+            "name": "Philips",
+            "link": "https://www.philips.com/"
+        }, {
+            "name": "Tribal DDB Amsterdam",
+            "link": "http://tribalworldwide.com/"
+        }],
+        "link": "http://labs.tribalddb.nl/Cinema219/",
+        "tags": [
+            "film"
+        ]
+    }]
+}

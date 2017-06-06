@@ -1,0 +1,15 @@
+{
+    "title": "McGregor Codes",
+    "description": "Specialist in creative, experiential web sites, games and applications.",
+    "url": "http://mcgregor.codes",
+    "sections": [{
+        "title": "Work",
+        "slug": ""
+    }, {
+        "title": "About",
+        "slug": "about"
+    }, {
+        "title": "Contact",
+        "slug": "contact"
+    }]
+}
