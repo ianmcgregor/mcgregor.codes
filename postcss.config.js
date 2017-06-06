@@ -9,9 +9,6 @@ module.exports = {
         require('postcss-url')({
             url: 'inline',
             maxSize: 4096
-          // url: function(url) {
-          //     return 'http://example.com/' + url
-          // }
         }),
         require('autoprefixer')({
             browsers: ['last 2 version'],

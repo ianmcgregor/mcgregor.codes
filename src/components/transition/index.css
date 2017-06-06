@@ -1,0 +1,30 @@
+:root {
+    --transitionTime: 400ms;
+}
+
+.Transition-enter {
+    opacity: 0;
+}
+
+.Transition-enter.Transition-enter-active {
+    opacity: 1;
+    transition: opacity var(--transitionTime) ease-in 200ms;
+}
+
+.Transition-leave {
+    opacity: 1;
+}
+
+.Transition-leave.Transition-leave-active {
+    opacity: 0;
+    transition: opacity var(--transitionTime) ease-out;
+}
+
+.Transition-appear {
+    opacity: 0;
+}
+
+.Transition-appear.Transition-appear-active {
+    opacity: 1;
+    transition: opacity var(--transitionTime) ease-in;
+}

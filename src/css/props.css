@@ -7,21 +7,21 @@
 
     /* font size */
 
-    --font-size-xsm: 16px;
-    --font-size-xsm--md: 18px;
-    --font-size-xsm--lg: 22px;
+    --font-size: 14px;
+    --font-size--md: 14px;
+    --font-size--lg: 16px;
 
-    --font-size-sm: 18px;
-    --font-size-sm--md: 24px;
-    --font-size-sm--lg: 32px;
+    --font-size-sm: 12px;
+    --font-size-sm--md: 12px;
+    --font-size-sm--lg: 13px;
 
-    --font-size-md: 22px;
-    --font-size-md--md: 26px;
-    --font-size-md--lg: 32px;
+    --font-size-md: 16px;
+    --font-size-md--md: 18px;
+    --font-size-md--lg: 20px;
 
     --font-size-lg: 32px;
-    --font-size-lg--md: 48px;
-    --font-size-lg--lg: 60px;
+    --font-size-lg--md: 42px;
+    --font-size-lg--lg: 54px;
 
     /* icon size */
 
@@ -34,7 +34,7 @@
 
     --spacing: 16px;
     --spacing--md: 24px;
-    --spacing--lg: 48px;
+    --spacing--lg: 32px;
 
     /* color palette */
 

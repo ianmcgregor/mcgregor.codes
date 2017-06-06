@@ -4,7 +4,8 @@ module.exports = {
     server: 'dist',
     files: [
         'dist/js/*.js',
-        'dist/css/*.css'
+        'dist/css/*.css',
+        'dist/*.html'
     ],
     ui: false,
     notify: false,

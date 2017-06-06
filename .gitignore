@@ -1,9 +1,9 @@
 .*
 ~*
-!/.babelrc
+!.gitignore
+!.gitinclude
 !/.gitattributes
-!/.gitignore
-!/.gitinclude
+!/.babelrc
 !/.editorconfig
 !/.eslintrc
 !/.stylelintrc
@@ -15,15 +15,11 @@ Desktop.ini
 user.properties
 npm-debug.log
 
-bower_components/
-node_modules/
-temp/
-src/img/
-src/font/
+/dist/
+/node_modules/
+/temp/
+/src/img/
 
-*.air
-*.f4v
-*.flv
 *.m4v
 *.mov
 *.mp3
@@ -32,6 +28,7 @@ src/font/
 *.ogv
 *.psd
 *.pyc
+*.sql
 *.wav
 *.webm
 *.zip

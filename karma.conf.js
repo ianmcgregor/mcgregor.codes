@@ -1,11 +1,14 @@
-'use strict';
-
 module.exports = function(config) {
     config.set({
-
-        // base path, that will be used to resolve files and exclude
         basePath: '',
-
+        autoWatch: true,
+        singleRun: false,
+        logLevel: config.LOG_DISABLE,
+        captureTimeout: 60000,
+        files: [
+            'test/**/*.spec.js'
+        ],
+        exclude: [],
         plugins: [
             'karma-mocha',
             'karma-chai',
@@ -13,70 +16,25 @@ module.exports = function(config) {
             'karma-chrome-launcher',
             'karma-firefox-launcher'
         ],
-
-        // frameworks to use
-        frameworks: ['browserify', 'mocha', 'chai'],
-
-        // list of files / patterns to load in the browser
-        files: [
-            'test/**/*.js'
-        ],
-
-        // list of files to exclude
-        exclude: [
-
-        ],
-
-        // Add browserify to preprocessors
+        frameworks: ['browserify', 'mocha'],
         preprocessors: {
-            'test/**/*.js': ['browserify']
+            'src/**/*.js': ['browserify'],
+            'test/**/*.spec.js': ['browserify']
         },
-
+        browsers: ['Firefox', 'Chrome'],
+        reporters: ['progress'],
         browserify: {
             debug: true,
-            transform: ['babelify']
+            transform: [
+                ['babelify', {
+                    ignore: '/node_modules/'
+                }]
+            ]
         },
-
-        // test results reporter to use
-        // possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'
-        reporters: ['progress'],
-
-        // web server port
-        port: 9876,
-
-        // enable / disable colors in the output (reporters and logs)
-        colors: true,
-
-        // level of logging
-        // possible values:
-        // config.LOG_DISABLE
-        // config.LOG_ERROR
-        // config.LOG_WARN
-        // config.LOG_INFO
-        // config.LOG_DEBUG
-        logLevel: config.LOG_ERROR,
-
-        // enable / disable watching file and executing tests whenever any file changes
-        autoWatch: true,
-
-        // Start these browsers, currently available:
-        // - Chrome
-        // - ChromeCanary
-        // - Firefox
-        // - Opera (has to be installed with `npm install karma-opera-launcher`)
-        // - Safari (only Mac; has to be installed with `npm install karma-safari-launcher`)
-        // - PhantomJS
-        // - IE (only Windows; has to be installed with `npm install karma-ie-launcher`)
-        browsers: [
-            'Chrome',
-            'Firefox'
-        ],
-
-        // If browser does not capture in given timeout [ms], kill it
-        captureTimeout: 60000,
-
-        // Continuous Integration mode
-        // if true, it capture browsers, run tests and exit
-        singleRun: false
+        client: {
+            mocha: {
+                opts: true
+            }
+        }
     });
 };

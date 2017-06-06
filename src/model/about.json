@@ -1,45 +1,7 @@
 {
-    "about": [{
-        "title": "Basics",
-        "list": [
-            "JavaScript (ES5, ES6)",
-            "CSS (Vanilla, Sass), HTML",
-            "Unit Tests (Karma, Mocha, Chai)",
-            "Gulp, NPM, Grunt",
-            "Node, Express, Socket IO",
-            "Browserify, Webpack, Rollup",
-            "Git, GitFlow",
-            "Ubuntu, NGINX",
-            "AWS, Digital Ocean"
-        ]
-    }, {
-        "title": "Libraries/Apis",
-        "list": [
-            "React, Backbone, Angular",
-            "PIXI.js",
-            "Web GL, Three.js",
-            "Web Audio",
-            "Babel, Core JS",
-            "Phaser.js",
-            "Video, Canvas",
-            "Lodash, Modernizr, jQuery",
-            "GSAP, Tween.js",
-            "Express, Socket IO",
-            "SUIT CSS, BEM, PostCSS",
-            "Social APIs"
-        ]
-    }, {
-        "title": "Other",
-        "list": [
-            "Tech Lead/Lead Dev",
-            "Prototyping",
-            "Accessibility, Usability",
-            "Performance optimisation",
-            "Mobile app packaging",
-            "Design patterns",
-            "Animation techniques",
-            "Agile methodologies",
-            "Basic PHP, Python, C#"
-        ]
-    }]
+    "about": [
+        "Specialist in creative, experiential web sites, games and applications.",
+        "I love to push the limits of the technologies at hand. I write robust, performant JavaScript and CSS, based on proven design patterns and guided by the [KISS](https://en.wikipedia.org/wiki/KISS_principle), [DRY](https://en.wikipedia.org/wiki/Don't_repeat_yourself) and [YAGNI](https://en.wikipedia.org/wiki/You_aren't_gonna_need_it) principles.",
+        "My work has won over 60 major awards from the Webby Awards, Cannes Lions (Grand Prix, Goldx3), FWA (SOTY, SOTMx2), Awwwards and D&AD."
+    ]
 }

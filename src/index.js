@@ -1,36 +1,35 @@
+import './utils/polyfills';
 import React from 'react';
 import {render} from 'react-dom';
 import {createStore} from 'redux';
 import {Provider} from 'react-redux';
-import App from './view/App';
+import App from './components/app';
 import reducers from './reducers';
-import filterProjects from './utils/filterProjects';
+import getProjectData from './utils/getProjectData';
 
-import {sections, title} from './model/model.json';
-import {contact} from './model/contact.json';
+import {sections, title} from './model/structure.json';
 import {about} from './model/about.json';
+import {contact} from './model/contact.json';
+import {tech} from './model/tech.json';
 import {srcSet} from './model/srcset.json';
 import {work} from './model/work.json';
 
-import getProjectData from './model/getProjectData';
-const {defaultTag, projects, tags} = getProjectData(work);
+const {allTag, defaultTag, projects, tags} = getProjectData(work);
+const match = `/($|${tags.map(t => t.slug).join('|')})`;
+const showTech = false;
 
 const store = createStore(reducers, {
     about,
-    contacts: contact,
-    currentProject: null,
-    currentSection: sections[0],
+    allTag,
+    contact,
     defaultTag,
-    fromScroll: false,
-    mounted: false,
-    path: '',
+    match,
     projects,
     sections,
-    selectedProjects: filterProjects(projects, defaultTag),
-    showSkills: false,
+    showTech,
     srcSet,
-    tag: defaultTag,
-    tags: tags,
+    tags,
+    tech,
     title
 });
 
