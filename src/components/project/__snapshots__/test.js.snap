@@ -1,0 +1,1041 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Project component should render 1`] = `
+initialize {
+  "0": Object {
+    "attribs": Object {
+      "class": "sc-jTzLTM eEjYel",
+    },
+    "children": Array [
+      Object {
+        "attribs": Object {
+          "href": "/google_inside_abbey_road/",
+        },
+        "children": Array [
+          Object {
+            "attribs": Object {
+              "class": "sc-gzVnrw cjDudR",
+            },
+            "children": Array [
+              Object {
+                "attribs": Object {
+                  "class": "sc-htoDjs dfKSvR",
+                },
+                "children": Array [
+                  Object {
+                    "attribs": Object {
+                      "autoplay": "",
+                      "class": "sc-gZMcBi jXcsyC",
+                      "loop": "",
+                      "muted": "",
+                      "playsinline": "",
+                    },
+                    "children": Array [
+                      Object {
+                        "attribs": Object {
+                          "src": "//videos.ctfassets.net/i8x1lkvuio7i/4JelMRzw1WCsoMGyKQkuUO/c5c42ec2fd7a6b6b273e2e35b6f32649/abbey_road.mp4",
+                          "type": "video/x-m4v",
+                        },
+                        "children": Array [],
+                        "name": "source",
+                        "namespace": "http://www.w3.org/1999/xhtml",
+                        "next": null,
+                        "parent": [Circular],
+                        "prev": null,
+                        "type": "tag",
+                        "x-attribsNamespace": Object {
+                          "src": undefined,
+                          "type": undefined,
+                        },
+                        "x-attribsPrefix": Object {
+                          "src": undefined,
+                          "type": undefined,
+                        },
+                      },
+                    ],
+                    "name": "video",
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                    "next": null,
+                    "parent": [Circular],
+                    "prev": null,
+                    "type": "tag",
+                    "x-attribsNamespace": Object {
+                      "autoplay": undefined,
+                      "class": undefined,
+                      "loop": undefined,
+                      "muted": undefined,
+                      "playsinline": undefined,
+                    },
+                    "x-attribsPrefix": Object {
+                      "autoplay": undefined,
+                      "class": undefined,
+                      "loop": undefined,
+                      "muted": undefined,
+                      "playsinline": undefined,
+                    },
+                  },
+                ],
+                "name": "div",
+                "namespace": "http://www.w3.org/1999/xhtml",
+                "next": null,
+                "parent": [Circular],
+                "prev": null,
+                "type": "tag",
+                "x-attribsNamespace": Object {
+                  "class": undefined,
+                },
+                "x-attribsPrefix": Object {
+                  "class": undefined,
+                },
+              },
+            ],
+            "name": "div",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "next": null,
+            "parent": [Circular],
+            "prev": null,
+            "type": "tag",
+            "x-attribsNamespace": Object {
+              "class": undefined,
+            },
+            "x-attribsPrefix": Object {
+              "class": undefined,
+            },
+          },
+        ],
+        "name": "a",
+        "namespace": "http://www.w3.org/1999/xhtml",
+        "next": Object {
+          "attribs": Object {
+            "class": "sc-gqjmRU clbgIC",
+          },
+          "children": Array [
+            Object {
+              "attribs": Object {
+                "class": "sc-bxivhb efuaUB",
+              },
+              "children": Array [
+                Object {
+                  "attribs": Object {
+                    "class": "sc-ifAKCX fwOaBU",
+                  },
+                  "children": Array [
+                    Object {
+                      "attribs": Object {
+                        "class": "sc-EHOje khSkhC",
+                      },
+                      "children": Array [
+                        Object {
+                          "attribs": Object {
+                            "class": "sc-bZQynM ixOPUe",
+                          },
+                          "children": Array [
+                            Object {
+                              "data": "Google — Inside Abbey Road",
+                              "next": null,
+                              "parent": [Circular],
+                              "prev": null,
+                              "type": "text",
+                            },
+                          ],
+                          "name": "span",
+                          "namespace": "http://www.w3.org/1999/xhtml",
+                          "next": null,
+                          "parent": [Circular],
+                          "prev": null,
+                          "type": "tag",
+                          "x-attribsNamespace": Object {
+                            "class": undefined,
+                          },
+                          "x-attribsPrefix": Object {
+                            "class": undefined,
+                          },
+                        },
+                      ],
+                      "name": "span",
+                      "namespace": "http://www.w3.org/1999/xhtml",
+                      "next": null,
+                      "parent": [Circular],
+                      "prev": null,
+                      "type": "tag",
+                      "x-attribsNamespace": Object {
+                        "class": undefined,
+                      },
+                      "x-attribsPrefix": Object {
+                        "class": undefined,
+                      },
+                    },
+                  ],
+                  "name": "h2",
+                  "namespace": "http://www.w3.org/1999/xhtml",
+                  "next": null,
+                  "parent": [Circular],
+                  "prev": null,
+                  "type": "tag",
+                  "x-attribsNamespace": Object {
+                    "class": undefined,
+                  },
+                  "x-attribsPrefix": Object {
+                    "class": undefined,
+                  },
+                },
+              ],
+              "name": "div",
+              "namespace": "http://www.w3.org/1999/xhtml",
+              "next": Object {
+                "attribs": Object {
+                  "class": "sc-VigVT eDJikp",
+                  "href": "https://insideabbeyroad.withgoogle.com/",
+                  "rel": "nofollow",
+                  "target": "_blank",
+                },
+                "children": Array [
+                  Object {
+                    "attribs": Object {
+                      "class": "sc-bxivhb efuaUB",
+                    },
+                    "children": Array [
+                      Object {
+                        "attribs": Object {
+                          "class": "sc-fjdhpX gfwEQJ",
+                        },
+                        "children": Array [
+                          Object {
+                            "attribs": Object {
+                              "class": "sc-EHOje khSkhC",
+                            },
+                            "children": Array [
+                              Object {
+                                "attribs": Object {
+                                  "class": "sc-bZQynM gyCMzi",
+                                },
+                                "children": Array [],
+                                "name": "span",
+                                "namespace": "http://www.w3.org/1999/xhtml",
+                                "next": null,
+                                "parent": [Circular],
+                                "prev": null,
+                                "type": "tag",
+                                "x-attribsNamespace": Object {
+                                  "class": undefined,
+                                },
+                                "x-attribsPrefix": Object {
+                                  "class": undefined,
+                                },
+                              },
+                            ],
+                            "name": "span",
+                            "namespace": "http://www.w3.org/1999/xhtml",
+                            "next": null,
+                            "parent": [Circular],
+                            "prev": null,
+                            "type": "tag",
+                            "x-attribsNamespace": Object {
+                              "class": undefined,
+                            },
+                            "x-attribsPrefix": Object {
+                              "class": undefined,
+                            },
+                          },
+                        ],
+                        "name": "div",
+                        "namespace": "http://www.w3.org/1999/xhtml",
+                        "next": null,
+                        "parent": [Circular],
+                        "prev": null,
+                        "type": "tag",
+                        "x-attribsNamespace": Object {
+                          "class": undefined,
+                        },
+                        "x-attribsPrefix": Object {
+                          "class": undefined,
+                        },
+                      },
+                    ],
+                    "name": "div",
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                    "next": null,
+                    "parent": [Circular],
+                    "prev": null,
+                    "type": "tag",
+                    "x-attribsNamespace": Object {
+                      "class": undefined,
+                    },
+                    "x-attribsPrefix": Object {
+                      "class": undefined,
+                    },
+                  },
+                ],
+                "name": "a",
+                "namespace": "http://www.w3.org/1999/xhtml",
+                "next": null,
+                "parent": [Circular],
+                "prev": [Circular],
+                "type": "tag",
+                "x-attribsNamespace": Object {
+                  "class": undefined,
+                  "href": undefined,
+                  "rel": undefined,
+                  "target": undefined,
+                },
+                "x-attribsPrefix": Object {
+                  "class": undefined,
+                  "href": undefined,
+                  "rel": undefined,
+                  "target": undefined,
+                },
+              },
+              "parent": [Circular],
+              "prev": null,
+              "type": "tag",
+              "x-attribsNamespace": Object {
+                "class": undefined,
+              },
+              "x-attribsPrefix": Object {
+                "class": undefined,
+              },
+            },
+            Object {
+              "attribs": Object {
+                "class": "sc-VigVT eDJikp",
+                "href": "https://insideabbeyroad.withgoogle.com/",
+                "rel": "nofollow",
+                "target": "_blank",
+              },
+              "children": Array [
+                Object {
+                  "attribs": Object {
+                    "class": "sc-bxivhb efuaUB",
+                  },
+                  "children": Array [
+                    Object {
+                      "attribs": Object {
+                        "class": "sc-fjdhpX gfwEQJ",
+                      },
+                      "children": Array [
+                        Object {
+                          "attribs": Object {
+                            "class": "sc-EHOje khSkhC",
+                          },
+                          "children": Array [
+                            Object {
+                              "attribs": Object {
+                                "class": "sc-bZQynM gyCMzi",
+                              },
+                              "children": Array [],
+                              "name": "span",
+                              "namespace": "http://www.w3.org/1999/xhtml",
+                              "next": null,
+                              "parent": [Circular],
+                              "prev": null,
+                              "type": "tag",
+                              "x-attribsNamespace": Object {
+                                "class": undefined,
+                              },
+                              "x-attribsPrefix": Object {
+                                "class": undefined,
+                              },
+                            },
+                          ],
+                          "name": "span",
+                          "namespace": "http://www.w3.org/1999/xhtml",
+                          "next": null,
+                          "parent": [Circular],
+                          "prev": null,
+                          "type": "tag",
+                          "x-attribsNamespace": Object {
+                            "class": undefined,
+                          },
+                          "x-attribsPrefix": Object {
+                            "class": undefined,
+                          },
+                        },
+                      ],
+                      "name": "div",
+                      "namespace": "http://www.w3.org/1999/xhtml",
+                      "next": null,
+                      "parent": [Circular],
+                      "prev": null,
+                      "type": "tag",
+                      "x-attribsNamespace": Object {
+                        "class": undefined,
+                      },
+                      "x-attribsPrefix": Object {
+                        "class": undefined,
+                      },
+                    },
+                  ],
+                  "name": "div",
+                  "namespace": "http://www.w3.org/1999/xhtml",
+                  "next": null,
+                  "parent": [Circular],
+                  "prev": null,
+                  "type": "tag",
+                  "x-attribsNamespace": Object {
+                    "class": undefined,
+                  },
+                  "x-attribsPrefix": Object {
+                    "class": undefined,
+                  },
+                },
+              ],
+              "name": "a",
+              "namespace": "http://www.w3.org/1999/xhtml",
+              "next": null,
+              "parent": [Circular],
+              "prev": Object {
+                "attribs": Object {
+                  "class": "sc-bxivhb efuaUB",
+                },
+                "children": Array [
+                  Object {
+                    "attribs": Object {
+                      "class": "sc-ifAKCX fwOaBU",
+                    },
+                    "children": Array [
+                      Object {
+                        "attribs": Object {
+                          "class": "sc-EHOje khSkhC",
+                        },
+                        "children": Array [
+                          Object {
+                            "attribs": Object {
+                              "class": "sc-bZQynM ixOPUe",
+                            },
+                            "children": Array [
+                              Object {
+                                "data": "Google — Inside Abbey Road",
+                                "next": null,
+                                "parent": [Circular],
+                                "prev": null,
+                                "type": "text",
+                              },
+                            ],
+                            "name": "span",
+                            "namespace": "http://www.w3.org/1999/xhtml",
+                            "next": null,
+                            "parent": [Circular],
+                            "prev": null,
+                            "type": "tag",
+                            "x-attribsNamespace": Object {
+                              "class": undefined,
+                            },
+                            "x-attribsPrefix": Object {
+                              "class": undefined,
+                            },
+                          },
+                        ],
+                        "name": "span",
+                        "namespace": "http://www.w3.org/1999/xhtml",
+                        "next": null,
+                        "parent": [Circular],
+                        "prev": null,
+                        "type": "tag",
+                        "x-attribsNamespace": Object {
+                          "class": undefined,
+                        },
+                        "x-attribsPrefix": Object {
+                          "class": undefined,
+                        },
+                      },
+                    ],
+                    "name": "h2",
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                    "next": null,
+                    "parent": [Circular],
+                    "prev": null,
+                    "type": "tag",
+                    "x-attribsNamespace": Object {
+                      "class": undefined,
+                    },
+                    "x-attribsPrefix": Object {
+                      "class": undefined,
+                    },
+                  },
+                ],
+                "name": "div",
+                "namespace": "http://www.w3.org/1999/xhtml",
+                "next": [Circular],
+                "parent": [Circular],
+                "prev": null,
+                "type": "tag",
+                "x-attribsNamespace": Object {
+                  "class": undefined,
+                },
+                "x-attribsPrefix": Object {
+                  "class": undefined,
+                },
+              },
+              "type": "tag",
+              "x-attribsNamespace": Object {
+                "class": undefined,
+                "href": undefined,
+                "rel": undefined,
+                "target": undefined,
+              },
+              "x-attribsPrefix": Object {
+                "class": undefined,
+                "href": undefined,
+                "rel": undefined,
+                "target": undefined,
+              },
+            },
+          ],
+          "name": "div",
+          "namespace": "http://www.w3.org/1999/xhtml",
+          "next": null,
+          "parent": [Circular],
+          "prev": [Circular],
+          "type": "tag",
+          "x-attribsNamespace": Object {
+            "class": undefined,
+          },
+          "x-attribsPrefix": Object {
+            "class": undefined,
+          },
+        },
+        "parent": [Circular],
+        "prev": null,
+        "type": "tag",
+        "x-attribsNamespace": Object {
+          "href": undefined,
+        },
+        "x-attribsPrefix": Object {
+          "href": undefined,
+        },
+      },
+      Object {
+        "attribs": Object {
+          "class": "sc-gqjmRU clbgIC",
+        },
+        "children": Array [
+          Object {
+            "attribs": Object {
+              "class": "sc-bxivhb efuaUB",
+            },
+            "children": Array [
+              Object {
+                "attribs": Object {
+                  "class": "sc-ifAKCX fwOaBU",
+                },
+                "children": Array [
+                  Object {
+                    "attribs": Object {
+                      "class": "sc-EHOje khSkhC",
+                    },
+                    "children": Array [
+                      Object {
+                        "attribs": Object {
+                          "class": "sc-bZQynM ixOPUe",
+                        },
+                        "children": Array [
+                          Object {
+                            "data": "Google — Inside Abbey Road",
+                            "next": null,
+                            "parent": [Circular],
+                            "prev": null,
+                            "type": "text",
+                          },
+                        ],
+                        "name": "span",
+                        "namespace": "http://www.w3.org/1999/xhtml",
+                        "next": null,
+                        "parent": [Circular],
+                        "prev": null,
+                        "type": "tag",
+                        "x-attribsNamespace": Object {
+                          "class": undefined,
+                        },
+                        "x-attribsPrefix": Object {
+                          "class": undefined,
+                        },
+                      },
+                    ],
+                    "name": "span",
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                    "next": null,
+                    "parent": [Circular],
+                    "prev": null,
+                    "type": "tag",
+                    "x-attribsNamespace": Object {
+                      "class": undefined,
+                    },
+                    "x-attribsPrefix": Object {
+                      "class": undefined,
+                    },
+                  },
+                ],
+                "name": "h2",
+                "namespace": "http://www.w3.org/1999/xhtml",
+                "next": null,
+                "parent": [Circular],
+                "prev": null,
+                "type": "tag",
+                "x-attribsNamespace": Object {
+                  "class": undefined,
+                },
+                "x-attribsPrefix": Object {
+                  "class": undefined,
+                },
+              },
+            ],
+            "name": "div",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "next": Object {
+              "attribs": Object {
+                "class": "sc-VigVT eDJikp",
+                "href": "https://insideabbeyroad.withgoogle.com/",
+                "rel": "nofollow",
+                "target": "_blank",
+              },
+              "children": Array [
+                Object {
+                  "attribs": Object {
+                    "class": "sc-bxivhb efuaUB",
+                  },
+                  "children": Array [
+                    Object {
+                      "attribs": Object {
+                        "class": "sc-fjdhpX gfwEQJ",
+                      },
+                      "children": Array [
+                        Object {
+                          "attribs": Object {
+                            "class": "sc-EHOje khSkhC",
+                          },
+                          "children": Array [
+                            Object {
+                              "attribs": Object {
+                                "class": "sc-bZQynM gyCMzi",
+                              },
+                              "children": Array [],
+                              "name": "span",
+                              "namespace": "http://www.w3.org/1999/xhtml",
+                              "next": null,
+                              "parent": [Circular],
+                              "prev": null,
+                              "type": "tag",
+                              "x-attribsNamespace": Object {
+                                "class": undefined,
+                              },
+                              "x-attribsPrefix": Object {
+                                "class": undefined,
+                              },
+                            },
+                          ],
+                          "name": "span",
+                          "namespace": "http://www.w3.org/1999/xhtml",
+                          "next": null,
+                          "parent": [Circular],
+                          "prev": null,
+                          "type": "tag",
+                          "x-attribsNamespace": Object {
+                            "class": undefined,
+                          },
+                          "x-attribsPrefix": Object {
+                            "class": undefined,
+                          },
+                        },
+                      ],
+                      "name": "div",
+                      "namespace": "http://www.w3.org/1999/xhtml",
+                      "next": null,
+                      "parent": [Circular],
+                      "prev": null,
+                      "type": "tag",
+                      "x-attribsNamespace": Object {
+                        "class": undefined,
+                      },
+                      "x-attribsPrefix": Object {
+                        "class": undefined,
+                      },
+                    },
+                  ],
+                  "name": "div",
+                  "namespace": "http://www.w3.org/1999/xhtml",
+                  "next": null,
+                  "parent": [Circular],
+                  "prev": null,
+                  "type": "tag",
+                  "x-attribsNamespace": Object {
+                    "class": undefined,
+                  },
+                  "x-attribsPrefix": Object {
+                    "class": undefined,
+                  },
+                },
+              ],
+              "name": "a",
+              "namespace": "http://www.w3.org/1999/xhtml",
+              "next": null,
+              "parent": [Circular],
+              "prev": [Circular],
+              "type": "tag",
+              "x-attribsNamespace": Object {
+                "class": undefined,
+                "href": undefined,
+                "rel": undefined,
+                "target": undefined,
+              },
+              "x-attribsPrefix": Object {
+                "class": undefined,
+                "href": undefined,
+                "rel": undefined,
+                "target": undefined,
+              },
+            },
+            "parent": [Circular],
+            "prev": null,
+            "type": "tag",
+            "x-attribsNamespace": Object {
+              "class": undefined,
+            },
+            "x-attribsPrefix": Object {
+              "class": undefined,
+            },
+          },
+          Object {
+            "attribs": Object {
+              "class": "sc-VigVT eDJikp",
+              "href": "https://insideabbeyroad.withgoogle.com/",
+              "rel": "nofollow",
+              "target": "_blank",
+            },
+            "children": Array [
+              Object {
+                "attribs": Object {
+                  "class": "sc-bxivhb efuaUB",
+                },
+                "children": Array [
+                  Object {
+                    "attribs": Object {
+                      "class": "sc-fjdhpX gfwEQJ",
+                    },
+                    "children": Array [
+                      Object {
+                        "attribs": Object {
+                          "class": "sc-EHOje khSkhC",
+                        },
+                        "children": Array [
+                          Object {
+                            "attribs": Object {
+                              "class": "sc-bZQynM gyCMzi",
+                            },
+                            "children": Array [],
+                            "name": "span",
+                            "namespace": "http://www.w3.org/1999/xhtml",
+                            "next": null,
+                            "parent": [Circular],
+                            "prev": null,
+                            "type": "tag",
+                            "x-attribsNamespace": Object {
+                              "class": undefined,
+                            },
+                            "x-attribsPrefix": Object {
+                              "class": undefined,
+                            },
+                          },
+                        ],
+                        "name": "span",
+                        "namespace": "http://www.w3.org/1999/xhtml",
+                        "next": null,
+                        "parent": [Circular],
+                        "prev": null,
+                        "type": "tag",
+                        "x-attribsNamespace": Object {
+                          "class": undefined,
+                        },
+                        "x-attribsPrefix": Object {
+                          "class": undefined,
+                        },
+                      },
+                    ],
+                    "name": "div",
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                    "next": null,
+                    "parent": [Circular],
+                    "prev": null,
+                    "type": "tag",
+                    "x-attribsNamespace": Object {
+                      "class": undefined,
+                    },
+                    "x-attribsPrefix": Object {
+                      "class": undefined,
+                    },
+                  },
+                ],
+                "name": "div",
+                "namespace": "http://www.w3.org/1999/xhtml",
+                "next": null,
+                "parent": [Circular],
+                "prev": null,
+                "type": "tag",
+                "x-attribsNamespace": Object {
+                  "class": undefined,
+                },
+                "x-attribsPrefix": Object {
+                  "class": undefined,
+                },
+              },
+            ],
+            "name": "a",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "next": null,
+            "parent": [Circular],
+            "prev": Object {
+              "attribs": Object {
+                "class": "sc-bxivhb efuaUB",
+              },
+              "children": Array [
+                Object {
+                  "attribs": Object {
+                    "class": "sc-ifAKCX fwOaBU",
+                  },
+                  "children": Array [
+                    Object {
+                      "attribs": Object {
+                        "class": "sc-EHOje khSkhC",
+                      },
+                      "children": Array [
+                        Object {
+                          "attribs": Object {
+                            "class": "sc-bZQynM ixOPUe",
+                          },
+                          "children": Array [
+                            Object {
+                              "data": "Google — Inside Abbey Road",
+                              "next": null,
+                              "parent": [Circular],
+                              "prev": null,
+                              "type": "text",
+                            },
+                          ],
+                          "name": "span",
+                          "namespace": "http://www.w3.org/1999/xhtml",
+                          "next": null,
+                          "parent": [Circular],
+                          "prev": null,
+                          "type": "tag",
+                          "x-attribsNamespace": Object {
+                            "class": undefined,
+                          },
+                          "x-attribsPrefix": Object {
+                            "class": undefined,
+                          },
+                        },
+                      ],
+                      "name": "span",
+                      "namespace": "http://www.w3.org/1999/xhtml",
+                      "next": null,
+                      "parent": [Circular],
+                      "prev": null,
+                      "type": "tag",
+                      "x-attribsNamespace": Object {
+                        "class": undefined,
+                      },
+                      "x-attribsPrefix": Object {
+                        "class": undefined,
+                      },
+                    },
+                  ],
+                  "name": "h2",
+                  "namespace": "http://www.w3.org/1999/xhtml",
+                  "next": null,
+                  "parent": [Circular],
+                  "prev": null,
+                  "type": "tag",
+                  "x-attribsNamespace": Object {
+                    "class": undefined,
+                  },
+                  "x-attribsPrefix": Object {
+                    "class": undefined,
+                  },
+                },
+              ],
+              "name": "div",
+              "namespace": "http://www.w3.org/1999/xhtml",
+              "next": [Circular],
+              "parent": [Circular],
+              "prev": null,
+              "type": "tag",
+              "x-attribsNamespace": Object {
+                "class": undefined,
+              },
+              "x-attribsPrefix": Object {
+                "class": undefined,
+              },
+            },
+            "type": "tag",
+            "x-attribsNamespace": Object {
+              "class": undefined,
+              "href": undefined,
+              "rel": undefined,
+              "target": undefined,
+            },
+            "x-attribsPrefix": Object {
+              "class": undefined,
+              "href": undefined,
+              "rel": undefined,
+              "target": undefined,
+            },
+          },
+        ],
+        "name": "div",
+        "namespace": "http://www.w3.org/1999/xhtml",
+        "next": null,
+        "parent": [Circular],
+        "prev": Object {
+          "attribs": Object {
+            "href": "/google_inside_abbey_road/",
+          },
+          "children": Array [
+            Object {
+              "attribs": Object {
+                "class": "sc-gzVnrw cjDudR",
+              },
+              "children": Array [
+                Object {
+                  "attribs": Object {
+                    "class": "sc-htoDjs dfKSvR",
+                  },
+                  "children": Array [
+                    Object {
+                      "attribs": Object {
+                        "autoplay": "",
+                        "class": "sc-gZMcBi jXcsyC",
+                        "loop": "",
+                        "muted": "",
+                        "playsinline": "",
+                      },
+                      "children": Array [
+                        Object {
+                          "attribs": Object {
+                            "src": "//videos.ctfassets.net/i8x1lkvuio7i/4JelMRzw1WCsoMGyKQkuUO/c5c42ec2fd7a6b6b273e2e35b6f32649/abbey_road.mp4",
+                            "type": "video/x-m4v",
+                          },
+                          "children": Array [],
+                          "name": "source",
+                          "namespace": "http://www.w3.org/1999/xhtml",
+                          "next": null,
+                          "parent": [Circular],
+                          "prev": null,
+                          "type": "tag",
+                          "x-attribsNamespace": Object {
+                            "src": undefined,
+                            "type": undefined,
+                          },
+                          "x-attribsPrefix": Object {
+                            "src": undefined,
+                            "type": undefined,
+                          },
+                        },
+                      ],
+                      "name": "video",
+                      "namespace": "http://www.w3.org/1999/xhtml",
+                      "next": null,
+                      "parent": [Circular],
+                      "prev": null,
+                      "type": "tag",
+                      "x-attribsNamespace": Object {
+                        "autoplay": undefined,
+                        "class": undefined,
+                        "loop": undefined,
+                        "muted": undefined,
+                        "playsinline": undefined,
+                      },
+                      "x-attribsPrefix": Object {
+                        "autoplay": undefined,
+                        "class": undefined,
+                        "loop": undefined,
+                        "muted": undefined,
+                        "playsinline": undefined,
+                      },
+                    },
+                  ],
+                  "name": "div",
+                  "namespace": "http://www.w3.org/1999/xhtml",
+                  "next": null,
+                  "parent": [Circular],
+                  "prev": null,
+                  "type": "tag",
+                  "x-attribsNamespace": Object {
+                    "class": undefined,
+                  },
+                  "x-attribsPrefix": Object {
+                    "class": undefined,
+                  },
+                },
+              ],
+              "name": "div",
+              "namespace": "http://www.w3.org/1999/xhtml",
+              "next": null,
+              "parent": [Circular],
+              "prev": null,
+              "type": "tag",
+              "x-attribsNamespace": Object {
+                "class": undefined,
+              },
+              "x-attribsPrefix": Object {
+                "class": undefined,
+              },
+            },
+          ],
+          "name": "a",
+          "namespace": "http://www.w3.org/1999/xhtml",
+          "next": [Circular],
+          "parent": [Circular],
+          "prev": null,
+          "type": "tag",
+          "x-attribsNamespace": Object {
+            "href": undefined,
+          },
+          "x-attribsPrefix": Object {
+            "href": undefined,
+          },
+        },
+        "type": "tag",
+        "x-attribsNamespace": Object {
+          "class": undefined,
+        },
+        "x-attribsPrefix": Object {
+          "class": undefined,
+        },
+      },
+    ],
+    "name": "article",
+    "namespace": "http://www.w3.org/1999/xhtml",
+    "next": null,
+    "parent": null,
+    "prev": null,
+    "root": Object {
+      "attribs": Object {},
+      "children": Array [
+        [Circular],
+      ],
+      "name": "root",
+      "namespace": "http://www.w3.org/1999/xhtml",
+      "next": null,
+      "parent": null,
+      "prev": null,
+      "type": "root",
+      "x-attribsNamespace": Object {},
+      "x-attribsPrefix": Object {},
+    },
+    "type": "tag",
+    "x-attribsNamespace": Object {
+      "class": undefined,
+    },
+    "x-attribsPrefix": Object {
+      "class": undefined,
+    },
+  },
+  "_root": [Circular],
+  "length": 1,
+  "options": Object {
+    "decodeEntities": true,
+    "normalizeWhitespace": false,
+    "withDomLvl1": true,
+    "xml": false,
+  },
+}
+`;

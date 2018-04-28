@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Image component should render 1`] = `
+initialize {
+  "0": Object {
+    "attribs": Object {
+      "class": "sc-bdVaJa cpqOBv",
+    },
+    "children": Array [
+      Object {
+        "attribs": Object {
+          "class": "sc-bwzfXH gVOSqX",
+        },
+        "children": Array [
+          Object {
+            "attribs": Object {
+              "alt": "comic-adventure",
+              "class": "sc-htpNat dZHANp",
+              "src": "//images.ctfassets.net/i8x1lkvuio7i/3Bh6RazkvSucssagW2GquS/a260280a7ec428b7a7ed1dec713df2a1/comic-adventure.png?w=800&q=100",
+              "srcset": "//images.ctfassets.net/i8x1lkvuio7i/3Bh6RazkvSucssagW2GquS/a260280a7ec428b7a7ed1dec713df2a1/comic-adventure.png?w=200&h=113&q=100 200w,
+//images.ctfassets.net/i8x1lkvuio7i/3Bh6RazkvSucssagW2GquS/a260280a7ec428b7a7ed1dec713df2a1/comic-adventure.png?w=400&h=225&q=100 400w,
+//images.ctfassets.net/i8x1lkvuio7i/3Bh6RazkvSucssagW2GquS/a260280a7ec428b7a7ed1dec713df2a1/comic-adventure.png?w=800&h=450&q=100 800w,
+//images.ctfassets.net/i8x1lkvuio7i/3Bh6RazkvSucssagW2GquS/a260280a7ec428b7a7ed1dec713df2a1/comic-adventure.png?w=1200&h=675&q=100 1200w,
+//images.ctfassets.net/i8x1lkvuio7i/3Bh6RazkvSucssagW2GquS/a260280a7ec428b7a7ed1dec713df2a1/comic-adventure.png?w=1600&h=900&q=100 1600w,
+//images.ctfassets.net/i8x1lkvuio7i/3Bh6RazkvSucssagW2GquS/a260280a7ec428b7a7ed1dec713df2a1/comic-adventure.png?w=2400&h=1350&q=100 2400w,
+//images.ctfassets.net/i8x1lkvuio7i/3Bh6RazkvSucssagW2GquS/a260280a7ec428b7a7ed1dec713df2a1/comic-adventure.png?w=2560&h=1440&q=100 2560w",
+            },
+            "children": Array [],
+            "name": "img",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "next": null,
+            "parent": [Circular],
+            "prev": null,
+            "type": "tag",
+            "x-attribsNamespace": Object {
+              "alt": undefined,
+              "class": undefined,
+              "src": undefined,
+              "srcset": undefined,
+            },
+            "x-attribsPrefix": Object {
+              "alt": undefined,
+              "class": undefined,
+              "src": undefined,
+              "srcset": undefined,
+            },
+          },
+        ],
+        "name": "div",
+        "namespace": "http://www.w3.org/1999/xhtml",
+        "next": null,
+        "parent": [Circular],
+        "prev": null,
+        "type": "tag",
+        "x-attribsNamespace": Object {
+          "class": undefined,
+        },
+        "x-attribsPrefix": Object {
+          "class": undefined,
+        },
+      },
+    ],
+    "name": "div",
+    "namespace": "http://www.w3.org/1999/xhtml",
+    "next": null,
+    "parent": null,
+    "prev": null,
+    "root": Object {
+      "attribs": Object {},
+      "children": Array [
+        [Circular],
+      ],
+      "name": "root",
+      "namespace": "http://www.w3.org/1999/xhtml",
+      "next": null,
+      "parent": null,
+      "prev": null,
+      "type": "root",
+      "x-attribsNamespace": Object {},
+      "x-attribsPrefix": Object {},
+    },
+    "type": "tag",
+    "x-attribsNamespace": Object {
+      "class": undefined,
+    },
+    "x-attribsPrefix": Object {
+      "class": undefined,
+    },
+  },
+  "_root": [Circular],
+  "length": 1,
+  "options": Object {
+    "decodeEntities": true,
+    "normalizeWhitespace": false,
+    "withDomLvl1": true,
+    "xml": false,
+  },
+}
+`;

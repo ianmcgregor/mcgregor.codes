@@ -1,14 +1,36 @@
 import React from 'react';
-import {connect} from 'react-redux';
+import styled from 'styled-components';
+import Label from '../label';
+import {linkCss, marginFixed} from '../../styles';
 
-function Title({sections, slug}) {
-    return (
-        <h1>{sections.find(section => section.slug === slug).title}</h1>
-    );
-}
+const Header = styled.div`
+    margin: ${marginFixed}px 0 ${marginFixed * 2}px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+`;
 
-export default connect(
-    state => ({
-        sections: state.sections
-    })
-)(Title);
+const ExternalLink = styled.a`
+    ${linkCss}
+`;
+
+export default ({
+    title,
+    link
+}) => (
+    <Header>
+        <Label text={title} el="h2"/>
+        {link && (
+            <ExternalLink
+                href={link}
+                target="_blank"
+                rel="nofollow">
+                <Label
+                    arrow="right"
+                    text=""
+                    el="div"
+                />
+            </ExternalLink>
+        )}
+    </Header>
+);

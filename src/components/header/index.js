@@ -1,47 +1,57 @@
 import React from 'react';
-// import Boids from '../boids';
-import {connect} from 'react-redux';
-import {Link} from 'react-micro-router';
-import renderDocTitle from '../../utils/renderDocTitle';
-import track from '../../utils/track';
+import styled from 'styled-components';
+import Menu from '../menu';
+import {
+    media,
+    marginMobile,
+    marginTablet,
+    marginDesktop
+} from '../../styles';
 
-function Header({sections, title, match}) {
+const Header = styled.header`
+    width: 100%;
+    padding: calc(${marginMobile}% + 10px) 0;
 
-    document.title = renderDocTitle(title, document.location.pathname);
+    ${media.tablet`
+        padding: calc(${marginTablet}% + 10px) 0;
+    `}
 
-    track.page(document.location.pathname);
+    ${media.desktop`
+        padding: calc(${marginDesktop}% + 10px) 0;
+    `}
+`;
 
-    return (
-        <header className="Header u-padH" data-path="">
-            <Link to="/" className="Header-titleLink" activeClassName="is-active">
-                <h1 className="Header-title">
-                    M<sup>c</sup>Gregor Codes
-                </h1>
-            </Link>
-            <nav className="Header-nav">
-                <ul className="Header-menu">
-                    {sections.map((section, i) => (
-                        <li className="Header-menuItem" key={i}>
-                            <Link
-                                to={`/${section.slug}`}
-                                match={section.slug ? null : match}
-                                className="Header-link u-font-md u-link"
-                                activeClassName="is-active">
-                                    {section.title}
-                            </Link>
-                        </li>
-                    ))}
-                </ul>
-            </nav>
-            {/* <Boids /> */}
-        </header>
-    );
-}
+const Inner = styled.div`
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    width: 100%;
+    margin: ${marginMobile}% 0;
 
-export default connect(
-    state => ({
-        sections: state.sections,
-        title: state.title,
-        match: state.match
-    })
-)(Header);
+    ${media.tablet`
+        margin: ${marginTablet}% 0;
+    `}
+
+    ${media.desktop`
+        margin: ${marginDesktop}% 0;
+    `}
+`;
+
+export default ({
+    links,
+    buttons,
+    socials
+}) => (
+    <Header>
+        <Inner>
+            <Menu
+                links={links}
+                buttons={buttons}
+                socials={socials}
+            />
+        </Inner>
+    </Header>
+);

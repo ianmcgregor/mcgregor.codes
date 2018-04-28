@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("./IbmPlexMono.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("./OpenSans.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}

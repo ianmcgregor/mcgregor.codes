@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Video component should render 1`] = `
+initialize {
+  "0": Object {
+    "attribs": Object {
+      "class": "sc-ifAKCX fXSpCA",
+    },
+    "children": Array [
+      Object {
+        "attribs": Object {
+          "class": "sc-EHOje eboURw",
+        },
+        "children": Array [
+          Object {
+            "attribs": Object {
+              "class": "sc-htoDjs knWVJE",
+              "id": "c46go7zB99SqIwWu8qKAqey",
+              "playsinline": "",
+            },
+            "children": Array [
+              Object {
+                "attribs": Object {
+                  "src": "//videos.ctfassets.net/i8x1lkvuio7i/46go7zB99SqIwWu8qKAqey/8d78c2dbad5d3e09a76b48de0498546b/comic_adventure.mp4",
+                  "type": "video/x-m4v",
+                },
+                "children": Array [],
+                "name": "source",
+                "namespace": "http://www.w3.org/1999/xhtml",
+                "next": null,
+                "parent": [Circular],
+                "prev": null,
+                "type": "tag",
+                "x-attribsNamespace": Object {
+                  "src": undefined,
+                  "type": undefined,
+                },
+                "x-attribsPrefix": Object {
+                  "src": undefined,
+                  "type": undefined,
+                },
+              },
+            ],
+            "name": "video",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "next": null,
+            "parent": [Circular],
+            "prev": null,
+            "type": "tag",
+            "x-attribsNamespace": Object {
+              "class": undefined,
+              "id": undefined,
+              "playsinline": undefined,
+            },
+            "x-attribsPrefix": Object {
+              "class": undefined,
+              "id": undefined,
+              "playsinline": undefined,
+            },
+          },
+        ],
+        "name": "div",
+        "namespace": "http://www.w3.org/1999/xhtml",
+        "next": null,
+        "parent": [Circular],
+        "prev": null,
+        "type": "tag",
+        "x-attribsNamespace": Object {
+          "class": undefined,
+        },
+        "x-attribsPrefix": Object {
+          "class": undefined,
+        },
+      },
+    ],
+    "name": "div",
+    "namespace": "http://www.w3.org/1999/xhtml",
+    "next": null,
+    "parent": null,
+    "prev": null,
+    "root": Object {
+      "attribs": Object {},
+      "children": Array [
+        [Circular],
+      ],
+      "name": "root",
+      "namespace": "http://www.w3.org/1999/xhtml",
+      "next": null,
+      "parent": null,
+      "prev": null,
+      "type": "root",
+      "x-attribsNamespace": Object {},
+      "x-attribsPrefix": Object {},
+    },
+    "type": "tag",
+    "x-attribsNamespace": Object {
+      "class": undefined,
+    },
+    "x-attribsPrefix": Object {
+      "class": undefined,
+    },
+  },
+  "_root": [Circular],
+  "length": 1,
+  "options": Object {
+    "decodeEntities": true,
+    "normalizeWhitespace": false,
+    "withDomLvl1": true,
+    "xml": false,
+  },
+}
+`;

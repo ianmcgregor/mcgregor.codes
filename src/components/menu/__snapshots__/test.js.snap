@@ -1,0 +1,567 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Menu component should render 1`] = `
+initialize {
+  "0": Object {
+    "attribs": Object {
+      "class": "sc-ifAKCX hbKAms",
+    },
+    "children": Array [
+      Object {
+        "attribs": Object {
+          "class": "sc-EHOje cyvMVa",
+        },
+        "children": Array [
+          Object {
+            "attribs": Object {
+              "class": "sc-bZQynM gAjREB",
+            },
+            "children": Array [
+              Object {
+                "attribs": Object {
+                  "class": "sc-gzVnrw fbHcEw",
+                },
+                "children": Array [
+                  Object {
+                    "attribs": Object {
+                      "href": "#",
+                    },
+                    "children": Array [
+                      Object {
+                        "attribs": Object {
+                          "class": "sc-bdVaJa fGHDiW",
+                        },
+                        "children": Array [
+                          Object {
+                            "attribs": Object {
+                              "class": "sc-dnqmqq kkvrgq",
+                            },
+                            "children": Array [
+                              Object {
+                                "attribs": Object {
+                                  "class": "sc-htpNat eIqxAw",
+                                },
+                                "children": Array [
+                                  Object {
+                                    "attribs": Object {
+                                      "class": "sc-bxivhb jZLiij",
+                                    },
+                                    "children": Array [
+                                      Object {
+                                        "data": "Work",
+                                        "next": null,
+                                        "parent": [Circular],
+                                        "prev": null,
+                                        "type": "text",
+                                      },
+                                    ],
+                                    "name": "span",
+                                    "namespace": "http://www.w3.org/1999/xhtml",
+                                    "next": null,
+                                    "parent": [Circular],
+                                    "prev": null,
+                                    "type": "tag",
+                                    "x-attribsNamespace": Object {
+                                      "class": undefined,
+                                    },
+                                    "x-attribsPrefix": Object {
+                                      "class": undefined,
+                                    },
+                                  },
+                                ],
+                                "name": "span",
+                                "namespace": "http://www.w3.org/1999/xhtml",
+                                "next": null,
+                                "parent": [Circular],
+                                "prev": null,
+                                "type": "tag",
+                                "x-attribsNamespace": Object {
+                                  "class": undefined,
+                                },
+                                "x-attribsPrefix": Object {
+                                  "class": undefined,
+                                },
+                              },
+                            ],
+                            "name": "span",
+                            "namespace": "http://www.w3.org/1999/xhtml",
+                            "next": null,
+                            "parent": [Circular],
+                            "prev": null,
+                            "type": "tag",
+                            "x-attribsNamespace": Object {
+                              "class": undefined,
+                            },
+                            "x-attribsPrefix": Object {
+                              "class": undefined,
+                            },
+                          },
+                        ],
+                        "name": "div",
+                        "namespace": "http://www.w3.org/1999/xhtml",
+                        "next": null,
+                        "parent": [Circular],
+                        "prev": null,
+                        "type": "tag",
+                        "x-attribsNamespace": Object {
+                          "class": undefined,
+                        },
+                        "x-attribsPrefix": Object {
+                          "class": undefined,
+                        },
+                      },
+                    ],
+                    "name": "a",
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                    "next": null,
+                    "parent": [Circular],
+                    "prev": null,
+                    "type": "tag",
+                    "x-attribsNamespace": Object {
+                      "href": undefined,
+                    },
+                    "x-attribsPrefix": Object {
+                      "href": undefined,
+                    },
+                  },
+                ],
+                "name": "li",
+                "namespace": "http://www.w3.org/1999/xhtml",
+                "next": Object {
+                  "attribs": Object {
+                    "class": "sc-gzVnrw fbHcEw",
+                  },
+                  "children": Array [
+                    Object {
+                      "attribs": Object {
+                        "href": "#",
+                      },
+                      "children": Array [
+                        Object {
+                          "attribs": Object {
+                            "class": "sc-bdVaJa fGHDiW",
+                          },
+                          "children": Array [
+                            Object {
+                              "attribs": Object {
+                                "class": "sc-iwsKbI jnCzXa",
+                              },
+                              "children": Array [
+                                Object {
+                                  "attribs": Object {
+                                    "class": "sc-htpNat eIqxAw",
+                                  },
+                                  "children": Array [
+                                    Object {
+                                      "attribs": Object {
+                                        "class": "sc-bxivhb jZLiij",
+                                      },
+                                      "children": Array [
+                                        Object {
+                                          "data": "About",
+                                          "next": null,
+                                          "parent": [Circular],
+                                          "prev": null,
+                                          "type": "text",
+                                        },
+                                      ],
+                                      "name": "span",
+                                      "namespace": "http://www.w3.org/1999/xhtml",
+                                      "next": null,
+                                      "parent": [Circular],
+                                      "prev": null,
+                                      "type": "tag",
+                                      "x-attribsNamespace": Object {
+                                        "class": undefined,
+                                      },
+                                      "x-attribsPrefix": Object {
+                                        "class": undefined,
+                                      },
+                                    },
+                                  ],
+                                  "name": "span",
+                                  "namespace": "http://www.w3.org/1999/xhtml",
+                                  "next": null,
+                                  "parent": [Circular],
+                                  "prev": null,
+                                  "type": "tag",
+                                  "x-attribsNamespace": Object {
+                                    "class": undefined,
+                                  },
+                                  "x-attribsPrefix": Object {
+                                    "class": undefined,
+                                  },
+                                },
+                              ],
+                              "name": "span",
+                              "namespace": "http://www.w3.org/1999/xhtml",
+                              "next": null,
+                              "parent": [Circular],
+                              "prev": null,
+                              "type": "tag",
+                              "x-attribsNamespace": Object {
+                                "class": undefined,
+                              },
+                              "x-attribsPrefix": Object {
+                                "class": undefined,
+                              },
+                            },
+                          ],
+                          "name": "div",
+                          "namespace": "http://www.w3.org/1999/xhtml",
+                          "next": null,
+                          "parent": [Circular],
+                          "prev": null,
+                          "type": "tag",
+                          "x-attribsNamespace": Object {
+                            "class": undefined,
+                          },
+                          "x-attribsPrefix": Object {
+                            "class": undefined,
+                          },
+                        },
+                      ],
+                      "name": "a",
+                      "namespace": "http://www.w3.org/1999/xhtml",
+                      "next": null,
+                      "parent": [Circular],
+                      "prev": null,
+                      "type": "tag",
+                      "x-attribsNamespace": Object {
+                        "href": undefined,
+                      },
+                      "x-attribsPrefix": Object {
+                        "href": undefined,
+                      },
+                    },
+                  ],
+                  "name": "li",
+                  "namespace": "http://www.w3.org/1999/xhtml",
+                  "next": null,
+                  "parent": [Circular],
+                  "prev": [Circular],
+                  "type": "tag",
+                  "x-attribsNamespace": Object {
+                    "class": undefined,
+                  },
+                  "x-attribsPrefix": Object {
+                    "class": undefined,
+                  },
+                },
+                "parent": [Circular],
+                "prev": null,
+                "type": "tag",
+                "x-attribsNamespace": Object {
+                  "class": undefined,
+                },
+                "x-attribsPrefix": Object {
+                  "class": undefined,
+                },
+              },
+              Object {
+                "attribs": Object {
+                  "class": "sc-gzVnrw fbHcEw",
+                },
+                "children": Array [
+                  Object {
+                    "attribs": Object {
+                      "href": "#",
+                    },
+                    "children": Array [
+                      Object {
+                        "attribs": Object {
+                          "class": "sc-bdVaJa fGHDiW",
+                        },
+                        "children": Array [
+                          Object {
+                            "attribs": Object {
+                              "class": "sc-iwsKbI jnCzXa",
+                            },
+                            "children": Array [
+                              Object {
+                                "attribs": Object {
+                                  "class": "sc-htpNat eIqxAw",
+                                },
+                                "children": Array [
+                                  Object {
+                                    "attribs": Object {
+                                      "class": "sc-bxivhb jZLiij",
+                                    },
+                                    "children": Array [
+                                      Object {
+                                        "data": "About",
+                                        "next": null,
+                                        "parent": [Circular],
+                                        "prev": null,
+                                        "type": "text",
+                                      },
+                                    ],
+                                    "name": "span",
+                                    "namespace": "http://www.w3.org/1999/xhtml",
+                                    "next": null,
+                                    "parent": [Circular],
+                                    "prev": null,
+                                    "type": "tag",
+                                    "x-attribsNamespace": Object {
+                                      "class": undefined,
+                                    },
+                                    "x-attribsPrefix": Object {
+                                      "class": undefined,
+                                    },
+                                  },
+                                ],
+                                "name": "span",
+                                "namespace": "http://www.w3.org/1999/xhtml",
+                                "next": null,
+                                "parent": [Circular],
+                                "prev": null,
+                                "type": "tag",
+                                "x-attribsNamespace": Object {
+                                  "class": undefined,
+                                },
+                                "x-attribsPrefix": Object {
+                                  "class": undefined,
+                                },
+                              },
+                            ],
+                            "name": "span",
+                            "namespace": "http://www.w3.org/1999/xhtml",
+                            "next": null,
+                            "parent": [Circular],
+                            "prev": null,
+                            "type": "tag",
+                            "x-attribsNamespace": Object {
+                              "class": undefined,
+                            },
+                            "x-attribsPrefix": Object {
+                              "class": undefined,
+                            },
+                          },
+                        ],
+                        "name": "div",
+                        "namespace": "http://www.w3.org/1999/xhtml",
+                        "next": null,
+                        "parent": [Circular],
+                        "prev": null,
+                        "type": "tag",
+                        "x-attribsNamespace": Object {
+                          "class": undefined,
+                        },
+                        "x-attribsPrefix": Object {
+                          "class": undefined,
+                        },
+                      },
+                    ],
+                    "name": "a",
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                    "next": null,
+                    "parent": [Circular],
+                    "prev": null,
+                    "type": "tag",
+                    "x-attribsNamespace": Object {
+                      "href": undefined,
+                    },
+                    "x-attribsPrefix": Object {
+                      "href": undefined,
+                    },
+                  },
+                ],
+                "name": "li",
+                "namespace": "http://www.w3.org/1999/xhtml",
+                "next": null,
+                "parent": [Circular],
+                "prev": Object {
+                  "attribs": Object {
+                    "class": "sc-gzVnrw fbHcEw",
+                  },
+                  "children": Array [
+                    Object {
+                      "attribs": Object {
+                        "href": "#",
+                      },
+                      "children": Array [
+                        Object {
+                          "attribs": Object {
+                            "class": "sc-bdVaJa fGHDiW",
+                          },
+                          "children": Array [
+                            Object {
+                              "attribs": Object {
+                                "class": "sc-dnqmqq kkvrgq",
+                              },
+                              "children": Array [
+                                Object {
+                                  "attribs": Object {
+                                    "class": "sc-htpNat eIqxAw",
+                                  },
+                                  "children": Array [
+                                    Object {
+                                      "attribs": Object {
+                                        "class": "sc-bxivhb jZLiij",
+                                      },
+                                      "children": Array [
+                                        Object {
+                                          "data": "Work",
+                                          "next": null,
+                                          "parent": [Circular],
+                                          "prev": null,
+                                          "type": "text",
+                                        },
+                                      ],
+                                      "name": "span",
+                                      "namespace": "http://www.w3.org/1999/xhtml",
+                                      "next": null,
+                                      "parent": [Circular],
+                                      "prev": null,
+                                      "type": "tag",
+                                      "x-attribsNamespace": Object {
+                                        "class": undefined,
+                                      },
+                                      "x-attribsPrefix": Object {
+                                        "class": undefined,
+                                      },
+                                    },
+                                  ],
+                                  "name": "span",
+                                  "namespace": "http://www.w3.org/1999/xhtml",
+                                  "next": null,
+                                  "parent": [Circular],
+                                  "prev": null,
+                                  "type": "tag",
+                                  "x-attribsNamespace": Object {
+                                    "class": undefined,
+                                  },
+                                  "x-attribsPrefix": Object {
+                                    "class": undefined,
+                                  },
+                                },
+                              ],
+                              "name": "span",
+                              "namespace": "http://www.w3.org/1999/xhtml",
+                              "next": null,
+                              "parent": [Circular],
+                              "prev": null,
+                              "type": "tag",
+                              "x-attribsNamespace": Object {
+                                "class": undefined,
+                              },
+                              "x-attribsPrefix": Object {
+                                "class": undefined,
+                              },
+                            },
+                          ],
+                          "name": "div",
+                          "namespace": "http://www.w3.org/1999/xhtml",
+                          "next": null,
+                          "parent": [Circular],
+                          "prev": null,
+                          "type": "tag",
+                          "x-attribsNamespace": Object {
+                            "class": undefined,
+                          },
+                          "x-attribsPrefix": Object {
+                            "class": undefined,
+                          },
+                        },
+                      ],
+                      "name": "a",
+                      "namespace": "http://www.w3.org/1999/xhtml",
+                      "next": null,
+                      "parent": [Circular],
+                      "prev": null,
+                      "type": "tag",
+                      "x-attribsNamespace": Object {
+                        "href": undefined,
+                      },
+                      "x-attribsPrefix": Object {
+                        "href": undefined,
+                      },
+                    },
+                  ],
+                  "name": "li",
+                  "namespace": "http://www.w3.org/1999/xhtml",
+                  "next": [Circular],
+                  "parent": [Circular],
+                  "prev": null,
+                  "type": "tag",
+                  "x-attribsNamespace": Object {
+                    "class": undefined,
+                  },
+                  "x-attribsPrefix": Object {
+                    "class": undefined,
+                  },
+                },
+                "type": "tag",
+                "x-attribsNamespace": Object {
+                  "class": undefined,
+                },
+                "x-attribsPrefix": Object {
+                  "class": undefined,
+                },
+              },
+            ],
+            "name": "ul",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "next": null,
+            "parent": [Circular],
+            "prev": null,
+            "type": "tag",
+            "x-attribsNamespace": Object {
+              "class": undefined,
+            },
+            "x-attribsPrefix": Object {
+              "class": undefined,
+            },
+          },
+        ],
+        "name": "nav",
+        "namespace": "http://www.w3.org/1999/xhtml",
+        "next": null,
+        "parent": [Circular],
+        "prev": null,
+        "type": "tag",
+        "x-attribsNamespace": Object {
+          "class": undefined,
+        },
+        "x-attribsPrefix": Object {
+          "class": undefined,
+        },
+      },
+    ],
+    "name": "div",
+    "namespace": "http://www.w3.org/1999/xhtml",
+    "next": null,
+    "parent": null,
+    "prev": null,
+    "root": Object {
+      "attribs": Object {},
+      "children": Array [
+        [Circular],
+      ],
+      "name": "root",
+      "namespace": "http://www.w3.org/1999/xhtml",
+      "next": null,
+      "parent": null,
+      "prev": null,
+      "type": "root",
+      "x-attribsNamespace": Object {},
+      "x-attribsPrefix": Object {},
+    },
+    "type": "tag",
+    "x-attribsNamespace": Object {
+      "class": undefined,
+    },
+    "x-attribsPrefix": Object {
+      "class": undefined,
+    },
+  },
+  "_root": [Circular],
+  "length": 1,
+  "options": Object {
+    "decodeEntities": true,
+    "normalizeWhitespace": false,
+    "withDomLvl1": true,
+    "xml": false,
+  },
+}
+`;
