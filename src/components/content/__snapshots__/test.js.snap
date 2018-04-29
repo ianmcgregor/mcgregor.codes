@@ -19,7 +19,7 @@ initialize {
             "children": Array [
               Object {
                 "attribs": Object {
-                  "class": "sc-gzVnrw jQHzRU",
+                  "class": "sc-bwzfXH bFJQhi",
                 },
                 "children": Array [
                   Object {
@@ -68,7 +68,7 @@ initialize {
                     },
                   },
                 ],
-                "name": "h1",
+                "name": "h2",
                 "namespace": "http://www.w3.org/1999/xhtml",
                 "next": null,
                 "parent": [Circular],
@@ -303,7 +303,7 @@ initialize {
               "children": Array [
                 Object {
                   "attribs": Object {
-                    "class": "sc-gzVnrw jQHzRU",
+                    "class": "sc-bwzfXH bFJQhi",
                   },
                   "children": Array [
                     Object {
@@ -352,7 +352,7 @@ initialize {
                       },
                     },
                   ],
-                  "name": "h1",
+                  "name": "h2",
                   "namespace": "http://www.w3.org/1999/xhtml",
                   "next": null,
                   "parent": [Circular],

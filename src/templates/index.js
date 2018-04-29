@@ -59,7 +59,7 @@ export default ({
             siteMetadata={siteMetadata}
             page={page}
         />
-        {page.components.map(c => {
+        {page.components.map((c, i) => {
             const type = c.type.replace('Contentful', '');
             const Module = components[type];
             if (!Module) {
@@ -68,7 +68,7 @@ export default ({
 
             return (
                 <Section id={c.id} data-component={type} key={type + c.id}>
-                    <Module {...c} page={page}/>
+                    <Module {...c} page={page} first={i === 0}/>
                 </Section>
             );
         })}

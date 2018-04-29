@@ -20,11 +20,12 @@ const Title = styled.div`
 
 export default ({
     title,
-    text
+    text,
+    first
 }) => (
     <Wrapper>
         <Title>
-            <Label text={title} el="h1"/>
+            <Label text={title} el={first ? 'h1' : 'h2'}/>
         </Title>
         {text && (
             <Text text={text}/>

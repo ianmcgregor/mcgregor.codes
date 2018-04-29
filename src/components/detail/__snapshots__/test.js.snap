@@ -4,22 +4,22 @@ exports[`Detail component should render 1`] = `
 initialize {
   "0": Object {
     "attribs": Object {
-      "class": "sc-cSHVUG fvKepu",
+      "class": "sc-kgoBCf hvNrLz",
     },
     "children": Array [
       Object {
         "attribs": Object {
-          "class": "sc-kgoBCf dwycFf",
+          "class": "sc-chPdSV dssqYe",
         },
         "children": Array [
           Object {
             "attribs": Object {
-              "class": "sc-kAzzGY gvThMw",
+              "class": "sc-cSHVUG kjQySR",
             },
             "children": Array [
               Object {
                 "attribs": Object {
-                  "class": "sc-chPdSV ilyUKU",
+                  "class": "sc-kAzzGY dUtFzu",
                   "href": "/a_hundred_lovers/",
                 },
                 "children": Array [
@@ -127,7 +127,7 @@ initialize {
             "namespace": "http://www.w3.org/1999/xhtml",
             "next": Object {
               "attribs": Object {
-                "class": "sc-chPdSV ilyUKU",
+                "class": "sc-kAzzGY dUtFzu",
                 "href": "/inside_abbey_road/",
               },
               "children": Array [
@@ -242,7 +242,7 @@ initialize {
           },
           Object {
             "attribs": Object {
-              "class": "sc-chPdSV ilyUKU",
+              "class": "sc-kAzzGY dUtFzu",
               "href": "/inside_abbey_road/",
             },
             "children": Array [
@@ -336,12 +336,12 @@ initialize {
             "parent": [Circular],
             "prev": Object {
               "attribs": Object {
-                "class": "sc-kAzzGY gvThMw",
+                "class": "sc-cSHVUG kjQySR",
               },
               "children": Array [
                 Object {
                   "attribs": Object {
-                    "class": "sc-chPdSV ilyUKU",
+                    "class": "sc-kAzzGY dUtFzu",
                     "href": "/a_hundred_lovers/",
                   },
                   "children": Array [
@@ -854,7 +854,7 @@ initialize {
                 "children": Array [
                   Object {
                     "attribs": Object {
-                      "class": "sc-ifAKCX fwOaBU",
+                      "class": "sc-ckVGcZ iEJwgp",
                     },
                     "children": Array [
                       Object {
@@ -903,7 +903,7 @@ initialize {
                         },
                       },
                     ],
-                    "name": "h2",
+                    "name": "h1",
                     "namespace": "http://www.w3.org/1999/xhtml",
                     "next": null,
                     "parent": [Circular],
@@ -934,7 +934,7 @@ initialize {
                       "children": Array [
                         Object {
                           "attribs": Object {
-                            "class": "sc-ckVGcZ iEJwgp",
+                            "class": "sc-jKJlTe gNgXmy",
                           },
                           "children": Array [
                             Object {
@@ -1047,7 +1047,7 @@ initialize {
                     "children": Array [
                       Object {
                         "attribs": Object {
-                          "class": "sc-ckVGcZ iEJwgp",
+                          "class": "sc-jKJlTe gNgXmy",
                         },
                         "children": Array [
                           Object {
@@ -1127,7 +1127,7 @@ initialize {
                   "children": Array [
                     Object {
                       "attribs": Object {
-                        "class": "sc-ifAKCX fwOaBU",
+                        "class": "sc-ckVGcZ iEJwgp",
                       },
                       "children": Array [
                         Object {
@@ -1176,7 +1176,7 @@ initialize {
                           },
                         },
                       ],
-                      "name": "h2",
+                      "name": "h1",
                       "namespace": "http://www.w3.org/1999/xhtml",
                       "next": null,
                       "parent": [Circular],
@@ -1959,7 +1959,7 @@ initialize {
               "children": Array [
                 Object {
                   "attribs": Object {
-                    "class": "sc-ifAKCX fwOaBU",
+                    "class": "sc-ckVGcZ iEJwgp",
                   },
                   "children": Array [
                     Object {
@@ -2008,7 +2008,7 @@ initialize {
                       },
                     },
                   ],
-                  "name": "h2",
+                  "name": "h1",
                   "namespace": "http://www.w3.org/1999/xhtml",
                   "next": null,
                   "parent": [Circular],
@@ -2039,7 +2039,7 @@ initialize {
                     "children": Array [
                       Object {
                         "attribs": Object {
-                          "class": "sc-ckVGcZ iEJwgp",
+                          "class": "sc-jKJlTe gNgXmy",
                         },
                         "children": Array [
                           Object {
@@ -2152,7 +2152,7 @@ initialize {
                   "children": Array [
                     Object {
                       "attribs": Object {
-                        "class": "sc-ckVGcZ iEJwgp",
+                        "class": "sc-jKJlTe gNgXmy",
                       },
                       "children": Array [
                         Object {
@@ -2232,7 +2232,7 @@ initialize {
                 "children": Array [
                   Object {
                     "attribs": Object {
-                      "class": "sc-ifAKCX fwOaBU",
+                      "class": "sc-ckVGcZ iEJwgp",
                     },
                     "children": Array [
                       Object {
@@ -2281,7 +2281,7 @@ initialize {
                         },
                       },
                     ],
-                    "name": "h2",
+                    "name": "h1",
                     "namespace": "http://www.w3.org/1999/xhtml",
                     "next": null,
                     "parent": [Circular],
@@ -2664,17 +2664,17 @@ initialize {
         "parent": [Circular],
         "prev": Object {
           "attribs": Object {
-            "class": "sc-kgoBCf dwycFf",
+            "class": "sc-chPdSV dssqYe",
           },
           "children": Array [
             Object {
               "attribs": Object {
-                "class": "sc-kAzzGY gvThMw",
+                "class": "sc-cSHVUG kjQySR",
               },
               "children": Array [
                 Object {
                   "attribs": Object {
-                    "class": "sc-chPdSV ilyUKU",
+                    "class": "sc-kAzzGY dUtFzu",
                     "href": "/a_hundred_lovers/",
                   },
                   "children": Array [
@@ -2782,7 +2782,7 @@ initialize {
               "namespace": "http://www.w3.org/1999/xhtml",
               "next": Object {
                 "attribs": Object {
-                  "class": "sc-chPdSV ilyUKU",
+                  "class": "sc-kAzzGY dUtFzu",
                   "href": "/inside_abbey_road/",
                 },
                 "children": Array [
@@ -2897,7 +2897,7 @@ initialize {
             },
             Object {
               "attribs": Object {
-                "class": "sc-chPdSV ilyUKU",
+                "class": "sc-kAzzGY dUtFzu",
                 "href": "/inside_abbey_road/",
               },
               "children": Array [
@@ -2991,12 +2991,12 @@ initialize {
               "parent": [Circular],
               "prev": Object {
                 "attribs": Object {
-                  "class": "sc-kAzzGY gvThMw",
+                  "class": "sc-cSHVUG kjQySR",
                 },
                 "children": Array [
                   Object {
                     "attribs": Object {
-                      "class": "sc-chPdSV ilyUKU",
+                      "class": "sc-kAzzGY dUtFzu",
                       "href": "/a_hundred_lovers/",
                     },
                     "children": Array [
@@ -3157,7 +3157,7 @@ initialize {
             "children": Array [
               Object {
                 "attribs": Object {
-                  "class": "sc-ifAKCX fwOaBU",
+                  "class": "sc-ckVGcZ iEJwgp",
                 },
                 "children": Array [
                   Object {
@@ -3206,7 +3206,7 @@ initialize {
                     },
                   },
                 ],
-                "name": "h2",
+                "name": "h1",
                 "namespace": "http://www.w3.org/1999/xhtml",
                 "next": null,
                 "parent": [Circular],
@@ -3237,7 +3237,7 @@ initialize {
                   "children": Array [
                     Object {
                       "attribs": Object {
-                        "class": "sc-ckVGcZ iEJwgp",
+                        "class": "sc-jKJlTe gNgXmy",
                       },
                       "children": Array [
                         Object {
@@ -3350,7 +3350,7 @@ initialize {
                 "children": Array [
                   Object {
                     "attribs": Object {
-                      "class": "sc-ckVGcZ iEJwgp",
+                      "class": "sc-jKJlTe gNgXmy",
                     },
                     "children": Array [
                       Object {
@@ -3430,7 +3430,7 @@ initialize {
               "children": Array [
                 Object {
                   "attribs": Object {
-                    "class": "sc-ifAKCX fwOaBU",
+                    "class": "sc-ckVGcZ iEJwgp",
                   },
                   "children": Array [
                     Object {
@@ -3479,7 +3479,7 @@ initialize {
                       },
                     },
                   ],
-                  "name": "h2",
+                  "name": "h1",
                   "namespace": "http://www.w3.org/1999/xhtml",
                   "next": null,
                   "parent": [Circular],
@@ -4225,17 +4225,17 @@ initialize {
           "parent": [Circular],
           "prev": Object {
             "attribs": Object {
-              "class": "sc-kgoBCf dwycFf",
+              "class": "sc-chPdSV dssqYe",
             },
             "children": Array [
               Object {
                 "attribs": Object {
-                  "class": "sc-kAzzGY gvThMw",
+                  "class": "sc-cSHVUG kjQySR",
                 },
                 "children": Array [
                   Object {
                     "attribs": Object {
-                      "class": "sc-chPdSV ilyUKU",
+                      "class": "sc-kAzzGY dUtFzu",
                       "href": "/a_hundred_lovers/",
                     },
                     "children": Array [
@@ -4343,7 +4343,7 @@ initialize {
                 "namespace": "http://www.w3.org/1999/xhtml",
                 "next": Object {
                   "attribs": Object {
-                    "class": "sc-chPdSV ilyUKU",
+                    "class": "sc-kAzzGY dUtFzu",
                     "href": "/inside_abbey_road/",
                   },
                   "children": Array [
@@ -4458,7 +4458,7 @@ initialize {
               },
               Object {
                 "attribs": Object {
-                  "class": "sc-chPdSV ilyUKU",
+                  "class": "sc-kAzzGY dUtFzu",
                   "href": "/inside_abbey_road/",
                 },
                 "children": Array [
@@ -4552,12 +4552,12 @@ initialize {
                 "parent": [Circular],
                 "prev": Object {
                   "attribs": Object {
-                    "class": "sc-kAzzGY gvThMw",
+                    "class": "sc-cSHVUG kjQySR",
                   },
                   "children": Array [
                     Object {
                       "attribs": Object {
-                        "class": "sc-chPdSV ilyUKU",
+                        "class": "sc-kAzzGY dUtFzu",
                         "href": "/a_hundred_lovers/",
                       },
                       "children": Array [
@@ -5047,7 +5047,7 @@ initialize {
               "children": Array [
                 Object {
                   "attribs": Object {
-                    "class": "sc-ifAKCX fwOaBU",
+                    "class": "sc-ckVGcZ iEJwgp",
                   },
                   "children": Array [
                     Object {
@@ -5096,7 +5096,7 @@ initialize {
                       },
                     },
                   ],
-                  "name": "h2",
+                  "name": "h1",
                   "namespace": "http://www.w3.org/1999/xhtml",
                   "next": null,
                   "parent": [Circular],
@@ -5127,7 +5127,7 @@ initialize {
                     "children": Array [
                       Object {
                         "attribs": Object {
-                          "class": "sc-ckVGcZ iEJwgp",
+                          "class": "sc-jKJlTe gNgXmy",
                         },
                         "children": Array [
                           Object {
@@ -5240,7 +5240,7 @@ initialize {
                   "children": Array [
                     Object {
                       "attribs": Object {
-                        "class": "sc-ckVGcZ iEJwgp",
+                        "class": "sc-jKJlTe gNgXmy",
                       },
                       "children": Array [
                         Object {
@@ -5320,7 +5320,7 @@ initialize {
                 "children": Array [
                   Object {
                     "attribs": Object {
-                      "class": "sc-ifAKCX fwOaBU",
+                      "class": "sc-ckVGcZ iEJwgp",
                     },
                     "children": Array [
                       Object {
@@ -5369,7 +5369,7 @@ initialize {
                         },
                       },
                     ],
-                    "name": "h2",
+                    "name": "h1",
                     "namespace": "http://www.w3.org/1999/xhtml",
                     "next": null,
                     "parent": [Circular],
@@ -5790,17 +5790,17 @@ initialize {
             "parent": [Circular],
             "prev": Object {
               "attribs": Object {
-                "class": "sc-kgoBCf dwycFf",
+                "class": "sc-chPdSV dssqYe",
               },
               "children": Array [
                 Object {
                   "attribs": Object {
-                    "class": "sc-kAzzGY gvThMw",
+                    "class": "sc-cSHVUG kjQySR",
                   },
                   "children": Array [
                     Object {
                       "attribs": Object {
-                        "class": "sc-chPdSV ilyUKU",
+                        "class": "sc-kAzzGY dUtFzu",
                         "href": "/a_hundred_lovers/",
                       },
                       "children": Array [
@@ -5908,7 +5908,7 @@ initialize {
                   "namespace": "http://www.w3.org/1999/xhtml",
                   "next": Object {
                     "attribs": Object {
-                      "class": "sc-chPdSV ilyUKU",
+                      "class": "sc-kAzzGY dUtFzu",
                       "href": "/inside_abbey_road/",
                     },
                     "children": Array [
@@ -6023,7 +6023,7 @@ initialize {
                 },
                 Object {
                   "attribs": Object {
-                    "class": "sc-chPdSV ilyUKU",
+                    "class": "sc-kAzzGY dUtFzu",
                     "href": "/inside_abbey_road/",
                   },
                   "children": Array [
@@ -6117,12 +6117,12 @@ initialize {
                   "parent": [Circular],
                   "prev": Object {
                     "attribs": Object {
-                      "class": "sc-kAzzGY gvThMw",
+                      "class": "sc-cSHVUG kjQySR",
                     },
                     "children": Array [
                       Object {
                         "attribs": Object {
-                          "class": "sc-chPdSV ilyUKU",
+                          "class": "sc-kAzzGY dUtFzu",
                           "href": "/a_hundred_lovers/",
                         },
                         "children": Array [

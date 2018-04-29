@@ -16,10 +16,11 @@ const ExternalLink = styled.a`
 
 export default ({
     title,
-    link
+    link,
+    el = 'h2'
 }) => (
     <Header>
-        <Label text={title} el="h2"/>
+        <Label text={title} el={el}/>
         {link && (
             <ExternalLink
                 href={link}
