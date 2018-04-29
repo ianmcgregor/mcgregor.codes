@@ -10,3 +10,5 @@ export const marginDesktop = 4;
 export const columnDesktop = 20;
 
 export const marginFixed = 15;
+
+export const menuHeight = 22;

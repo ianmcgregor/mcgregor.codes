@@ -5,6 +5,7 @@ import {color} from './color';
 export const boxCss = css`
     display: inline;
     background-color: ${color.white};
+    box-decoration-break: clone;
     box-shadow: 5px 0 0 ${color.white}, -5px 0 0 ${color.white};
 `;
 

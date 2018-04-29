@@ -14,7 +14,7 @@ const Text = styled.h2`
     color: ${color.black};
     ${fontTitle};
     font-size: 16px;
-    line-height: 20px;
+    line-height: 21px;
     text-transform: uppercase;
 `;
 

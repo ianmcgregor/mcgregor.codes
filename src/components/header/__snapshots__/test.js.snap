@@ -4,7 +4,7 @@ exports[`Header component should render 1`] = `
 initialize {
   "0": Object {
     "attribs": Object {
-      "class": "sc-dnqmqq etZNfp",
+      "class": "sc-dnqmqq ePwxxF",
     },
     "children": Array [
       Object {
@@ -46,12 +46,12 @@ initialize {
                                 "children": Array [
                                   Object {
                                     "attribs": Object {
-                                      "class": "sc-gZMcBi dyJVgy",
+                                      "class": "sc-gZMcBi hBAMka",
                                     },
                                     "children": Array [
                                       Object {
                                         "attribs": Object {
-                                          "class": "sc-htpNat eIqxAw",
+                                          "class": "sc-htpNat csPHbj",
                                         },
                                         "children": Array [
                                           Object {
@@ -162,12 +162,12 @@ initialize {
                                   "children": Array [
                                     Object {
                                       "attribs": Object {
-                                        "class": "sc-gqjmRU fAuRiS",
+                                        "class": "sc-gqjmRU kdVvSr",
                                       },
                                       "children": Array [
                                         Object {
                                           "attribs": Object {
-                                            "class": "sc-htpNat eIqxAw",
+                                            "class": "sc-htpNat csPHbj",
                                           },
                                           "children": Array [
                                             Object {
@@ -299,12 +299,12 @@ initialize {
                                 "children": Array [
                                   Object {
                                     "attribs": Object {
-                                      "class": "sc-gqjmRU fAuRiS",
+                                      "class": "sc-gqjmRU kdVvSr",
                                     },
                                     "children": Array [
                                       Object {
                                         "attribs": Object {
-                                          "class": "sc-htpNat eIqxAw",
+                                          "class": "sc-htpNat csPHbj",
                                         },
                                         "children": Array [
                                           Object {
@@ -417,12 +417,12 @@ initialize {
                                   "children": Array [
                                     Object {
                                       "attribs": Object {
-                                        "class": "sc-gZMcBi dyJVgy",
+                                        "class": "sc-gZMcBi hBAMka",
                                       },
                                       "children": Array [
                                         Object {
                                           "attribs": Object {
-                                            "class": "sc-htpNat eIqxAw",
+                                            "class": "sc-htpNat csPHbj",
                                           },
                                           "children": Array [
                                             Object {

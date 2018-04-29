@@ -5,19 +5,20 @@ import {
     media,
     marginMobile,
     marginTablet,
-    marginDesktop
+    marginDesktop,
+    menuHeight
 } from '../../styles';
 
 const Header = styled.header`
     width: 100%;
-    padding: calc(${marginMobile * 2}% + 10px) 0;
+    height: calc(${marginMobile * 4}vw + ${menuHeight}px);
 
     ${media.tablet`
-        padding: calc(${marginTablet}% + 10px) 0;
+        height: calc(${marginTablet * 2}vw + ${menuHeight}px);
     `}
 
     ${media.desktop`
-        padding: calc(${marginDesktop}% + 10px) 0;
+        height: calc(${marginDesktop * 2}vw + ${menuHeight}px);
     `}
 `;
 
