@@ -7,7 +7,7 @@ export default ({
     page
 }) => {
     const siteURL = siteMetadata.url;
-    const title = page.title ? `${settings.title} / ${page.title.toUpperCase()}` : settings.title;
+    const title = page.title && page.slug ? `${settings.title} / ${page.title.toUpperCase()}` : settings.title;
     const description = page.description || settings.description;
     const image = `https:${(page.image && page.image.file.url) || settings.image.file.url}`;
     const favicon = settings.favicon.file.url;
