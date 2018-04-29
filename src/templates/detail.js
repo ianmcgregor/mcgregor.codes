@@ -11,7 +11,8 @@ import {
     marginTablet,
     columnTablet,
     marginDesktop,
-    columnDesktop
+    columnDesktop,
+    marginFixed
 } from '../styles';
 
 const Main = styled.main`
@@ -19,6 +20,7 @@ const Main = styled.main`
     flex-direction: column;
     width: 100%;
     opacity: 0;
+    padding-bottom: ${marginFixed}px;
 
     ${media.tablet`
         flex-direction: row;

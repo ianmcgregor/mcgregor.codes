@@ -50,35 +50,33 @@ const Item = styled.li`
     margin-right: 20px;
 `;
 
-export default props => {
-    const pathname = props.location.pathname;
-
-    return (
-        <Main>
-            <Section>
-                <Label text="404 page not found" el="h1"/>
-                <Text
-                    text={`There is no page at ${pathname}. If you were trying to reach another page, perhaps you can find it below:`}
-                />
-                <List>
-                    {props.data.allSitePage.edges
-                        .map(({node}) => node)
-                        .filter(({path}) => path.length > 1 && !path.includes('404'))
-                        .map(({path}) => (
-                            <Item key={path}>
-                                <Link to={path}>
-                                    <Text text={path}/>
-                                </Link>
-                            </Item>)
-                        )}
-                </List>
-            </Section>
-            {process.env.NODE_ENV === 'development' && (
-                <Grid show/>
-            )}
-        </Main>
-    );
-};
+export default ({
+    data: {allSitePage}
+}) => (
+    <Main>
+        <Section>
+            <Label text="404 page not found" el="h1"/>
+            <Text
+                text="If you were trying to reach another page, perhaps you can find it below:"
+            />
+            <List>
+                {allSitePage.edges
+                    .map(({node}) => node)
+                    .filter(({path}) => path.length > 1 && !path.includes('404'))
+                    .map(({path}) => (
+                        <Item key={path}>
+                            <Link to={path}>
+                                <Text text={path}/>
+                            </Link>
+                        </Item>)
+                    )}
+            </List>
+        </Section>
+        {process.env.NODE_ENV === 'development' && (
+            <Grid show/>
+        )}
+    </Main>
+);
 
 export const pageQuery = graphql`
   query Page404 {
