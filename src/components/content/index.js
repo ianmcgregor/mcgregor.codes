@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Label from '../label';
 import Text from '../text';
-import {marginFixed, media} from '../../styles';
+import {marginFixed} from '../../styles';
 
 const Wrapper = styled.div`
     position: relative;
@@ -11,11 +11,6 @@ const Wrapper = styled.div`
 
 const Title = styled.div`
     margin-bottom: ${marginFixed * 2}px;
-    margin-top: ${marginFixed}px;
-
-    ${media.tablet`
-        margin-top: 0;
-    `}
 `;
 
 export default ({

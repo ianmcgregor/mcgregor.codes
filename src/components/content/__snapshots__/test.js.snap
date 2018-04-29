@@ -9,7 +9,7 @@ initialize {
     "children": Array [
       Object {
         "attribs": Object {
-          "class": "sc-bZQynM fmEPBW",
+          "class": "sc-bZQynM kHzLMV",
         },
         "children": Array [
           Object {
@@ -293,7 +293,7 @@ initialize {
         "parent": [Circular],
         "prev": Object {
           "attribs": Object {
-            "class": "sc-bZQynM fmEPBW",
+            "class": "sc-bZQynM kHzLMV",
           },
           "children": Array [
             Object {

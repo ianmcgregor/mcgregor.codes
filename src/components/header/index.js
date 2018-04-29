@@ -10,7 +10,7 @@ import {
 
 const Header = styled.header`
     width: 100%;
-    padding: calc(${marginMobile}% + 10px) 0;
+    padding: calc(${marginMobile * 2}% + 10px) 0;
 
     ${media.tablet`
         padding: calc(${marginTablet}% + 10px) 0;
@@ -29,7 +29,7 @@ const Inner = styled.div`
     justify-content: center;
     z-index: 5;
     width: 100%;
-    margin: ${marginMobile}% 0;
+    margin: ${marginMobile * 2}% 0;
 
     ${media.tablet`
         margin: ${marginTablet}% 0;
